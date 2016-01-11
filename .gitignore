@@ -39,7 +39,7 @@ TestResult.xml
 dlldata.c
 
 # Project Specific Files
-Folio/Folio/src/Folio/Migrations/*
+Folio/Folio/src/Folio/Migrations/*.cs
 
 *_i.c
 *_p.c

@@ -8,7 +8,7 @@ using Folio.Models;
 namespace Folio.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160111212630_Initial")]
+    [Migration("20160111224134_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,13 +23,21 @@ namespace Folio.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<decimal>("AnnualIncome");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
+
+                    b.Property<DateTime>("DateOfBirth");
 
                     b.Property<string>("Email")
                         .HasAnnotation("MaxLength", 256);
 
                     b.Property<bool>("EmailConfirmed");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -46,6 +54,10 @@ namespace Folio.Migrations
                     b.Property<string>("PhoneNumber");
 
                     b.Property<bool>("PhoneNumberConfirmed");
+
+                    b.Property<int>("RatedInvestmentKnowledge");
+
+                    b.Property<int>("RiskTolerance");
 
                     b.Property<string>("SecurityStamp");
 
@@ -77,16 +89,19 @@ namespace Folio.Migrations
 
             modelBuilder.Entity("Folio.Models.PortfolioAsset", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<string>("Symbol");
 
                     b.Property<string>("AssetSymbol");
 
                     b.Property<string>("AssetType");
 
+                    b.Property<int>("ID");
+
+                    b.Property<string>("Name");
+
                     b.Property<int>("PortfolioID");
 
-                    b.HasKey("ID");
+                    b.HasKey("Symbol");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>

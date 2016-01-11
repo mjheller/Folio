@@ -15,9 +15,13 @@ namespace Folio.Migrations
                 {
                     Id = table.Column<string>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
+                    AnnualIncome = table.Column<decimal>(nullable: false),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
+                    DateOfBirth = table.Column<DateTime>(nullable: false),
                     Email = table.Column<string>(nullable: true),
                     EmailConfirmed = table.Column<bool>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     NormalizedEmail = table.Column<string>(nullable: true),
@@ -25,6 +29,8 @@ namespace Folio.Migrations
                     PasswordHash = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
                     PhoneNumberConfirmed = table.Column<bool>(nullable: false),
+                    RatedInvestmentKnowledge = table.Column<int>(nullable: false),
+                    RiskTolerance = table.Column<int>(nullable: false),
                     SecurityStamp = table.Column<string>(nullable: true),
                     TwoFactorEnabled = table.Column<bool>(nullable: false),
                     UserName = table.Column<string>(nullable: true)
@@ -150,15 +156,16 @@ namespace Folio.Migrations
                 name: "PortfolioAsset",
                 columns: table => new
                 {
-                    ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Symbol = table.Column<string>(nullable: false),
                     AssetSymbol = table.Column<string>(nullable: true),
                     AssetType = table.Column<string>(nullable: true),
+                    ID = table.Column<int>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     PortfolioID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PortfolioAsset", x => x.ID);
+                    table.PrimaryKey("PK_PortfolioAsset", x => x.Symbol);
                     table.ForeignKey(
                         name: "FK_PortfolioAsset_Portfolio_PortfolioID",
                         column: x => x.PortfolioID,

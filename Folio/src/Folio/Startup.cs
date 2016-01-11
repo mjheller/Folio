@@ -63,6 +63,9 @@ namespace Folio
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            // Alex Add
+            services.Configure<AuthMessageSenderOptions>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -106,6 +109,7 @@ namespace Folio
 
             //Chris Add
             app.UseSession();
+
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 

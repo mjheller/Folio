@@ -16,12 +16,11 @@ namespace Folio.Models.MattsModels
     //Stock Class
     public class Stock : Asset
     {
-        private string symbol;
+        public string symbol { get; private set; }
         private int sharesOwned;
         private decimal weight;
-
-        private decimal marketRiskPremium = (decimal)6.34;
-        private decimal riskFreeReturn = (decimal)2.70;
+        private const decimal marketRiskPremium = 6.34M;
+        private const decimal riskFreeReturn = 2.70M;
         private decimal expectedReturn;
         private decimal variance;
 
@@ -32,7 +31,11 @@ namespace Folio.Models.MattsModels
         public decimal PurchasePrice { get { return purchasePrice; } }
 
         public int SharesOwned { get { return sharesOwned; } }
-        public decimal Worth { get { return CurrentPrice * SharesOwned; } }
+        public decimal Worth
+        {
+            get { return CurrentPrice * SharesOwned; }
+        }
+
         public decimal Weight { get { return weight; } set { weight = value; } }
         public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
         public decimal Variance { get { return variance; } set { variance = value; } }

@@ -23,7 +23,7 @@ namespace Folio.Models
 
         //stock, bond, etc.
 
-        string AssetType { get; set; }
+        public string AssetType { get; set; }
 
         public virtual Portfolio Portfolio { get; set; }
     }

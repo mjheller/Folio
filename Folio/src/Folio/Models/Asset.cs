@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Folio.Models
 {
-    public class Asset
+    public abstract class Asset
     {
         public string Name { get; set; }
         [Key]

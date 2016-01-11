@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Folio.Models
 {
-    public class PortfolioAsset
+    public class PortfolioAsset : Asset
     {
         int ID { get; set; }
 
@@ -18,7 +18,7 @@ namespace Folio.Models
 
         //stock, bond, etc.
         string AssetType { get; set; }
-        public virtual Portfolio Portfolio { get; set; }
 
+        public virtual Portfolio Portfolio { get; set; }
     }
 }

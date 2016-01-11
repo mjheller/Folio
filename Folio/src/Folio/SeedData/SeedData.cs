@@ -13,7 +13,7 @@ namespace Folio.SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
+            ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
             if (context.Database == null)
             {
                 throw new Exception("DB is null");
@@ -48,7 +48,5 @@ namespace Folio.SeedData
             userManager.AddToRoleAsync(admin, "admin");
             context.SaveChanges();
         }
-
-
     }
 }

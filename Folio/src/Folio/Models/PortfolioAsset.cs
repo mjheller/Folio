@@ -8,12 +8,23 @@ namespace Folio.Models
 {
     public class PortfolioAsset : Asset
     {
-        int ID { get; set; }
+        public int ID { get; set; }
+
         [ForeignKey("Portfolio")]
-        int PortfolioID { get; set; }
-        [ForeignKey("Asset")]
-        string AssetSymbol { get; set; }
+        public int PortfolioID { get; set; }
+
+        [ForeignKey("Asset")] //not actually in DB
+        public  string AssetSymbol { get; set; }
+
+        public decimal AveragePurchasePrice { get; set; }
+
+        public int NumberOfAsset { get; set; }
+
+
+        //stock, bond, etc.
+
         string AssetType { get; set; }
+
         public virtual Portfolio Portfolio { get; set; }
     }
 }

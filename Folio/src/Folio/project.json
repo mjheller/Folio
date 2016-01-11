@@ -1,4 +1,4 @@
-{
+﻿{
   "userSecretsId": "Folio-db-1",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -8,6 +8,7 @@
   "dependencies": {
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
+    "HtmlAgilityPack": "1.4.9",
     "Microsoft.ApplicationInsights.AspNet": "1.0.0-rc1",
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-rc1-final",
     "Microsoft.AspNet.Diagnostics.Entity": "7.0.0-rc1-final",
@@ -28,7 +29,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
-    "Sendgrid": "6.3.4"
+    "Sendgrid": "6.3.4",
+    "YahooStockQuotes": "1.0.6"
   },
 
   "commands": {

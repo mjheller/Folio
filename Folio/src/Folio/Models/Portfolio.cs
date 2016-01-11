@@ -9,7 +9,6 @@ namespace Folio.Models
     public class Portfolio
     {
         public int ID { get; set; }
-
         public virtual ICollection<PortfolioAsset> PortfolioAssets { get; set; }
         public virtual ApplicationUser User { get; set; }
     }

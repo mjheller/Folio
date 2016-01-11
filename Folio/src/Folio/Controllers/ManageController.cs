@@ -14,6 +14,7 @@ using Folio.ViewModels.Manage;
 namespace Folio.Controllers
 {
     [Authorize]
+    [RequireHttps]
     public class ManageController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;

@@ -66,6 +66,7 @@ namespace Folio.Models.MattsModels
             return currentPrice;
 
         }
+
         public decimal getBeta(string ticker)
         {
             decimal beta = 0;

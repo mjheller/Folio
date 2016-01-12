@@ -10,6 +10,33 @@
     <hr />
     <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
     <div class="form-group">
+        <label asp-for="FirstName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="RiskTolerance" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <select asp-for="RiskTolerance">
+                <option value="1">Very Low Risk</option>
+                <option value="2">Somewhat Low Risk</option>
+                <option value="3">Average Risk</option>
+                <option value="4">Above Average Risk</option>
+                <option value="5">Very High Risk</option>
+            </select>
+            <span asp-validation-for="RiskTolerance" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
         <label asp-for="Email" class="col-md-2 control-label"></label>
         <div class="col-md-10">
             <input asp-for="Email" class="form-control" />

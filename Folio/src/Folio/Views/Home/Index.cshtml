@@ -106,14 +106,14 @@
                     <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="Email" class="col-md-2 control-label"></label>
-                       <br/> <div class="col-md-12">
+                        <div class="col-md-12">
                             <input asp-for="Email" class="form-control" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label asp-for="Password" class="col-md-2 control-label"></label>
-                        <br/><br/><div class="col-md-12">
+                       <div class="col-md-12">
                             <input asp-for="Password" class="form-control" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
@@ -132,10 +132,10 @@
                         </div>
                     </div>
                     <p>
-                        <a asp-action="Register">Register as a new user?</a>
+                        <a asp-controller="Account" asp-action="Register">Register as a new user?</a>
                     </p>
                     <p>
-                        <a asp-action="ForgotPassword">Forgot your password?</a>
+                        <a asp-controller="Account" asp-action="ForgotPassword">Forgot your password?</a>
                     </p>
                 </form>
     </div>

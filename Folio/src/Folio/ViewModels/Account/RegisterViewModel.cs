@@ -21,13 +21,15 @@ namespace Folio.ViewModels.Account
         [Display(Name = "Last Name:")]
         public string LastName { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth:")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBirth { get; set; }
 
         [Required]
         [Range(1, 5)]
-        [Display(Name = "I Prefer:")]
+        [Display(Name = "As an Investor, I Prefer:")]
         public int RiskTolerance { get; set; }
 
         [Required]

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Folio.Models
 {
-    public class PortfolioAsset : Asset
+    public class PortfolioAsset
     {
         public int ID { get; set; }
 
@@ -18,7 +18,7 @@ namespace Folio.Models
 
         public decimal AveragePurchasePrice { get; set; }
 
-        public int NumberOfAsset { get; set; }
+        public int NumberOfAssetOwned { get; set; }
 
         public string AssetType { get; set; }
 

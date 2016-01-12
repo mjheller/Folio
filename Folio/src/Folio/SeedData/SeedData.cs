@@ -28,6 +28,15 @@ namespace Folio.SeedData
                 UserManager<ApplicationUser> userManager = serviceProvider.GetService<UserManager<ApplicationUser>>();
                 InitializeUserAdmin(context, userManager);
             }
+            if (!(context.Stock.Any()))
+            {
+                SeedStocks(context);
+            }
+        }
+
+        private static void SeedStocks(ApplicationDbContext context)
+        {
+            
         }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
@@ -44,7 +53,7 @@ namespace Folio.SeedData
                 UserName = "admin@gmail.com"
                 ,Email = "admin@gmail.com"
             };
-            userManager.CreateAsync(admin, "Beast@2"); //password much match constraints of 6 char min, case-change, min 1 number and non-letter character
+            userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character
             userManager.AddToRoleAsync(admin, "admin");
             context.SaveChanges();
         }

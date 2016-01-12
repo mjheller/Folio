@@ -5,11 +5,11 @@ using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 using Folio.Models;
 
-namespace Folio.Migrations
+namespace folio.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160112162015_Update")]
-    partial class Update
+    [Migration("20160112205822_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,6 +82,10 @@ namespace Folio.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("DateCreated");
+
+                    b.Property<string>("Name");
+
                     b.Property<string>("UserId");
 
                     b.HasKey("ID");
@@ -89,7 +93,8 @@ namespace Folio.Migrations
 
             modelBuilder.Entity("Folio.Models.PortfolioAsset", b =>
                 {
-                    b.Property<string>("Symbol");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("AssetSymbol");
 
@@ -97,15 +102,11 @@ namespace Folio.Migrations
 
                     b.Property<decimal>("AveragePurchasePrice");
 
-                    b.Property<int>("ID");
-
-                    b.Property<string>("Name");
-
-                    b.Property<int>("NumberOfAsset");
+                    b.Property<int>("NumberOfAssetOwned");
 
                     b.Property<int>("PortfolioID");
 
-                    b.HasKey("Symbol");
+                    b.HasKey("ID");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>

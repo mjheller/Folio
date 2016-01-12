@@ -18,5 +18,6 @@ namespace Folio.Models
         }
         public DbSet<Portfolio> Portfolio { get; set; }
         public DbSet<PortfolioAsset> PortfolioAsset { get; set; }
+        public DbSet<Stock> Stock { get; set; }
     }
 }

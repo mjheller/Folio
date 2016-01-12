@@ -24,7 +24,7 @@ namespace Folio.Builders
             List<StockDomainModel> stocks = new List<StockDomainModel>();
             foreach (PortfolioAsset asset in portfolioAssets)
             {
-                stocks.Add(new StockDomainModel(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAsset));
+                stocks.Add(new StockDomainModel(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAssetOwned));
             }
             return stocks;
         }

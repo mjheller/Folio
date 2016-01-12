@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Folio.Models
 {
-    public abstract class Asset
+    interface Asset
     {
-        public string Name { get; set; }
+        string Name { get; set; }
 
         [Key]
-        public string Symbol { get; set; }
+        string Symbol { get; set; }
     }
 }

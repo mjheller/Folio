@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Microsoft.Data.Entity.Migrations;
 using Microsoft.Data.Entity.Metadata;
 
-namespace Folio.Migrations
+namespace folio.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,6 +58,8 @@ namespace Folio.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    DateCreated = table.Column<DateTime>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -156,18 +158,17 @@ namespace Folio.Migrations
                 name: "PortfolioAsset",
                 columns: table => new
                 {
-                    Symbol = table.Column<string>(nullable: false),
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     AssetSymbol = table.Column<string>(nullable: true),
                     AssetType = table.Column<string>(nullable: true),
                     AveragePurchasePrice = table.Column<decimal>(nullable: false),
-                    ID = table.Column<int>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    NumberOfAsset = table.Column<int>(nullable: false),
+                    NumberOfAssetOwned = table.Column<int>(nullable: false),
                     PortfolioID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PortfolioAsset", x => x.Symbol);
+                    table.PrimaryKey("PK_PortfolioAsset", x => x.ID);
                     table.ForeignKey(
                         name: "FK_PortfolioAsset_Portfolio_PortfolioID",
                         column: x => x.PortfolioID,

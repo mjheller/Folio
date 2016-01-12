@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
-using YSQ.core.Historical;
+using Newtonsoft.Json;
 
 namespace Folio.Models
 {
@@ -36,12 +35,23 @@ namespace Folio.Models
             UpdateStockInformation();
         }
 
+        private string GetPriceHistory1YearAsJSON()
+        {
+            return JsonConvert.SerializeObject(PriceHistory1Year);
+        }
+
         private void UpdateStockInformation()
         {
+            CurrentPrice = UpdateCurrentPrice();
             ExpectedReturn = CalculateExpectedReturn();
             Variance = CalculateVariance();
             PriceHistory1Year = UpdatePriceHistory1Year();
             _lastUpdated = DateTime.UtcNow;
+        }
+
+        private decimal UpdateCurrentPrice()
+        {
+            return YahooAPICalls.GetCurrentStockPrice(Ticker);
         }
 
         private double[] UpdatePriceHistory1Year()

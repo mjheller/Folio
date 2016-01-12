@@ -1,0 +1,3262 @@
+﻿Quote on 1/12/16 15:59:08
+
+NYSE AMEX
+Symbol,Last,,Quote Trend,%Change,Volume,Net Chng,Bid,Ask,BS,AS,Open,High,Low,52High,52Low,Shares,Description
+AAU,.58,Range Bound,"instrument=AAU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.33%,"68,567",-.02,.57,1.23,0,6,.59,.61,.57,1.27,.4825,"73,148,321",ALMADEN MINERALS LTD CL B
+AAp,82.75,N/A,"instrument=AAp
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,415,0,82.75,85.00,10,1,0,0,0,89.9183,78.01,0,ALCOA INC PFD $3.75 CALLABLE
+ABL,<empty>,N/A,"instrument=ABL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AMERICAN BILTRITE INC COM
+ACU,16.2471,N/A,"instrument=ACU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.11%,"2,035",+.0171,15.80,16.40,1,1,16.468,16.468,16.2471,19.74,15.5784,"3,370,591",ACME UTD CORP COM
+ACY,11.61,N/A,"instrument=ACY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.63%,"33,541",+.0725,10.01,11.80,30,0,11.50,11.9035,11.50,14.00,7.61,"1,543,257",AERO CENTURY CORP COM
+ADGE,.3099,N/A,"instrument=ADGE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-8.85%,"3,913",-.0301,.2900,.6500,2,3,.3151,.3151,.3000,.9000,.2602,"50,684,095",AMERICAN DG ENERGY ONSITE UTILITY
+ADK,2.0299,Range Bound,"instrument=ADK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"90,958",-.0001,2.0200,5.0000,0,262,2.0796,2.2400,1.9800,4.5000,1.8500,"19,902,283",ADCARE HEALTH SYSTEMS INC COM
+ADK/WS,<empty>,N/A,"instrument=ADK/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ADCARE HEALTH SYSTEMS INC WARRANT
+AE,37.85,N/A,"instrument=AE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.25%,"9,712",-.48,31.13,37.99,1,13,38.09,39.01,37.32,73.279,33.55,"4,217,596",ADAMS RES & ENERGY INC CM
+AEN,<empty>,N/A,"instrument=AEN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ADEONA PHARMACEUTICALS INC N/C 2/16/12 87164U102
+AFP,<empty>,N/A,"instrument=AFP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,UNITED CAPITAL CORP CM
+AGX,29.81,Range Bound,"instrument=AGX
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-2.10%,"201,536",-.64,27.23,32.32,1,1,30.66,30.84,29.58,42.50,28.85,"14,826,469",ARGAN INC COM
+AIM,<empty>,N/A,"instrument=AIM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AEROSONIC CORP DEL COM PAR $0.40
+AIP,<empty>,N/A,"instrument=AIP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,HADERA PAPER LTD COM
+AIS,<empty>,N/A,"instrument=AIS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ANTARES PHARMA INC COM
+ALN,1.15,N/A,"instrument=ALN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+7.18%,"32,151",+.077,1.06,1.14,1,2,1.10,1.15,1.0465,1.88,.89,"38,259,490",AMERICAN LORAIN CORP COM
+AMS,1.6499,N/A,"instrument=AMS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.12%,241,+.0499,1.5400,2.0000,0,1,1.6499,1.6499,1.6499,2.8600,1.5000,"5,364,147",AMERICAN SHARED HOSP SVCS COM
+ANO,<empty>,N/A,"instrument=ANO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ANOORAQ RESOURCE CORP NAME CHANGE 5/14/12 049477102
+ANV,.1060,N/A,"instrument=ANV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,ALLIED NEVADA GOLD CORP COM
+ANX,<empty>,N/A,"instrument=ANX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ADVENTRX PHARMACEUTICALS INC N/C 3/11/13 576314108
+API,<empty>,N/A,"instrument=API
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ADVANCED PHOTONIX INC .31782:1 EXC 5/11/15 550351100
+APP,.1123,N/A,"instrument=APP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0010,.0600,0,0,0,0,0,0,0,0,AMERICAN APPAREL INC COM
+APT,1.6101,Range Bound,"instrument=APT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.01%,"28,216",-.0499,1.5000,1.7900,4,1,1.6600,1.6700,1.5800,2.9300,1.5500,"18,159,454",ALPHA PRO TECH LTD COM
+APTS,12.31,N/A,"instrument=APTS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.33%,"188,116",+.04,11.90,13.80,1,2,12.56,12.56,12.128,13.89,8.69,"22,368,377",PREFERRED APT COMMUNITIES INC COM
+AQQ,0,N/A,"instrument=AQQ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AMERICAN SPECTRUM REALTY INC COM
+ARR/WS,<empty>,N/A,"instrument=ARR/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ARMOUR RESIDENTIAL REIT INC WARRANT
+ATC,<empty>,N/A,"instrument=ATC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ATC VENTURE GROUP INC COM
+ATSC,<empty>,N/A,"instrument=ATSC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ATS Corporation Common Stock
+AUMN,.1901,Downtrend,"instrument=AUMN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.70%,"40,727",-.0115,.1500,.2900,1,17,.2000,.2089,.1901,.6700,.1900,"53,335,333",GOLDEN MINERALS CO COMMON STOCK
+AVL,0,Downtrend,"instrument=AVL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.065,.165,0,0,0,0,0,.3994,.0809,"152,785,480",AVALON RARE METALS INC ORD
+AWX,1.71,N/A,"instrument=AWX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,5,0,1.72,2.08,1,1,0,0,0,3.89,1.61,"3,803,331",AVALON HOLDINGS CORP COM
+AXK,<empty>,N/A,"instrument=AXK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ACCELR8 TECH CORP N/C 12/26/12 00430H102
+AXN,.75,N/A,"instrument=AXN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.85%,"76,674",-.03,.73,1.00,10,49,.77,.77,.74,3.48,.2901,"74,299,195",AOXING PHARMACEUTICAL CO COM
+AXU,.3121,Range Bound,"instrument=AXU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.97%,"128,611",-.0198,.3000,.4500,5,10,.3300,.3316,.3100,.6783,.2553,"69,468,899",ALEXCO RESOURCE CORPORATION COM
+AZC,<empty>,N/A,"instrument=AZC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AUGUSTA RESOURCE CORP .315:1 EXC 9/23/14 443628102
+AZK,<empty>,N/A,"instrument=AZK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AURIZON MINES LTD COM
+BAA,.1780,Range Bound,"instrument=BAA
+trend=[null, BRIGHT_RED, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-6.32%,"1,311,011",-.012,.1600,.1990,20,47,.1972,.1972,.1700,.4000,.1360,"252,151,000",BANRO CORPORATION COM
+BAA/WS,<empty>,N/A,"instrument=BAA/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BANRO CORPORATION WARRANT
+BCV,17.27,N/A,"instrument=BCV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.04%,"4,431",-.1815,17.26,17.40,0,5,17.47,17.51,17.21,21.91,17.42,"5,107,022",BANCROFT FUND LTD COM
+BDL,22.56,N/A,"instrument=BDL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.40%,"3,809",-.09,17.14,22.49,1,0,23.00,23.00,22.32,44.31,17.70,"1,858,647",FLANIGANS ENERPRISES INC COM
+BDR,.3847,N/A,"instrument=BDR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.3001,.4999,1,1,0,0,0,2.3800,.29605,"6,554,736",BLONDER TONGUE LABS COM
+BFY,15.10,N/A,"instrument=BFY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.26%,"13,973",-.04,14.75,15.28,11,11,15.22,15.23,14.93,15.50,13.91,"4,998,911",BLACKROCK NEW YORK MUNI INC TR II COM
+BHB,32.31,N/A,"instrument=BHB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.97%,"8,202",+.31,31.76,36.00,0,1,31.95,33.8132,31.54,37.98,28.969,"5,997,231",BAR HARBOR BANKSHARES COM
+BHO,<empty>,N/A,"instrument=BHO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,B & H OCEAN CARRIERS LTD 1:1 NET 11/29/11 TO V10064109
+BHV,19.877,N/A,"instrument=BHV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.44%,"1,078",+.2825,19.56,23.22,0,1,20.2999,20.2999,19.877,20.65,15.90,"1,593,648",BLACKROCK VA MUNI BOND TRUST
+BKJ,10.83,N/A,"instrument=BKJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.18%,"4,741",-.02,10.36,11.29,10,24,10.85,10.85,10.82,11.88,10.3016,"6,240,241",BANCORP OF NEW JERSEY INC COM
+BKR,<empty>,N/A,"instrument=BKR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BAKER MICHAEL CORP CSH MRG $40.50/SH 10/14/13
+BLD,26.14,Downtrend,"instrument=BLD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.21%,"379,657",-.59,26.14,26.16,6,7,27.02,27.27,25.98,36.36,22.75,"37,681,765",TOPBUILD CORP COM
+BLE,15.50,N/A,"instrument=BLE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.39%,"29,056",+.06,14.03,15.50,4,6,15.44,15.50,15.41,16.67,13.82,"23,470,421",BLACKROCK MUN INC TR II COM
+BLJ,14.82,N/A,"instrument=BLJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.03%,"1,693",+.151,12.48,15.10,10,11,14.86,14.86,14.60,16.54,13.65,"2,325,038",BLACKROCK NEW JERSEY MUNI BD CLOSED END INVESTMENT TRUST
+BMJ,<empty>,N/A,"instrument=BMJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BIRKS AND MAYORS INC COM
+BNX,<empty>,N/A,"instrument=BNX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BANKS.COM INC COM
+BONE,3.25,N/A,"instrument=BONE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,3.25,3.35,0,0,0,0,0,4.50,2.55,"11,746,051",XTANT MEDICAL HOLDINGS INC COM
+BPS,<empty>,N/A,"instrument=BPS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BLACKROCK PENN STRAT MUNI TR .90936725:1 4/13/15 09255G107
+BQI,<empty>,N/A,"instrument=BQI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,OILSANDS QUEST INC COM
+BQI/WS/A,<empty>,N/A,"instrument=BQI/WS/A
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,OILSANDS QUEST INC WARRANT
+BQY,<empty>,N/A,"instrument=BQY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BLACKROCK DIVIDEND INCOME TR 1.57393059:1 EXC 12/8/14
+BRD,<empty>,N/A,"instrument=BRD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BRIGUS GOLD CORP .175:1 & .1:1 EXC 3/5/14
+BRN,1.71,N/A,"instrument=BRN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.84%,370,-.05,1.71,1.90,4,0,1.71,1.71,1.71,3.44,1.60,"8,277,160",BARNWELL INDS INC COM
+BTC,<empty>,N/A,"instrument=BTC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,COMMUNITY BANKERS TRUST CORP COM
+BTC/U,<empty>,N/A,"instrument=BTC/U
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,COMMUNITY BANKERS TRUST CORP UNIT
+BTC/WS,<empty>,N/A,"instrument=BTC/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,COMMUNITY BANKERS TRUST CORP WARRANT
+BTI,106.86,Range Bound,"instrument=BTI
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",+0.50%,"230,981",+.53,103.57,112.42,1,1,106.93,107.17,105.98,119.91,102.14,"932,110,570",BRITISH AMERICAN TOBACCO PLC SP ADR
+BTN,4.49,Range Bound,"instrument=BTN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.66%,"14,754",-.03,4.34,4.73,1,1,4.51,4.548,4.48,5.13,3.42,"14,163,246",BALLANTYNE STRONG INC COM
+BTX,2.79,Downtrend,"instrument=BTX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.11%,"222,070",-.06,2.90,2.94,4,3,2.81,2.9528,2.72,5.496495,2.032317,"94,894,152",BIOTIME INC COM
+BVX,2.37,N/A,"instrument=BVX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.60%,"23,575",+.06,2.13,3.50,10,1,2.33,2.39,2.2644,4.01,1.72,"27,194,251",BOVIE MEDICAL CORP COM
+BWL/A,14.50,N/A,"instrument=BWL/A
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.21%,220,-.0299,13.56,14.50,2,0,14.50,14.50,14.50,16.00,13.00,"5,160,971",BOWL AMERICA INC COM CL A
+BZC,19.80,N/A,"instrument=BZC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,10.00,39.80,0,0,0,0,0,21.25,9.53,"9,914,242",BREEZE EASTERN CORP CSH MGR $19.61/SH 1/4/16
+BZM,14.8533,N/A,"instrument=BZM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.51%,"6,326",-.0767,14.78,15.05,1,3,14.988,14.988,14.72,15.72,14.25,"2,076,674",BLACKROCK MARYLAND MUN BD TR COM
+CAK,0,N/A,"instrument=CAK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,CAMAC ENERGY INC 1:6 R/S 4/23/15 295625107
+CAW,3.1858,N/A,"instrument=CAW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.31%,"1,471",-.01,3.18,4.00,0,5,3.18,3.1858,3.18,3.88,2.11,"7,006,684",CCA INDUSTRIES INC COM
+CBP,0,N/A,"instrument=CBP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CHINA BOTANIC PHARMACEUTICAL COM
+CCA,11.80,N/A,"instrument=CCA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.08%,"4,419",-.01,11.66,11.98,14,10,11.82,11.87,11.80,12.10,10.65,"2,786,238",MFS CALIFORNIA MUNICIPAL FUND COM SHRS OF BEN INT
+CCF,38.67,N/A,"instrument=CCF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.08%,"12,579",-.03,35.05,44.00,2,1,38.97,38.9899,38.27,44.78,34.0114,"9,211,603",CHASE CORP COM
+CDM,<empty>,N/A,"instrument=CDM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CHINA CENTURY DRAGON MEDIA INC COM
+CDY,<empty>,N/A,"instrument=CDY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CARDERO RESOURCE CORP COM
+CEF,10.23,N/A,"instrument=CEF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.68%,"539,816",-.07,10.18,10.28,5,1,10.23,10.25,10.16,13.73,9.84,"254,472,710",CENTRAL FUND OF CANADA CLOSED END FUND CL A
+CET,18.03,N/A,"instrument=CET
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.61%,"94,205",+.11,14.93,21.21,1,1,17.95,18.14,17.79,22.60,17.08,"24,310,831",CENTRAL SECURITIES CORP CLOSED-END FUND
+CEV,13.33,N/A,"instrument=CEV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.22%,"8,740",+.0289,13.10,13.63,13,13,13.35,13.37,13.26,13.83,12.34,"7,254,575",EATON VANCE MUNI INCOME CLOSED END
+CFD,8.49,N/A,"instrument=CFD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"24,369",0,8.49,8.51,17,7,8.52,8.56,8.46,13.00,8.44,"9,047,040",NUVEEN DIVERSIFIED COMMODITY
+CFP,0,N/A,"instrument=CFP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,16.80,16.84,0,0,0,0,0,18.72,12.52,"16,594,000",CORNERSTONE PROGRESSIVE RETURN 0.7657:1 EXC 6/29/15 21924B30
+CFW,<empty>,N/A,"instrument=CFW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CANO PETROLEUM INC COM
+CGL/A,<empty>,N/A,"instrument=CGL/A
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CAGLES INC CL A
+CGR,<empty>,N/A,"instrument=CGR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CLAUDE RESOURCES INC COM
+CH,5.38,N/A,"instrument=CH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.54%,"39,241",-.14,5.32,5.70,0,6,5.46,5.5099,5.31,7.93,5.27,"9,386,497",ABERDEEN CHILE FUND COM
+CHGS,.0001,N/A,"instrument=CHGS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,<empty>,<empty>,<empty>,<empty>,0,0,0,.0500,.0001,"26,803,044",CHINA GENGSHENG MINERALS INC COM
+CIK,2.77,N/A,"instrument=CIK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.36%,"113,808",-.01,2.70,2.84,90,90,2.78,2.79,2.75,3.32,2.67,"52,257,211",CREDIT SUISSE INCOME FD COM
+CIL,31.708,N/A,"instrument=CIL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.21%,425,+.068,31.61,32.88,4,0,31.81,31.81,31.708,35.30,31.4992,"100,000",VICTORY CEMP INTL VOL WTD INDX ETF
+CIX,11.22,N/A,"instrument=CIX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.67%,"22,162",+.0749,10.88,11.66,1,1,11.16,11.27,10.61,12.4399,10.35,"12,411,107",COMPX INTERNATIONAL INC COM
+CKX,10.02,N/A,"instrument=CKX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.77%,360,+.27,9.33,10.00,1,0,10.35,10.35,10.02,17.98,9.42,"1,942,495",CKX LANDS INC COM
+CLM,15.1201,N/A,"instrument=CLM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.30%,"751,423",-.1999,15.19,15.22,7,3,15.35,15.44,14.68,23.03,12.75,"21,060,843",CORNERSTONE STRATEGIC VALUE COM
+CMFO,.1100,N/A,"instrument=CMFO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,585,0,.1100,.1351,"5,000","5,000",.1100,.1100,.1100,.1600,.0440,"29,722,976",CHINA MARINE FOOD GROUP LTD COM
+CMT,9.67,N/A,"instrument=CMT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.73%,"48,605",-.17,9.67,12.85,0,9,10.00,10.025,9.40,28.95,9.81,"7,711,000",CORE MOLDING TECHNOLOGIES INC COM
+CNAM,<empty>,N/A,"instrument=CNAM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CHINA ARMCO METALS INC COM
+CNGL,0,N/A,"instrument=CNGL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,0,0,0,.0010,.0001,"36,915,762",CHINA NUTRIFRUIT GROUP LTD COM
+CNR,.9350,N/A,"instrument=CNR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+7.48%,100,+.0651,.9000,.9444,0,10,.9350,.9350,.9350,1.5500,.8500,"73,543,782",CHINA METRO-RURAL HOLDINGS LTD ORD
+COHN,<empty>,N/A,"instrument=COHN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Institutional Financial Markets, Inc."
+CONM,<empty>,N/A,"instrument=CONM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CONMED HEALTHCARE MANAGEMENT CSH MGR $3.95/SH 8/30/12
+CPD,<empty>,N/A,"instrument=CPD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CARACO PHARMACEUTICAL LABS INC CSH MRG $5.25/SH EFF 6/15/11
+CPHI,.15,N/A,"instrument=CPHI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"50,024",0,.14,.24,17,2,.15,.15,.1499,.56,.1321,"43,579,557",CHINA PHARMA HOLDINGS INC COM
+CQP,23.65,Range Bound,"instrument=CQP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.31%,"485,386",-.56,21.28,28.35,4,2,24.38,24.68,21.78,34.5495,20.15,"337,818,510",CHENIERE ENERGY PARTNERS LP COM
+CRC,1.59,Downtrend,"instrument=CRC
+trend=[null, RED, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.63%,"5,670,006",-.01,1.51,1.73,1,1,1.75,1.76,1.52,9.865,1.50,"387,837,650",CALIFORNIA RES CORP COM
+CRF,15.79,N/A,"instrument=CRF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.44%,"256,343",-.23,15.40,16.15,1,9,16.16,16.16,15.4899,26.647711,14.23,"4,616,330",CORNERSTONE TOTAL RETURN FUND COM
+CRMD,1.48,Downtrend,"instrument=CRMD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.67%,"178,341",-.01,1.21,2.89,5,1,1.53,1.6399,1.415,10.40,1.38,"35,376,502",CORMEDIX INC COM
+CRMD/WS,0,N/A,"instrument=CRMD/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CORMEDIX INC WARRANT
+CRV,5.49,N/A,"instrument=CRV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,5.48,5.51,0,0,0,0,0,5.72,2.94,"5,197,000","COAST DISTRIBUTION SYSTEM, INC CSH MGR $5.50/SH 08/20/15"
+CRVP,.5705,N/A,"instrument=CRVP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.47%,"3,000",-.0085,.5600,.5790,2,10,.5790,.5790,.5705,.9700,.4415,"21,358,411",CRYSTAL ROCK HOLDINGS INC COM
+CTO,49.77,N/A,"instrument=CTO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.43%,"21,427",-.72,49.98,49.90,1,0,50.68,50.83,49.665,64.37,48.11,"5,944,412",CONSOLIDATED TOMOKA LD CO COM
+CTP,0,N/A,"instrument=CTP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,0,0,0,0,0,"8,753,000",CTPARTNERS EXECUTIVE SEARCH COM
+CUO,12.18,N/A,"instrument=CUO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.58%,200,-.72,12.01,12.90,0,10,12.001,12.18,12.001,18.59,11.5401,"1,662,167",CONTINENTAL MATERIALS CORP COM
+CUR,1.0200,Range Bound,"instrument=CUR
+trend=[null, GREEN, GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",0.00%,"403,743",0,.9961,1.0500,2,1,1.0200,1.0300,1.0000,3.9200,.9800,"91,786,290",NEURALSTEM INC COM
+CVM,.3800,N/A,"instrument=CVM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.08%,"402,565",-.0003,.3600,.4200,49,100,.3950,.3979,.3800,1.2278,.3600,"129,972,144",CEL-SCI CORP COM
+CVR,24.4475,N/A,"instrument=CVR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.90%,321,-.4725,24.02,35.00,0,1,24.4475,24.4475,24.4475,35.50,22.00,"966,132",CHICAGO RIVET & MACHINE CO COM
+CVU,8.98,Range Bound,"instrument=CVU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.11%,"2,433",-.0099,8.70,9.00,1,3,9.135,9.135,8.95,12.54,8.30,"8,577,256",CPI AEROSTRUCTURES INC COM
+CXM,<empty>,N/A,"instrument=CXM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CARDIUM THERAPEUTICS INC COM
+CXZ,<empty>,N/A,"instrument=CXZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CROSSHAIR ENERGY CORP COM
+DEJ,.1011,N/A,"instrument=DEJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0640,.4000,0,0,0,0,0,.2750,.0704,"36,480,427",DEJOUR ENERGY INC 1:5 R/S 10/30/15 23286A104
+DGSE,.339,N/A,"instrument=DGSE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.29%,"11,067",-.001,.290,1.010,2,1,.330,.340,.330,1.750,.250,"12,296,446",DGSE COMPANIES INC COM
+DHY,2.22,N/A,"instrument=DHY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"366,450",0,2.12,2.30,10,1,2.23,2.24,2.205,2.86,2.00,"99,905,798",CREDIT SUISSE HIGH YIELD BD COM
+DIT,78.39,N/A,"instrument=DIT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.50%,"1,017",+.3901,75.47,79.00,0,1,76.6461,78.39,76.51,88.10,72.02,"634,741",AMCON DISTRIBUTING COM
+DLA,13.82,N/A,"instrument=DLA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.95%,"2,128",+.13,13.60,19.90,1,2,13.64,13.82,13.60,19.44,8.50,"7,747,579",DELTA APPAREL INC. COM
+DMC,<empty>,N/A,"instrument=DMC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,DOCUMENT SECURITIES SYSTEMS COM
+DMF,9.46,N/A,"instrument=DMF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.75%,"44,380",+.07,6.95,9.79,15,21,9.42,9.46,9.37,10.10,8.63,"20,723,399",DREYFUS MUN INCOME INC COM
+DNN,.4270,Range Bound,"instrument=DNN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.84%,"468,580",-.0125,.3900,.4680,12,62,.4518,.4518,.4185,.9900,.3500,"518,438,670",DENISON MINES CORP COM
+DPW,.52,N/A,"instrument=DPW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+4.00%,"1,806",+.02,.41,.65,1,18,.50,.52,.50,1.35,.4578,"6,775,971",DIGITAL POWER CORP COM
+DRJ,<empty>,N/A,"instrument=DRJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Dreams, Inc."
+DXR,7.4001,N/A,"instrument=DXR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.67%,334,-.0499,7.35,8.90,0,1,7.7388,7.7388,7.4001,9.1799,5.40,"3,896,284",DAXOR CORP COM
+EAD,7.33,N/A,"instrument=EAD
+trend=[null, RED, GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.68%,"204,310",-.05,7.11,7.33,2,1,7.37,7.39,7.33,9.088,6.95,"70,983,001",WELLS FARGO INCOME OPPORTUNITIES FUND
+EAG,<empty>,N/A,"instrument=EAG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,AMERICAN DEFENSE SYSTEMS INC COM
+EAR,<empty>,N/A,"instrument=EAR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"HearUSA, Inc. Common Stock"
+ECF,7.35,N/A,"instrument=ECF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.14%,"30,313",-.01,7.37,7.38,1,18,7.40,7.41,7.27,9.288,7.32,"12,798,717",ELLSWORTH GROWTH & INCOME FD L COM
+EGAS,8.25,Uptrend,"instrument=EGAS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.36%,"46,770",+.19,8.07,8.99,0,3,8.06,8.35,8.06,10.97,6.50,"10,504,734",GAS NATURAL INC COM
+EGI,.2006,Downtrend,"instrument=EGI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.00%,"130,063",-.0041,.1900,.3900,3,3,.2003,.2099,.2000,.5090,.0812,"147,093,420",ENTREE GOLD INC COM
+EGT,2.05,N/A,"instrument=EGT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.49%,"1,801",+.03,.01,199999.99,0,1,1.7801,2.089,1.7801,3.00,1.40,"14,464,220",ENTERTAINMENT GAMING ASIA INC COM
+EGX,<empty>,N/A,"instrument=EGX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ENGEX INC COM
+EIA,12.72,N/A,"instrument=EIA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.16%,"15,062",-.02,12.37,12.96,13,13,12.76,12.90,12.6301,13.69,11.74,"3,885,759",EATON VANCE CALI MUNI BD FD II COM
+EIM,13.13,N/A,"instrument=EIM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.31%,"107,572",+.04,12.76,13.37,20,25,13.10,13.16,13.07,13.35,11.93,"68,168,250",EATON VANCE MUN BOND CLOSED END FUND
+EIO,14.23,N/A,"instrument=EIO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.14%,"3,707",-.02,13.45,14.25,12,0,14.12,14.23,14.12,14.40,12.08,"2,536,999",EATON VANCE OH MUNI BOND FUND CLOSED-END FUND
+EIP,13.43,N/A,"instrument=EIP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.96%,"2,998",-.13,13.12,13.59,12,1,13.49,13.52,13.41,13.78,11.87,"2,960,040",EATON VANCE PA MUNI BOND FUND COM
+EIV,13.15,N/A,"instrument=EIV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.27%,"15,849",+.035,13.06,13.48,0,13,13.07,13.16,13.07,13.49,11.92,"10,013,381",EATON VANCE MUNICIPAL BD FD II COM
+ELC,<empty>,N/A,"instrument=ELC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,EASTERN LIGHT CAPITAL INC COM
+EMAN,1.80,Uptrend,"instrument=EMAN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.45%,"29,199",+.06,1.31,1.83,200,1,1.67,1.80,1.67,3.74,1.26,"25,517,121",EMAGIN CORPORATION COM
+EMI,13.06,N/A,"instrument=EMI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.15%,"5,200",-.02,12.90,13.36,13,13,13.01,13.0899,13.01,13.3412,12.26,"2,033,894",EATON VANCE MI MUNI INC TR COM
+EMJ,13.95,N/A,"instrument=EMJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.36%,"7,440",-.05,13.89,14.44,0,12,14.08,14.08,13.88,14.93,12.31,"2,578,988",EATON VANCE NJ MUNI BOND FUND COM
+EML,17.14,N/A,"instrument=EML
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.55%,"21,463",-.63,17.03,26.57,1,1,17.82,17.87,17.04,20.67,15.75,"6,246,412",EASTERN CO COM
+ENA,<empty>,N/A,"instrument=ENA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ENOVA SYSTEMS INC COM
+ENX,13.03,N/A,"instrument=ENX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.54%,"43,254",+.07,12.86,13.32,13,13,13.03,13.05,12.95,13.17,12.22,"15,658,585",EATON VANCE NEW YORK MUNICIPAL BOND FUND
+EPM,4.01,Downtrend,"instrument=EPM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.75%,"133,143",-.20,3.85,4.01,6,0,4.35,4.37,3.96,8.10,4.02,"32,670,342",EVOLUTION PETROLEUM CORP COM
+ERC,11.288,N/A,"instrument=ERC
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.98%,"83,401",-.112,11.12,11.74,1,1,11.37,11.37,11.25,13.77,10.53,"42,055,000",WELLS FARGO MULTI-SECTOR INCOME FUND
+ERH,11.44,N/A,"instrument=ERH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.09%,"14,841",+.01,11.35,12.00,8,10,11.43,11.45,11.36,14.00,10.30,"9,232,832",WELLS FARGO UTILITIES & HIGH INCOME FUND
+ESA,<empty>,N/A,"instrument=ESA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ENERGY SERVICES OF AMER CORP COM
+ESA/U,<empty>,N/A,"instrument=ESA/U
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ENERGY SERVICES OF AMER CORP UNITS
+ESA/WS,<empty>,N/A,"instrument=ESA/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ENERGY SERVICES OF AMER CORP WTS
+ESP,25.79,N/A,"instrument=ESP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.04%,311,-.01,25.50,25.80,2,3,25.80,25.80,25.79,31.50,21.93,"2,349,184",ESPEY MFG & ELECTRS CORP COM
+ETF,12.718,N/A,"instrument=ETF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,11.78,13.30,0,0,0,0,0,14.9599,12.02,"9,765,000",ABERDEEN EMRG MKTS SM CO OP FD COM
+EV,28.78,Range Bound,"instrument=EV
+trend=[null, GREEN, RED, GREEN, GREEN, RED, GREEN, null, null, null]
+headPointer=6
+separatorPointer=6
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",+1.05%,"1,325,219",+.30,28.61,28.77,2,1,28.72,29.02,28.13,44.18,28.175,"115,885,563",EATON VANCE CORP COM NON VTG
+EVBN,25.00,N/A,"instrument=EVBN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,31,0,25.00,25.97,2,9,0,0,0,26.10,22.75,"4,255,301",EVANS BANCORP INC COM
+EVI,4.08,N/A,"instrument=EVI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.00%,"2,733",+.08,3.62,4.08,2,1,4.00,4.08,4.00,5.65,2.17,"7,033,732",ENVIROSTAR INC COM
+EVJ,12.70,N/A,"instrument=EVJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.36%,"8,033",+.17,12.54,12.92,0,13,12.47,12.70,12.47,13.29,11.60,"4,644,158",EATON VANCE N.J. MUNI INCOME COM
+EVK,2.1235,N/A,"instrument=EVK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.45%,"13,840",-.1465,1.6700,2.1100,4,0,2.1200,2.1300,1.6200,6.9390,1.8300,"14,785,868",EVER-GLORY INTL GROUP INC COM
+EVM,12.28,N/A,"instrument=EVM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"40,586",0,11.34,12.50,10,19,12.32,12.33,12.22,12.41,11.12,"21,391,186",EATON VANCE CALI MUN BOND CLOSED END FUND
+EVO,14.09,N/A,"instrument=EVO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.64%,"19,169",-.382,14.08,14.41,0,1,14.02,14.27,14.02,15.18,13.09,"2,857,157",EATON VANCE OHIO MUNI INC CLOSED END
+EVP,12.13,N/A,"instrument=EVP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.49%,"1,563",-.0594,12.00,12.43,14,14,12.15,12.25,12.13,12.73,11.51,"2,652,114",EATON VANCE PA MUNICIPAL INC COM
+EVV,12.45,N/A,"instrument=EVV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.31%,"349,816",-.0383,10.46,12.85,1,1,12.52,12.57,12.41,14.69,11.00,"116,253,018",EATON VANCE LTD DURATION FD CLOSED-END FUND
+EVY,14.0399,N/A,"instrument=EVY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.66%,"5,014",+.0916,13.71,14.21,12,12,14.02,14.04,13.95,14.19,13.09,"5,475,356",EATON VANCE NY MUNI INCOME TRUST
+FAX,4.46,N/A,"instrument=FAX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.22%,"858,060",-.01,4.32,4.50,1,40,4.52,4.54,4.45,5.72,4.35,"267,407,930",ABERDEEN ASIA-PAC PRIME INC COM
+FCO,7.52,N/A,"instrument=FCO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.27%,"29,270",+.02,7.46,7.52,6,1,7.60,7.6029,7.50,9.84,7.39,"8,844,758",ABERDEEN GLOBAL INCOME FUND COM
+FEN,20.36,N/A,"instrument=FEN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.50%,"289,133",-.96,16.89,23.85,1,1,21.55,22.25,19.98,36.759,18.5577,"19,355,214",FIRST TRUST ENERGY I & G  FUND CLOSED-END FUND
+FFI,<empty>,N/A,"instrument=FFI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,FORTUNE INDUSTRIES INC COM
+FLL,1.50,N/A,"instrument=FLL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.83%,"33,725",-.11,1.46,1.72,1,2,1.6222,1.64,1.50,1.79,1.10,"18,969,396",FULL HOUSE RESORTS INC COM
+FOH,<empty>,N/A,"instrument=FOH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,FREDERCKS OF HOLLYWOOD GRP INC COM
+FPP,.610,N/A,"instrument=FPP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.17%,"1,953",-.02,.562,1.110,0,10,.580,.670,.580,2.500,.500,"8,880,101",FIELDPOINT PETROLEUM CORP COM
+FRD,4.90,N/A,"instrument=FRD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.20%,"9,009",-.11,4.90,9.88,0,1,4.99,4.99,4.89,6.9499,4.97,"6,799,444",FRIEDMAN INDS INC COM
+FRS,33.97,N/A,"instrument=FRS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,33.86,34.00,0,0,0,0,0,35.14,24.80,"5,132,000",FRISCHS RESTAURANTS INC CSH MRG $34.00/SH 8/25/15
+FSI,.9699,N/A,"instrument=FSI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"11,959",0,.9008,.9948,10,128,.9524,.9900,.9331,2.8600,.6600,"13,177,991",FLEXIBLE SOLUTIONS INTL INC COM
+FSP,10.00,Range Bound,"instrument=FSP
+trend=[null, RED, GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.86%,"374,303",-.19,8.29,11.63,1,10,10.24,10.43,9.92,13.60,9.445,"100,187,405",FRANKLIN STREET PPTYS CORP COM
+FTF,10.63,N/A,"instrument=FTF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.09%,"291,882",+.01,8.82,10.98,1,23,10.67,10.77,10.62,12.42,10.18,"26,835,650",FRANKLIN LTD DURTN INC TR REIT
+FWV,17.20,N/A,"instrument=FWV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,17.20,19.61,0,0,0,0,0,24.552,17.20,"1,728,730",FIRST WEST VIRGINIA BANCORP COM
+GBG,<empty>,N/A,"instrument=GBG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GREAT BASIN GOLD LTD CM
+GBR,.93,N/A,"instrument=GBR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.06%,"3,501",-.01,.50,1.91,15,1,.9896,.9896,.90,2.85,.94,"1,946,934",NEW CONCEPT ENERGY INC COM
+GGN,4.43,N/A,"instrument=GGN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.14%,"2,394,386",-.29,4.40,4.41,1,50,4.65,4.69,4.21,7.85,4.46,"112,728,260",GAMCO GLOBAL GOLD NTRL RES COM
+GGNpA,<empty>,N/A,"instrument=GGNpA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GAMCO GLOBAL GOLD NTRL RES 6.625% SER A PFD
+GGR,<empty>,N/A,"instrument=GGR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GEOGLOBAL RESOURCES INC COM
+GHM,15.03,Range Bound,"instrument=GHM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.94%,"90,274",+.14,11.27,15.08,10,0,14.99,15.17,14.53,26.35,14.47,"9,949,593",GRAHAM CORP COM
+GLA,<empty>,N/A,"instrument=GLA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GLOBAL LOGISTICS ACQUISITION
+GLO,10.05,N/A,"instrument=GLO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.20%,"282,700",+.02,9.65,10.18,25,25,10.00,10.11,9.94,12.86,9.905,"51,736,859",CLOUGH GLOBAL OPPORTUNITIES COM
+GLQ,11.68,N/A,"instrument=GLQ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.43%,"67,608",+.05,9.61,11.76,1,5,11.71,11.76,11.57,15.72,11.37,"17,653,305",CLOUGH GLOBAL EQUITY FUND COM
+GLU,15.5316,N/A,"instrument=GLU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.45%,"12,738",-.229,15.15,15.94,16,16,15.78,15.78,15.5212,19.7799,15.55,"4,111,411",GABELLI GLOBL UTIL & INCOME TR COM
+GLV,12.2999,N/A,"instrument=GLV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.41%,"81,178",+.0499,12.02,12.71,20,20,12.29,12.4399,12.12,15.6884,12.18,"10,392,606",CLOUGH GLOBAL ALLOCATION FUND COM
+GMO,.1912,Downtrend,"instrument=GMO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.97%,"100,316",-.0079,.0900,.2250,2,10,.2020,.2099,.1900,1.0000,.1900,"95,862,066",GENERAL MOLY INC COM
+GOK,<empty>,N/A,"instrument=GOK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GEOKINETICS INC COM
+GORO,1.25,Downtrend,"instrument=GORO
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-4.58%,"667,464",-.06,1.19,1.55,3,3,1.27,1.30,1.18,3.88,1.15,"54,179,369",GOLD RESOURCE CORPORATION COM
+GPL,.4674,Range Bound,"instrument=GPL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.61%,"445,515",-.0226,.4601,.5750,250,1,.4954,.4954,.4610,.7800,.3020,"141,712,610",GREAT PANTHER SILVER LTD ORD
+GPR,<empty>,N/A,"instrument=GPR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GEOPETRO RESOURCES COM
+GRC,23.56,Downtrend,"instrument=GRC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.93%,"34,304",-.22,22.77,34.25,4,15,24.07,24.09,23.36,32.60,18.14,"26,083,623",GORMAN RUPP CO COM
+GRF,7.03,N/A,"instrument=GRF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.44%,"1,499",+.10,6.98,7.10,5,1,7.059,7.059,7.02,8.64,6.78,"3,125,124",EAGLE CAPITAL GROWTH FUND INC COM
+GRH,.14,N/A,"instrument=GRH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"211,194",0,.08,.17,35,250,.147,.147,.12,1.04,.0601,"42,288,257",GREENHUNTER RESOURCES INC COM
+GRZ,<empty>,N/A,"instrument=GRZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GOLD RESERVE INC CL A
+GSB,3.83,Range Bound,"instrument=GSB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.59%,"12,273",+.06,3.80,3.90,25,1,3.85,3.9699,3.75,4.33,2.11,"21,318,967",GLOBALSCAPE COM
+GSS,.1630,Range Bound,"instrument=GSS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.12%,"625,169",-.007,.1530,.2400,900,100,.1605,.1700,.1559,.4192,.1370,"259,897,100",GOLDEN STAR RES LTD CM
+GST,1.08,Downtrend,"instrument=GST
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+12.49%,"1,506,696",+.1199,.85,1.14,2,10,1.09,1.10,.9201,3.79,.9365,"80,147,147",GASTAR EXPLORATION INC COM
+GSX,<empty>,N/A,"instrument=GSX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,GASCO ENERGY INC COM
+GTE,1.87,Downtrend,"instrument=GTE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.06%,"826,189",-.02,1.84,1.91,1,1,1.95,1.95,1.79,3.99,1.82,"283,096,110",GRAN TIERRA ENERGY INC COM
+GTU,38.95,N/A,"instrument=GTU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.64%,"40,697",-.25,35.59,42.37,1,1,39.04,39.11,38.69,46.7253,37.25,"19,299,000",CENTRAL GOLDTRUST CLOSED END FUND
+GV,1.3916,Downtrend,"instrument=GV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.06%,"45,773",-.0008,1.3100,1.4400,1,0,1.4320,1.4499,1.3900,2.8500,1.2000,"25,451,354",GOLDFIELD CORP COM
+GVP,2.27,N/A,"instrument=GVP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.89%,"1,254",+.02,1.89,2.71,1,1,2.28,2.31,2.25,2.5099,1.281,"17,897,859",GSE SYSTEMS  INC COM
+HBP,3.37,N/A,"instrument=HBP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.20%,"23,889",+.04,3.34,4.28,4,0,3.34,3.4545,3.33,4.12,2.81,"24,879,750",HUTTIG BUILDING PRODUCTS INC COM
+HDY,131.96,N/A,"instrument=HDY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,105.18,104.15,0,0,0,0,0,149.51,100.03,0,HYPERDYNAMICS CORP COM
+HEB,.0719,N/A,"instrument=HEB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.13%,"606,754",+.0008,.0590,.0980,20,100,.0740,.0759,.0658,.3300,.0604,"247,516,990",HEMISPHERX BIOPHARMA INC COM
+HH,.0616,N/A,"instrument=HH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.35%,"388,622",-.0028,.0500,.1100,21,3,.0600,.0660,.0560,.6300,.0526,"77,958,270",HOOPER HOLMES INC COM
+HKN,<empty>,N/A,"instrument=HKN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,HARKEN ENERGY CORPORATION 1:40 R/S 10/31/12 40420K707
+HLMp,30.90,N/A,"instrument=HLMp
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.15%,"3,747",+.65,30.20,30.90,1,2,30.55,30.90,30.20,33.45,25.50,0,HILLMAN GROUP CAP TRUST PFD 11.6% CALLABLE
+HMG,10.222,N/A,"instrument=HMG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.29%,508,-.348,8.00,10.35,1,0,10.32,10.32,10.09,14.57,10.07,"1,035,492",HMG COURTLAND PROPERTIES INC. COM
+HNB,<empty>,N/A,"instrument=HNB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Herald National Bank Common Stock
+HNW,14.20,N/A,"instrument=HNW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.35%,"46,096",-.05,14.00,14.70,3,17,14.36,14.36,14.09,17.64,13.31,"8,332,790",PIONEER DIVERSIFIED HIGH INC CLOSED END FUND
+HQS,<empty>,N/A,"instrument=HQS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,HQ SUSTAINABLE MARITIME IND NEW COM
+HRT,5.41,N/A,"instrument=HRT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,10,0,5.31,6.20,1,4,0,0,0,7.74,5.10,"2,792,539",ARRHYTHMIA RESH TECHNOLOGY INC CM PR $.01 NEW
+HTM,.6000,N/A,"instrument=HTM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.23%,"174,489",-.02,.5450,.7500,2,20,.6190,.6190,.5900,.7000,.4306,"107,601,425",U.S. GEOTHERMAL INC COM
+HUSA,.1602,Downtrend,"instrument=HUSA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.67%,"70,231",-.0044,.1600,.2200,10,75,.1610,.1738,.1602,.2700,.1501,"52,169,945",HOUSTON AMERICA COM
+HWG,<empty>,N/A,"instrument=HWG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,HALLWOOD GROUP INC CSH MRG $12.39/SHR 5/19/14
+IAF,4.99,N/A,"instrument=IAF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.83%,"128,832",+.041,4.64,5.23,1,3,5.03,5.04,4.94,7.50,4.80,"22,874,020",FIRST ABERDEEN AUSTRALIA EQTY CLOSED END FUND
+IBIO,.4800,N/A,"instrument=IBIO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.88%,"229,730",-.03,.2500,.5425,11,85,.5000,.5298,.4600,1.3200,.4000,"77,325,410",IBIO INC COM
+ICH,0,N/A,"instrument=ICH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,"7,238,000",INVESTORS CAP HLDGS LTD .3334:1 EXC 7/14/14 74937W102
+IDI,5.50,N/A,"instrument=IDI
+trend=[null, GREEN, RED, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.79%,"111,123",-.10,5.54,6.24,3,2,6.00,6.00,5.50,12.80,4.95,"15,603,286",IDI INC COM
+IDI.UN,<empty>,N/A,"instrument=IDI.UN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SEARCHMEDIA HOLDINGS LTD
+IDN,1.19,N/A,"instrument=IDN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+5.31%,"54,342",+.06,1.13,1.80,0,100,1.10,1.19,1.07,1.85,.75,"9,878,906",INTELLICHECK MOBILISA INC COM
+IEC,3.18,N/A,"instrument=IEC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.25%,"37,078",+.07,3.16,3.62,0,9,3.11,3.24,3.11,4.78,2.59,"10,201,740",IEC ELECTRS CORP COM NEW
+IF,5.39,N/A,"instrument=IF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.08%,"21,245",+.11,5.16,7.00,1,1,5.43,5.50,5.33,8.361,5.14,"9,485,247",ABERDEEN INDONESIA FUND COM
+IG,7.68,Range Bound,"instrument=IG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,6.29,8.49,0,0,0,0,0,12.05,4.75,"52,863,453",IGI LABORATORIES N/C 10/26/15 87960W104
+IGC,.2468,N/A,"instrument=IGC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.83%,"12,378",+.0068,.2250,.2900,934,3,.2300,.2468,.2268,.7399,.0001,"16,340,243",INDIA GLOBALIZATION CAPITAL COM
+IGC/U,<empty>,N/A,"instrument=IGC/U
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,INDIA GLOBALIZATION CAPITAL UNITS
+IGC/WS,.0018,N/A,"instrument=IGC/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+20.00%,"8,501",+.0003,.0001,.0034,"1,000",0,.0016,.0028,.0016,.0188,.0002,0,INDIA GLOBALIZATION CAPITAL WARRANT
+IHT,2.57,N/A,"instrument=IHT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+4.90%,"3,983",+.12,2.53,2.62,1,10,2.45,2.65,2.45,3.32,1.85,"9,455,613",INNSUITES HOSPITALITY TRUST COM
+IIG,<empty>,N/A,"instrument=IIG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Imergent, Inc. Common Stock"
+IMH,15.65,Downtrend,"instrument=IMH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.76%,"61,421",+.27,12.85,18.46,1,1,15.46,15.7881,14.80,29.85,7.54,"10,322,602",IMPAC MORTGAGE HOLDINGS COM
+IMO,29.10,Range Bound,"instrument=IMO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.41%,"735,817",+.12,24.16,34.09,1,1,29.29,29.42,28.05,45.60,28.66,"847,599,010",IMPERIAL OIL LTD COM
+INFU,3.05,N/A,"instrument=INFU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.69%,"23,865",+.08,2.78,4.34,1,1,2.95,3.10,2.92,3.42,2.22,"22,514,484",INFUSYSTEMS HOLDINGS INC COM
+INO,5.54,Downtrend,"instrument=INO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.55%,"1,747,533",+.19,5.35,5.60,2,10,5.40,5.81,5.33,10.83,5.21,"72,183,247",INOVIO PHARMACEUTICALS INC COM
+INS,3.06,N/A,"instrument=INS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,1,0,3.06,3.25,7,1,0,0,0,3.50,1.63,"8,731,299",INTELLIGENT SYS CORP COM
+INUV,2.30,N/A,"instrument=INUV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.29%,"92,283",-.03,2.21,2.69,5,4,2.38,2.39,2.23,3.57,1.04,"24,375,881",INUVO INC COM
+INV,<empty>,N/A,"instrument=INV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,INNOVARO INC COM
+IOT,7.40,N/A,"instrument=IOT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.82%,"7,313",+.06,6.90,7.58,1,3,7.499,7.51,7.40,9.00,5.6326,"4,168,214",INC OPPT RLTY INVS COM
+IPB,26.4709,N/A,"instrument=IPB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.45%,480,+.1193,26.36,27.00,2,0,26.363,26.4709,26.363,29.7799,25.85,"1,500,000",INDEXPLUS TRUST 2003-1 PFD NONCALLABLE SER 03-1
+IPT,<empty>,N/A,"instrument=IPT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,IPARTY CORP CSH MGR $0.45/SH 05/10/2013
+ISL,16.82,N/A,"instrument=ISL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.94%,781,-.16,16.80,23.42,0,6,16.95,16.95,16.8001,20.59,14.031,"4,037,605",ABERDEEN ISRAEL FUND INC COM
+ISR,.6329,N/A,"instrument=ISR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.75%,"681,767",+.0229,.5550,.6700,20,16,.6500,.7078,.6000,3.7900,.6008,"55,013,553",ISORAY INC COM
+ITI,2.30,N/A,"instrument=ITI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"24,544",0,2.29,3.01,0,1,2.32,2.38,2.2646,2.96,1.60,"31,974,059",ITERIS INC COM
+IVD,<empty>,N/A,"instrument=IVD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,IVAX DIAGNOSTICS INC NAME CHANGE 6/18/12 29490B101
+JFP,<empty>,N/A,"instrument=JFP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Tax-Advantaged Floating Rate Fund Nuveen Tax-Advantaged Floating Rate Fund Shares of Beneficial Interest
+JOB,5.1301,N/A,"instrument=JOB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.04%,"15,079",-.3299,4.10,5.28,5,0,5.54,5.54,5.11,13.30,3.60,"9,256,311",GENERAL EMPLOYMENT ENTERPRIS COM
+JRS,10.25,N/A,"instrument=JRS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.16%,"67,854",-.12,10.17,10.35,1,1,10.38,10.418,10.19,12.30,9.82,"28,892,471",NUVEEN REAL ESTATE FUND COM
+KAD,<empty>,N/A,"instrument=KAD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ARCADIA RESOURCES INC COM
+KAZ,<empty>,N/A,"instrument=KAZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BMB MUNAI INC COM
+KBX,<empty>,N/A,"instrument=KBX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,KIMBER RESOURCES INC COM
+KGN,<empty>,N/A,"instrument=KGN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,KEEGAN RESOURCES INC N/C 3/01/13 04341Y105
+KOG,112.39,Range Bound,"instrument=KOG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,146.42,109.30,0,0,0,0,0,149.51,100.03,0,KODIAK OIL & GAS CORP. .177:1 EXC 12/8/14 966387102
+KRY,<empty>,N/A,"instrument=KRY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CRYSTALLEX INTL
+KUN,<empty>,N/A,"instrument=KUN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CHINA SHENGHUO PHARMCEUTICA COM
+KXM,<empty>,N/A,"instrument=KXM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,KOBEX MINERALS INC COM
+LAQ,13.87,N/A,"instrument=LAQ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.77%,"15,417",-.25,13.92,14.31,2,1,14.35,14.35,13.80,23.12,14.10,"7,448,517",ABERDEEN LATIN AMER EQUITY FND COM
+LB,95.12,Range Bound,"instrument=LB
+trend=[null, GREEN, GREEN, RED, GREEN, null, null, null, null, null]
+headPointer=4
+separatorPointer=4
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",+2.26%,"1,936,727",+2.10,94.71,95.08,1,1,94.23,96.80,93.95,101.11,75.11,"289,434,390",L BRANDS INC COM
+LBY,19.50,Downtrend,"instrument=LBY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.41%,"167,603",-.08,19.40,28.38,1,1,19.64,19.69,19.077,42.04,19.30,"21,843,851",LIBBEY INC COM
+LCI,35.68,Downtrend,"instrument=LCI
+trend=[RED, RED_OVER_GREEN, RED, RED_OVER_GREEN, RED, RED, GREEN, RED_OVER_GREEN, RED, RED]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",+1.45%,"680,950",+.51,35.36,36.40,1,1,35.57,36.50,34.13,72.44,33.1301,"36,527,543",LANNETT CO INC COM
+LEI,4.34,Uptrend,"instrument=LEI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+5.34%,"159,123",+.22,3.67,5.45,2,5,4.10,4.80,4.09,11.25,1.23,"1,465,238",LUCAS ENERGY INC COM
+LGL,3.6441,N/A,"instrument=LGL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.01%,400,-.0002,3.43,5.99,2,1,3.5302,3.6441,3.5302,5.47,3.4199,"2,652,779",LGL GROUP INC COM
+LNG,33.47,Range Bound,"instrument=LNG
+trend=[GREEN, GREEN, GREEN, GREEN, RED, GREEN, GREEN, GREEN, RED, GREEN]
+headPointer=5
+separatorPointer=-1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.95%,"4,637,517",-.32,31.37,33.46,3,1,34.06,34.35,32.83,82.3199,33.30,"236,032,660",CHENIERE ENERGY INC COM
+LOV,3.75,Range Bound,"instrument=LOV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"111,093",0,3.67,5.46,0,2,3.78,3.8187,3.61,5.10,2.7604,"25,690,893",SPARK NETWORKS INC COM
+LPH,<empty>,N/A,"instrument=LPH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,LONGWEI PETROLEUM INVSTMTS HLD COM
+LTS,2.3800,N/A,"instrument=LTS
+trend=[null, RED, GREEN, RED, GREEN, RED, null, null, null, null]
+headPointer=5
+separatorPointer=5
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.65%,"195,799",-.04,2.3500,2.7800,1,1,2.4500,2.4600,2.3500,4.0500,1.8000,"183,220,170",LADENBURG THALMANN FINANCIAL COM
+MAB,14.7101,N/A,"instrument=MAB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.14%,"9,956",-.1698,14.00,14.85,14,0,14.80,14.84,14.6967,15.20,13.40,"1,768,514",EATON VANCE MASS MUNI BOND FD COM
+MBA,<empty>,N/A,"instrument=MBA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CIBT EDUCATION GROUP INC COM
+MBR,<empty>,N/A,"instrument=MBR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,MERCANTILE BANCORP-QUINCEY COM
+MCF,4.11,Downtrend,"instrument=MCF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.96%,"138,324",-.04,4.10,45.00,0,10,4.27,4.32,3.96,33.17,3.89,"19,403,080",CONTANGO OIL & GAS CO COM
+MCZ,.3896,N/A,"instrument=MCZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.55%,"178,537",-.0102,.3755,.4800,90,26,.3901,.4079,.3751,.7500,.3500,"73,469,571",MAD CATZ INTERACTIVE INC COM
+MDF,<empty>,N/A,"instrument=MDF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,METROPOLITAN HEALTH NETWORK CASH MERGER $11.25/SH 12/24/12
+MDGN,4.25,Downtrend,"instrument=MDGN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.71%,"320,529",+.03,4.24,10.00,0,2,4.22,4.4988,3.90,10.25,4.05,"32,860,716",MEDGENICS INC COM
+MDGN/WS,.80,N/A,"instrument=MDGN/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,200,0,.50,1.40,0,19,.71,.80,.71,4.40,.6506,0,MEDGENICS INC WARRANTS 03/31/16
+MDM,2.71,N/A,"instrument=MDM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"65,099",0,2.64,3.16,2,1,2.73,2.768,2.66,4.40,2.47,"159,678,830",MOUNTAIN PROVINCE DIAMONDS COM
+MDW,.0350,N/A,"instrument=MDW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0400,.0450,0,0,0,0,0,0,0,0,MIDWAY GOLD CORP COM
+MEA,117.54,Range Bound,"instrument=MEA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,118.57,101.06,0,0,0,0,0,149.51,100.03,0,METALICO INC CSH MRG $0.60/SH 9/14/15
+MFN,<empty>,N/A,"instrument=MFN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,MineFinders Corp. Ltd. Ordinary Shares
+MGH,.1300,N/A,"instrument=MGH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-10.28%,"115,240",-.0149,.1030,.2390,78,6,.1400,.1499,.1300,.3244,.0985,"50,561,381",MINCO GOLD CORP COM
+MGN,.3800,N/A,"instrument=MGN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.00%,"28,794",-.02,.0001,.5100,"1,000",2,.4000,.4044,.3800,.7400,.1120,"29,814,040",MINES MGT INC COM
+MGT,.2600,N/A,"instrument=MGT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+4.00%,"19,532",+.01,.1900,.4000,3,5,.2348,.2716,.2200,1.0000,.1764,"17,199,665",MGT CAPITAL INVESTMENTS INC COM
+MHE,13.47,N/A,"instrument=MHE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.52%,"19,987",-.07,13.44,14.56,0,8,13.51,13.6014,13.47,15.194,12.84,"2,365,804",BLACKROCK MASS TAX EXEMPT TR COM
+MHH,7.3101,N/A,"instrument=MHH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,2,0,7.12,7.70,1,1,0,0,0,11.50,5.30,"4,353,189",MASTECH HOLDINGS INC COM
+MHRpC,2.07,N/A,"instrument=MHRpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,2.03,2.19,0,0,0,0,0,25.58,2.06,0,MAGNUM HUNTER RESOURCES CORP PFD 10.25% SERIES C
+MHRpD,1.76,N/A,"instrument=MHRpD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,1.62,2.55,0,0,0,0,0,44.45,1.24,0,MAGNUM HUNTER RESOURCES CORP PFD STOCK
+MIW,13.70,N/A,"instrument=MIW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.36%,"4,399",-.05,13.47,14.20,12,12,13.83,13.84,13.63,14.41,13.00,"1,500,065",EATON VANCE MI MUNI BD FUND COM
+MMG,<empty>,N/A,"instrument=MMG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Metalline Mining Company Common Stock
+MMV,14.10,N/A,"instrument=MMV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.84%,"3,864",+.1172,13.86,14.15,12,0,14.0243,14.12,13.98,14.86,13.19,"2,737,021",EATON VANCE MA MUNI INC COM
+MOC,2.44,N/A,"instrument=MOC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.09%,"4,479",+.0499,2.28,3.93,2,10,2.3729,2.45,2.36,3.14,1.34,"9,792,618",COMMAND SEC CORP COM
+MSL,8.00,N/A,"instrument=MSL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.96%,"53,698",-.16,7.05,11.45,4,1,8.21,8.27,7.95,16.31,8.00,"11,362,149",MIDSOUTH BANCORP INC COM
+MSN,1.050,N/A,"instrument=MSN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"7,133",0,.911,1.080,2,1,1.080,1.080,1.020,1.460,.8199,"27,129,832",EMERSON RADIO CORP CM NEW
+MVF,10.34,N/A,"instrument=MVF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"102,891",0,10.24,10.69,30,30,10.33,10.38,10.2904,10.59,9.20,"64,042,503",BLACKROCK MUNIVEST FUND INC COM
+MVG,6.71,Range Bound,"instrument=MVG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.67%,"38,624",+.11,5.96,7.88,2,1,6.60,6.73,6.48,9.20,5.57,"69,374,241",MAG SILVER CORP COM
+MXA,<empty>,N/A,"instrument=MXA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,MINNESOTA MUN INCOME PTFL IN EXC 1:1 10/6/14 670734102
+MXC,1.57,N/A,"instrument=MXC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-30.22%,"11,973",-.68,1.55,4.50,0,10,2.0999,2.0999,1.41,6.15,1.64,"2,037,266",MEXCO ENERGY CORP COM
+MXN,<empty>,N/A,"instrument=MXN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,FIRST AMERN MINN EXC 0.96710017:1 10/06/14
+MZA,16.40,N/A,"instrument=MZA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.18%,"6,866",-.03,16.24,17.19,10,10,16.42,16.42,16.315,17.76,15.56,"4,600,792",BLACKROCK MUNIYIELD ARIZONA FD COM
+NAK,.2903,Range Bound,"instrument=NAK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.46%,"83,214",+.0097,.2500,.3300,2,5,.3000,.3000,.2800,.7150,.2800,"130,972,599",NORTHERN DYNASTY MINERALS COM
+NBH,15.95,N/A,"instrument=NBH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.82%,"34,924",+.13,15.89,16.14,0,14,15.88,15.95,15.76,16.29,14.52,"18,766,000",NEUBERGER BERMAN INTMDT FUND COM
+NBJ,<empty>,N/A,"instrument=NBJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN .90047:1 EXC 4/8/13 670980101
+NBO,14.19,N/A,"instrument=NBO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.70%,"8,033",-.10,14.07,14.57,12,5,14.40,14.61,14.14,14.76,13.34,"5,076,000",NEUBERGER BERMAN NY INT MUNI FD
+NBS,142.30,N/A,"instrument=NBS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,132.00,125.78,0,0,0,0,0,149.51,100.03,0,"NEOSTEM, INC N/C 6/8/15 128058104"
+NBS/WS,<empty>,N/A,"instrument=NBS/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"NeoStem, Inc. Warrants"
+NBW,15.65,N/A,"instrument=NBW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.38%,"16,324",-.06,15.65,16.28,0,11,15.79,15.86,15.56,17.29,13.88,"5,542,000",NEUBERGER BERMAN CA INT MUNI CLOSED-END FUND
+NBY,2.3723,N/A,"instrument=NBY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.95%,"24,392",+.0223,2.0000,2.4000,10,2,2.3500,2.5100,2.3290,26.2500,1.6250,"3,483,489",NOVABAY PHARMACUETICAL INC COM
+NCB,16.84,N/A,"instrument=NCB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.59%,"6,243",-.10,16.83,17.32,0,10,16.95,16.95,16.81,17.65,15.84,"3,287,900",NUVEEN CALIF MUNI VALUE FUND
+NCU,<empty>,N/A,"instrument=NCU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN CALIF PREMIUM MUNI 1.02299:1 EXC 6/9/14 670651108
+NEA,13.93,N/A,"instrument=NEA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.22%,"115,912",+.03,13.66,14.05,24,5,13.91,13.95,13.89,14.3601,12.61,"78,883,061",NUVEEN AMT FREE MUNI INCOME FD COM
+NEN,50.00,N/A,"instrument=NEN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.53%,"1,290",-.2662,48.00,50.45,1,0,50.25,50.43,50.00,51.75,46.00,"3,768,757",NEW ENGLAND REALTY ASSN LP
+NEOP,<empty>,N/A,"instrument=NEOP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NEOPROBE CORP N/C 1/5/12 63937X103
+NEP,28.66,Range Bound,"instrument=NEP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.39%,"465,835",+.11,23.78,30.89,1,2,28.80,29.51,28.66,48.2341,19.34,"29,668,745",NEXTERA ENERGY PARTNERS COM
+NEWN,.0003,N/A,"instrument=NEWN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,<empty>,<empty>,<empty>,<empty>,0,0,0,.0390,.0003,"14,711,731",NEW ENERGY SYSTEMS GROUP COM
+NFC,<empty>,N/A,"instrument=NFC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Connecticut Dividend Advantage Municipal Fund Common Shares of Beneficial Interest
+NFM,<empty>,N/A,"instrument=NFM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+NFZ,<empty>,N/A,"instrument=NFZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN ARIZONA 1.0023:1 EXC 4/8/13 67061W104
+NFZpC,<empty>,N/A,"instrument=NFZpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN ARIZONA 1:1 EXC 4/8/13 67061W401
+NG,3.95,Range Bound,"instrument=NG
+trend=[null, GREEN, RED, null, null, null, null, null, null, null]
+headPointer=2
+separatorPointer=2
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-2.23%,"1,863,495",-.09,3.87,3.99,1,6,3.99,4.01,3.83,4.595,2.65,"317,906,680",NOVAGOLD RESOURCES INC COM
+NGB,<empty>,N/A,"instrument=NGB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+NGD,2.14,Range Bound,"instrument=NGD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.17%,"7,865,709",-.07,2.12,2.19,4,100,2.16,2.20,2.07,4.92,1.90,"509,164,910",NEW GOLD INC COM
+NGK,<empty>,N/A,"instrument=NGK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Connecticut Dividend Advantage Municipal Fund 2 Common Shares of Beneficial Interest
+NGO,<empty>,N/A,"instrument=NGO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Nuveen Connecticut Dividend Advantage Municipal Fund 3 It is a newly organized, non-diversified, closed-end management investment company registered under the 1"
+NGX,<empty>,N/A,"instrument=NGX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN MA AMT FREE MUNI INC FD .960937:1 EXC 6/9/14 67061E10
+NHC,61.10,Range Bound,"instrument=NHC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.59%,"34,990",-.36,59.78,61.10,1,0,61.76,61.98,60.23,69.40,58.98,"14,906,032",NATIONAL HEALTHCARE CORP COM
+NHCpA,15.52,N/A,"instrument=NHCpA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,15.60,16.61,0,0,0,0,0,16.19,15.00,"10,837,000",NATIONAL HEALTHCARE CORP COM
+NHS,9.95,N/A,"instrument=NHS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.40%,"119,791",-.04,8.18,10.05,1,25,10.02,10.0201,9.83,12.82,9.31,"19,540,584",NEUBERGER BERMAN HIGH YIELD STRATEGIES FUND INC
+NI,19.54,Range Bound,"instrument=NI
+trend=[GREEN, GREEN, RED, GREEN, RED, GREEN, GREEN, GREEN, RED, GREEN]
+headPointer=6
+separatorPointer=-1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.26%,"2,405,275",-.25,19.47,19.54,2,1,19.82,19.90,19.46,20.125,16.035,"318,671,280",NISOURCE INC COM
+NII,<empty>,N/A,"instrument=NII
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Nuveen North Carolina Dividend Advantage Municipal Fund 3 It is a newly organized, non-diversified, closed-end management investment company registered under th"
+NIV,0,N/A,"instrument=NIV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,NIVS INTELLIMEDIA TECH GRP COM
+NJV,14.69,N/A,"instrument=NJV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.69%,"4,945",+.10,14.00,14.80,2,1,14.47,14.69,14.45,15.23,13.70,"1,550,036",NUVEEN NJ MUNI FUND
+NKG,13.4399,N/A,"instrument=NKG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.30%,"13,439",+.0399,13.40,13.60,0,5,13.46,13.52,13.38,13.60,12.54,"10,548,790",NUVEEN GA DIV ADV MUN FUND 2 COM
+NKL,<empty>,N/A,"instrument=NKL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Insured California Dividend Advantage Municipal Fund Common Shares of Beneifical Interest
+NKO,<empty>,N/A,"instrument=NKO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN NEW YORK DIVIDEND ADV 1.0318:1 EXC 3/11/13 670656107
+NKR,<empty>,N/A,"instrument=NKR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN AZ DIV ADVTG MUNI FD 2 1.0227:1 EXC 4/8/13 67061W104
+NKX,15.50,N/A,"instrument=NKX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.32%,"88,369",+.05,15.21,18.15,20,1,15.42,15.51,15.41,15.58,13.899,"47,708,456",NUVEEN INS CALIFORNIA AMT FREE CLOSED END
+NLP,<empty>,N/A,"instrument=NLP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NTS REALTY HOLDINGS CSH MRG $8.683/SH 6/11/14
+NMB,<empty>,N/A,"instrument=NMB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN MASS DIV ADV MUNI FD .991414:1 EXC 6/9/14 67061E104
+NMBpC,<empty>,N/A,"instrument=NMBpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN MASS DIV ADV MUNI FD 1:1 EXC 6/9/14 67061E609
+NMZ,13.94,N/A,"instrument=NMZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.36%,"144,779",+.05,13.81,14.03,3,4,13.94,13.95,13.88,14.19,12.87,"50,084,682",NUVEEN MUNI HIGH INCOME OPP CLOSEDEND
+NNB,<empty>,N/A,"instrument=NNB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+NNO,<empty>,N/A,"instrument=NNO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen North Carolina Dividend Advantage Municipal Fund 2 Common Shares of Beneficial Interest
+NOG,3.05,Downtrend,"instrument=NOG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-7.85%,"1,457,621",-.26,2.27,3.36,14,10,3.44,3.44,2.91,9.51,3.18,"62,960,639",NORTHERN OIL AND GAS INC COM
+NOM,15.51,N/A,"instrument=NOM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.06%,"8,688",+.01,15.45,15.55,10,3,15.50,15.528,15.424,17.07,14.12,"2,333,861",NUVEEN MO PREM INCOME MUN FD SH BEN INT
+NPG,<empty>,N/A,"instrument=NPG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Georgia Premium Income Municipal Fund Common Shares of Beneficial Interest
+NPN,15.18,N/A,"instrument=NPN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.46%,"2,600",-.07,14.92,15.46,11,10,15.24,15.24,15.18,16.81,14.51,"1,219,352",NUVEEN PA MUNI VALUE FUND
+NRB,<empty>,N/A,"instrument=NRB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen North Carolina Dividend Advantage Municipal Fund Common Shares of Beneficial Interest
+NRK,13.00,N/A,"instrument=NRK
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, null]
+headPointer=8
+separatorPointer=8
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.08%,"191,474",-.01,12.87,13.09,1,1,13.00,13.05,12.97,13.62,12.40,"87,618,504",NUVEEN NEW YORK AMT FREE MUNICIPAL INCOME FUND
+NRO,4.81,N/A,"instrument=NRO
+trend=[null, RED, GREEN, RED, GREEN, RED, GREEN, RED, GREEN, null]
+headPointer=8
+separatorPointer=8
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-0.82%,"228,943",-.04,4.51,4.89,1,1,4.87,4.9126,4.81,5.67,4.12,"55,787,846",NEUBERGER BERMAN REAL ESTATE COM
+NSU,2.45,Range Bound,"instrument=NSU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.24%,"164,752",+.03,2.45,2.46,3,10,2.42,2.4601,2.38,4.36,2.41,"199,781,470",NEVSUN RES LTD COM
+NTN,.165,N/A,"instrument=NTN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.88%,"176,260",-.0049,.150,.170,36,36,.1651,.1725,.145,.590,.1303,"92,412,255",NTN BUZZTIME INC COM
+NUJ,<empty>,N/A,"instrument=NUJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN NJ DIV ADV MUN FD .9819:1 EXC 11/10/14 67069Y102
+NVG,14.78,N/A,"instrument=NVG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.48%,"30,626",+.07,14.36,14.88,16,16,14.75,14.78,14.74,14.83,13.50,"26,646,630",NUVEEN DIVIDEND ADVANTAGE MUNI INCOME FUND
+NVJ,<empty>,N/A,"instrument=NVJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN OH DVD ADV MUNI FD 3 .91738:1 EXC 4/8/13 670980101
+NVX,15.48,N/A,"instrument=NVX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.45%,"23,023",+.07,15.38,16.08,0,14,15.46,15.49,15.37,15.73,13.46,"14,759,237",NUVEEN CALIF DIVID ADVANTAGE MUNI FUND 2
+NVY,<empty>,N/A,"instrument=NVY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN PA DIVID ADVANTAGE .9723462 EXC 2/10/14 670972108
+NWD,<empty>,N/A,"instrument=NWD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,New Dragon Asia Corporation Class A Common Stock
+NWI,<empty>,N/A,"instrument=NWI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+NXE,<empty>,N/A,"instrument=NXE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN ARIZONA DIV MUN .9915:1 EXC 4/8/13 67061W104
+NXG,<empty>,N/A,"instrument=NXG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NORTHGATE MINERALS CORP
+NXI,<empty>,N/A,"instrument=NXI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN .92165:1 EXC 4/8/13 670980101
+NXIpD,<empty>,N/A,"instrument=NXIpD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Ohio Dividend Advantage Municipal Fund Term Preferred Shares Series 2016
+NXJ,13.59,N/A,"instrument=NXJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.22%,"45,500",+.03,13.34,13.82,23,23,13.57,13.59,13.51,14.16,12.53,"42,623,879",NUVEEN NJ DIV ADV MUNI FD
+NXK,0,N/A,"instrument=NXK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,12.86,13.77,0,0,0,0,0,0,0,"6,483,000",NUVEEN .978148:1 EXC 6/8/15 67066X107
+NXM,<empty>,N/A,"instrument=NXM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEEN .9840506 EXC 2/10/14 670972108
+NXZ,14.37,N/A,"instrument=NXZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.28%,"53,685",+.04,11.91,14.45,1,10,14.34,14.39,14.3275,14.76,13.22,"29,453,512",NUVEEN DVD ADV FD 2 MUNI FUND
+NYH,12.51,N/A,"instrument=NYH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.16%,"6,156",+.02,12.26,12.71,13,13,12.44,12.54,12.40,12.70,11.48,"2,556,041",EATON VANCE NY MUNI BD FUND II COM
+NYV,15.12,N/A,"instrument=NYV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.85%,"4,432",-.13,15.08,15.61,0,11,15.39,15.39,15.08,15.77,14.17,"2,349,612",NUVEEN NY MUNI VALUE FUND
+NZF,14.54,N/A,"instrument=NZF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.14%,"114,158",+.02,13.65,14.67,15,19,14.52,14.54,14.4501,14.64,13.24,"36,312,525",NUVEEN DIV ADV MUN FD 3
+NZH,14.23,N/A,"instrument=NZH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.07%,"38,815",+.01,14.10,14.53,10,16,14.28,14.29,14.18,14.44,12.61,"24,151,884",NUVEEN CAL DIV ADV MUN FD 3 COM
+NZR,<empty>,N/A,"instrument=NZR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+NZW,<empty>,N/A,"instrument=NZW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEENMICHIGAN DIV ADV MUNI FD .95647:1 EXC 1/7/13 670979103
+NZWpC,<empty>,N/A,"instrument=NZWpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,NUVEENMICHIGAN DIV ADV MUNI FD 1:1 EXC 1/7/13 670979608
+NZX,<empty>,N/A,"instrument=NZX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Georgia Dividend Advantage Municipal Fund Common Shares of Beneficial Interest
+NZXpC,<empty>,N/A,"instrument=NZXpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Nuveen Georgia Dividend Advantage Municipal Fund Munifund Term Pfd Shares Series 2015
+OESX,2.00,Range Bound,"instrument=OESX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"33,486",0,1.66,2.37,1,1,1.99,2.02,1.99,5.13,1.58,"27,649,576",ORION ENERGY SYSTEMS INC COM
+OFI,<empty>,N/A,"instrument=OFI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,OVERHILL FARMS INC COM
+ONP,1.33,Downtrend,"instrument=ONP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+6.40%,"1,957",+.08,1.30,1.90,0,7,1.35,1.439,1.33,2.30,.85,"20,316,400",ORIENT PAPER INC COM
+ONVO,2.01,Downtrend,"instrument=ONVO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.95%,"909,486",-.04,1.95,2.04,25,100,2.05,2.17,1.95,7.10,1.90,"92,413,710",ORGANOVO HOLDINGS INC COM
+OPK,8.73,Downtrend,"instrument=OPK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.51%,"5,026,252",+.13,8.66,8.72,2,1,8.63,8.87,8.31,19.20,8.20,"545,011,750",OPKO HEALTH INC COM
+ORS,<empty>,N/A,"instrument=ORS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ORSUS XELENT TECHNOLOGIES INC COM
+PAL,135.0900,N/A,"instrument=PAL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,112.3900,105.1800,0,0,0,0,0,149.5100,100.0300,0,NORTH AMERICAN PALLADIUM LTD COM
+PBM,1.55,N/A,"instrument=PBM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+4.73%,253,+.07,1.48,1.60,1,5,1.55,1.55,1.55,5.76,1.04,"12,641,339",PACIFIC BOOKER MINERALS INC COM
+PBTH,<empty>,N/A,"instrument=PBTH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PROLOR BIOTECH INC .9951:1 EXC 8/30/13 68375N103
+PCC,<empty>,N/A,"instrument=PCC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PMC COML TR SH BEN INT
+PCE,<empty>,N/A,"instrument=PCE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PACIFIC OFFICE PROPERTIES TR COM
+PCGpA,30.84,N/A,"instrument=PCGpA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+5.40%,"1,183",+1.5799,29.10,30.84,1,1,29.48,30.84,29.0101,31.40,27.5392,0,PACIFIC GAS & ELEC CO PFD 6% SER A PERPETUAL
+PCGpB,27.35,N/A,"instrument=PCGpB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,27.21,27.68,3,1,0,0,0,28.99,25.6501,0,PACIFIC GAS & ELEC CO PFD 5.5% SER B PERPETUAL
+PCGpC,25.28,N/A,"instrument=PCGpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.38%,716,-.6158,24.41,25.94,1,0,25.30,25.31,25.28,27.78,24.05,0,PACIFIC GAS & ELEC CO PFD 5% SER C PERPETUAL
+PCGpD,24.90,N/A,"instrument=PCGpD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.97%,505,+.24,24.90,25.04,2,1,24.90,24.90,24.90,27.49,23.21,0,PACIFIC GAS & ELEC CO PFD 5% SER D CALLABLE
+PCGpE,24.92,N/A,"instrument=PCGpE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.87%,"2,460",+.215,24.71,25.20,1,7,24.78,24.9201,24.775,28.99,23.36,0,PACIFIC GAS & ELEC CO PFD 5% SER E CALLABLE
+PCGpG,24.2901,N/A,"instrument=PCGpG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.60%,"1,674",-1.1699,24.29,26.80,1,1,25.00,25.25,24.2901,28.60,22.711,0,PACIFIC GAS & ELEC CO PFD 4.8% SER G CALLABLE
+PCGpH,24.11,N/A,"instrument=PCGpH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.37%,"1,641",-.09,20.06,24.11,1,0,23.95,24.45,23.95,25.01,21.25,0,PACIFIC GAS & ELEC CO PFD 4.5% SER H CALLABLE
+PCGpI,23.50,N/A,"instrument=PCGpI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,23.26,24.14,2,7,0,0,0,24.9199,21.55,0,PACIFIC GAS & ELEC CO PFD 4.36% SER I CALLABLE
+PCYG,9.63,Downtrend,"instrument=PCYG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.27%,"60,003",-.43,7.27,12.47,0,1,10.12,10.26,9.52,14.87,8.59,"19,154,719",PARK CITY GROUP INC COM
+PDC,<empty>,N/A,"instrument=PDC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PIONEER DRILLING COMPANY NAME CHANGE 7/30/12 723664108
+PDL/B,<empty>,N/A,"instrument=PDL/B
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Presidential Realty Corporation (Class B )
+PDO,<empty>,N/A,"instrument=PDO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PYRAMID OIL CO N/C 9/11/14 98872E108
+PETpA,<empty>,N/A,"instrument=PETpA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PACIFIC ENTERPRISES PFD $4.36 CALLABLE
+PETpB,<empty>,N/A,"instrument=PETpB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Pacific Enterprises $4.40 Div. Preferred Stock
+PETpC,<empty>,N/A,"instrument=PETpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Pacific Enterprises $4.50 Div. Preferred Stock
+PETpD,<empty>,N/A,"instrument=PETpD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Pacific Enterprises $4.75 Div. Preferred Stock
+PHC,<empty>,N/A,"instrument=PHC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PHC INC CL A
+PHF,6.00,N/A,"instrument=PHF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.66%,"52,974",-.04,5.64,6.35,1,5,6.02,6.06,6.00,7.89,5.83,"12,996,610",PACHOLDER FUND INC COM
+PIP,1.65,Range Bound,"instrument=PIP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.20%,"139,872",-.02,1.61,1.67,1,1,1.67,1.75,1.61,2.09,1.20,"64,451,334",PHARMATHENE INC COM
+PKT,102.09,N/A,"instrument=PKT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,149.51,149.51,0,0,0,0,0,149.51,100.03,0,PROCERA NETWORKS INC CSH MRG $11.50/SH 6/8/15
+PLG,.1327,N/A,"instrument=PLG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.16%,"364,394",+.0028,.1110,.2500,4,72,.1390,.1390,.1250,.5985,.1250,"768,943,030",PLATINUM GROUP METALS COM
+PLM,.7018,N/A,"instrument=PLM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-11.15%,"281,554",-.0881,.6500,.9500,10,44,.7960,.8099,.7000,1.3700,.5500,"277,486,660",POLYMET MINING CORP COM
+PLX,.8800,Downtrend,"instrument=PLX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.30%,"195,251",-.03,.8000,.9122,3,132,.8900,.8999,.8110,2.4000,.7399,"99,800,397",PROTALIX BIOTHERAPUTICS INC COM
+PNS,<empty>,N/A,"instrument=PNS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PINNACLE DATA SYSTEMS INC CSH MRG $2.40/SH 1/31/12
+PPWp,<empty>,N/A,"instrument=PPWp
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,PacifiCorp 5% Preferred Stock
+PRK,86.00,Range Bound,"instrument=PRK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.15%,"37,446",+.13,85.81,88.20,0,5,86.00,86.49,85.19,99.68,79.46,"15,350,817",PARK NATIONAL CORP COM
+PTN,.5800,N/A,"instrument=PTN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-3.32%,"193,290",-.0199,.5600,.6300,17,10,.5900,.6000,.5800,1.5800,.5900,"68,030,008",PALATIN TECHNOLOGIES INC COM
+PTX,2.51,Range Bound,"instrument=PTX
+trend=[null, GREEN, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.18%,"622,266",-.03,2.14,3.30,1,4,2.59,2.67,2.41,12.88,1.91,"61,057,293",PERNIX THERAPEUTICS HLDG INC COM
+PUDA,.0001,N/A,"instrument=PUDA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"2,450",0,<empty>,<empty>,<empty>,<empty>,.0001,.0001,.0001,.0100,.00001,"30,022,856",PUDA COAL INC COM
+PW,4.33,N/A,"instrument=PW
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.83%,"1,815",+.078,4.22,4.47,1,1,4.1973,4.33,4.1973,9.94,3.8401,"1,742,688",POWER REIT UNIT
+PZG,1.0295,N/A,"instrument=PZG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.95%,"22,765",-.0205,1.0100,1.3000,7,18,1.0500,1.1200,1.0201,2.0900,.9300,"8,518,791",PARAMOUNT GOLD NEV CORP COM
+QBC,<empty>,N/A,"instrument=QBC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,CUBIC ENERGY INC COM
+QMM,<empty>,N/A,"instrument=QMM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,QUATERRA RESOURCES COM
+QPSA,<empty>,N/A,"instrument=QPSA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"MEETME, INC."
+RAE,<empty>,N/A,"instrument=RAE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+RAP,<empty>,N/A,"instrument=RAP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+RBY,.0310,Downtrend,"instrument=RBY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0310,.0312,0,0,0,0,0,1.3500,.0308,"394,928,250",RUBICON MINERALS CORP COM
+RCG,.82,N/A,"instrument=RCG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.82,.84,10,2,0,0,0,1.39,.74,"4,463,967",RENN FUND INC COM
+REE,.1423,Downtrend,"instrument=REE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.26%,"107,561",-.0079,.1300,.1600,5,240,.1520,.1520,.1400,1.0600,.1500,"52,941,880",RARE ELEMENT RE LTD COM
+RFA,<empty>,N/A,"instrument=RFA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BlackRock Investment Quality Municipal Trust
+RIC,3.33,Uptrend,"instrument=RIC
+trend=[null, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, null]
+headPointer=8
+separatorPointer=8
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-2.35%,"256,637",-.08,3.02,3.69,1,1,3.44,3.47,3.29,3.75,2.27,"58,067,000",RICHMONT MINES INC COM
+RIF,18.29,N/A,"instrument=RIF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.03%,"26,439",-.19,17.64,18.70,15,14,18.58,18.59,18.22,22.69,17.44,"7,651,507",RMR REAL ESTATE INCOME FUND ETF
+RNJ,<empty>,N/A,"instrument=RNJ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BlackRock New Jersey Investment Quality Municipal Trust Inc.
+RNN,.3255,N/A,"instrument=RNN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.42%,"706,191",-.0047,.3150,.3798,1,51,.3312,.3498,.3200,.9489,.3300,"180,747,120",REXAHN PHARMACEUTICALS INC COM
+RNY,<empty>,N/A,"instrument=RNY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,BlackRock New York Investment Quality Municipal Trust Inc. (The)
+ROX,1.2200,N/A,"instrument=ROX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.83%,"185,442",+.01,1.1800,1.2500,2,1,1.2000,1.2200,1.1800,1.8326,1.0300,"160,034,460",CASTLE BRANDS INC COM
+RPC,<empty>,N/A,"instrument=RPC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,RADIENT PHARMACEUTICALS CORP COM
+RPI,<empty>,N/A,"instrument=RPI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ROBERTS REALTY INVESTORS INC N/C 02/02/15 00489F106
+RTK,2.40,Downtrend,"instrument=RTK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.41%,"87,538",-.01,2.37,2.43,1,1,2.42,2.50,2.26,14.40,2.40,"23,010,618",RENTECH INC COM
+RVP,2.87,N/A,"instrument=RVP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.37%,"1,096",-.04,2.87,4.86,0,5,2.8399,2.87,2.8399,5.70,2.7034,"27,891,874",RETRACTABLE TECHNOLOGIES INC COM
+RVR,<empty>,N/A,"instrument=RVR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,WHITE RIVER CAPITAL INC CSH MRG $22.03/SHR 2/15/2013
+RWC,3.75,N/A,"instrument=RWC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.54%,"19,781",+.02,3.11,4.47,1,1,3.75,3.91,3.71,6.75,2.97,"13,718,396",RELM WIRELESS CORP. COM
+SA,7.48,Range Bound,"instrument=SA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-8.67%,"1,060,478",-.71,7.36,7.48,1,1,8.05,8.052,7.39,9.89,3.31,"52,092,626",SEABRIDGE GOLD INC COM
+SAL,34.00,N/A,"instrument=SAL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,32.06,35.35,1,1,0,0,0,34.44,26.505,"2,733,576",SALISBURY BANCORP INC COM
+SBI,10.32,N/A,"instrument=SBI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.78%,"27,718",+.08,10.10,10.35,16,0,10.2692,10.32,10.21,10.71,9.52,"14,076,914",WESTERN ASSET INTERMEDIATE MUN CLOSED END FUND
+SCEpB,22.64,N/A,"instrument=SCEpB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.07%,"1,095",+.46,22.21,22.78,8,0,22.6068,22.74,22.6068,24.71,20.85,0,SOUTHERN CALIF EDISON CO PFD 4.08% CALLABLE
+SCEpC,23.50,N/A,"instrument=SCEpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,400,-.0001,22.80,25.25,0,1,23.50,23.50,23.50,25.81,20.67,0,SOUTHERN CALIF EDISON CO PFD 4.24% CALLABLE
+SCEpD,24.50,N/A,"instrument=SCEpD
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.04%,100,+.4899,24.01,24.49,0,8,24.50,24.50,24.50,26.30,21.8401,0,SOUTHERN CALIF EDISON CO PFD 4.32% CALLABLE
+SCEpE,24.95,N/A,"instrument=SCEpE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.68%,512,-.4258,24.91,25.72,1,1,25.00,25.00,24.95,27.39,23.08,0,SOUTHERN CALIF EDISON CO PFD 4.78% CALLABLE
+SDOpA,<empty>,N/A,"instrument=SDOpA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SAN DIEGO GAS & ELEC CO PFD 5% CALLABLE
+SDOpB,<empty>,N/A,"instrument=SDOpB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SAN DIEGO GAS & ELEC CO PFD 4.50% CALLABLE
+SDOpC,<empty>,N/A,"instrument=SDOpC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SAN DIEGO GAS & ELEC CO PFD 4.40% CALLABLE
+SDOpH,<empty>,N/A,"instrument=SDOpH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SAN DIEGO GAS & ELEC CO PFD $1.82 CALLABLE
+SEB,2625.25,N/A,"instrument=SEB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.29%,592,-7.64,2351.00,2832.89,10,2,2652.00,2672.00,2535.0001,4640.00,2525.36,"1,170,550",SEABOARD CORP DEL
+SED,0,N/A,"instrument=SED
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,SED INTERNATIONAL HLDGS INC COM
+SGA,38.15,N/A,"instrument=SGA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.30%,"7,595",+1.22,37.41,38.34,1,5,37.16,38.63,37.02,48.085,33.53,"5,811,678",SAGA COMMUNICATIONS INC CLASS A COM
+SGB,14.1715,N/A,"instrument=SGB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.47%,751,-.3585,14.17,14.89,1,3,14.171,14.1715,14.171,16.40,12.8308,"2,547,837",SOUTHWEST GEORGIA FINL CORP COM
+SGS,0,N/A,"instrument=SGS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,"Stream Global Services, Inc"
+SGS/U,<empty>,N/A,"instrument=SGS/U
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"STREAM GLOBAL SERVICES, INC UNITS"
+SGS/WS,<empty>,N/A,"instrument=SGS/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,STREAM GLOBAL SERVICES INC
+SHZ,0,N/A,"instrument=SHZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,0,0,0,0,0,0,0,0,0,0,CHINA SHEN ZHOU MINGING & INC COM
+SIF,8.10,N/A,"instrument=SIF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.74%,"3,862",-.06,7.77,8.25,2,1,7.92,8.15,7.88,30.69,7.75,"5,448,007",SIFCO INDS INC COM
+SIHI,0,N/A,"instrument=SIHI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SINOHUB INC COM
+SILU,<empty>,N/A,"instrument=SILU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SPROTT RESOURCE LENDING CORP COM
+SIM,6.19,Range Bound,"instrument=SIM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.66%,"8,212",+.101,4.66,6.40,1,0,6.14,6.19,5.93,9.69,5.99,"165,903,070",GRUPO SIMEC S A DE C V ADR
+SLI,33.37,N/A,"instrument=SLI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.21%,"3,415",+.07,32.73,33.37,1,8,32.34,33.50,32.13,44.7833,30.14,"3,961,000",SL INDS INC COM
+SNT,<empty>,N/A,"instrument=SNT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"SENESCO TECHNOLOGIES, INC COM"
+SOQ,0,N/A,"instrument=SOQ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-100.00%,0,-.01,0,0,0,0,0,0,0,0,0,0,SONDE RESOURCES CORP ORD
+SSE,.6002,Downtrend,"instrument=SSE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-24.98%,"1,847,742",-.1998,.6001,.6001,0,10,.8299,.8299,.4604,6.3000,.8000,"56,746,769",SEVENTY SEVEN ENERGY INC COM
+SSN,.4900,Range Bound,"instrument=SSN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-18.35%,"154,526",-.1101,.4731,.6110,0,2,.6000,.6099,.4136,2.8000,.3701,"14,189,171",SAMSON OIL + GAS LIMITED ADR
+SSY,.8601,N/A,"instrument=SSY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.52%,"27,682",-.06,.5000,1.7900,10,1,.9200,.9201,.8600,2.0100,.8500,"9,443,408",SUNLINK HEALTH SYSTEMS INC COM
+STS,6.63,Range Bound,"instrument=STS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.13%,"5,704",-.076,6.62,6.98,0,49,6.72,6.72,6.60,8.89,6.70,"16,718,064",SUPREME INDS INC CL A
+SUF,<empty>,N/A,"instrument=SUF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,SULPHCO INC COM
+SVT,8.0001,N/A,"instrument=SVT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.45%,"2,763",+.1143,6.80,12.50,1,1,7.88,8.018,7.88,8.95,5.62,"2,438,209",SERVOTRONICS INC COM
+TA,8.00,Downtrend,"instrument=TA
+trend=[null, GREEN_OVER_RED, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",0.00%,"300,215",0,7.57,9.42,17,1,8.04,8.27,7.86,18.10,7.87,"38,397,018",TRAVEL CENTERS OF AMERICA COM
+TAT,.93,Downtrend,"instrument=TAT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-7.00%,"84,037",-.07,.93,2.49,0,5,1.02,1.02,.92,6.18,.9801,"41,011,990",TRANSATLANTIC PETROLEUM LTD ORD BMG899821133
+TBV,<empty>,N/A,"instrument=TBV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,TIENS BIOTECH GROUP USA INC CSH MRG $1.72/SH 8/12/11
+TCX,19.18,Range Bound,"instrument=TCX
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.24%,"58,553",-.44,15.91,22.70,1,1,19.73,19.89,19.18,32.23,17.29,"10,727,380",TUCOWS INC COM
+TF,0,N/A,"instrument=TF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,0,<empty>,0,.0001,0,0,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,THAI CAPITAL FD COM
+TGB,.2599,Downtrend,"instrument=TGB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-8.19%,"415,738",-.0232,.2501,.3400,50,5,.2800,.2840,.2540,1.0200,.2800,"221,808,640",TASEKO MINES LTD COM
+TGC,.1037,N/A,"instrument=TGC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-11.74%,"75,811",-.0138,.0701,.1487,8,50,.1100,.1155,.1001,.5800,.0790,"60,842,413",TENGASCO INC. COM  (NEW)
+THM,.1952,Range Bound,"instrument=THM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-8.66%,"107,664",-.0185,.1601,.3100,3,2,.2380,.2380,.1900,.6200,.1821,"116,313,638",INTL TOWER HILL MINES LTD COM
+TIK,4.23,N/A,"instrument=TIK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.15%,"23,750",-.2299,3.95,5.00,3,7,4.50,4.50,4.10,6.6509,3.82,"3,256,887",TEL-INSTRUMENT ELECTR CORP COM
+TIS,29.16,Range Bound,"instrument=TIS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.44%,"91,548",-.13,25.00,33.51,6,1,29.29,29.7525,27.81,32.50,21.423,"10,268,891",ORCHIDS PAPER PRODUCTS CO COM
+TIV,<empty>,N/A,"instrument=TIV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,TRI-VALLEY CORP N/C 2-87 FORMERLY TRI-VALLEY O&G
+TLB/WS,<empty>,N/A,"instrument=TLB/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,TALBOT INC REMOVE WORTHLESS 10/8/12
+TLR,.1416,N/A,"instrument=TLR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-25.47%,"35,720",-.0484,.1100,.2900,2,2,.1900,.1900,.1416,.7999,.1602,"13,331,945",TIMBERLINE RESOURCES CORP COM
+TMP,53.82,Range Bound,"instrument=TMP
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.47%,"28,920",+.25,53.46,53.88,3,6,54.00,54.00,53.00,63.48,49.05,"14,901,276",TOMPKINS FINANCIAL CORPORATION COM
+TOF,3.55,N/A,"instrument=TOF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-12.02%,"4,902",-.485,3.50,3.65,1,10,3.7001,3.72,3.55,7.17,3.53,"5,153,706",TOFUTTI BRANDS INC COM
+TPI,.1368,Downtrend,"instrument=TPI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.66%,"139,807",-.0082,.1140,.2700,50,1,.1400,.1400,.1200,.7500,.1400,"29,432,791",TIANYIN PHARMACEUTICAL CO INC COM
+TPLM,.5316,Range Bound,"instrument=TPLM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-6.97%,"448,443",-.0398,.4950,.6300,80,100,.6300,.6300,.5200,6.4900,.5000,"75,713,104",TRIANGLE PETROLEUM CORP COM
+TRE,<empty>,N/A,"instrument=TRE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Tanzanian Royalty Exploration Corporation Common Stock
+TRT,2.74,N/A,"instrument=TRT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.48%,900,+.04,2.30,4.99,2,1,2.70,2.74,2.70,3.47,2.09,"3,513,055",TRIO TECH INTERNATIONAL COM
+TSH,<empty>,N/A,"instrument=TSH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,TECHE HOLDING CO 1.162:1 EXC 6/2/14 450828108
+TWO,8.14,Range Bound,"instrument=TWO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.85%,"5,287,503",-.07,8.11,8.15,2,1,8.24,8.27,8.01,11.00,7.80,"364,055,180",TWO HARBORS INVESTMENT CORP REIT
+TWO/WS,<empty>,N/A,"instrument=TWO/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,TWO HARBORS INVESTMENT CORP WARRANT
+U,<empty>,N/A,"instrument=U
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+UEC,.98,Range Bound,"instrument=UEC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-2.97%,"1,081,306",-.03,.98,1.05,34,6,1.01,1.03,.98,3.00,.90,"99,241,976",URANIUM ENERGY CORP COM
+ULU,<empty>,N/A,"instrument=ULU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,ULURU INC COM
+UMH,9.67,Range Bound,"instrument=UMH
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.43%,"70,997",-.14,9.57,10.80,1,1,9.88,9.88,9.59,10.64,9.01,"27,011,797",UMH PROPERTIES INC COM
+UPG,<empty>,N/A,"instrument=UPG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,UNIVERSAL POWER GROUP INC COM
+UQM,.5600,Range Bound,"instrument=UQM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.88%,"70,391",-.005,.4850,.7198,1,68,.5700,.5805,.5200,1.6500,.4700,"48,437,814",UQM TECHNOLOGIES INC COM
+URG,.6381,N/A,"instrument=URG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.83%,"227,474",-.0119,.5000,.7000,20,100,.6649,.6650,.6300,1.0800,.4538,"130,188,775",UR ENERGY INC COM
+URZ,0,N/A,"instrument=URZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,145.39,131.96,0,0,0,0,0,0,0,0,URANERZ ENERGY CORP 0.255:1 EXC 6/19/15 292671708
+UTG,25.55,N/A,"instrument=UTG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.35%,"144,313",-.09,24.95,26.31,1,10,25.87,25.87,25.28,31.222743,24.11,"31,502,182",REAVES UTILITY INC TR COM
+UUU,4.87,N/A,"instrument=UUU
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.46%,563,+.0701,4.75,5.00,1,11,4.87,4.87,4.87,6.88,4.146,"2,312,887",UNIVERSAL SEC INSTRS INC COM (NEW)
+UVE,19.66,Range Bound,"instrument=UVE
+trend=[RED, GREEN, GREEN, RED, GREEN, GREEN, RED, GREEN, RED, GREEN]
+headPointer=1
+separatorPointer=-1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-1.06%,"638,901",-.21,18.61,21.50,3,2,20.07,20.1799,18.92,37.49,16.50,"35,600,279",UNIVERSAL INSURANCE HLDGS INC COM
+UWN,2.1401,N/A,"instrument=UWN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.92%,"28,667",-.0199,2.1000,2.2000,1,1,2.1300,2.2156,2.1300,2.5000,1.0100,"17,737,179",NEVADA GOLD & CASINOS INC CM NEW
+VAZ,<empty>,N/A,"instrument=VAZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,DELAWARE INV AZ MUNI INCM FD 1.0396:1 EXC 6/17/11 24610T108
+VCF,14.61,N/A,"instrument=VCF
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-0.27%,"2,072",-.04,14.49,15.13,11,11,14.62,14.626,14.59,15.28,13.35,"4,837,100",DELAWARE INV COL MUNI INCOME CLOSED-END FUND
+VFL,13.31,N/A,"instrument=VFL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.23%,"5,080",+.03,13.02,13.48,13,13,13.23,13.32,13.23,13.67,12.50,"4,528,443",DELAWARE INV NATIONAL MUNC INC CLOSED-END FUND
+VGZ,.3086,Range Bound,"instrument=VGZ
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.05%,"104,610",-.0164,.2644,.3800,40,4,.3250,.3250,.2876,.4500,.2363,"82,883,562",VISTA GOLD CORP COM
+VHC,2.56,Uptrend,"instrument=VHC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+28.00%,"2,533,967",+.56,2.55,2.56,1,3,2.15,3.08,2.07,8.09,1.95,"53,046,308",VIRNETX HOLDING COM
+VII,2.004,N/A,"instrument=VII
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.20%,"2,312",+.004,1.960,3.250,0,6,1.990,2.040,1.970,2.550,1.220,"9,341,038",VICON INDS INC COM
+VK,<empty>,N/A,"instrument=VK
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,
+VKI,12.03,N/A,"instrument=VKI
+trend=[null, GREEN, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",+0.59%,"96,432",+.07,11.68,12.07,30,28,12.00,12.05,11.98,12.20,10.78,"44,380,951",INVESCO ADVANTAGE MUNI INCOME TRUST II
+VKL,<empty>,N/A,"instrument=VKL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,INVESCO VAN KAMPEN .8777:1 EXC 10/15/12 46132C107
+VMM,13.62,N/A,"instrument=VMM
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+0.59%,"11,591",+.08,13.58,13.71,0,12,13.59,13.62,13.53,14.18,12.69,"11,504,975",DELAWARE INV MINN MUNI II COM
+VMV,<empty>,N/A,"instrument=VMV
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,INVESCO VAN KAMPEN .9410:1 EXC 10/15/12 46131J103
+VOG,<empty>,N/A,"instrument=VOG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"EMERALD OIL, INC."
+VRNG,1.86,Downtrend,"instrument=VRNG
+trend=[null, RED, null, null, null, null, null, null, null, null]
+headPointer=1
+separatorPointer=1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-2.11%,"109,560",-.04,1.81,2.16,2,5,1.91,1.9401,1.82,9.80,1.78,"11,272,083",VRINGO INC COM
+VRNG/WS,<empty>,N/A,"instrument=VRNG/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,VRINGO INC WARRANT
+VSR,2.81,Range Bound,"instrument=VSR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.75%,"3,751",-.05,2.79,4.50,0,10,2.779,2.92,2.779,4.45,2.67,"9,822,918",VERSAR INC COM
+VTG,.0530,N/A,"instrument=VTG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0459,.0595,0,0,0,0,0,1.7800,.0500,"311,024,000",VANTAGE DRILLING CO COM
+VTG.UN,<empty>,N/A,"instrument=VTG.UN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Vantage Energy Services, Inc"
+VTG/WS,<empty>,N/A,"instrument=VTG/WS
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,VANTAGE DRILLING CO
+WAC,15.87,Uptrend,"instrument=WAC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+3.05%,"360,203",+.47,13.18,18.22,1,2,15.51,15.93,15.11,24.35,9.63,"37,802,297",WALTER INVT MGMT CORP COM
+WEX,73.70,Downtrend,"instrument=WEX
+trend=[RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED, RED_OVER_GREEN, GREEN_OVER_RED]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Jan 13 15:00:00 CST 2016
+",-2.16%,"549,634",-1.63,69.87,77.39,1,1,75.86,76.06,72.60,118.97,74.75,"38,642,308",WEX INC COM
+WGA,.4884,N/A,"instrument=WGA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.0500,.4900,250,0,0,0,0,1.0000,.4100,"11,668,000",AG&E HOLDINGS INC COM
+WISp,<empty>,N/A,"instrument=WISp
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,WISCONSIN PWR & LT CO PFD 4.5% CALLABLE
+WLB,4.72,Downtrend,"instrument=WLB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.26%,"556,150",-.06,3.91,5.54,1,1,4.79,4.88,4.54,33.51,4.17,"18,064,956",WESTMORELAND COAL CO COM
+WLBp,<empty>,N/A,"instrument=WLBp
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,"Westmoreland Coal Company Depositary Shares, rep. 1/4 of a share of Ser. A Preferred Stock"
+WRN,.2375,N/A,"instrument=WRN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.17%,"11,990",-.0028,.1500,1.2500,50,18,.2500,.2500,.2300,.6500,.2190,"94,194,936",WESTERN COPPER AND GOLD CORP COM
+WSC,<empty>,N/A,"instrument=WSC
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,WESCO FINL CORP CSH MRG $385.00/SH EFF 6/27/11
+WSO/B,111.63,N/A,"instrument=WSO/B
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-1.72%,201,-1.95,108.86,118.86,1,1,111.63,111.63,111.63,131.4504,106.75,"35,284,075",WATSCO INC CL B
+WSR,10.98,Range Bound,"instrument=WSR
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-4.36%,"271,674",-.50,10.75,11.04,6,1,11.55,11.56,10.93,16.39,9.90,"26,985,799",WHITESTONE REIT COM
+WTT,1.56,N/A,"instrument=WTT
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,"1,199",0,1.51,1.60,1,2,1.49,1.59,1.49,3.25,1.23,"19,626,455",WIRELESS TELECOM GRP INC COM
+WYY,.5801,N/A,"instrument=WYY
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-7.92%,"262,112",-.0499,.5820,.7899,9,17,.6200,.6500,.5669,2.3000,.5801,"82,520,696",WIDEPOINT CORPORATION COM
+WZE,<empty>,N/A,"instrument=WZE
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,WIZZARD SOFTWARE CORP N/C 10/9/12 302771100
+XFN,<empty>,N/A,"instrument=XFN
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,XFONE NAME CHANGE 2/2/12 62943B105
+XG,<empty>,N/A,"instrument=XG
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,Extorre Gold Mines Ltd. Ordinary Shares (Canada)
+XPL,.480,N/A,"instrument=XPL
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+2.13%,"18,992",+.01,.413,.480,250,0,.454,.480,.454,.960,.402,"39,314,189",SOLITARIO RESOURCES CORP COM
+XPO,22.97,Downtrend,"instrument=XPO
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",+1.73%,"2,136,546",+.39,21.99,22.97,1,1,22.83,23.08,21.52,50.9599,21.33,"108,375,625",XPO LOGISTICS INC COM
+XRA,.3401,Range Bound,"instrument=XRA
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",-5.55%,"194,791",-.02,.3018,.4000,80,30,.3551,.3551,.3300,.6600,.2907,"88,407,753",EXETER RESOURCE CORP COM
+YMI,<empty>,N/A,"instrument=YMI
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,<empty>,YM BIOSCIENCES CSH MGR $2.95/SHR 2/11/13
+ZBB,.75,N/A,"instrument=ZBB
+trend=[null, null, null, null, null, null, null, null, null, null]
+headPointer=0
+separatorPointer=-1
+currentSessionEndTime=Wed Dec 31 18:00:00 CST 1969
+",0.00%,0,0,.60,.85,0,0,0,0,0,0,0,0,ZBB ENERGY CORPORATION N/C 8/17/15 29359T102

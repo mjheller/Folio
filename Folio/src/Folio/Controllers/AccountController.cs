@@ -118,8 +118,6 @@ namespace Folio.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
-                    // Send an email with this link
                     string code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     string callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
                     await _emailSender.SendEmailAsync(model.Email, "Confirm your account",

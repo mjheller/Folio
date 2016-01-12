@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace Folio.Models
 {
-    public class PortfolioAsset : Asset
+    public class PortfolioAsset
     {
         public int ID { get; set; }
 
         [ForeignKey("Portfolio")]
         public int PortfolioID { get; set; }
 
-        [ForeignKey("Asset")] //not actually in DB
         public string AssetSymbol { get; set; }
 
         public decimal AveragePurchasePrice { get; set; }

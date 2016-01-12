@@ -19,8 +19,7 @@ namespace Folio.Builders
         {
             List<PortfolioAsset> portfolioAssets = _context.Portfolio
             .Single(p => p.ID == portfolioID)
-            .PortfolioAssets
-            .Where(pa => pa.AssetType == "stock")
+            .PortfolioAssets.Where(pa => pa.AssetType == "stock")
             .ToList();
             List<Stock> stocks = new List<Stock>();
             foreach (PortfolioAsset asset in portfolioAssets)

@@ -8,8 +8,9 @@ namespace Folio.Models
 {
     public abstract class Asset
     {
-        public string Name { get; set; }
+        public string Name { get; protected set; }
+
         [Key]
-        public string Symbol { get; set; }
+        public string Symbol { get; protected set; }
     }
 }

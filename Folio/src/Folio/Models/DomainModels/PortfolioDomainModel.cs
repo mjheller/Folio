@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Accord.Statistics;
 
 
-namespace Folio.Models.MattsModels
+namespace Folio.Models
 {
     public class Portfolio
     {

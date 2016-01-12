@@ -5,17 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using YSQ.core.Historical;
 
-namespace Folio.Models.MattsModels
+namespace Folio.Models
 {
     //Stock Class
-    public class Stock : Asset
+    public class Stock
     {
 
         private string symbol;
         private int sharesOwned;
         private decimal weight;
-        private decimal sp500avgReturn = (decimal)6.34;
-        private decimal riskFreeReturn = (decimal)2.70;
+        private const decimal _sp500avgReturn = 6.34m;
+        private sonst decimal _riskFreeReturn = 2.70m;
         private decimal expectedReturn;
         private decimal variance;
         public double[] priceHistory1Year;
@@ -44,7 +44,7 @@ namespace Folio.Models.MattsModels
             this.sharesOwned = sharesOwned;
             CalculateExpectedReturn();
             CalculateVariance();
-            decimal[] priceData = StockHelper.GetHistoricalPricesToNow(symbol, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
+            decimal[] priceData = YahooAPICalls.GetHistoricalPricesToNow(symbol, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
             priceHistory1Year = new double[priceData.Length];
             Parallel.For(0, priceData.Length, i => { priceHistory1Year[i] = (double)priceData[i]; });
         }
@@ -67,7 +67,7 @@ namespace Folio.Models.MattsModels
                 { year = Convert.ToInt32(String.Format("200{0}", i.ToString())); } else
                 { year = Convert.ToInt32(String.Format("20{0}", i.ToString())); }
 
-                List<decimal> prices = StockHelper.GetHistoricalPricesCustom(this.Symbol, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
+                List<decimal> prices = YahooAPICalls.GetHistoricalPricesCustom(this.Symbol, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
                 decimal annualReturn = (prices[prices.Count - 1] / prices[0]) - 1;
                 decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.expectedReturn - annualReturn), 2));
                 sumSquared += squared;
@@ -77,8 +77,7 @@ namespace Folio.Models.MattsModels
 
         private void CalculateExpectedReturn()
         {
-            StockHelper StockHelper = new StockHelper();
-            decimal beta = StockHelper.getBeta(this.Symbol);
+            decimal beta = YahooAPICalls.GetStockBeta(this.Symbol);
             decimal marketRiskPremium = sp500avgReturn - riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             this.expectedReturn = riskFreeReturn + riskPremium;

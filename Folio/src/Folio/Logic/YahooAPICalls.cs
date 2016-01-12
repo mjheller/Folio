@@ -5,35 +5,14 @@ using System.Threading.Tasks;
 using YSQ.core.Historical;
 using HtmlAgilityPack;
 
-namespace Folio.Models.MattsModels
+namespace Folio.Logic
 {
-    public class StockHelper
+    public static class YahooAPICalls
     {
-        static HistoricalPriceService historical_price_service;
-        HtmlWeb HtmlWeb;
-        public StockHelper()
+        public static List<decimal> GetStockHistoricalPricesToNow(string ticker, DateTime startDate) /* <= new DateTime(2000, 1, 1)*/
         {
-            historical_price_service = new HistoricalPriceService();
-            HtmlWeb = new HtmlWeb();
-        }
-
-
-        public static List<decimal> GetHistoricalPricesToNow(string ticker, DateTime startDate) /* <= new DateTime(2000, 1, 1)*/
-        {
-
-            IEnumerable<HistoricalPrice> historicalPrices = historical_price_service.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
-
-            List<decimal> priceData = new List<decimal>();
-            foreach (var price in historicalPrices)
-            {
-                priceData.Add(price.Price);
-            }
-            return priceData;
-        }
-        public static List<decimal> GetHistoricalPricesCustom(string ticker, DateTime startDate, DateTime endDate)
-        {
-            IEnumerable<HistoricalPrice> historicalPrices = historical_price_service.Get(ticker, startDate, endDate, Period.Daily);
-
+            HistoricalPriceService hps = new HistoricalPriceService();
+            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
             List<decimal> priceData = new List<decimal>();
             foreach (var price in historicalPrices)
             {
@@ -42,11 +21,22 @@ namespace Folio.Models.MattsModels
             return priceData;
         }
 
+        public static List<decimal> GetStockHistoricalPricesCustom(string ticker, DateTime startDate, DateTime endDate)
+        {
+            HistoricalPriceService hps = new HistoricalPriceService();
+            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
+            List<decimal> priceData = new List<decimal>();
+            foreach (var price in historicalPrices)
+            {
+                priceData.Add(price.Price);
+            }
+            return priceData;
+        }
 
         public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate) /*{startDate format = DateTime(2000, 1, 1)}*/
         {
-
-            IEnumerable<HistoricalPrice> historicalPrices = historical_price_service.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
+            HistoricalPriceService hps = new HistoricalPriceService();
+            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
 
             Dictionary<DateTime, decimal> priceData = new Dictionary<DateTime, decimal>();
             foreach (var price in historicalPrices)
@@ -55,23 +45,25 @@ namespace Folio.Models.MattsModels
             }
             return priceData;
         }
-        public decimal getCurrentPrice(string ticker)
+
+        public static decimal GetCurrentStockPrice(string ticker)
         {
-            IEnumerable<HistoricalPrice> price = historical_price_service.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
+            HistoricalPriceService hps = new HistoricalPriceService();
+            IEnumerable<HistoricalPrice> price = hps.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
             decimal currentPrice = price.ElementAt(0).Price;
             return currentPrice;
 
         }
-        public decimal getBeta(string ticker)
+        public static decimal GetStockBeta(string ticker)
         {
+            HtmlWeb htmlWeb = new HtmlWeb();
             decimal beta = 0;
-
-            HtmlDocument document = HtmlWeb.Load(String.Format("http://finance.yahoo.com/q?s={0}&ql=1", ticker));
-            HtmlNode someNode = document.GetElementbyId("table1");
-            if (someNode != null)
+            HtmlDocument document = htmlWeb.Load(string.Format("http://finance.yahoo.com/q?s={0}&ql=1", ticker));
+            HtmlNode node = document.GetElementbyId("table1");
+            if (node != null)
             {
                 int count = 0;
-                IEnumerable<HtmlNode> td = someNode.Descendants("td");
+                IEnumerable<HtmlNode> td = node.Descendants("td");
                 foreach (HtmlNode d in td)
                 {
                     if (count == 5)

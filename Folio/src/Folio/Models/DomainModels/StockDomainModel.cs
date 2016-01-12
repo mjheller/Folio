@@ -7,7 +7,6 @@ using YSQ.core.Historical;
 
 namespace Folio.Models
 {
-    //Stock Class
     public class Stock
     {
 
@@ -18,6 +17,11 @@ namespace Folio.Models
         private sonst decimal _riskFreeReturn = 2.70m;
         private decimal expectedReturn;
         private decimal variance;
+
+        public decimal CurrentPrice { get { return currentPrice; } set { currentPrice = value; } }
+        //use StockHelper.getCurrentPrice()
+        public string Symbol { get { return symbol; } }
+        public decimal PurchasePrice { get { return purchasePrice; } }
         public double[] priceHistory1Year;
 
 
@@ -35,8 +39,6 @@ namespace Folio.Models
         public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
         public decimal Variance { get { return variance; } set { variance = value; } }
 
-
-
         public Stock(string symbol, decimal purchasePrice, int sharesOwned)
         {
             this.symbol = symbol;
@@ -52,7 +54,7 @@ namespace Folio.Models
         private void addShares(int amount)
         {
             this.sharesOwned += amount;
-            // this.PurchasePrice = CurrentPrice 
+            // this.PurchasePrice = CurrentPrice
         }
 
         private void CalculateVariance()
@@ -81,11 +83,8 @@ namespace Folio.Models
             decimal marketRiskPremium = sp500avgReturn - riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             this.expectedReturn = riskFreeReturn + riskPremium;
-
             //risk-free return + risk premium = expected return
-
         }
-
     }
 
 }

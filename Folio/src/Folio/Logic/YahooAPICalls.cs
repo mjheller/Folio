@@ -26,10 +26,12 @@ namespace Folio.Logic
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             List<decimal> priceData = new List<decimal>();
+
             foreach (var price in historicalPrices)
             {
                 priceData.Add(price.Price);
             }
+
             return priceData;
         }
 
@@ -37,12 +39,12 @@ namespace Folio.Logic
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
-
             Dictionary<DateTime, decimal> priceData = new Dictionary<DateTime, decimal>();
             foreach (var price in historicalPrices)
             {
                 priceData.Add(price.Date, price.Price);
             }
+
             return priceData;
         }
 
@@ -52,8 +54,8 @@ namespace Folio.Logic
             IEnumerable<HistoricalPrice> price = hps.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
             decimal currentPrice = price.ElementAt(0).Price;
             return currentPrice;
-
         }
+
         public static decimal GetStockBeta(string ticker)
         {
             HtmlWeb htmlWeb = new HtmlWeb();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
+using Folio.Models;
 
 namespace Folio.ViewModels.Manage
 {
@@ -17,5 +18,6 @@ namespace Folio.ViewModels.Manage
         public bool TwoFactor { get; set; }
 
         public bool BrowserRemembered { get; set; }
+        public bool HasPortfolios { get; set; }
     }
 }

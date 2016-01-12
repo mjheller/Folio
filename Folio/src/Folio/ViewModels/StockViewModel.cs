@@ -7,5 +7,6 @@ namespace Folio.ViewModels
 {
     public class StockViewModel
     {
+        public string Ticker { get; set; }
     }
 }

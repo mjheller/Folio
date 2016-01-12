@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Folio.Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,83 +8,73 @@ using YSQ.core.Historical;
 
 namespace Folio.Models
 {
-    public class Stock
+    public class StockDomainModel
     {
 
-        private string symbol;
-        private int sharesOwned;
-        private decimal weight;
         private const decimal _sp500avgReturn = 6.34m;
-        private sonst decimal _riskFreeReturn = 2.70m;
-        private decimal expectedReturn;
-        private decimal variance;
+        private const decimal _riskFreeReturn = 2.70m;
 
-        public decimal CurrentPrice { get { return currentPrice; } set { currentPrice = value; } }
-        //use StockHelper.getCurrentPrice()
-        public string Symbol { get { return symbol; } }
-        public decimal PurchasePrice { get { return purchasePrice; } }
-        public double[] priceHistory1Year;
+        public double[] PriceHistory1Year;
 
+        public string Ticker { get; set; }
 
-
-
-        public string Symbol { get { return symbol; } }
         [DataType("Currency")]
-        public decimal CurrentPrice { get { return currentPrice; }  }
+        public decimal CurrentPrice { get; set; }
+
         [DataType("Currency")]
-        public decimal PurchasePrice { get { return purchasePrice; } set; }
+        public decimal PurchasePrice { get; set; }
 
-        public int SharesOwned { get { return sharesOwned; } }
-        public decimal Worth { get { return CurrentPrice * SharesOwned; } }
-        public decimal Weight { get { return weight; } set { weight = value; } }
-        public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
-        public decimal Variance { get { return variance; } set { variance = value; } }
+        public int SharesOwned { get; set; }
 
-        public Stock(string symbol, decimal purchasePrice, int sharesOwned)
+        public decimal Worth
+        { get { return CurrentPrice * SharesOwned; } }
+
+        public decimal Weight { get; set; }
+        public decimal ExpectedReturn { get; set; }
+        public decimal Variance { get; set; }
+
+        public StockDomainModel(string ticker, decimal purchasePrice, int sharesOwned)
         {
-            this.symbol = symbol;
-            this.PurchasePrice = CurrentPrice = purchasePrice;
-            this.sharesOwned = sharesOwned;
+            Ticker = ticker;
+            PurchasePrice = purchasePrice;
+            SharesOwned = sharesOwned;
             CalculateExpectedReturn();
             CalculateVariance();
-            decimal[] priceData = YahooAPICalls.GetHistoricalPricesToNow(symbol, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
-            priceHistory1Year = new double[priceData.Length];
-            Parallel.For(0, priceData.Length, i => { priceHistory1Year[i] = (double)priceData[i]; });
+            decimal[] priceData = YahooAPICalls.GetStockHistoricalPricesToNow(ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
+            PriceHistory1Year = new double[priceData.Length];
+            Parallel.For(0, priceData.Length, i => { PriceHistory1Year[i] = (double)priceData[i]; });
         }
 
         private void addShares(int amount)
         {
-            this.sharesOwned += amount;
-            // this.PurchasePrice = CurrentPrice
+            SharesOwned += amount;
         }
 
         private void CalculateVariance()
         {
-            Int32 year;
+            int year;
             decimal sumSquared = 0;
             int numYears = DateTime.UtcNow.Year - 2006;
             decimal prob = numYears / 100;
             for (int i = 0; i < numYears; i++)
             {
                 if (i < 10)
-                { year = Convert.ToInt32(String.Format("200{0}", i.ToString())); } else
-                { year = Convert.ToInt32(String.Format("20{0}", i.ToString())); }
-
-                List<decimal> prices = YahooAPICalls.GetHistoricalPricesCustom(this.Symbol, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
+                { year = Convert.ToInt32(string.Format("200{0}", i.ToString())); } else
+                { year = Convert.ToInt32(string.Format("20{0}", i.ToString())); }
+                List<decimal> prices = YahooAPICalls.GetStockHistoricalPricesCustom(Ticker, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
                 decimal annualReturn = (prices[prices.Count - 1] / prices[0]) - 1;
-                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.expectedReturn - annualReturn), 2));
+                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2));
                 sumSquared += squared;
             }
-            this.Variance = sumSquared / numYears;
+            Variance = sumSquared / numYears;
         }
 
         private void CalculateExpectedReturn()
         {
-            decimal beta = YahooAPICalls.GetStockBeta(this.Symbol);
-            decimal marketRiskPremium = sp500avgReturn - riskFreeReturn;
+            decimal beta = YahooAPICalls.GetStockBeta(Ticker);
+            decimal marketRiskPremium = _sp500avgReturn - _riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
-            this.expectedReturn = riskFreeReturn + riskPremium;
-            //risk-free return + risk premium = expected return
+            ExpectedReturn = _riskFreeReturn + riskPremium;
         }
     }
 

@@ -27,7 +27,6 @@ namespace Folio.Controllers
 
         public ManageController(
         UserManager<ApplicationUser> userManager,
-        UserManager<Portfolio> portfolioManager,
         SignInManager<ApplicationUser> signInManager,
         IEmailSender emailSender,
         ISmsSender smsSender,
@@ -65,6 +64,7 @@ namespace Folio.Controllers
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user),
+                PortfolioNames = user.Portfolios != null ? user.Portfolios.Select(p => p.Name) : new List<string>()
             };
 
             return View(model);

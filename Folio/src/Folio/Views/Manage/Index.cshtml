@@ -24,6 +24,21 @@
         </dd>
         <dt>Portfolios:</dt>
         <dd>
+            [
+            @if (Model.PortfolioNames.Count() == 0)
+            {
+                <a asp-controller="Portfolios" asp-action="Create">Add a Portfolio</a>
+            }
+            else
+            {
+                <ul>
+                    @foreach (string portfolioName in Model.PortfolioNames)
+                    {
+                        <li><a asp-controller="Portfolios" asp-action="Index">@portfolioName</a></li>
+                    }
+                </ul>
+            }
+            ]
         </dd>
     </dl>
 </div>

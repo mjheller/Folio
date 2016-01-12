@@ -13,7 +13,6 @@ namespace Folio.Models
         [ForeignKey("Portfolio")]
         public int PortfolioID { get; set; }
 
-        [ForeignKey("Asset")] //not actually in DB
         public string AssetSymbol { get; set; }
 
         public decimal AveragePurchasePrice { get; set; }

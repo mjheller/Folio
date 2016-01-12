@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using YSQ.core.Historical;
 
 namespace Folio.Models.MattsModels
 {
+<<<<<<< HEAD
     //Asset Class
     public class Asset
     {
@@ -13,26 +15,39 @@ namespace Folio.Models.MattsModels
         protected decimal purchasePrice, currentPrice;   
     }
 
+=======
+>>>>>>> a1754c17488be482293b9d8896f9d69c4e743a6a
     //Stock Class
     public class Stock : Asset
     {
-        public string symbol { get; private set; }
+
+        private string symbol;
         private int sharesOwned;
         private decimal weight;
-        private const decimal marketRiskPremium = 6.34M;
-        private const decimal riskFreeReturn = 2.70M;
+        private decimal sp500avgReturn = (decimal)6.34;
+        private decimal riskFreeReturn = (decimal)2.70;
         private decimal expectedReturn;
         private decimal variance;
+<<<<<<< HEAD
         public decimal CurrentPrice { get { return currentPrice; } set { currentPrice = value; } }
         //use StockHelper.getCurrentPrice()
         public string Symbol { get { return symbol; } }
         public decimal PurchasePrice { get { return purchasePrice; } }
-        public int SharesOwned { get { return sharesOwned; } }
-        public decimal Worth
-        {
-            get { return CurrentPrice * SharesOwned; }
-        }
+=======
+        public double[] priceHistory1Year;
 
+
+
+
+        public string Symbol { get { return symbol; } }
+        [DataType("Currency")]
+        public decimal CurrentPrice { get { return currentPrice; }  }
+        [DataType("Currency")]
+        public decimal PurchasePrice { get { return purchasePrice; } set; }
+
+>>>>>>> a1754c17488be482293b9d8896f9d69c4e743a6a
+        public int SharesOwned { get { return sharesOwned; } }
+        public decimal Worth { get { return CurrentPrice * SharesOwned; } }
         public decimal Weight { get { return weight; } set { weight = value; } }
         public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
         public decimal Variance { get { return variance; } set { variance = value; } }
@@ -40,10 +55,13 @@ namespace Folio.Models.MattsModels
         public Stock(string symbol, decimal purchasePrice, int sharesOwned)
         {
             this.symbol = symbol;
-            this.purchasePrice = currentPrice = purchasePrice;
+            this.PurchasePrice = CurrentPrice = purchasePrice;
             this.sharesOwned = sharesOwned;
             CalculateExpectedReturn();
             CalculateVariance();
+            decimal[] priceData = StockHelper.GetHistoricalPricesToNow(symbol, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
+            priceHistory1Year = new double[priceData.Length];
+            Parallel.For(0, priceData.Length, i => { priceHistory1Year[i] = (double)priceData[i]; });
         }
 
         private void addShares(int amount)
@@ -56,8 +74,8 @@ namespace Folio.Models.MattsModels
         {
             Int32 year;
             decimal sumSquared = 0;
-            int numYears = DateTime.UtcNow.Year - 2000;
-            decimal prob = 100 / numYears;
+            int numYears = DateTime.UtcNow.Year - 2006;
+            decimal prob = numYears / 100;
             for (int i = 0; i < numYears; i++)
             {
                 if (i < 10)
@@ -76,9 +94,11 @@ namespace Folio.Models.MattsModels
         {
             StockHelper StockHelper = new StockHelper();
             decimal beta = StockHelper.getBeta(this.Symbol);
+            decimal marketRiskPremium = sp500avgReturn - riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             this.expectedReturn = riskFreeReturn + riskPremium;
             //risk-free return + risk premium = expected return
         }
     }
+
 }

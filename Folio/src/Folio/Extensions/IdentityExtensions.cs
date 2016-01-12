@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Threading.Tasks;
 
-namespace atlas.Services
+namespace folio.Services
 {
     public static class IdentityExtensions
     {

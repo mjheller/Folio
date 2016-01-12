@@ -18,11 +18,14 @@ namespace Folio.Models.MattsModels
             HtmlWeb = new HtmlWeb();
         }
 
+<<<<<<< HEAD
         //public Stock findStock(int riskLevel)
         //{
         //    //input a specified risk level (say 1-10) and will return a Stock or List<Stock> corresponding to specified risk
         //    return Stock;
         //}
+=======
+>>>>>>> a1754c17488be482293b9d8896f9d69c4e743a6a
 
         public static List<decimal> GetHistoricalPricesToNow(string ticker, DateTime startDate) /* <= new DateTime(2000, 1, 1)*/
         {
@@ -65,11 +68,10 @@ namespace Folio.Models.MattsModels
 
         public decimal getCurrentPrice(string ticker)
         {
-            IEnumerable<HistoricalPrice> price = historical_price_service.Get(ticker, DateTime.UtcNow, DateTime.UtcNow, Period.Daily);
+            IEnumerable<HistoricalPrice> price = historical_price_service.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
             decimal currentPrice = price.ElementAt(0).Price;
             return currentPrice;
         }
-
         public decimal getBeta(string ticker)
         {
             decimal beta = 0;
@@ -93,3 +95,4 @@ namespace Folio.Models.MattsModels
         }
     }
 }
+

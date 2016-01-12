@@ -3,6 +3,40 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1938,7 +1972,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1-beta1": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -2206,6 +2240,40 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -4144,7 +4212,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1-beta1": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -4412,6 +4480,40 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -6350,7 +6452,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1-beta1": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -6619,6 +6721,53 @@
     }
   },
   "libraries": {
+    "Accord/3.0.2": {
+      "type": "package",
+      "sha512": "Rr4qe5MkUql9qdEZyAMlRBFBEHztILnDdLongRgr8e5sp+EkZcZG3xCRhWCPKLyWD/Jk5Vn2aqPBttOfqvo+cQ==",
+      "files": [
+        "Accord.3.0.2.nupkg",
+        "Accord.3.0.2.nupkg.sha512",
+        "Accord.nuspec",
+        "build/Accord.dll.config",
+        "build/Accord.targets",
+        "lib/net35/Accord.dll",
+        "lib/net35/Accord.xml",
+        "lib/net40/Accord.dll",
+        "lib/net40/Accord.xml",
+        "lib/net45/Accord.dll",
+        "lib/net45/Accord.xml"
+      ]
+    },
+    "Accord.Math/3.0.2": {
+      "type": "package",
+      "sha512": "mUuCRsVIvYsmemIeIYZr1vNQPQf5s8LPZknL69Il7E3AJH/lrEgAjLfsnmhfBpte5eH0NHI0PlGRWj8WWuQbCA==",
+      "files": [
+        "Accord.Math.3.0.2.nupkg",
+        "Accord.Math.3.0.2.nupkg.sha512",
+        "Accord.Math.nuspec",
+        "lib/net35/Accord.Math.dll",
+        "lib/net35/Accord.Math.xml",
+        "lib/net40/Accord.Math.dll",
+        "lib/net40/Accord.Math.xml",
+        "lib/net45/Accord.Math.dll",
+        "lib/net45/Accord.Math.xml"
+      ]
+    },
+    "Accord.Statistics/3.0.2": {
+      "type": "package",
+      "sha512": "GGfctxlk0DkhweBhWrVdRqpAPL3KmmLu8kzKqjMlmWl8rzItsu4qxXg3OxG5SmbAX2ZKqC1+YIMwarhDmu0M7Q==",
+      "files": [
+        "Accord.Statistics.3.0.2.nupkg",
+        "Accord.Statistics.3.0.2.nupkg.sha512",
+        "Accord.Statistics.nuspec",
+        "lib/net35/Accord.Statistics.dll",
+        "lib/net35/Accord.Statistics.xml",
+        "lib/net40/Accord.Statistics.dll",
+        "lib/net40/Accord.Statistics.xml",
+        "lib/net45/Accord.Statistics.dll",
+        "lib/net45/Accord.Statistics.xml"
+      ]
+    },
     "EntityFramework.Commands/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -8169,9 +8318,9 @@
         "Microsoft.VisualStudio.Web.BrowserLink.Loader.nuspec"
       ]
     },
-    "Newtonsoft.Json/7.0.1-beta1": {
+    "Newtonsoft.Json/7.0.1": {
       "type": "package",
-      "sha512": "eh9Z/FYVfAjFevLhAYcVenlVFyXD89f0tZbYBbIkMn7kyCeyKibOdnbVg7XoNiJP1vskSHzW5R2hxlD7TsS2nw==",
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -8183,10 +8332,10 @@
         "lib/net45/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.7.0.1-beta1.nupkg",
-        "Newtonsoft.Json.7.0.1-beta1.nupkg.sha512",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -9017,6 +9166,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Accord.Statistics >= 3.0.2",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
       "EntityFramework.MicrosoftSqlServer >= 7.0.0-rc1-final",
       "HtmlAgilityPack >= 1.4.9",
@@ -9040,6 +9190,7 @@
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-rc1-final",
+      "Newtonsoft.Json >= 7.0.1",
       "Sendgrid >= 6.3.4",
       "YahooStockQuotes >= 1.0.6"
     ],

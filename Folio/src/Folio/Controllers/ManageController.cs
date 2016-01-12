@@ -67,6 +67,8 @@ namespace Folio.Controllers
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user),
             };
 
+            model.HasPortfolios = user.Portfolios != null ? true : false;
+
             return View(model);
         }
 

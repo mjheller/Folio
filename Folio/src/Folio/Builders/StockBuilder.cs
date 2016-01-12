@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Folio.Models.MattsModels;
 using Folio.Models;
+using Folio.ViewModels;
 
 namespace Folio.Builders
 {
@@ -27,6 +28,11 @@ namespace Folio.Builders
                 stocks.Add(new Stock(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAsset));
             }
             return stocks;
+        }
+
+        public List<PortfolioViewModel> GetPortfolioViewModels(ApplicationUser User)
+        {
+            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User == User).ToList();;
         }
     }
 }

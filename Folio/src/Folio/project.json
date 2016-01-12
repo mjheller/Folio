@@ -6,6 +6,7 @@
   },
 
   "dependencies": {
+    "CsvHelper": "0.12.0",
     "Accord.Statistics": "3.0.2",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",

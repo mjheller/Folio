@@ -26,7 +26,6 @@ namespace Folio.Models
         private void UpdatePortfolioDollarValue()
         {
             decimal count = 0;
-            UpdateCurrentPrices();
             foreach (StockDomainModel s in Stocks)
             {
                 count += (s.Worth);
@@ -34,6 +33,7 @@ namespace Folio.Models
             this.dollarValue = count;
         }
 
+<<<<<<< HEAD
         private void UpdateCurrentPrices()
         {
             foreach (StockDomainModel s in Stocks)
@@ -42,6 +42,8 @@ namespace Folio.Models
             }
         }
 
+=======
+>>>>>>> f05c432a03e8274bf9a007d098964708d367956d
         private void AddToPortfolio(StockDomainModel stock)
         {
             Stocks.Add(stock);
@@ -71,17 +73,16 @@ namespace Folio.Models
 
                 for (int j = i + 1; j < stocks.Count; j++)
                 {
-                    if (i == stocks.Count - 1)
-                    {/*do nothing*/} else
+                    if (!(i == stocks.Count - 1))
                     {
                         decimal covariance = CalculateCovariance(stocks[i].PriceHistory1Year, stocks[j].PriceHistory1Year);
                         decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
-                        variance += pair;
+                        localVariance += pair;
                     }
                 }
                 localVariance += nthWeightedVariance;
             }
-            this.variance = localVariance;
+            variance = localVariance;
         }
 
         private void CalculateExpectedReturn()

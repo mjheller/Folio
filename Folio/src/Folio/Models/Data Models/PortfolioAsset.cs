@@ -17,7 +17,7 @@ namespace Folio.Models
 
         public decimal AveragePurchasePrice { get; set; }
 
-        public int NumberOfAsset { get; set; }
+        public int NumberOfAssetOwned { get; set; }
 
         public string AssetType { get; set; }
 

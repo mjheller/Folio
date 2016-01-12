@@ -23,5 +23,11 @@ namespace Folio.Logic
             _context.SaveChangesAsync();
             return portfolio;
         }
+
+        //public Portfolio GetCurrentUsersPortfolios()
+        //{
+        //     ApplicationUser User = System.Security.Claims.ClaimsPrincipal.Current.Identity.GetCurrentUser(_context);
+        //    return portfolio;
+        //}
     }
 }

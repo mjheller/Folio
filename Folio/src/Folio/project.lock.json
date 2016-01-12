@@ -37,6 +37,15 @@
           "lib/net45/Accord.Statistics.dll": {}
         }
       },
+      "CsvHelper/0.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/CsvHelper.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -2272,6 +2281,15 @@
         },
         "runtime": {
           "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
+      "CsvHelper/0.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/CsvHelper.dll": {}
         }
       },
       "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -4512,6 +4530,15 @@
         },
         "runtime": {
           "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
+      "CsvHelper/0.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/CsvHelper.dll": {}
+        },
+        "runtime": {
+          "lib/CsvHelper.dll": {}
         }
       },
       "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -6766,6 +6793,18 @@
         "lib/net40/Accord.Statistics.xml",
         "lib/net45/Accord.Statistics.dll",
         "lib/net45/Accord.Statistics.xml"
+      ]
+    },
+    "CsvHelper/0.12.0": {
+      "type": "package",
+      "sha512": "eFOPelYx/VNbqYSUpev4SlrD77mYB8hSvkQs8AlCKb0Kor/YlLOJ/1yGi/dGbkW4qNJJDfeyWQyCZ1uKnkgyCQ==",
+      "files": [
+        "CsvHelper.0.12.0.nupkg",
+        "CsvHelper.0.12.0.nupkg.sha512",
+        "CsvHelper.nuspec",
+        "lib/CsvHelper.dll",
+        "lib/CsvHelper.pdb",
+        "lib/CsvHelper.XML"
       ]
     },
     "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -9166,6 +9205,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "CsvHelper >= 0.12.0",
       "Accord.Statistics >= 3.0.2",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
       "EntityFramework.MicrosoftSqlServer >= 7.0.0-rc1-final",

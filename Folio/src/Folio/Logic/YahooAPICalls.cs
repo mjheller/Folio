@@ -9,33 +9,19 @@ namespace Folio.Logic
 {
     public static class YahooAPICalls
     {
-        public static List<decimal> GetStockHistoricalPricesToNow(string ticker, DateTime startDate) /* <= new DateTime(2000, 1, 1)*/
-        {
-            HistoricalPriceService hps = new HistoricalPriceService();
-            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
-            List<decimal> priceData = new List<decimal>();
-            foreach (var price in historicalPrices)
-            {
-                priceData.Add(price.Price);
-            }
-            return priceData;
-        }
-
-        public static List<decimal> GetStockHistoricalPricesCustom(string ticker, DateTime startDate, DateTime endDate)
+        public static List<decimal> GetStockHistoricalPrices(string ticker, DateTime startDate, DateTime endDate)
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             List<decimal> priceData = new List<decimal>();
-
             foreach (var price in historicalPrices)
             {
                 priceData.Add(price.Price);
             }
-
             return priceData;
         }
 
-        public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate) /*{startDate format = DateTime(2000, 1, 1)}*/
+        public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate)
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
@@ -44,7 +30,6 @@ namespace Folio.Logic
             {
                 priceData.Add(price.Date, price.Price);
             }
-
             return priceData;
         }
 

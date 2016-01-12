@@ -8,6 +8,9 @@ namespace Folio.Models
 {
     public class Stock : Asset
     {
+        public DateTime LastUpdate { get; set; }
+        public decimal Variance { get; set; }
+        public decimal ExpectedReturn { get; set; }
 
     }
 }

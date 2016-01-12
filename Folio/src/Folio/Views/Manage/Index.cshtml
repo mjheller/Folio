@@ -24,6 +24,16 @@
         </dd>
         <dt>Portfolios:</dt>
         <dd>
+            @if (Model.Portfolios != null)
+            {
+                @foreach (Portfolio portfolio in Model.Portfolios)
+                {
+                    <a asp-controller="Manage" asp-action="Index">@portfolio.Name</a>
+                }
+            } else
+            {
+                <a asp-controller="Manage" asp-action="Index">Add a Portfolio</a>
+            }
         </dd>
     </dl>
 </div>

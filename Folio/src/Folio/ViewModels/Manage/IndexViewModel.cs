@@ -18,5 +18,7 @@ namespace Folio.ViewModels.Manage
         public bool TwoFactor { get; set; }
 
         public bool BrowserRemembered { get; set; }
+
+        public IEnumerable<string> PortfolioNames { get; set; }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Folio.Models;
 using Folio.Services;
 using Folio.ViewModels.Manage;
+using folio.Services;
 
 namespace Folio.Controllers
 {
@@ -22,19 +23,23 @@ namespace Folio.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private ApplicationDbContext _context;
 
         public ManageController(
         UserManager<ApplicationUser> userManager,
+        UserManager<Portfolio> portfolioManager,
         SignInManager<ApplicationUser> signInManager,
         IEmailSender emailSender,
         ISmsSender smsSender,
-        ILoggerFactory loggerFactory)
+        ILoggerFactory loggerFactory,
+        ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<ManageController>();
+            _context = context;
         }
 
         //

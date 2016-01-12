@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Folio.Models.MattsModels;
 using Folio.Models;
 using Folio.ViewModels;
 
@@ -34,5 +33,5 @@ namespace Folio.Builders
     //    {
     //        List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User == User).ToList();;
     //    }
-    //}
+   }
 }

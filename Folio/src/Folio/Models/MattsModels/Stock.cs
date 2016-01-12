@@ -33,15 +33,15 @@ namespace Folio.Models.MattsModels
         public Stock(string symbol, decimal purchasePrice, int sharesOwned)
         {
             this.Symbol = symbol;
-            this.purchasePrice = currentPrice = purchasePrice;
-            this.sharesOwned = sharesOwned;
+            this.PurchasePrice = purchasePrice;
+            this.SharesOwned = sharesOwned;
             CalculateExpectedReturn();
             CalculateVariance();
         }
 
         private void addShares(int amount)
         {
-            this.sharesOwned += amount;
+            this.SharesOwned += amount;
             // this.PurchasePrice = CurrentPrice 
         }
 
@@ -59,7 +59,7 @@ namespace Folio.Models.MattsModels
 
                 List<decimal> prices = StockHelper.GetHistoricalPricesCustom(this.Symbol, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
                 decimal annualReturn = (prices[prices.Count - 1] / prices[0]) - 1;
-                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.expectedReturn - annualReturn), 2));
+                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.ExpectedReturn - annualReturn), 2));
                 sumSquared += squared;
             }
             this.Variance = sumSquared / numYears;
@@ -70,7 +70,7 @@ namespace Folio.Models.MattsModels
             StockHelper StockHelper = new StockHelper();
             decimal beta = StockHelper.getBeta(this.Symbol);
             decimal riskPremium = beta * marketRiskPremium;
-            this.expectedReturn = riskFreeReturn + riskPremium;
+            this.ExpectedReturn = riskFreeReturn + riskPremium;
 
             //risk-free return + risk premium = expected return
 

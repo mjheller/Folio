@@ -2,71 +2,101 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Accord.Statistics;
+
 
 namespace Folio.Models.MattsModels
 {
     public class Portfolio
     {
-        Dictionary<Stock, int> portfolio;
-        int expectedReturn;
-        int variance;
+        List<Stock> portfolio;
+        public decimal expectedReturn { get; private set; }
+        public decimal variance { get; private set; }
         private decimal dollarValue;
         StockHelper StockHelper;
 
         public Portfolio()
         {
-            this.portfolio = new Dictionary<Stock, int>();
+            this.portfolio = new List<Stock>();
+
         }
-        public Portfolio(Dictionary<Stock, int> Stocks)
+        public Portfolio(List<Stock> stocks)
         {
             StockHelper = new StockHelper();
-            this.portfolio = Stocks;
-            this.updatePortfolioDollarValue();
-            this.setWeights();
+            this.portfolio = stocks;
+            this.UpdatePortfolioDollarValue();
+            this.SetWeights();
+            CalculateExpectedReturn();
+            CalculateVariance(this.portfolio);
         }
-        private void updatePortfolioDollarValue()
+        private void UpdatePortfolioDollarValue()
         {
             decimal count = 0;
-            this.updateCurrentPrices();
-            foreach (KeyValuePair<Stock, int> kvp in portfolio)
+            this.UpdateCurrentPrices();
+            foreach (Stock s in portfolio)
             {
-                count += (kvp.Key.CurrentPrice * kvp.Value);
+                count += (s.Worth);
             }
             this.dollarValue = count;
         }
-        private void updateCurrentPrices()
+        private void UpdateCurrentPrices()
         {
-            foreach (Stock s in portfolio.Keys)
+            foreach (Stock s in portfolio)
             {
                 s.CurrentPrice = StockHelper.getCurrentPrice(s.Symbol);
             }
         }
-        private void addToPortfolio(Stock stock, int shares)
+        private void AddToPortfolio(Stock stock)
         {
-            this.portfolio.Add(stock, shares);
+            this.portfolio.Add(stock);
 
         }
 
-        private void setWeights()
+        private void SetWeights()
         {
-            foreach (Stock s in portfolio.Keys)
+            foreach (Stock s in portfolio)
             {
-                //weight of security in portfolio is dollar value of a security by the total dollar value of the portfolio
-                // may be able to get rid of dictionary int shares depending if have a ParentPortfolio link on each stock linking it to the portfolio it belongs to. Could then reference the stock.worth;
-                s.Weight = (s.CurrentPrice * s.SharesOwned) / this.dollarValue;
+                s.Weight = (s.Worth) / this.dollarValue;
             }
         }
 
-        //private int Variance(List<Stock> stocks)
-        //{
-        //    foreach (Stock s in stocks)
-        //    {
+        private decimal CalculateCovariance(double[] stock1, double[] stock2)
+        {
+            double covariance = Tools.Covariance(stock1, stock2);
+            return (decimal)covariance;
+        }
+        private void CalculateVariance(List<Stock> stocks)
+        {
+            decimal localVariance = 0;
 
-        //    }
-        //    decimal variance = (weight(1) ^ 2 * variance(1) + weight(2) ^ 2 * variance(2) + 2 * weight(1) * weight(2) * covariance(1, 2)
+            for (int i = 0; i < stocks.Count; i++)
+            {
+                decimal nthWeightedVariance = (decimal)Math.Pow((double)stocks[i].Weight, 2) * stocks[i].Variance;
 
+                for (int j = i + 1; j < stocks.Count; j++)
+                {
+                    if (i == stocks.Count - 1)
+                    {/*do nothing*/} else
+                    {
+                        decimal covariance = CalculateCovariance(stocks[i].priceHistory1Year, stocks[j].priceHistory1Year);
+                        decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
+                        variance += pair;
+                    }
+                }
+                localVariance += nthWeightedVariance;
+            }
+            this.variance = localVariance;
+        }
 
-
-        //}
+        private void CalculateExpectedReturn()
+        {
+            decimal sum = 0;
+            foreach (Stock s in portfolio)
+            {
+                decimal weightedReturn = s.Weight * s.ExpectedReturn;
+                sum += weightedReturn;
+            }
+            this.expectedReturn = sum;
+        }
     }
 }

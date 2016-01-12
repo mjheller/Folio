@@ -10,38 +10,48 @@ namespace Folio.Models.MattsModels
     //Stock Class
     public class Stock : Asset
     {
-        private const decimal marketRiskPremium = 6.34M;
-        private const decimal riskFreeReturn = 2.70M;
 
+        private string symbol;
+        private int sharesOwned;
+        private decimal weight;
+        private decimal sp500avgReturn = (decimal)6.34;
+        private decimal riskFreeReturn = (decimal)2.70;
+        private decimal expectedReturn;
+        private decimal variance;
+        public double[] priceHistory1Year;
+
+
+
+
+        public string Symbol { get { return symbol; } }
         [DataType("Currency")]
-        public decimal CurrentPrice { get; set; }
-
+        public decimal CurrentPrice { get { return currentPrice; }  }
         [DataType("Currency")]
-        public decimal PurchasePrice { get; set; }
+        public decimal PurchasePrice { get { return purchasePrice; } set; }
 
-        public decimal Weight { get; set; }
-        public decimal ExpectedReturn { get; set; }
-        public decimal Variance { get; set; }
-       
-        public int SharesOwned { get; private set; }
-        public decimal Worth
-        {
-            get { return CurrentPrice * SharesOwned; }
-        }
+        public int SharesOwned { get { return sharesOwned; } }
+        public decimal Worth { get { return CurrentPrice * SharesOwned; } }
+        public decimal Weight { get { return weight; } set { weight = value; } }
+        public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
+        public decimal Variance { get { return variance; } set { variance = value; } }
 
-   
+
+
         public Stock(string symbol, decimal purchasePrice, int sharesOwned)
         {
-            this.Symbol = symbol;
-            this.PurchasePrice = purchasePrice;
-            this.SharesOwned = sharesOwned;
+            this.symbol = symbol;
+            this.PurchasePrice = CurrentPrice = purchasePrice;
+            this.sharesOwned = sharesOwned;
             CalculateExpectedReturn();
             CalculateVariance();
+            decimal[] priceData = StockHelper.GetHistoricalPricesToNow(symbol, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).ToArray();
+            priceHistory1Year = new double[priceData.Length];
+            Parallel.For(0, priceData.Length, i => { priceHistory1Year[i] = (double)priceData[i]; });
         }
 
         private void addShares(int amount)
         {
-            this.SharesOwned += amount;
+            this.sharesOwned += amount;
             // this.PurchasePrice = CurrentPrice 
         }
 
@@ -49,8 +59,8 @@ namespace Folio.Models.MattsModels
         {
             Int32 year;
             decimal sumSquared = 0;
-            int numYears = DateTime.UtcNow.Year - 2000;
-            decimal prob = 100 / numYears;
+            int numYears = DateTime.UtcNow.Year - 2006;
+            decimal prob = numYears / 100;
             for (int i = 0; i < numYears; i++)
             {
                 if (i < 10)
@@ -59,7 +69,7 @@ namespace Folio.Models.MattsModels
 
                 List<decimal> prices = StockHelper.GetHistoricalPricesCustom(this.Symbol, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
                 decimal annualReturn = (prices[prices.Count - 1] / prices[0]) - 1;
-                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.ExpectedReturn - annualReturn), 2));
+                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(this.expectedReturn - annualReturn), 2));
                 sumSquared += squared;
             }
             this.Variance = sumSquared / numYears;
@@ -69,12 +79,14 @@ namespace Folio.Models.MattsModels
         {
             StockHelper StockHelper = new StockHelper();
             decimal beta = StockHelper.getBeta(this.Symbol);
+            decimal marketRiskPremium = sp500avgReturn - riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
-            this.ExpectedReturn = riskFreeReturn + riskPremium;
+            this.expectedReturn = riskFreeReturn + riskPremium;
 
             //risk-free return + risk premium = expected return
 
         }
 
     }
+
 }

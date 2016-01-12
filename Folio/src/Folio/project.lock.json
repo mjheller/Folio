@@ -3,6 +3,40 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -2206,6 +2240,40 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -4412,6 +4480,40 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
+      "Accord/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.dll": {}
+        }
+      },
+      "Accord.Math/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.0.2",
+          "Accord.Math": "3.0.2"
+        },
+        "compile": {
+          "lib/net45/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Accord.Statistics.dll": {}
+        }
+      },
       "EntityFramework.Commands/7.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -6619,6 +6721,53 @@
     }
   },
   "libraries": {
+    "Accord/3.0.2": {
+      "type": "package",
+      "sha512": "Rr4qe5MkUql9qdEZyAMlRBFBEHztILnDdLongRgr8e5sp+EkZcZG3xCRhWCPKLyWD/Jk5Vn2aqPBttOfqvo+cQ==",
+      "files": [
+        "Accord.3.0.2.nupkg",
+        "Accord.3.0.2.nupkg.sha512",
+        "Accord.nuspec",
+        "build/Accord.dll.config",
+        "build/Accord.targets",
+        "lib/net35/Accord.dll",
+        "lib/net35/Accord.xml",
+        "lib/net40/Accord.dll",
+        "lib/net40/Accord.xml",
+        "lib/net45/Accord.dll",
+        "lib/net45/Accord.xml"
+      ]
+    },
+    "Accord.Math/3.0.2": {
+      "type": "package",
+      "sha512": "mUuCRsVIvYsmemIeIYZr1vNQPQf5s8LPZknL69Il7E3AJH/lrEgAjLfsnmhfBpte5eH0NHI0PlGRWj8WWuQbCA==",
+      "files": [
+        "Accord.Math.3.0.2.nupkg",
+        "Accord.Math.3.0.2.nupkg.sha512",
+        "Accord.Math.nuspec",
+        "lib/net35/Accord.Math.dll",
+        "lib/net35/Accord.Math.xml",
+        "lib/net40/Accord.Math.dll",
+        "lib/net40/Accord.Math.xml",
+        "lib/net45/Accord.Math.dll",
+        "lib/net45/Accord.Math.xml"
+      ]
+    },
+    "Accord.Statistics/3.0.2": {
+      "type": "package",
+      "sha512": "GGfctxlk0DkhweBhWrVdRqpAPL3KmmLu8kzKqjMlmWl8rzItsu4qxXg3OxG5SmbAX2ZKqC1+YIMwarhDmu0M7Q==",
+      "files": [
+        "Accord.Statistics.3.0.2.nupkg",
+        "Accord.Statistics.3.0.2.nupkg.sha512",
+        "Accord.Statistics.nuspec",
+        "lib/net35/Accord.Statistics.dll",
+        "lib/net35/Accord.Statistics.xml",
+        "lib/net40/Accord.Statistics.dll",
+        "lib/net40/Accord.Statistics.xml",
+        "lib/net45/Accord.Statistics.dll",
+        "lib/net45/Accord.Statistics.xml"
+      ]
+    },
     "EntityFramework.Commands/7.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -7528,7 +7677,7 @@
     },
     "Microsoft.CodeAnalysis.Analyzers/1.0.0": {
       "type": "package",
-      "sha512": "E7VdmGw6xO3VHWapC+pNLZmo6yncS53UY3bmb5WZm9wliJBB1A6brgzKA4fcqiLrmJFx71r0M2zEbRDphRLUNg==",
+      "sha512": "2+V/VDgZu59Thrlp+FQH38H/SmPBegMKsG0ie1ZZyHtx7kJNEozIx/p9zs0UrolX0uyYX7Ouoj3Q3Be15lqXxA==",
       "files": [
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
@@ -7544,7 +7693,7 @@
     },
     "Microsoft.CodeAnalysis.Common/1.1.0-rc1-20151109-01": {
       "type": "package",
-      "sha512": "5eea4BzS8/ge6aVWbweZ3LxMZumN7lm1hPPjSn3iAS3yi1ozsg1aCZ+lHq2nbS/ZNT+Z3QmTcmKaQd3b4bTqeA==",
+      "sha512": "gC9zpQARTjIOht1dZM5Bp0fbOKA40yh0wHBMG2psLGquche0URbfdB9i1pnCusLospEsRIrNvYl75647BcBVug==",
       "files": [
         "lib/net45/Microsoft.CodeAnalysis.dll",
         "lib/net45/Microsoft.CodeAnalysis.xml",
@@ -7558,7 +7707,7 @@
     },
     "Microsoft.CodeAnalysis.CSharp/1.1.0-rc1-20151109-01": {
       "type": "package",
-      "sha512": "2u8FpEIzbjvW6kveLYDwVgrrw7rkqN123dQSMLL3aRBcNFpKL4+hJkrU5uutsVNmjrzxjQkrSKQjIw6L2yjU9w==",
+      "sha512": "BFhSWMMlp0xLN/ogn71ULN7N0yy/yqJf/wu63x3KjV497n+8OlyiX7ZnbaQiUeafjW5P2vLzvZH99+5s+dH3Dg==",
       "files": [
         "lib/net45/Microsoft.CodeAnalysis.CSharp.dll",
         "lib/net45/Microsoft.CodeAnalysis.CSharp.xml",
@@ -8343,7 +8492,7 @@
     "System.Diagnostics.DiagnosticSource/4.0.0-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "WHVhr5/p8UDjqNV7l9PCxZgOufE2tO4XOWva9pau9c7PzJJTdB1By6scO5dgHLpmlB/u4y27Y9AzT8AqtG8sxw==",
+      "sha512": "0uDR/UOmFCNPDCyHEPHhCrk6c1iRnDp00YqwSZ8Qf5aaaJjm4WXnf4Q9xZw4OoApsSiODSypDMdpQU24IxR16A==",
       "files": [
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.dll",
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.xml",
@@ -8532,7 +8681,7 @@
     "System.Numerics.Vectors/4.1.1-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jphbCfQB30LZBC/8kNQtAaaCcKzCFIFnRyUvYapNOozvleUvwI6sYG9d3/WamMcalnNcHDgIlQ713QOv9aweVA==",
+      "sha512": "FCYCEjc3BXBTpVZTxMqf2m/sGYyDzLwICy5lNKgZzT8WfshJhsTGjJuETwsh1Cwi6bksw9YiTB6yeeWBBJDnTA==",
       "files": [
         "lib/dotnet5.4/System.Numerics.Vectors.dll",
         "lib/MonoAndroid10/_._",
@@ -8639,7 +8788,7 @@
     "System.Reflection.Metadata/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "a8VsRm/B0Ik1o5FumSMWmpwbG7cvIIajAYhzTTy9VB9XItByJDQHGZkQTIAdsvVJ6MI5O3uH/lb0izgQDlDIWA==",
+      "sha512": "RLIE4sSt2zngMLuqM6YmxBH99mTumtT4DNZE4+msfEaInUP5iCLQT+BHPl+2cjSAP1pdALyAjLB8RtCB+WGGWQ==",
       "files": [
         "lib/dotnet5.2/System.Reflection.Metadata.dll",
         "lib/dotnet5.2/System.Reflection.Metadata.xml",
@@ -9017,6 +9166,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "Accord.Statistics >= 3.0.2",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
       "EntityFramework.MicrosoftSqlServer >= 7.0.0-rc1-final",
       "HtmlAgilityPack >= 1.4.9",

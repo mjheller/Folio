@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace atlas.Services
+namespace folio.Services
 {
     public static class SessionExtensions
     {

@@ -10,9 +10,9 @@ namespace Folio.Models.MattsModels
     public class Asset
     {
         protected string Name;
-        protected decimal purchasePrice, currentPrice;
-        
+        protected decimal purchasePrice, currentPrice;   
     }
+
     //Stock Class
     public class Stock : Asset
     {
@@ -23,13 +23,10 @@ namespace Folio.Models.MattsModels
         private const decimal riskFreeReturn = 2.70M;
         private decimal expectedReturn;
         private decimal variance;
-
-
         public decimal CurrentPrice { get { return currentPrice; } set { currentPrice = value; } }
         //use StockHelper.getCurrentPrice()
         public string Symbol { get { return symbol; } }
         public decimal PurchasePrice { get { return purchasePrice; } }
-
         public int SharesOwned { get { return sharesOwned; } }
         public decimal Worth
         {
@@ -39,8 +36,6 @@ namespace Folio.Models.MattsModels
         public decimal Weight { get { return weight; } set { weight = value; } }
         public decimal ExpectedReturn { get { return expectedReturn; } set { expectedReturn = value; } }
         public decimal Variance { get { return variance; } set { variance = value; } }
-
-
 
         public Stock(string symbol, decimal purchasePrice, int sharesOwned)
         {
@@ -54,7 +49,7 @@ namespace Folio.Models.MattsModels
         private void addShares(int amount)
         {
             this.sharesOwned += amount;
-            // this.PurchasePrice = CurrentPrice 
+            // this.PurchasePrice = CurrentPrice
         }
 
         private void CalculateVariance()
@@ -83,10 +78,7 @@ namespace Folio.Models.MattsModels
             decimal beta = StockHelper.getBeta(this.Symbol);
             decimal riskPremium = beta * marketRiskPremium;
             this.expectedReturn = riskFreeReturn + riskPremium;
-
             //risk-free return + risk premium = expected return
-
         }
-
     }
 }

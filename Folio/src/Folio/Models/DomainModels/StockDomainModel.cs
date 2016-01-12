@@ -24,7 +24,7 @@ namespace Folio.Models
         [DataType("Currency")]
         public decimal PurchasePrice { get; set; }
 
-        public int SharesOwned { get; set; }
+        public int SharesOwned { get; private set; }
 
         public decimal Worth
         { get { return CurrentPrice * SharesOwned; } }

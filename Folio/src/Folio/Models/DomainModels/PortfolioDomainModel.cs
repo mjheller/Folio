@@ -3,37 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Accord.Statistics;
-
+using Folio.Logic;
 
 namespace Folio.Models
 {
-    public class Portfolio
+    public class PortfolioDomainModel
     {
-        List<Stock> portfolio;
+        public List<StockDomainModel> Stocks;
         public decimal expectedReturn { get; private set; }
         public decimal variance { get; private set; }
         private decimal dollarValue;
-        StockHelper StockHelper;
 
-        public Portfolio()
+        public PortfolioDomainModel(List<StockDomainModel> stocks)
         {
-            this.portfolio = new List<Stock>();
-
-        }
-        public Portfolio(List<Stock> stocks)
-        {
-            StockHelper = new StockHelper();
-            this.portfolio = stocks;
-            this.UpdatePortfolioDollarValue();
-            this.SetWeights();
+            Stocks = stocks;
+            UpdatePortfolioDollarValue();
+            SetWeights();
             CalculateExpectedReturn();
-            CalculateVariance(this.portfolio);
+            CalculateVariance(Stocks);
         }
         private void UpdatePortfolioDollarValue()
         {
             decimal count = 0;
-            this.UpdateCurrentPrices();
-            foreach (Stock s in portfolio)
+            UpdateCurrentPrices();
+            foreach (StockDomainModel s in Stocks)
             {
                 count += (s.Worth);
             }
@@ -41,22 +34,21 @@ namespace Folio.Models
         }
         private void UpdateCurrentPrices()
         {
-            foreach (Stock s in portfolio)
+            foreach (StockDomainModel s in Stocks)
             {
-                s.CurrentPrice = StockHelper.getCurrentPrice(s.Symbol);
+                s.CurrentPrice = YahooAPICalls.GetCurrentStockPrice(s.Ticker);
             }
         }
-        private void AddToPortfolio(Stock stock)
+        private void AddToPortfolio(StockDomainModel stock)
         {
-            this.portfolio.Add(stock);
-
+            Stocks.Add(stock);
         }
 
         private void SetWeights()
         {
-            foreach (Stock s in portfolio)
+            foreach (StockDomainModel s in Stocks)
             {
-                s.Weight = (s.Worth) / this.dollarValue;
+                s.Weight = (s.Worth) / dollarValue;
             }
         }
 
@@ -65,7 +57,7 @@ namespace Folio.Models
             double covariance = Tools.Covariance(stock1, stock2);
             return (decimal)covariance;
         }
-        private void CalculateVariance(List<Stock> stocks)
+        private void CalculateVariance(List<StockDomainModel> stocks)
         {
             decimal localVariance = 0;
 
@@ -78,7 +70,7 @@ namespace Folio.Models
                     if (i == stocks.Count - 1)
                     {/*do nothing*/} else
                     {
-                        decimal covariance = CalculateCovariance(stocks[i].priceHistory1Year, stocks[j].priceHistory1Year);
+                        decimal covariance = CalculateCovariance(stocks[i].PriceHistory1Year, stocks[j].PriceHistory1Year);
                         decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
                         variance += pair;
                     }
@@ -91,7 +83,7 @@ namespace Folio.Models
         private void CalculateExpectedReturn()
         {
             decimal sum = 0;
-            foreach (Stock s in portfolio)
+            foreach (StockDomainModel s in Stocks)
             {
                 decimal weightedReturn = s.Weight * s.ExpectedReturn;
                 sum += weightedReturn;

@@ -15,23 +15,23 @@ namespace Folio.Builders
             _context = context;
         }
 
-        public List<Stock> GetStocksForPortolio(int portfolioID)
+        public List<StockDomainModel> GetStocksForPortolio(int portfolioID)
         {
             List<PortfolioAsset> portfolioAssets = _context.Portfolio
             .Single(p => p.ID == portfolioID)
             .PortfolioAssets.Where(pa => pa.AssetType == "stock")
             .ToList();
-            List<Stock> stocks = new List<Stock>();
+            List<StockDomainModel> stocks = new List<StockDomainModel>();
             foreach (PortfolioAsset asset in portfolioAssets)
             {
-                stocks.Add(new Stock(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAsset));
+                stocks.Add(new StockDomainModel(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAsset));
             }
             return stocks;
         }
 
-        public List<PortfolioViewModel> GetPortfolioViewModels(ApplicationUser User)
-        {
-            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User == User).ToList();;
-        }
-    }
+    //    public List<PortfolioViewModel> GetPortfolioViewModels(ApplicationUser User)
+    //    {
+    //        List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User == User).ToList();;
+    //    }
+   }
 }

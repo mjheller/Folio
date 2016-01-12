@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "Folio-db-1",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -29,6 +29,7 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "Newtonsoft.Json": "7.0.1",
     "Sendgrid": "6.3.4",
     "YahooStockQuotes": "1.0.6"
   },

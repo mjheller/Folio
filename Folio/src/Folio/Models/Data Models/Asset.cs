@@ -9,7 +9,6 @@ namespace Folio.Models
     interface Asset
     {
         string Name { get; set; }
-
         [Key]
         string Symbol { get; set; }
     }

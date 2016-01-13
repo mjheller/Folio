@@ -12,7 +12,7 @@ namespace Folio.Models
         private const decimal _sp500avgReturn = 6.34m;
         private const decimal _riskFreeReturn = 2.70m;
         private DateTime _lastUpdated;
-        //public double[] PriceHistory1Year { get; set; }
+        public double[] PriceHistory1Year { get; set; }
         public double[] dailyReturns1Year;
         public string Ticker { get; private set; }
         [DataType("Currency")]
@@ -47,7 +47,7 @@ namespace Folio.Models
             CurrentPrice = UpdateCurrentPrice();
             ExpectedReturn = CalculateExpectedReturn();
             Variance = CalculateVariance();
-            dailyReturns1Year = CalculateDailyReturnsToArray(priceData);
+            // dailyReturns1Year = CalculateDailyReturnsToArray(priceData);
             _lastUpdated = DateTime.UtcNow;
         }
 
@@ -76,13 +76,13 @@ namespace Folio.Models
             const int yearSearchLimit = 2006;
             int numYears = DateTime.UtcNow.Year - yearSearchLimit;
             decimal prob = numYears / 100;
-            for (int i = yearSeachLimit; i < DateTime.UtcNow.Year; i++)
-            {
-                List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
-                decimal annualReturn = ((prices[prices.Count - 1] - prices[0]) / prices[0]);
-                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
-                sumSquared += squared;
-            }
+            //for (int i = yearSeachLimit; i < DateTime.UtcNow.Year; i++)
+            //{
+            //    List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
+            //    decimal annualReturn = ((prices[prices.Count - 1] - prices[0]) / prices[0]);
+            //    decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
+            //    sumSquared += squared;
+            //}
             return sumSquared / numYears;
         }
 

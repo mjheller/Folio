@@ -56,6 +56,7 @@ namespace Folio.Controllers
                 : "";
 
             var user = await GetCurrentUserAsync();
+            List<string> portfolioNames = _context.Portfolio.Where(p => p.User.Id == user.Id).Select(s => s.Name).ToList();
 
             var model = new IndexViewModel
             {
@@ -64,7 +65,7 @@ namespace Folio.Controllers
                 TwoFactor = await _userManager.GetTwoFactorEnabledAsync(user),
                 Logins = await _userManager.GetLoginsAsync(user),
                 BrowserRemembered = await _signInManager.IsTwoFactorClientRememberedAsync(user),
-                PortfolioNames = user.Portfolios != null ? user.Portfolios.Select(p => p.Name) : new List<string>()
+                PortfolioNames = portfolioNames != null ? portfolioNames : new List<string>()
             };
 
             return View(model);

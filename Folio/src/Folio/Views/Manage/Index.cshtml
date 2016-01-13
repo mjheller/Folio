@@ -8,37 +8,22 @@
 <div>
     <h4>Change your account settings</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>Password:</dt>
-        <dd>
-            [
-            @if (Model.HasPassword)
+    <p>@if (Model.HasPassword)
             {
-                <a asp-controller="Manage" asp-action="ChangePassword">Change</a>
-            }
-            else
+        <a asp-controller="Manage" asp-action="ChangePassword">Change Your Password</a>
+    }
+    else
+    {
+        <a asp-controller="Manage" asp-action="SetPassword">Create Your Password</a>
+    }</p>
+    <p>
+        @if (Model.PortfolioNames.Count() == 0)
             {
-                <a asp-controller="Manage" asp-action="SetPassword">Create</a>
-            }
-            ]
-        </dd>
-        <dt>Portfolios:</dt>
-        <dd>
-            [
-            @if (Model.PortfolioNames.Count() == 0)
-            {
-                <a asp-controller="Portfolios" asp-action="Create">Add a Portfolio</a>
-            }
-            else
-            {
-                <ul>
-                    @foreach (string portfolioName in Model.PortfolioNames)
-                    {
-                        <li><a asp-controller="Portfolios" asp-action="Index">@portfolioName</a></li>
-                    }
-                </ul>
-            }
-            ]
-        </dd>
-    </dl>
+            <a asp-controller="Portfolios" asp-action="Create">Add a Portfolio</a>
+        }
+        else
+        {
+            <a asp-controller="Portfolios" asp-action="Index">Manage Your Portfolios</a>
+        }
+    </p>
 </div>

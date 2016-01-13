@@ -1,23 +1,27 @@
 using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
+using Microsoft.AspNet.Authorization;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Folio.Controllers
 {
+    [Authorize]
     public class PortfoliosController : Controller
     {
         private ApplicationDbContext _context;
+        private UserManager<ApplicationUser> _userManager; 
 
-        public PortfoliosController(ApplicationDbContext context)
+        public PortfoliosController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
-            _context = context;    
+            _context = context;
+            _userManager = userManager;
         }
 
         // GET: Portfolios
@@ -56,6 +60,9 @@ namespace Folio.Controllers
         {
             if (ModelState.IsValid)
             {
+                ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+                portfolio.User = user;
+                portfolio.DateCreated = DateTime.Now;
                 _context.Portfolio.Add(portfolio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("AddStock", portfolio);

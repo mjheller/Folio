@@ -72,8 +72,14 @@ namespace Folio.Controllers
         }
 
         // GET: Portfolios/AddStock
-        public IActionResult AddStock(Portfolio portfolio)
+        public async Task<IActionResult> AddStock(int? id)
         {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+
+            Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
 
             if (HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks") == null)
             {

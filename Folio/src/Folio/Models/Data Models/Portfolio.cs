@@ -10,7 +10,7 @@ namespace Folio.Models
         [Required]
         [Display(Name = "Portfolio Name:")]
         public string Name { get; set; }
-        [Display(Name = "Date Created")]
+        [Display(Name = "Date Created:")]
         [DataType(DataType.Date)]
         public DateTime DateCreated { get; set; }
         public virtual ICollection<PortfolioAsset> PortfolioAssets { get; set; }

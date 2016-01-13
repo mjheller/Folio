@@ -20,7 +20,7 @@ namespace Folio.Logic
             {
                 historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 historicalPrices = BruteForceHistoricalPrices(hps, ticker, startDate, endDate);
             }
@@ -43,7 +43,7 @@ namespace Folio.Logic
                 {
                     historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
                 }
-                catch(Exception ex)
+                catch(Exception)
                 {
                 }
                 if (historicalPrice == null)

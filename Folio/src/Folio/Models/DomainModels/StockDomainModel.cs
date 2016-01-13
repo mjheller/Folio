@@ -69,24 +69,16 @@ namespace Folio.Models
 
         private decimal CalculateVariance()
         {
-            int year;
+            
             decimal sumSquared = 0;
             const int yearSearchLimit = 2006;
             int numYears = DateTime.UtcNow.Year - yearSearchLimit;
             decimal prob = numYears / 100;
-            for (int i = 0; i < numYears; i++)
+            for (int i = yearSeachLimit; i < DateTime.UtcNow.Year; i++)
             {
-                if (i < 10)
-                {
-                    year = Convert.ToInt32($"200{i}");
-                }
-                else
-                {
-                    year = Convert.ToInt32($"20{i}");
-                }
-                List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(year, 1, 1), new DateTime(year, 12, 31));
-                decimal annualReturn = (prices[prices.Count - 1] / prices[0]) - 1;
-                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2));
+                List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
+                decimal annualReturn = ((prices[prices.Count - 1] - prices[0]) / prices[0]);
+                decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
                 sumSquared += squared;
             }
             return sumSquared / numYears;
@@ -97,7 +89,7 @@ namespace Folio.Models
             decimal beta = YahooAPICalls.GetStockBeta(Ticker);
             decimal marketRiskPremium = _sp500avgReturn - _riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
-            return _riskFreeReturn + riskPremium;
+            return (_riskFreeReturn + riskPremium)/100;
         }
     }
 }

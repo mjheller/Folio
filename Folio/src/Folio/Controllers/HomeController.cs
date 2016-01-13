@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
+﻿using Microsoft.AspNet.Mvc;
 
 namespace Folio.Controllers
 {
@@ -11,12 +7,21 @@ namespace Folio.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Message"] = "Folio";
+
+            return View();
+        }
+
+        public IActionResult News()
+        {
+            ViewData["Message"] = "Your news page.";
+
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "[Folio] members in alphabetical order";
 
             return View();
         }

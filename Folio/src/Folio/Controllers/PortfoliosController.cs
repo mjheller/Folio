@@ -1,12 +1,14 @@
 using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
+using Newtonsoft.Json;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -71,7 +73,8 @@ namespace Folio.Controllers
             return View();
         }
 
-        // GET: Portfolios/AddStock
+        // GET: Portfolios/AddStock/5
+        [HttpGet]
         public async Task<IActionResult> AddStock(int? id)
         {
             if (id == null)
@@ -79,7 +82,9 @@ namespace Folio.Controllers
                 return HttpNotFound();
             }
 
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
+            List<Portfolio> userPortfolios = _context.Portfolio.Where(p => p.User.Id == HttpContext.User.GetUserId()).Include(s => s.PortfolioAssets).ToList();
+            Portfolio workingPortfolio = userPortfolios.Find(p => p.ID == id);
+            userPortfolios.Remove(userPortfolios.Find(p => p.Name == workingPortfolio.Name));
 
             if (HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks") == null)
             {
@@ -89,11 +94,34 @@ namespace Folio.Controllers
 
             AddStockToPortfolioViewModel model = new AddStockToPortfolioViewModel
             {
-                Portfolio = portfolio,
+                UserPortfolios = userPortfolios,
+                WorkingPortfolio = workingPortfolio,
                 AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks")
             };
 
             return View(model);
+        }
+
+        // POST: Portfolios/AddStock/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddStock(int? id, string ticker, string amount)
+        {
+            Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
+            portfolio.PortfolioAssets.Add(new PortfolioAsset { AssetSymbol = ticker, NumberOfAssetOwned = Int32.Parse(amount)});
+            return View();
+        }
+
+        public JsonResult Autocomplete(string term)
+        {
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("StockTickers");
+            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
+            return Json(filteredItems);
+        }
+
+        private IActionResult Json(IEnumerable<string> filteredItems, object allowGet)
+        {
+            throw new NotImplementedException();
         }
 
         // GET: Portfolios/Edit/5

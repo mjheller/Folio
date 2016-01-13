@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Folio.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
-using Folio.Models;
-using System.Collections;
-using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Folio.SeedData
 {
@@ -32,7 +29,7 @@ namespace Folio.SeedData
             }
             if (!(context.Stock.Any()))
             {
-                SeedStocks(context);
+                // SeedStocks(context);
             }
         }
 

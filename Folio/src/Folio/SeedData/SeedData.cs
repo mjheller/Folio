@@ -38,19 +38,19 @@ namespace Folio.SeedData
 
         private static void SeedStocks(ApplicationDbContext context)
         {
-
-            string[] stockFiles = {
-                "NasdaqQuote",
-                "NyseAmexQuote",
-                "NYSEQuote",
-                "SP500Quote"
+            Dictionary<string, string> stockFiles = new Dictionary<string, string> {
+                { "NasdaqQuote", "NASDAQ" },
+                { "NyseAmexQuote","NYSE AMEX" },
+                { "NYSEQuote","NYSE" },
+                { "SP500Quote", "S&P 500" }
             };
-            List<Stock> allStocks = new List<Stock>();
-            foreach (string stock in stockFiles)
+            List<SeedStock> seedStocks = new List<SeedStock>();
+            foreach (string stock in stockFiles.Keys)
             {
-               allStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv"));
+               seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock]));
             }
-            context.Stock.AddRange(allStocks);
+            List<Stock> dataStocks = SeedDataHelperFunctions.SeedStockData(seedStocks);
+            context.AddRange(dataStocks);
             context.SaveChanges();
         }
 

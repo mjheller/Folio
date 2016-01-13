@@ -14,8 +14,7 @@ namespace Folio.Models
         public DateTime LastUpdate { get; set; }
         public decimal Variance { get; set; }
         public decimal ExpectedReturn { get; set; }
-        public string PriceHistory1YearJSON { get; set; }
-        public string Description { get; set; }
+        public string DailyReturns1Year { get; set; }
         public string Exchange { get; set; }
     }
 }

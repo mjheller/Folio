@@ -30,21 +30,16 @@ namespace Folio.Models
             {
                 count += (s.Worth);
             }
-            this.dollarValue = count;
+            dollarValue = count;
         }
 
-        private void UpdateCurrentPrices()
-        {
-            foreach (StockDomainModel s in Stocks)
-            {
-                s.CurrentPrice = YahooAPICalls.GetCurrentStockPrice(s.Ticker);
-            }
-        }
-
-        private void AddToPortfolio(StockDomainModel stock)
-        {
-            Stocks.Add(stock);
-        }
+        //private void UpdateCurrentPrices()
+        //{
+        //    foreach (StockDomainModel s in Stocks)
+        //    {
+        //        s.CurrentPrice = YahooAPICalls.GetCurrentStockPrice(s.Ticker);
+        //    }
+        //}
 
         private void SetWeights()
         {
@@ -72,7 +67,7 @@ namespace Folio.Models
                 {
                     if (!(i == stocks.Count - 1))
                     {
-                        decimal covariance = CalculateCovariance(stocks[i].dailyReturns1Year, stocks[j].dailyReturns1Year);
+                        decimal covariance = CalculateCovariance(stocks[i].DailyReturns1Year, stocks[j].DailyReturns1Year);
                         decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
                         localVariance += pair;
                     }

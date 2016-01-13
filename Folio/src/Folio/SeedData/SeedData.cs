@@ -38,23 +38,20 @@ namespace Folio.SeedData
 
         private static void SeedStocks(ApplicationDbContext context)
         {
-            
-            //string[] stockFiles = {
-            //    "NasdaqQuote",
-            //    "NyseAmexQuote",
-            //    "NYSEQuote",
-            //    "SP500Quote"
-            //};
-            //foreach (string exchange in stockFiles)
-            //{
-            //    string filePath = string.Format("~/StockData/{0}.csv", exchange);
-            //    using (var sr = new StreamReader(filePath))
-            //    {
-            //        var csv = new CsvReader(sr);
 
-            //    }
-            //}
-
+            string[] stockFiles = {
+                "NasdaqQuote",
+                "NyseAmexQuote",
+                "NYSEQuote",
+                "SP500Quote"
+            };
+            List<Stock> allStocks = new List<Stock>();
+            foreach (string stock in stockFiles)
+            {
+               allStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv"));
+            }
+            context.Stock.AddRange(allStocks);
+            context.SaveChanges();
         }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)

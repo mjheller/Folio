@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "News";
+}
+
+@using System.Xml.XPath;
+@using System.Xml;
+@{
+    //Fetch RSS XML
+    XmlTextReader NasDaqRSS = new XmlTextReader("http://articlefeeds.nasdaq.com/nasdaq/categories?category=Stocks");
+
+    //Create new XML document
+    XmlDocument NasDaqXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    NasDaqXML.Load(NasDaqRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList NasDaqRSSItems = NasDaqXML.SelectNodes("//item");
+
+}
+@{
+    //Fetch RSS XML
+    XmlTextReader YahooRSS = new XmlTextReader("http://finance.yahoo.com/rss/headline?s=yhoo");
+
+    //Create new XML document
+    XmlDocument YahooXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    YahooXML.Load(YahooRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList YahooRSSItems = YahooXML.SelectNodes("//item");
+
+}
+@{
+    //Fetch RSS XML
+    XmlTextReader CNNRSS = new XmlTextReader("http://rss.cnn.com/rss/money_markets.rss");
+    //Create new XML document
+    XmlDocument CNNXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    CNNXML.Load(CNNRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList CNNRSSItems = CNNXML.SelectNodes("//item");
+
+}
+@{
+    //Fetch RSS XML
+    XmlTextReader marketwatchRSS = new XmlTextReader("http://feeds.marketwatch.com/marketwatch/StockstoWatch/");
+     //Create new XML document
+    XmlDocument marketwatchXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    marketwatchXML.Load(marketwatchRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList marketwatchRSSItems = marketwatchXML.SelectNodes("//item");
+
+}
+@{
+    //Fetch RSS XML
+    XmlTextReader reutersRSS = new XmlTextReader("http://feeds.reuters.com/reuters/hotStocksNews");
+    //Create new XML document
+    XmlDocument reutersXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    reutersXML.Load(reutersRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList reutersRSSItems = reutersXML.SelectNodes("//item");
+
+}
+@{
+    //Fetch RSS XML
+    XmlTextReader BriefingRSS = new XmlTextReader("http://rss.briefing.com/Investor/RSS/StockMarketUpdate.xml");
+    //Create new XML document
+    XmlDocument BriefingXML = new XmlDocument();
+
+    //Load in our remote XML into our XML document
+    BriefingXML.Load(BriefingRSS);
+
+    //Select our nodes we want with some xPath
+    XmlNodeList BriefingRSSItems = BriefingXML.SelectNodes("//item");
+
+}
+<div class="row1">
+    <div class="col-md-4" row ="row1">
+        <h3>NASDAQ Stock Feed</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in NasDaqRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-4" row ="row1">
+        <h3>Yahoo Finance Top Stories</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in YahooRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+</div>
+    <div class="col-md-4" row="row1">
+        <h3>CNN Money Markets</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in CNNRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-4" row="row1">
+        <h3>Market Watch Stocks to Watch</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in marketwatchRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-4" row="row1">
+        <h3>Reuters Hot Stock News</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in reutersRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+    <div class="col-md-4" row="row1">
+        <h3>Briefing Stock Market Update</h3>
+        <ul>
+            @{
+                //For each item node we can then ouput what we want
+                foreach (XmlNode node in BriefingRSSItems)
+                {
+                    <li>
+                        <div class="date">@node["pubDate"].InnerText</div>
+                        <a href="@node["link"].InnerText">@node["title"].InnerText</a>
+                        <p></p>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>

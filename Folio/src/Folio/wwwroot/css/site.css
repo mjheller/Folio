@@ -38,15 +38,14 @@ select {
 }
 
 /* Custom Styles */
-#stock-input {
+.stock-input {
     display: block;
-    margin: 0;
     width: 100%;
     font-family: sans-serif;
     font-size: 18px;
     box-shadow: none;
     padding: 10px;
-    border: solid 1px #888;
+    border: solid 1px #ccc;
     transition: box-shadow 0.3s, border 0.3s;
 }
 

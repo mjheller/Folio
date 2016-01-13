@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Folio.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
-using Folio.Models;
-using System.Collections;
-using System.IO;
-using CsvHelper;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Folio.SeedData
 {
@@ -37,35 +33,22 @@ namespace Folio.SeedData
             }
         }
 
-        //private static void SeedStocks(ApplicationDbContext context)
-        //{
-
-        //    string[] stockFiles = {
-        //        "NasdaqQuote",
-        //        "NyseAmexQuote",
-        //        "NYSEQuote",
-        //        "SP500Quote"
-        //    };
-        //    foreach (string exchange in stockFiles)
-        //    {
-        //        string filePath = string.Format("~/StockData/{0}.csv", exchange);
-        //        using (var sr = new StreamReader(filePath))
-        //        {
-        //            CsvReader csv = new CsvReader(sr);
-        //            csv.Configuration.RegisterClassMap<StockCSVMap>();
-        //            csv.Configuration.WillThrowOnMissingField = false;
-        //            csv.Configuration.SkipEmptyRecords = true;
-        //            var stocks = csv.GetRecords<Stock>();
-        //            foreach (var stock in stocks)
-        //            {
-        //                Console.Write(stock.Symbol);
-        //                Console.Write("\t");
-        //                Console.Write(stock.Description);
-        //                Console.WriteLine();
-        //            }
-        //        }
-
-        //    }
+        private static void SeedStocks(ApplicationDbContext context)
+        {
+            string[] stockFiles = {
+                "NasdaqQuote",
+                "NyseAmexQuote",
+                "NYSEQuote",
+                "SP500Quote"
+            };
+            List<Stock> allStocks = new List<Stock>();
+            foreach (string stock in stockFiles)
+            {
+               allStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv"));
+            }
+            context.Stock.AddRange(allStocks);
+            context.SaveChanges();
+        }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {

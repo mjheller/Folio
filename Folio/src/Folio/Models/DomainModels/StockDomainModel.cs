@@ -37,16 +37,18 @@ namespace Folio.Models
             
         }
 
-        private string GetPriceHistory1YearAsJSON()
-        {
-            return JsonConvert.SerializeObject(PriceHistory1Year);
-        }
+        //private string GetPriceHistory1YearAsJSON()
+        //{
+        //    return JsonConvert.SerializeObject(PriceHistory1Year);
+        //}
+
 
         private void UpdateStockInformation()
         {
             CurrentPrice = UpdateCurrentPrice();
             ExpectedReturn = CalculateExpectedReturn();
             Variance = CalculateVariance();
+            decimal[] priceData = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year)).ToArray() ;
             dailyReturns1Year = CalculateDailyReturnsToArray(priceData);
             _lastUpdated = DateTime.UtcNow;
         }
@@ -76,7 +78,7 @@ namespace Folio.Models
             const int yearSearchLimit = 2006;
             int numYears = DateTime.UtcNow.Year - yearSearchLimit;
             decimal prob = numYears / 100;
-            for (int i = yearSeachLimit; i < DateTime.UtcNow.Year; i++)
+            for (int i = yearSearchLimit; i < DateTime.UtcNow.Year; i++)
             {
                 List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
                 decimal annualReturn = ((prices[prices.Count - 1] - prices[0]) / prices[0]);

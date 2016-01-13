@@ -37,13 +37,13 @@
           "lib/net45/Accord.Statistics.dll": {}
         }
       },
-      "CsvHelper/0.12.0": {
+      "CsvHelper/2.13.5": {
         "type": "package",
         "compile": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         },
         "runtime": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         }
       },
       "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -1981,7 +1981,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -2283,13 +2283,13 @@
           "lib/net45/Accord.Statistics.dll": {}
         }
       },
-      "CsvHelper/0.12.0": {
+      "CsvHelper/2.13.5": {
         "type": "package",
         "compile": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         },
         "runtime": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         }
       },
       "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -4230,7 +4230,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -4532,13 +4532,13 @@
           "lib/net45/Accord.Statistics.dll": {}
         }
       },
-      "CsvHelper/0.12.0": {
+      "CsvHelper/2.13.5": {
         "type": "package",
         "compile": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         },
         "runtime": {
-          "lib/CsvHelper.dll": {}
+          "lib/net20/CsvHelper.dll": {}
         }
       },
       "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -6479,7 +6479,7 @@
           "lib/dnx451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Newtonsoft.Json/7.0.1": {
+      "Newtonsoft.Json/8.0.2": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -6795,16 +6795,25 @@
         "lib/net45/Accord.Statistics.xml"
       ]
     },
-    "CsvHelper/0.12.0": {
+    "CsvHelper/2.13.5": {
       "type": "package",
-      "sha512": "eFOPelYx/VNbqYSUpev4SlrD77mYB8hSvkQs8AlCKb0Kor/YlLOJ/1yGi/dGbkW4qNJJDfeyWQyCZ1uKnkgyCQ==",
+      "sha512": "fC8DPi/YTcZ8uXFiAeuT9EpsR2TE5cSJ2jg/4tht/Oen6az/djebpYoCQEtI33RfNrSZ533SedOknlWtUTX3fw==",
       "files": [
-        "CsvHelper.0.12.0.nupkg",
-        "CsvHelper.0.12.0.nupkg.sha512",
+        "CsvHelper.2.13.5.nupkg",
+        "CsvHelper.2.13.5.nupkg.sha512",
         "CsvHelper.nuspec",
-        "lib/CsvHelper.dll",
-        "lib/CsvHelper.pdb",
-        "lib/CsvHelper.XML"
+        "lib/net20/CsvHelper.dll",
+        "lib/net20/CsvHelper.pdb",
+        "lib/net20/CsvHelper.xml",
+        "lib/net35-client/CsvHelper.dll",
+        "lib/net35-client/CsvHelper.pdb",
+        "lib/net35-client/CsvHelper.xml",
+        "lib/net40-client/CsvHelper.dll",
+        "lib/net40-client/CsvHelper.pdb",
+        "lib/net40-client/CsvHelper.xml",
+        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.dll",
+        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.pdb",
+        "lib/portable-net40+sl5+win8+wpa+wp8/CsvHelper.xml"
       ]
     },
     "EntityFramework.Commands/7.0.0-rc1-final": {
@@ -8357,9 +8366,9 @@
         "Microsoft.VisualStudio.Web.BrowserLink.Loader.nuspec"
       ]
     },
-    "Newtonsoft.Json/7.0.1": {
+    "Newtonsoft.Json/8.0.2": {
       "type": "package",
-      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
+      "sha512": "e5yWmEfu68rmtG431zl9N/7PlNKQDIuiDW5MHlEFAZcecakcxrIGnKqrPAtWNILzK2oNanRB5cD150MYhECK3g==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -8373,8 +8382,8 @@
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.7.0.1.nupkg",
-        "Newtonsoft.Json.7.0.1.nupkg.sha512",
+        "Newtonsoft.Json.8.0.2.nupkg",
+        "Newtonsoft.Json.8.0.2.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -9205,7 +9214,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "CsvHelper >= 0.12.0",
+      "Newtonsoft.Json >= 8.0.2",
       "Accord.Statistics >= 3.0.2",
       "EntityFramework.Commands >= 7.0.0-rc1-final",
       "EntityFramework.MicrosoftSqlServer >= 7.0.0-rc1-final",
@@ -9230,9 +9239,9 @@
       "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc1-final",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-rc1-final",
-      "Newtonsoft.Json >= 7.0.1",
       "Sendgrid >= 6.3.4",
-      "YahooStockQuotes >= 1.0.6"
+      "YahooStockQuotes >= 1.0.6",
+      "CsvHelper >= 2.13.5"
     ],
     "DNX,Version=v4.5.1": []
   }

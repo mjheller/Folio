@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Folio.Models;
 using System.Collections;
 using System.IO;
+using CsvHelper;
 
 namespace Folio.SeedData
 {
@@ -38,24 +39,33 @@ namespace Folio.SeedData
 
         private static void SeedStocks(ApplicationDbContext context)
         {
-            
-            //string[] stockFiles = {
-            //    "NasdaqQuote",
-            //    "NyseAmexQuote",
-            //    "NYSEQuote",
-            //    "SP500Quote"
-            //};
-            //foreach (string exchange in stockFiles)
-            //{
-            //    string filePath = string.Format("~/StockData/{0}.csv", exchange);
-            //    using (var sr = new StreamReader(filePath))
-            //    {
-            //        var csv = new CsvReader(sr);
 
-            //    }
-            //}
+            string[] stockFiles = {
+                "NasdaqQuote",
+                "NyseAmexQuote",
+                "NYSEQuote",
+                "SP500Quote"
+            };
+            foreach (string exchange in stockFiles)
+            {
+                //string filePath = string.Format("~/StockData/{0}.csv", exchange);
+                //using (var sr = new StreamReader(filePath))
+                //{
+                //    CsvReader csv = new CsvReader(sr);
+                //    csv.Configuration.RegisterClassMap<StockCSVMap>();
+                //    csv.Configuration.WillThrowOnMissingField = false;
+                //    csv.Configuration.SkipEmptyRecords = true;
+                //    var stocks = csv.GetRecords<Stock>();
+                //    foreach (var stock in stocks)
+                //    {
+                //        Console.Write(stock.Symbol);
+                //        Console.Write("\t");
+                //        Console.Write(stock.Description);
+                //        Console.WriteLine();
+                //    }
+                //}
 
-        }
+            }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {

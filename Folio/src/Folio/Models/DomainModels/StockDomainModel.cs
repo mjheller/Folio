@@ -15,7 +15,7 @@ namespace Folio.Models
         public double[] PriceHistory1Year { get; set; }
         public string Ticker { get; private set; }
         [DataType("Currency")]
-        public decimal CurrentPrice { get; private set; }
+        public decimal CurrentPrice { get; set; }
         [DataType("Currency")]
         public decimal PurchasePrice { get; private set; }
         public int SharesOwned { get; private set; }

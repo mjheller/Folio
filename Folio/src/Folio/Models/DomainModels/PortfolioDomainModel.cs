@@ -33,7 +33,6 @@ namespace Folio.Models
             this.dollarValue = count;
         }
 
-<<<<<<< HEAD
         private void UpdateCurrentPrices()
         {
             foreach (StockDomainModel s in Stocks)
@@ -42,8 +41,6 @@ namespace Folio.Models
             }
         }
 
-=======
->>>>>>> f05c432a03e8274bf9a007d098964708d367956d
         private void AddToPortfolio(StockDomainModel stock)
         {
             Stocks.Add(stock);

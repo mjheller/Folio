@@ -32,19 +32,23 @@
     <div>
         @Html.Label("Ticker Search:")
         @Html.TextBox("ticker", "", new { name = "ticker", @class = "stock-input", @style = "margin-bottom: 15px" } )
-        @Html.Label("Number of Stocks:")
+        @Html.Label("Shares Held:")
         @Html.TextBox("amount", "", new { name = "amount", @class = "stock-input" } )
         <input type="submit" class="portfolio-button" value="Add Stock">
     </div>
 </form>
 
+
 @if (Model.WorkingPortfolio.PortfolioAssets.Count() > 0)
 {
+    <hr />
     <div class="owned-stocks">
-        <label>Owned Stocks:</label>
-        @foreach(PortfolioAsset asset in Model.WorkingPortfolio.PortfolioAssets)
-        {
-            <p>@asset.AssetSymbol</p>
-        }
+        <label>Assets Held Within @Model.WorkingPortfolio.Name:</label>
+        <ul>
+            @foreach (PortfolioAsset asset in Model.WorkingPortfolio.PortfolioAssets)
+            {
+                <li><p>@asset.AssetSymbol : @asset.NumberOfAssetOwned Shares</p></li>
+            }
+        </ul>
     </div>
 }

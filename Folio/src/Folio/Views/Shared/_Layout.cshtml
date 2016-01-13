@@ -28,12 +28,20 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">[Folio]</a>
+                    <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a asp-controller="Home" asp-action="News">News</a></li>
+<<<<<<< HEAD
                         <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+=======
+                        <li><a asp-controller="Home" asp-action="About">About</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li><a asp-controller="Portfolios" asp-action="Index">Portfolios</a></li>
+                        }
+>>>>>>> 653d23b3e6526adab095e647d166804140a926e3
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>

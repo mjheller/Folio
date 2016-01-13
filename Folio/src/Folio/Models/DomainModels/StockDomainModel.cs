@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace Folio.Models
 {
@@ -39,7 +38,6 @@ namespace Folio.Models
            // PurchasePrice = purchasePrice;
             SharesOwned = sharesOwned;
             UpdateStockInformation();
-            
         }
 
         public StockDomainModel(string ticker, string name, string exchange)

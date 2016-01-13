@@ -108,20 +108,30 @@ namespace Folio.Controllers
         public async Task<IActionResult> AddStock(int? id, string ticker, string amount)
         {
             Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
-            portfolio.PortfolioAssets.Add(new PortfolioAsset { AssetSymbol = ticker, NumberOfAssetOwned = Int32.Parse(amount)});
-            return View();
+
+            if (portfolio.PortfolioAssets == null)
+            {
+                PortfolioAsset asset = new PortfolioAsset { AssetSymbol = ticker, NumberOfAssetOwned = Int32.Parse(amount) };
+                _context.PortfolioAsset.Add(asset);
+                portfolio.PortfolioAssets = new List<PortfolioAsset>() { asset };
+                _context.Update(portfolio);
+            } else
+            {
+                PortfolioAsset asset = portfolio.PortfolioAssets.ToList().Find(p => p.AssetSymbol == ticker);
+                asset.NumberOfAssetOwned += Int32.Parse(amount);
+                _context.Update(asset);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("AddStock", new { id = id } );
         }
 
         public JsonResult Autocomplete(string term)
         {
-            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("StockTickers");
+            // List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("StockTickers");
+            List<string> items = new List<string>();
             var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
             return Json(filteredItems);
-        }
-
-        private IActionResult Json(IEnumerable<string> filteredItems, object allowGet)
-        {
-            throw new NotImplementedException();
         }
 
         // GET: Portfolios/Edit/5

@@ -4,11 +4,13 @@
     ViewData["Title"] = "Add Stock to Portfolio";
 }
 
-<h2>Add Stock</h2>
-<h4>Search for a stock ticker below to add the stock to @Model.Portfolio.Name</h4>
-<form id="SearchStock">
+<h2>Add a Stock to: <strong>@Model.Portfolio.Name</strong></h2>
+<a href="#" class="portfolio-button">Change Portfolio</a>
+<hr />
+<p>Search for a stock ticker below to add it.</p>
+<form id="search-stock">
     <div>
-        @Html.Label("Stock Ticker:")
-        @Html.TextBox("ticker", "GOOG")
+        @Html.TextBox("ticker", "", new { id = "stock-input" } )
+        <a href="#" class="portfolio-button">Add Stock</a>
     </div>
 </form>

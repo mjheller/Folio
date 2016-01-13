@@ -8,7 +8,8 @@ namespace Folio.ViewModels
 {
     public class AddStockToPortfolioViewModel
     {
-        Portfolio Portfolio { get; set; }
-        List<StockViewModel> AvailableAssetTickers { get; set; }
+        public Portfolio Portfolio { get; set; }
+        public List<StockViewModel> AvailableAssetTickers { get; set; }
+        public List<StockViewModel> ChosenAssets { get; set; }
     }
 }

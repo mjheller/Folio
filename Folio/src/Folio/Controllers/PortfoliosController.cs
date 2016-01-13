@@ -1,9 +1,13 @@
-using System.Linq;
-using System.Threading.Tasks;
+using folio.Services;
+using Folio.Models;
+using Folio.ViewModels;
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
-using Folio.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Folio.Controllers
 {
@@ -54,9 +58,29 @@ namespace Folio.Controllers
             {
                 _context.Portfolio.Add(portfolio);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("AddStock", portfolio);
             }
-            return View(portfolio);
+
+            return View();
+        }
+
+        // GET: Portfolios/AddStock
+        public IActionResult AddStock(Portfolio portfolio)
+        {
+
+            if (HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks") == null)
+            {
+                // Need Chris' Method to Get StockViewModel objects for all stocks.
+                // Set the list of all StockViewModel objects on the session.
+            }
+
+            AddStockToPortfolioViewModel model = new AddStockToPortfolioViewModel
+            {
+                Portfolio = portfolio,
+                AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks")
+            };
+
+            return View(model);
         }
 
         // GET: Portfolios/Edit/5

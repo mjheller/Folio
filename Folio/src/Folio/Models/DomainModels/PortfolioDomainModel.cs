@@ -22,6 +22,7 @@ namespace Folio.Models
             CalculateExpectedReturn();
             CalculateVariance(Stocks);
         }
+
         private void UpdatePortfolioDollarValue()
         {
             decimal count = 0;
@@ -30,6 +31,14 @@ namespace Folio.Models
                 count += (s.Worth);
             }
             this.dollarValue = count;
+        }
+
+        private void UpdateCurrentPrices()
+        {
+            foreach (StockDomainModel s in Stocks)
+            {
+                s.CurrentPrice = YahooAPICalls.GetCurrentStockPrice(s.Ticker);
+            }
         }
 
         private void AddToPortfolio(StockDomainModel stock)
@@ -50,6 +59,7 @@ namespace Folio.Models
             double covariance = Tools.Covariance(stock1, stock2);
             return (decimal)covariance;
         }
+
         private void CalculateVariance(List<StockDomainModel> stocks)
         {
             decimal localVariance = 0;
@@ -62,7 +72,7 @@ namespace Folio.Models
                 {
                     if (!(i == stocks.Count - 1))
                     {
-                        decimal covariance = CalculateCovariance(stocks[i].PriceHistory1Year, stocks[j].PriceHistory1Year);
+                        decimal covariance = CalculateCovariance(stocks[i].dailyReturns1Year, stocks[j].dailyReturns1Year);
                         decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
                         localVariance += pair;
                     }

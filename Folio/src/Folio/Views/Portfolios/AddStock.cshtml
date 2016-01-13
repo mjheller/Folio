@@ -1,0 +1,14 @@
+﻿@model Folio.ViewModels.AddStockToPortfolioViewModel
+
+@{
+    ViewData["Title"] = "Add Stock to Portfolio";
+}
+
+<h2>Add Stock</h2>
+<h4>Search for a stock ticker below to add the stock to @Model.Portfolio.Name</h4>
+<form id="SearchStock">
+    <div>
+        @Html.Label("Stock Ticker:")
+        @Html.TextBox("ticker", "GOOG")
+    </div>
+</form>

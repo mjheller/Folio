@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using Folio.Models;
+using Folio.Services;
+using Folio.ViewModels.Account;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
-using Folio.Models;
-using Folio.Services;
-using Folio.ViewModels.Account;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Folio.Controllers
 {

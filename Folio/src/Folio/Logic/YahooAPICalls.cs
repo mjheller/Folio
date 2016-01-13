@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using YSQ.core.Historical;
 using HtmlAgilityPack;
+using YSQ.core.Quotes;
 
 namespace Folio.Logic
 {
@@ -13,7 +14,16 @@ namespace Folio.Logic
         public static List<decimal> GetStockHistoricalPrices(string ticker, DateTime startDate, DateTime endDate)
         {
             HistoricalPriceService hps = new HistoricalPriceService();
-            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
+            IEnumerable<HistoricalPrice> historicalPrices = null;
+
+            try
+            {
+                historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
+            }
+            catch(Exception ex)
+            {
+                historicalPrices = BruteForceHistoricalPrices(hps, ticker, startDate, endDate);
+            }
             List<decimal> priceData = new List<decimal>();
             foreach (var price in historicalPrices)
             {
@@ -22,17 +32,46 @@ namespace Folio.Logic
             return priceData;
         }
 
-        public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate)
+        private static IEnumerable<HistoricalPrice> BruteForceHistoricalPrices(HistoricalPriceService hps, string ticker, DateTime startDate, DateTime endDate)
         {
-            HistoricalPriceService hps = new HistoricalPriceService();
-            IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
-            Dictionary<DateTime, decimal> priceData = new Dictionary<DateTime, decimal>();
-            foreach (var price in historicalPrices)
+            IEnumerable<HistoricalPrice> historicalPrice = null;
+            int loopCount = 0;
+            TimeSpan half = new TimeSpan(0);
+            while(loopCount < 20)
             {
-                priceData.Add(price.Date, price.Price);
+                try
+                {
+                    historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
+                }
+                catch(Exception ex)
+                {
+                }
+                if (historicalPrice == null)
+                {
+                    half = new TimeSpan((endDate - startDate).Ticks / 2);
+                    startDate = (startDate + half);
+                }
+                else
+                {
+                    half = new TimeSpan(half.Ticks + (half.Ticks/2));
+                    startDate = (startDate + half);
+                }
+                loopCount++;
             }
-            return priceData;
+            return historicalPrice;
         }
+
+        //public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate)
+        //{
+        //    HistoricalPriceService hps = new HistoricalPriceService();
+        //    IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
+        //    Dictionary<DateTime, decimal> priceData = new Dictionary<DateTime, decimal>();
+        //    foreach (var price in historicalPrices)
+        //    {
+        //        priceData.Add(price.Date, price.Price);
+        //    }
+        //    return priceData;
+        //}
 
         public static decimal GetCurrentStockPrice(string ticker)
         {
@@ -56,8 +95,14 @@ namespace Folio.Logic
                 {
                     if (count == 5)
                     {
-                        beta = Convert.ToDecimal(d.InnerHtml);
-
+                        try
+                        {
+                            beta = Convert.ToDecimal(d.InnerHtml);
+                        }
+                        catch(Exception ex)
+                        {
+                            beta = 1;
+                        }
                     }
                     count++;
                 }

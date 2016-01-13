@@ -9,7 +9,7 @@ namespace Folio.SeedData
 {
     public static class SeedDataHelperFunctions
     {
-        public static List<Stock> ParseStockCSV(string filePath)
+        public static List<SeedStock> ParseStockCSV(string filePath, string exchange)
         {
             var lines = File.ReadAllLines(filePath).Select(a => a.Split(';'));
             var csv = from line in lines
@@ -17,7 +17,7 @@ namespace Folio.SeedData
 
             int rowCount = 1;
             int innerCount = 1;
-            List<Stock> stocks = new List<Stock>();
+            List<SeedStock> stocks = new List<SeedStock>();
             string ticker ="";
             foreach (var row in csv)
             {
@@ -32,14 +32,15 @@ namespace Folio.SeedData
                     if (innerCount == 6)
                     {
                         string[] lineSplit = line.Split(',');
-                        string description = lineSplit[lineSplit.Length-1];
-                        if (description.Length < 3)
+                        string name = lineSplit[lineSplit.Length-1];
+                        if (name.Length < 3)
                         {
-                            description = null;
+                            name = null;
                         }
-                        stocks.Add(new Stock {
+                        stocks.Add(new SeedStock {
                             Symbol = ticker,
-                            Description = description
+                            Name = name,
+                            Exchange = exchange
                         });
                         ticker = "";
                         innerCount = 0;
@@ -49,6 +50,30 @@ namespace Folio.SeedData
                 rowCount++;
             }
             return stocks;
+        }
+
+        public static List<Stock> SeedStockData(List<SeedStock> seedStocks)
+        {
+            List<StockDomainModel> stocks = new List<StockDomainModel>();
+            foreach (SeedStock stock in seedStocks)
+            {
+                stocks.Add(new StockDomainModel(stock.Symbol, stock.Name, stock.Exchange)); 
+            }
+
+            List<Stock> dataStocks = new List<Stock>(); 
+            foreach (StockDomainModel s in stocks)
+            {
+                dataStocks.Add(new Stock {
+                    Symbol = s.Ticker,
+                    Name = s.Name,
+                    LastUpdate = s.LastUpdated,
+                    Variance = s.Variance,
+                    ExpectedReturn = s.ExpectedReturn,
+                    DailyReturns1Year = s.GetDailyReturns1YearAsJSON,
+                    Exchange = s.Exchange,
+                });
+            }
+            return dataStocks;
         }
     }
 }

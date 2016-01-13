@@ -8,7 +8,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Folio.Models;
 using System.Collections;
 using System.IO;
-using CsvHelper;
 
 namespace Folio.SeedData
 {
@@ -46,26 +45,14 @@ namespace Folio.SeedData
                 "NYSEQuote",
                 "SP500Quote"
             };
-            foreach (string exchange in stockFiles)
+            List<Stock> allStocks = new List<Stock>();
+            foreach (string stock in stockFiles)
             {
-                string filePath = string.Format("~/StockData/{0}.csv", exchange);
-                using (var sr = new StreamReader(filePath))
-                {
-                    CsvReader csv = new CsvReader(sr);
-                    csv.CsvConfiguration.RegisterClassMap<sr>();
-                    csv.Configuration.WillThrowOnMissingField = false;
-                    csv.Configuration.SkipEmptyRecords = true;
-                    var stocks = csv.GetRecords<Stock>();
-                    foreach (var stock in stocks)
-                    {
-                        Console.Write(stock.Symbol);
-                        Console.Write("\t");
-                        Console.Write(stock.Description);
-                        Console.WriteLine();
-                    }
-                }
-
+               allStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv"));
             }
+            context.Stock.AddRange(allStocks);
+            context.SaveChanges();
+        }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {

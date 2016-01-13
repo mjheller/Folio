@@ -1,6 +1,7 @@
 using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
+using Newtonsoft.Json;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
@@ -9,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Security.Principal;
 using System.Threading.Tasks;
 
 namespace Folio.Controllers
@@ -109,8 +109,19 @@ namespace Folio.Controllers
         {
             Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
             portfolio.PortfolioAssets.Add(new PortfolioAsset { AssetSymbol = ticker, NumberOfAssetOwned = Int32.Parse(amount)});
-
             return View();
+        }
+
+        public JsonResult Autocomplete(string term)
+        {
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("StockTickers");
+            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
+            return Json(filteredItems);
+        }
+
+        private IActionResult Json(IEnumerable<string> filteredItems, object allowGet)
+        {
+            throw new NotImplementedException();
         }
 
         // GET: Portfolios/Edit/5

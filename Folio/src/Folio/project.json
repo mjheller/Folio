@@ -32,7 +32,8 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
     "Sendgrid": "6.3.4",
-    "YahooStockQuotes": "1.0.6"
+    "YahooStockQuotes": "1.0.6",
+    "jQuery.UI.Combined": "1.11.4"
   },
 
   "commands": {

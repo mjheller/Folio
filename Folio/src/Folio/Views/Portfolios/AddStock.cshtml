@@ -4,6 +4,14 @@
     ViewData["Title"] = "Add Stock to Portfolio";
 }
 
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $('#ticker').autocomplete({
+            source: '@Url.Action("Autocomplete")'
+        });
+    })
+</script>
+
 <h2>Add a Stock to Portfolio: @Model.WorkingPortfolio.Name</h2>
 
 @if (Model.UserPortfolios.Count() > 0)

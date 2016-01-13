@@ -6,6 +6,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
 using Folio.Models;
+using System.Collections;
+using System.IO;
 
 namespace Folio.SeedData
 {
@@ -37,6 +39,22 @@ namespace Folio.SeedData
         private static void SeedStocks(ApplicationDbContext context)
         {
             
+            //string[] stockFiles = {
+            //    "NasdaqQuote",
+            //    "NyseAmexQuote",
+            //    "NYSEQuote",
+            //    "SP500Quote"
+            //};
+            //foreach (string exchange in stockFiles)
+            //{
+            //    string filePath = string.Format("~/StockData/{0}.csv", exchange);
+            //    using (var sr = new StreamReader(filePath))
+            //    {
+            //        var csv = new CsvReader(sr);
+
+            //    }
+            //}
+
         }
 
         private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)

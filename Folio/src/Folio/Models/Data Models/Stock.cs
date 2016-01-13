@@ -15,6 +15,7 @@ namespace Folio.Models
         public decimal Variance { get; set; }
         public decimal ExpectedReturn { get; set; }
         public string PriceHistory1YearJSON { get; set; }
-
+        public string Description { get; set; }
+        public string Exchange { get; set; }
     }
 }

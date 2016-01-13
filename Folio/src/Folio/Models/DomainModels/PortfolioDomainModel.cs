@@ -75,7 +75,7 @@ namespace Folio.Models
                 {
                     if (!(i == stocks.Count - 1))
                     {
-                        decimal covariance = CalculateCovariance(stocks[i].PriceHistory1Year, stocks[j].PriceHistory1Year);
+                        decimal covariance = CalculateCovariance(stocks[i].dailyReturns1Year, stocks[j].dailyReturns1Year);
                         decimal pair = 2 * stocks[i].Weight * stocks[j].Weight * covariance;
                         localVariance += pair;
                     }

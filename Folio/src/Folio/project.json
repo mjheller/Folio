@@ -6,7 +6,6 @@
   },
 
   "dependencies": {
-    "Newtonsoft.Json": "8.0.2",
     "Accord.Statistics": "3.0.2",
     "EntityFramework.Commands": "7.0.0-rc1-final",
     "EntityFramework.MicrosoftSqlServer": "7.0.0-rc1-final",
@@ -31,13 +30,17 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
+    "Newtonsoft.Json": "8.0.2",
     "Sendgrid": "6.3.4",
+    "xunit": "2.2.0-beta1-build3239",
+    "xunit.runner.dnx": "2.1.0-*",
     "YahooStockQuotes": "1.0.6"
   },
 
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel",
-    "ef": "EntityFramework.Commands"
+    "ef":"EntityFramework.Commands",
+    "test": "xunit.runner.dnx"
   },
 
   "frameworks": {

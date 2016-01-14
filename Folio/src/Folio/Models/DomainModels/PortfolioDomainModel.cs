@@ -28,7 +28,7 @@ namespace Folio.Models
             decimal count = 0;
             foreach (StockDomainModel s in Stocks)
             {
-                count += (s.Worth);
+                count += s.Worth;
             }
             dollarValue = count;
         }
@@ -45,7 +45,7 @@ namespace Folio.Models
         {
             foreach (StockDomainModel s in Stocks)
             {
-                s.Weight = (s.Worth) / dollarValue;
+                s.Weight = s.Worth / dollarValue;
             }
         }
 

@@ -35,22 +35,22 @@ namespace Folio.Models
             set { DailyReturns1Year = JsonConvert.DeserializeObject<IEnumerable<HistoricalPrice>>(value); }
         }
 
-        public StockDomainModel(string ticker, int sharesOwned)
-        {
-            Ticker = ticker;
-            SharesOwned = sharesOwned;
-            CurrentPrice = UpdateCurrentPrice();
-            UpdateStockInformation();
-        }
+        //public StockDomainModel(string ticker, int sharesOwned)
+        //{
+        //    Ticker = ticker;
+        //    SharesOwned = sharesOwned;
+        //    CurrentPrice = UpdateCurrentPrice();
+        //    UpdateStockInformation();
+        //}
 
         public StockDomainModel(string ticker, string name, string exchange)
         {
             Ticker = ticker;
             Name = name;
             Exchange = exchange;
-            CurrentPrice = UpdateCurrentPrice();
-            UpdateDailyReturns1Year();
-            LastUpdated = DateTime.UtcNow;
+            //CurrentPrice = UpdateCurrentPrice();
+            //UpdateDailyReturns1Year();
+            //LastUpdated = DateTime.UtcNow;
         }
 
         private void UpdateStockInformation()
@@ -82,7 +82,7 @@ namespace Folio.Models
             SharesOwned += amount;
         }
 
-        private decimal CalculateVariance()
+        private decimal CalculateVariance() //refactor
         {
             decimal sumSquared = 0;
             int yearSearchLimit = 2006;
@@ -102,11 +102,11 @@ namespace Folio.Models
                     .Single(p => p.Date == prices
                     .Select(pp => pp.Date).Max()).Price;
                 decimal annualReturn = (yearEnd - yearStart) / yearStart;
-                numYears = DateTime.UtcNow.Year - yearSearchLimit;
                 decimal prob = numYears / 100m;
                 decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
                 sumSquared += squared;
             }
+
             return sumSquared / numYears;
         }
 

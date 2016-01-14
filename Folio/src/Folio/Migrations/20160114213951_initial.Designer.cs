@@ -8,7 +8,7 @@ using Folio.Models;
 namespace folio.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160114174141_initial")]
+    [Migration("20160114213951_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -114,17 +114,9 @@ namespace folio.Migrations
                 {
                     b.Property<string>("Symbol");
 
-                    b.Property<string>("DailyReturns1Year");
-
                     b.Property<string>("Exchange");
 
-                    b.Property<decimal?>("ExpectedReturn");
-
-                    b.Property<DateTime>("LastUpdate");
-
                     b.Property<string>("Name");
-
-                    b.Property<decimal?>("Variance");
 
                     b.HasKey("Symbol");
                 });

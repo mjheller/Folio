@@ -1,4 +1,5 @@
-﻿using Folio.Models;
+﻿using Folio.Logic;
+using Folio.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +10,8 @@ namespace Folio.SeedData
 {
     public static class SeedDataHelperFunctions
     {
-        public static List<SeedStock> ParseStockCSV(string filePath, string exchange)
+        //if error comment out in startup
+        public static List<SeedStock> ParseStockCSV(string filePath, string exchange, HashSet<string> tickers)
         {
             var lines = File.ReadAllLines(filePath).Select(a => a.Split(';'));
             var csv = from line in lines
@@ -18,7 +20,7 @@ namespace Folio.SeedData
             int rowCount = 1;
             int innerCount = 1;
             List<SeedStock> stocks = new List<SeedStock>();
-            string ticker ="";
+            string ticker = "";
             foreach (var row in csv)
             {
                 if (rowCount > 4)
@@ -27,7 +29,7 @@ namespace Folio.SeedData
                     if (innerCount == 1)
                     {
                         string[] lineSplit = line.Split(',');
-                        ticker = lineSplit[0];
+                        ticker = lineSplit[0].Trim().ToUpper();
                     }
                     if (innerCount == 6)
                     {
@@ -37,11 +39,15 @@ namespace Folio.SeedData
                         {
                             name = null;
                         }
-                        stocks.Add(new SeedStock {
-                            Symbol = ticker,
-                            Name = name,
-                            Exchange = exchange
-                        });
+                        if (!(tickers.Contains(ticker)) && ticker != null)
+                        {
+                            stocks.Add(new SeedStock {
+                                Symbol = ticker,
+                                Name = name,
+                                Exchange = exchange
+                            });
+                            tickers.Add(ticker);
+                        }
                         ticker = "";
                         innerCount = 0;
                     }
@@ -55,31 +61,16 @@ namespace Folio.SeedData
 
         public static List<Stock> SeedStockData(List<SeedStock> seedStocks)
         {
-            List<StockDomainModel> stocks = new List<StockDomainModel>();
+            Stock[] dataStocks = new Stock[seedStocks.Count()];
             Parallel.For(0, seedStocks.Count(), i =>
             {
-                try
-                {
-                stocks.Add(new StockDomainModel(seedStocks[i].Symbol, seedStocks[i].Name, seedStocks[i].Exchange));
-                }
-                catch(Exception)
-                { }
-            });
-
-            List<Stock> dataStocks = new List<Stock>(); 
-            foreach (StockDomainModel s in stocks)
-            {
-                dataStocks.Add(new Stock {
-                    Symbol = s.Ticker,
-                    Name = s.Name,
-                    LastUpdate = s.LastUpdated,
-                    Variance = null, //s.Variance,
-                    ExpectedReturn = null, // s.ExpectedReturn,
-                    DailyReturns1Year = s.DailyReturns1YearAsJSON,
-                    Exchange = s.Exchange
+                dataStocks[i] = (new Stock {
+                    Symbol = seedStocks[i].Symbol,
+                    Name = seedStocks[i].Name,
+                    Exchange = seedStocks[i].Exchange
                 });
-            }
-            return dataStocks;
+            });
+            return dataStocks.ToList();
         }
     }
 }

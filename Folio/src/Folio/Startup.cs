@@ -119,7 +119,8 @@ namespace Folio
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            SeedData.SeedData.Initialize(app.ApplicationServices);
+            // Comment out below line to stop seeddata from running if you're getting database errors.
+            //SeedData.SeedData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.

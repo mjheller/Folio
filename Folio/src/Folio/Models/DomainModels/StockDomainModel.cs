@@ -68,7 +68,7 @@ namespace Folio.Models
         {
             IEnumerable<HistoricalPrice> priceData = YahooAPICalls
                     .GetStockHistoricalPrices
-                    (Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year));
+                    (Ticker, DateTime.UtcNow.AddYears(-1), DateTime.UtcNow);
             DailyReturns1Year = priceData;
         }
 
@@ -86,8 +86,7 @@ namespace Folio.Models
         {
             decimal sumSquared = 0;
             int yearSearchLimit = 2006;
-            int numYears = DateTime.UtcNow.Year - yearSearchLimit;
-            decimal prob = numYears / 100m;
+            int numYears = 0;
             for (int i = yearSearchLimit; i < DateTime.UtcNow.Year; i++)
             {
                 IEnumerable<HistoricalPrice> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
@@ -103,6 +102,8 @@ namespace Folio.Models
                     .Single(p => p.Date == prices
                     .Select(pp => pp.Date).Max()).Price;
                 decimal annualReturn = (yearEnd - yearStart) / yearStart;
+                numYears = DateTime.UtcNow.Year - yearSearchLimit;
+                decimal prob = numYears / 100m;
                 decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
                 sumSquared += squared;
             }

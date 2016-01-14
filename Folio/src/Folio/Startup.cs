@@ -124,6 +124,7 @@ namespace Folio
             //mattsclass.mattsfunction(app.ApplicationServices);
             //context.stock.Select(s => s);
 
+           // SeedData.MrClean.Clean(app.ApplicationServices);
         }
 
         // Entry point for the application.

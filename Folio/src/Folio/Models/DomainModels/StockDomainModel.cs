@@ -69,7 +69,7 @@ namespace Folio.Models
             SharesOwned += amount;
         }
 
-        private decimal CalculateVariance() //refactor
+        private decimal CalculateVariance()
         {
             decimal sumSquared = 0;
             int yearSearchLimit = 2006;

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Folio.Models;
 using Folio.ViewModels;
+using Microsoft.AspNet.Mvc;
+using Microsoft.AspNet.Mvc.Rendering;
+using Microsoft.Data.Entity;
+using Microsoft.AspNet.Authorization;
 
 namespace Folio.Builders
 {
@@ -15,23 +19,22 @@ namespace Folio.Builders
             _context = context;
         }
 
-        //public List<StockDomainModel> GetStocksForPortolio(int portfolioID)
-        //{
-        //    List<PortfolioAsset> portfolioAssets = _context.Portfolio
-        //    .Single(p => p.ID == portfolioID)
-        //    .PortfolioAssets.Where(pa => pa.AssetType == "stock")
-        //    .ToList();
-        //    List<StockDomainModel> stocks = new List<StockDomainModel>();
-        //    foreach (PortfolioAsset asset in portfolioAssets)
-        //    {
-        //        stocks.Add(new StockDomainModel(asset.AssetSymbol, asset.AveragePurchasePrice, asset.NumberOfAssetOwned));
-        //    }
-        //    return stocks;
-        //}
-
-    //    public List<PortfolioViewModel> GetPortfolioViewModels(ApplicationUser User)
-    //    {
-    //        List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User == User).ToList();;
-    //    }
-   }
+        public PortfolioDomainModel GetPortfolioDomainModel(int portfolioID)
+        {
+            Portfolio portfolio = _context.Portfolio
+                .Include(p => p.PortfolioAssets)
+                .Single(p => p.ID == portfolioID);
+            IEnumerable<string> symbols = portfolio.PortfolioAssets.Select(a => a.AssetSymbol);
+            List<Stock> stocks = _context.Stock
+                .Where(s => symbols.Contains(s.Symbol)).ToList();
+            List<StockDomainModel> stockDomainModels = new List<StockDomainModel>();
+            Parallel.For(0, stocks.Count(), i =>
+            {
+                int amountOwned = portfolio.PortfolioAssets.Single(a => a.AssetSymbol == stocks[i].Symbol).NumberOfAssetOwned;
+                stockDomainModels.Add(new StockDomainModel(stocks[i], amountOwned));
+            });
+            PortfolioDomainModel output = new PortfolioDomainModel(stockDomainModels);
+            return output;
+        }
+    }
 }

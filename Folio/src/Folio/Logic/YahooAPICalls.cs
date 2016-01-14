@@ -10,7 +10,6 @@ namespace Folio.Logic
 {
     public static class YahooAPICalls
     {
-
         public static IEnumerable<HistoricalPrice> GetStockHistoricalPrices(string ticker, DateTime startDate, DateTime endDate)
         {
             HistoricalPriceService hps = new HistoricalPriceService();

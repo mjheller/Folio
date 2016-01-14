@@ -9,7 +9,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    margin-top: 100px;
 }
 
 footer{
@@ -17,10 +18,11 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    height:50px;
+    height:70px;
     background-color:darkgrey;
     text-align: center;
     color: black;
+    font-weight: bold;
 }
 
 .body-content {
@@ -109,23 +111,29 @@ select {
 }
 .navbar {
     background-color:darkgrey;
+    font-weight: bold;
 }
 .nav.navbar-nav.nav li a {
     color: black;
+    font-weight: bold;
 }
 .nav.navbar-nav.nav li a:hover {
     color: grey;
     background-color:darkgrey;
+    font-weight: bold;
 }
 .navbar-header.nav a{
     color: black;
+    font-weight: bold;
 }
 .navbar-brand{
     color: black;
+    font-weight: bold;
 }
 .navbar-brand:hover{
     color: grey;
     background-color:darkgrey;
+    font-weight: bold;
 }
 .breezy{
     color: white;
@@ -147,4 +155,26 @@ select {
     .carousel-caption {
         z-index: 10 !important;
     }
+}
+@media screen and (max-width: 767px) {
+    .collapse-hidden{
+        display: none;
+    }
+}
+
+ /**
+ * hide menu items when NOT collapsed
+ */
+@media screen and (min-width: 768px){
+    .navbar-collapse.collapse.uncollapse-hidden{
+        display: none!important;
+    }
+}
+
+/**
+ * set the fore-color of text within navbar-toggle items
+ */
+.navbar-toggle {
+    color: black;
+    font-weight: bold;
 }

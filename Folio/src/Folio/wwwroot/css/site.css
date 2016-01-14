@@ -37,6 +37,7 @@ footer{
     height:100px;
     background-color:darkgrey;
     text-align: center;
+    color: black;
 }
 
 select {
@@ -112,6 +113,20 @@ select {
 	position:relative;
 	top:1px;
 }
+.navbar {
+    background-color:darkgrey;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+}
+.nav.navbar-nav.nav li a {
+    color: black;
+}
+
+.navbar-button:hover {
+    color: black;
+}
+
 
 /* Carousel */
 .carousel-caption {

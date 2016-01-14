@@ -13,7 +13,7 @@ namespace Folio.Models
     {
         public string Name { get; private set; }
         public string Exchange { get; private set; }
-        public DateTime LastUpdated { get; private set; }
+        //public DateTime LastUpdated { get; private set; }
         public IEnumerable<HistoricalPrice> DailyReturns1Year { get; private set; }
         public string Ticker { get; private set; }
         [DataType("Currency")]
@@ -48,7 +48,7 @@ namespace Folio.Models
             ExpectedReturn = CalculateExpectedReturn();
             Variance = CalculateVariance();
             UpdateDailyReturns1Year();
-            LastUpdated = DateTime.UtcNow;
+           // LastUpdated = DateTime.UtcNow;
         }
 
         private void UpdateDailyReturns1Year()

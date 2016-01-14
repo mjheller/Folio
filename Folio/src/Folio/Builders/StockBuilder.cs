@@ -33,8 +33,42 @@ namespace Folio.Builders
                 int amountOwned = portfolio.PortfolioAssets.Single(a => a.AssetSymbol == stocks[i].Symbol).NumberOfAssetOwned;
                 stockDomainModels.Add(new StockDomainModel(stocks[i], amountOwned));
             });
-            PortfolioDomainModel output = new PortfolioDomainModel(stockDomainModels);
+            PortfolioDomainModel output = new PortfolioDomainModel(stockDomainModels, portfolio);
             return output;
+        }
+
+        private IEnumerable<StockViewModel> GetStockViewModels(List<StockDomainModel> stocks)
+        {
+            List<StockViewModel> stockViewModels = new List<StockViewModel>();
+            Parallel.For(0, stocks.Count(), i =>
+            {
+                stockViewModels.Add(new StockViewModel {
+                    Ticker = stocks[i].Ticker,
+                    Name = stocks[i].Name,
+                    Exchange = stocks[i].Exchange,
+                    Worth = stocks[i].Worth,
+                    DailyReturns1Year = stocks[i].DailyReturns1Year,
+                    SharesOwned = stocks[i].SharesOwned,
+                    ExpectedReturn = stocks[i].ExpectedReturn,
+                    Variance = stocks[i].Variance,
+                    CurrentPrice= stocks[i].CurrentPrice
+                });
+            });
+            return stockViewModels;
+        }
+
+        public PortfolioViewModel GetPortfolioViewModel(PortfolioDomainModel portfolioDomainModel)
+        {
+            PortfolioViewModel portfolioViewModel = new PortfolioViewModel {
+                ID = portfolioDomainModel.ID,
+                Name = portfolioDomainModel.Name,
+                DateCreated = portfolioDomainModel.DateCreated,
+                ExpectedReturn = portfolioDomainModel.ExpectedReturn,
+                Variance = portfolioDomainModel.Variance,
+                DollarValue = portfolioDomainModel.DollarValue
+            };
+            portfolioViewModel.Stocks = (GetStockViewModels(portfolioDomainModel.Stocks));
+            return portfolioViewModel;
         }
     }
 }

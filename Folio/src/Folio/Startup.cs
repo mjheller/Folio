@@ -121,8 +121,7 @@ namespace Folio
             });
             // Comment out below line to stop seeddata from running if you're getting database errors.
             //SeedData.SeedData.Initialize(app.ApplicationServices);
-            mattsclass.mattsfunction(app.ApplicationServices);
-            context.stock.Select(s => s);
+            
 
         }
 

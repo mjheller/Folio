@@ -126,8 +126,8 @@ namespace Folio.Models
             double[] dailyReturnsDoubles = new double[prices.Length];
             dailyReturnsDoubles[0] = Convert.ToDouble(prices[1]);
             Parallel.For(1, prices.Length, i => {
-                decimal dailyReturn = (prices[i] - prices[i - 1]) / prices[i - 1];
-                dailyReturnsDoubles[i] = Convert.ToDouble(dailyReturn);
+                double dailyReturn = (Math.Log((double)prices[i]) - Math.Log((double)prices[i - 1]) / Math.Log((double)prices[i - 1]));
+                dailyReturnsDoubles[i] = dailyReturn;
             });
             return dailyReturnsDoubles;
         }

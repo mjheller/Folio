@@ -20,7 +20,6 @@ namespace Folio.Services.MonteCarlo
         }
         public static List<double> GetMaximumPath(PortfolioPath[] paths, int steps)
         {
-
             IEnumerable<double> endingValues = paths.Select(x => x.endingPortfolioValue).ToArray();
             double maxEndingValue = endingValues.Max();
             var maxPathQuery = paths.Where(path => path.endingPortfolioValue == maxEndingValue).ToArray();

@@ -11,8 +11,6 @@ namespace Folio.Models
 {
     public class StockDomainModel
     {
-        //private const decimal _sp500avgReturn = 6.34m;
-        //private const decimal _riskFreeReturn = 2.70m;
         public string Name { get; private set; }
         public string Exchange { get; private set; }
         public DateTime LastUpdated { get; private set; }
@@ -75,7 +73,6 @@ namespace Folio.Models
         {
             decimal sumSquared = 0;
             int yearSearchLimit = 2006;
-            int numYears = 0;
             List<decimal> annualReturns = new List<decimal>();
             for (int i = yearSearchLimit; i < DateTime.UtcNow.Year; i++)
             {
@@ -94,7 +91,7 @@ namespace Folio.Models
                 decimal annualReturn = (yearEnd - yearStart) / yearStart;
                 annualReturns.Add(annualReturn);
             }
-            numYears = DateTime.Now.Year - yearSearchLimit;
+            int numYears = DateTime.Now.Year - yearSearchLimit;
             decimal prob = numYears / 100m;
             foreach (decimal annualReturn in annualReturns)
             {

@@ -116,17 +116,19 @@ select {
 .navbar {
     background-color:darkgrey;
 }
-.nav.navbar-nav.navbar-right li a {
-    color: black;
-}
 .nav.navbar-nav.nav li a {
     color: black;
 }
-
-.navbar-button:hover {
+.nav.navbar-nav.nav li a:hover {
+    color: grey;
+    background-color:darkgrey;
+}
+.navbar-header.nav a{
     color: black;
 }
-
+.a.navbar-brand{
+    color: black;
+}
 
 /* Carousel */
 .carousel-caption {

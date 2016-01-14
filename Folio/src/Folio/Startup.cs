@@ -121,6 +121,7 @@ namespace Folio
             });
             // Comment out below line to stop seeddata from running if you're getting database errors.
             //SeedData.SeedData.Initialize(app.ApplicationServices);
+           // SeedData.MrClean.Clean(app.ApplicationServices);
         }
 
         // Entry point for the application.

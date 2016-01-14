@@ -10,10 +10,24 @@
             source: '@Url.Action("Autocomplete")'
         });
         $("#get-stock-data").click(function () {
-            $("#stock-information-header").html("Current Stock Data: " + $("#ticker").val());
+            var sym = $("#ticker").val();
+            console.log(sym);
+            var baseApiUri = "https://query.yahooapis.com/v1/public/yql";
+            var queryUri = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + sym + "')");
+            var formatUri = "&format=json&diagnostics=true&env=http://datatables.org/alltables.env"
 
+            $.getJSON(baseApiUri, "q=" + queryUri + formatUri).done(function (data) {
+                console.log(data);
+                $("#table-ticker").text(data.query.results.quote.Symbol);
+                $("#table-price").text(data.query.results.quote.LastTradePriceOnly);
+                $("#table-change").text(data.query.results.quote.PercentChange);
+                $("#table-stock-name").text(data.query.results.quote.Name);
+            }).fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                console.log(error);
+            });
         });
-    })
+    });
 </script>
 
 <div class="row">
@@ -51,13 +65,27 @@
     </div>
 
     <div class="col-md-8">
-        <h4 id="stock-information-header">Current Stock Data</h4>
-        <dl class="dl-horizontal">
-            <dt>Current Price: </dt>
-            <dd>Choose a Stock</dd>
-            <dt>Percent Change:</dt>
-            <dd>Choose a Stock</dd>
-        </dl>
+        <div class="table-title">
+            <h4 id="stock-information-header">Current Stock Data</h4>
+        </div>
+        <table class="table-fill" id="stocks">
+            <thead>
+                <tr>
+                    <th class="text-left">Ticker</th>
+                    <th class="text-left">Price</th>
+                    <th class="text-left">Change</th>
+                    <th class="text-left">Name</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <tr>
+                    <td class="text-left" id="table-ticker">Enter a Stock</td>
+                    <td class="text-left" id="table-price">Enter a Stock</td>
+                    <td class="text-left" id="table-change">Enter a Stock</td>
+                    <td class="text-left" id="table-stock-name">Enter a Stock</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -66,15 +94,23 @@
         @if (Model.WorkingPortfolio.PortfolioAssets.Count() > 0)
         {
             <hr />
-            <div class="owned-stocks">
-                <label>Assets Held Within @Model.WorkingPortfolio.Name:</label>
-                <ul>
+            <table class="table-fill">
+                <thead>
+                    <tr>
+                        <th class="text-left">Ticker</th>
+                        <th class="text-left">Shares</th>
+                    </tr>
+                </thead>
+                <tbody>
                     @foreach (PortfolioAsset asset in Model.WorkingPortfolio.PortfolioAssets)
                     {
-                        <li><p>@asset.AssetSymbol : @asset.NumberOfAssetOwned Shares</p></li>
+                        <tr>
+                            <td>@asset.AssetSymbol</td>
+                            <td>@asset.NumberOfAssetOwned</td>
+                        </tr>
                     }
-                </ul>
-            </div>
+                </tbody>
+            </table>
         }
     </div>
 </div>

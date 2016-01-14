@@ -10,7 +10,6 @@ namespace Folio.ViewModels
     {
         public Portfolio WorkingPortfolio { get; set; }
         public IEnumerable<Portfolio> UserPortfolios { get; set; }
-        public List<StockViewModel> AvailableAssetTickers { get; set; }
-        public StockViewModel ChosenStock { get; set; }
+        public List<string> AvailableAssetTickers { get; set; }
     }
 }

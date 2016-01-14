@@ -52,13 +52,19 @@ namespace Folio.SeedData
             return stocks;
         }
 
+
         public static List<Stock> SeedStockData(List<SeedStock> seedStocks)
         {
             List<StockDomainModel> stocks = new List<StockDomainModel>();
-            foreach (SeedStock stock in seedStocks)
+            Parallel.For(0, seedStocks.Count(), i =>
             {
-                stocks.Add(new StockDomainModel(stock.Symbol, stock.Name, stock.Exchange)); 
-            }
+                try
+                {
+                stocks.Add(new StockDomainModel(seedStocks[i].Symbol, seedStocks[i].Name, seedStocks[i].Exchange));
+                }
+                catch(Exception)
+                { }
+            });
 
             List<Stock> dataStocks = new List<Stock>(); 
             foreach (StockDomainModel s in stocks)
@@ -69,7 +75,7 @@ namespace Folio.SeedData
                     LastUpdate = s.LastUpdated,
                     Variance = s.Variance,
                     ExpectedReturn = s.ExpectedReturn,
-                    DailyReturns1Year = s.GetDailyReturns1YearAsJSON,
+                    DailyReturns1Year = s.DailyReturns1YearAsJSON,
                     Exchange = s.Exchange,
                 });
             }

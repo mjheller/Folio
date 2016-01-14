@@ -1,20 +1,8 @@
-﻿html{
-  position:relative; 
-  min-height: 100%;
-}
-body {
+﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("../images/GreySignature.png");
-    background-position:center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    font-weight: bold;
-    margin-bottom:100px;
 }
-div {
-    
-}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -27,17 +15,6 @@ input,
 select,
 textarea {
     max-width: 280px;
-}
-
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height:100px;
-    background-color:darkgrey;
-    text-align: center;
-    color: black;
 }
 
 select {
@@ -80,7 +57,7 @@ select {
 	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
 	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
 	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	/*background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);*/
 	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
 	background-color:#ffffff;
@@ -104,7 +81,7 @@ select {
 	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
 	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
 	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	/*background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);*/
 	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
 	background-color:#f6f6f6;

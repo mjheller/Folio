@@ -119,7 +119,7 @@ namespace Folio
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            //SeedData.SeedData.Initialize(app.ApplicationServices);
+            SeedData.SeedData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.

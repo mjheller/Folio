@@ -11,7 +11,7 @@ namespace Folio.Logic
     public static class YahooAPICalls
     {
 
-        public static List<decimal> GetStockHistoricalPrices(string ticker, DateTime startDate, DateTime endDate)
+        public static IEnumerable<HistoricalPrice> GetStockHistoricalPrices(string ticker, DateTime startDate, DateTime endDate)
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = null;
@@ -22,56 +22,40 @@ namespace Folio.Logic
             }
             catch(Exception)
             {
-                historicalPrices = BruteForceHistoricalPrices(hps, ticker, startDate, endDate);
+                return null;
             }
-            List<decimal> priceData = new List<decimal>();
-            foreach (var price in historicalPrices)
-            {
-                priceData.Add(price.Price);
-            }
-            return priceData;
+            return historicalPrices;
         }
 
-        private static IEnumerable<HistoricalPrice> BruteForceHistoricalPrices(HistoricalPriceService hps, string ticker, DateTime startDate, DateTime endDate)
-        {
-            IEnumerable<HistoricalPrice> historicalPrice = null;
-            int loopCount = 0;
-            TimeSpan half = new TimeSpan(0);
-            while(loopCount < 20)
-            {
-                try
-                {
-                    historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
-                }
-                catch(Exception)
-                {
-                }
-                if (historicalPrice == null)
-                {
-                    half = new TimeSpan((endDate - startDate).Ticks / 2);
-                    startDate = (startDate + half);
-                }
-                else
-                {
-                    half = new TimeSpan(half.Ticks + (half.Ticks/2));
-                    startDate = (startDate + half);
-                }
-                loopCount++;
-            }
-            return historicalPrice;
-        }
-
-        //public static Dictionary<DateTime, decimal> HistoricalPricesToDict(string ticker, DateTime startDate)
+        //private static IEnumerable<HistoricalPrice> BruteForceHistoricalPrices(HistoricalPriceService hps, string ticker, DateTime startDate, DateTime endDate)
         //{
-        //    HistoricalPriceService hps = new HistoricalPriceService();
-        //    IEnumerable<HistoricalPrice> historicalPrices = hps.Get(ticker, startDate, DateTime.UtcNow, Period.Daily);
-        //    Dictionary<DateTime, decimal> priceData = new Dictionary<DateTime, decimal>();
-        //    foreach (var price in historicalPrices)
+        //    IEnumerable<HistoricalPrice> historicalPrice = null;
+        //    int loopCount = 0;
+        //    TimeSpan half = new TimeSpan(0);
+        //    while(loopCount < 20)
         //    {
-        //        priceData.Add(price.Date, price.Price);
+        //        try
+        //        {
+        //            historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
+        //        }
+        //        catch(Exception)
+        //        {
+        //        }
+        //        if (historicalPrice == null)
+        //        {
+        //            half = new TimeSpan((endDate - startDate).Ticks / 2);
+        //            startDate = (startDate + half);
+        //        }
+        //        else
+        //        {
+        //            half = new TimeSpan(half.Ticks + (half.Ticks/2));
+        //            startDate = (startDate + half);
+        //        }
+        //        loopCount++;
         //    }
-        //    return priceData;
+        //    return historicalPrice;
         //}
+
 
         public static decimal GetCurrentStockPrice(string ticker)
         {
@@ -89,22 +73,14 @@ namespace Folio.Logic
             HtmlNode node = document.GetElementbyId("table1");
             if (node != null)
             {
-                int count = 0;
-                IEnumerable<HtmlNode> td = node.Descendants("td");
-                foreach (HtmlNode d in td)
+                HtmlNode[] td = node.Descendants("td").ToArray();
+                try
                 {
-                    if (count == 5)
-                    {
-                        try
-                        {
-                            beta = Convert.ToDecimal(d.InnerHtml);
-                        }
-                        catch(Exception ex)
-                        {
-                            beta = 1;
-                        }
-                    }
-                    count++;
+                    beta = Convert.ToDecimal(td[5].InnerHtml);
+                }
+                catch(Exception)
+                {
+                    beta = 1;
                 }
             }
             return beta;

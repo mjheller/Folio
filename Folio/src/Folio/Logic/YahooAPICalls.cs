@@ -47,7 +47,7 @@ namespace Folio.Logic
                 {
                     beta = Convert.ToDecimal(td[5].InnerHtml);
                 }
-                catch(Exception ex)
+                catch(Exception)
                 {
                     beta = 1;
                 }

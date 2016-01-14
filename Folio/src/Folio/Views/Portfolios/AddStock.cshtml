@@ -6,12 +6,12 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        $("#ticker").autocomplete({
+        $("#tickerinput").autocomplete({
             source: '@Url.Action("Autocomplete")'
         });
         $("#get-stock-data").click(function () {
-            var sym = $("#ticker").val();
-            console.log(sym);
+            var sym = $("#tickerinput").val();
+            $("#stock-table-header").html("Current Data For " + sym);
             var baseApiUri = "https://query.yahooapis.com/v1/public/yql";
             var queryUri = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + sym + "')");
             var formatUri = "&format=json&diagnostics=true&env=http://datatables.org/alltables.env"
@@ -50,42 +50,46 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h4>Search for a Stock:</h4>
-        <form asp-action="AddStock" id="search-stock">
-            <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
-            <div>
-                @Html.Label("Ticker Search:")
-                @Html.TextBox("ticker", "", new { name = "ticker", @class = "stock-input", @style = "margin-bottom: 15px" })
-                @Html.Label("Shares Held:")
-                @Html.TextBox("amount", "", new { name = "amount", @class = "stock-input" })
-                <button id="get-stock-data" type="button" class="portfolio-button">Get Stock Data</button>
-                <input type="submit" class="portfolio-button" value="Add Stock">
-            </div>
-        </form>
+        <div class="stock-search">
+            <h4>Search for a Stock:</h4>
+            <form asp-action="AddStock" id="search-stock">
+                <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+                <div>
+                    @Html.Label("Ticker Search:")
+                    @Html.TextBox("tickerinput", "", new { name = "ticker", @class = "stock-input", @style = "margin-bottom: 15px" })
+                    @Html.Label("Shares Held:")
+                    @Html.TextBox("amount", "", new { name = "amount", @class = "stock-input" })
+                    <button id="get-stock-data" type="button" class="portfolio-button">Get Stock Data</button>
+                    <input type="submit" class="portfolio-button" value="Add Stock">
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="col-md-8">
-        <div class="table-title">
-            <h4 id="stock-information-header">Current Stock Data</h4>
+        <div class="stock-table">
+            <div class="stock-table-title" id="stock-information-header">
+                <h4 id="stock-table-header">Current Stock Data</h4>
+            </div>
+            <table class="table-fill" id="stocks">
+                <thead>
+                    <tr class="stock-table">
+                        <th class="text-left">Ticker</th>
+                        <th class="text-left">Price</th>
+                        <th class="text-left">Change</th>
+                        <th class="text-left">Name</th>
+                    </tr>
+                </thead>
+                <tbody class="table-hover">
+                    <tr>
+                        <td class="text-left" id="table-ticker">Enter a Stock</td>
+                        <td class="text-left" id="table-price">Enter a Stock</td>
+                        <td class="text-left" id="table-change">Enter a Stock</td>
+                        <td class="text-left" id="table-stock-name">Enter a Stock</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="table-fill" id="stocks">
-            <thead>
-                <tr>
-                    <th class="text-left">Ticker</th>
-                    <th class="text-left">Price</th>
-                    <th class="text-left">Change</th>
-                    <th class="text-left">Name</th>
-                </tr>
-            </thead>
-            <tbody class="table-hover">
-                <tr>
-                    <td class="text-left" id="table-ticker">Enter a Stock</td>
-                    <td class="text-left" id="table-price">Enter a Stock</td>
-                    <td class="text-left" id="table-change">Enter a Stock</td>
-                    <td class="text-left" id="table-stock-name">Enter a Stock</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </div>
 
@@ -94,6 +98,9 @@
         @if (Model.WorkingPortfolio.PortfolioAssets.Count() > 0)
         {
             <hr />
+            <div class="table-title">
+                <h4>Stocks Held</h4>
+            </div>
             <table class="table-fill">
                 <thead>
                     <tr>

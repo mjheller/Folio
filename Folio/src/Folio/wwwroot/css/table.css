@@ -2,7 +2,6 @@
 
 div.table-title {
   display: block;
-  margin: auto;
   max-width: 600px;
   padding:5px;
   width: 100%;
@@ -25,20 +24,15 @@ div.table-title {
   border-radius:3px;
   border-collapse: collapse;
   height: 150px;
-  /* margin: auto; */
   max-width: 600px;
   padding:5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
 }
-
-#stocks {
-    margin: auto;
-}
  
 th {
-  color:#D5DDE5;;
+  color:#D5DDE5;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;

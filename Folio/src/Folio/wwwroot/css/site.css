@@ -143,3 +143,24 @@ select {
         z-index: 10 !important;
     }
 }
+@media screen and (max-width: 767px) {
+    .collapse-hidden{
+        display: none;
+    }
+}
+
+ /**
+ * hide menu items when NOT collapsed
+ */
+@media screen and (min-width: 768px){
+    .navbar-collapse.collapse.uncollapse-hidden{
+        display: none!important;
+    }
+}
+
+/**
+ * set the fore-color of text within navbar-toggle items
+ */
+.navbar-toggle {
+    color: black;
+}

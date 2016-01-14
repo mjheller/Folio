@@ -32,10 +32,28 @@
                     <a asp-controller="Home" asp-action="Index" class="navbar-brand">[Folio]</a>
                 </div>
                 <div class="navbar-collapse collapse">
+                    <button class="navbar-toggle collapsed" aria-expanded="false" type="button" data-target="#LanguageMenu" data-toggle="collapse">
+                        News<b class="caret"></b>
+                    </button>
                     <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="News">News</a></li>
+                        @*<li><a asp-controller="Home" asp-action="News">News</a></li>*@
                         <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                         <li><a asp-controller="Home" asp-action="About">About</a></li>
+                        <li class="collapse-hidden">
+                            <ul class="nav navbar-nav collapse-hidden">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" style="margin-right: 5px;" href="#" data-toggle="dropdown">News<b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="1">NASDAQ - Stocks</a></li>
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="2">Yahoo Finance - Top Stories</a></li>
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="3">CNN - Money Markets</a></li>
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="4">Marketwatch - Stocks to Watch</a></li>
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="5">Reuters - Hot Stock News</a></li>
+                                        <li><a asp-controller="Home" asp-action="News" asp-route-id="6">Briefing - Stock Market Update</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li><a asp-controller="Portfolios" asp-action="Index">Portfolios</a></li>
@@ -44,6 +62,16 @@
                     @await Html.PartialAsync("_LoginPartial")
                 </div>
             </div>
+        </div>
+        <div class="navbar-collapse uncollapse-hidden collapse" id="LanguageMenu" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="1">NASDAQ - Stocks</a></li>
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="2">Yahoo Finance - Top Stories</a></li>
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="3">CNN - Money Markets</a></li>
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="4">Marketwatch - Stocks to Watch</a></li>
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="5">Reuters - Hot Stock News</a></li>
+                <li><a asp-controller="Home" asp-action="News" asp-route-id="6">Briefing - Stock Market Update</a></li>
+            </ul>
         </div>
         <div class="container body-content">
             @RenderBody()

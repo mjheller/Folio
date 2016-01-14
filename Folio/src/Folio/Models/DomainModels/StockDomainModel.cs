@@ -4,22 +4,23 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using YSQ.core.Historical;
+using System.Linq;
 
 namespace Folio.Models
 {
     public class StockDomainModel
     {
-        private const decimal _sp500avgReturn = 6.34m;
-        private const decimal _riskFreeReturn = 2.70m;
+        //private const decimal _sp500avgReturn = 6.34m;
+        //private const decimal _riskFreeReturn = 2.70m;
         public string Name { get; private set; }
         public string Exchange { get; private set; }
         public DateTime LastUpdated { get; private set; }
-        public double[] DailyReturns1Year { get; private set; }
+        public IEnumerable<HistoricalPrice> DailyReturns1Year { get; private set; }
         public string Ticker { get; private set; }
         [DataType("Currency")]
         public decimal CurrentPrice { get; set; }
         [DataType("Currency")]
-       // public decimal PurchasePrice { get; private set; }
         public int SharesOwned { get; private set; }
         public decimal Worth
         {
@@ -28,18 +29,18 @@ namespace Folio.Models
         public decimal Weight { get; set; }
         public decimal ExpectedReturn { get; private set; }
         public decimal Variance { get; private set; }
-        public string GetDailyReturns1YearAsJSON
+        public string DailyReturns1YearAsJSON
         {
             get { return JsonConvert.SerializeObject(DailyReturns1Year); }
+            set { DailyReturns1Year = JsonConvert.DeserializeObject<IEnumerable<HistoricalPrice>>(value); }
         }
 
         public StockDomainModel(string ticker, int sharesOwned)
         {
             Ticker = ticker;
-           // PurchasePrice = purchasePrice;
             SharesOwned = sharesOwned;
+            CurrentPrice = UpdateCurrentPrice();
             UpdateStockInformation();
-            
         }
 
         public StockDomainModel(string ticker, string name, string exchange)
@@ -47,24 +48,21 @@ namespace Folio.Models
             Ticker = ticker;
             Name = name;
             Exchange = exchange;
-            UpdateStockInformation();
+            CurrentPrice = UpdateCurrentPrice();
+            //UpdateStockInformation();
+
         }
-
-       
-
 
         private void UpdateStockInformation()
         {
-            CurrentPrice = UpdateCurrentPrice();
             if ((DateTime.UtcNow - LastUpdated) > TimeSpan.FromDays(7))
             {
                 ExpectedReturn = CalculateExpectedReturn();
                 Variance = CalculateVariance();
-                decimal[] priceData = YahooAPICalls
+                IEnumerable<HistoricalPrice> priceData = YahooAPICalls
                     .GetStockHistoricalPrices
-                    (Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year))
-                    .ToArray();
-                DailyReturns1Year = CalculateDailyReturnsToArray(priceData);
+                    (Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year));
+                DailyReturns1Year = priceData;
                 LastUpdated = DateTime.UtcNow;
             }
         }
@@ -82,14 +80,24 @@ namespace Folio.Models
         private decimal CalculateVariance()
         {
             decimal sumSquared = 0;
-            const int yearSearchLimit = 2006;
+            int yearSearchLimit = 2006;
             int numYears = DateTime.UtcNow.Year - yearSearchLimit;
-            decimal prob = numYears / 100;
-
+            decimal prob = numYears / 100m;
             for (int i = yearSearchLimit; i < DateTime.UtcNow.Year; i++)
             {
-                List<decimal> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
-                decimal annualReturn = ((prices[prices.Count - 1] - prices[0]) / prices[0]);
+                IEnumerable<HistoricalPrice> prices = YahooAPICalls.GetStockHistoricalPrices(Ticker, new DateTime(i, 1, 1), new DateTime(i, 12, 31));
+                if (prices == null)
+                {
+                    yearSearchLimit += 1;
+                    continue;
+                }
+                decimal yearStart = prices
+                    .Single(p => p.Date == prices
+                    .Select(pp => pp.Date).Min()).Price;
+                decimal yearEnd = prices
+                    .Single(p => p.Date == prices
+                    .Select(pp => pp.Date).Max()).Price;
+                decimal annualReturn = (yearEnd - yearStart) / yearStart;
                 decimal squared = Convert.ToDecimal(Math.Pow(Convert.ToDouble(ExpectedReturn - annualReturn), 2))*prob;
                 sumSquared += squared;
             }
@@ -98,14 +106,17 @@ namespace Folio.Models
 
         private decimal CalculateExpectedReturn()
         {
+            const decimal _sp500avgReturn = 6.34m;
+            const decimal _riskFreeReturn = 2.70m;
             decimal beta = YahooAPICalls.GetStockBeta(Ticker);
-            decimal marketRiskPremium = _sp500avgReturn - _riskFreeReturn;
+            decimal marketRiskPremium = _sp500avgReturn -_riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             return (_riskFreeReturn + riskPremium)/100;
         }
 
-        private double[] CalculateDailyReturnsToArray(decimal[] prices)
+        public double[] DailyReturns1YearAsArray()
         {
+            decimal[] prices = DailyReturns1Year.Select(p => p.Price).ToArray();
             decimal[] dailyRet = new decimal[prices.Length];
             double[] dailyReturnsDoubles = new double[dailyRet.Length];
             dailyRet[0] = prices[1];

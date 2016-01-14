@@ -19,6 +19,11 @@ namespace Folio.Controllers
             return View();
         }
 
+        public IActionResult News(int? HttpChoice)
+        {
+            return View(Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(HttpChoice))); 
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "[Folio] members in alphabetical order";

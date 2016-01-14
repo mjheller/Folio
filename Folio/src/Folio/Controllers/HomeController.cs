@@ -20,9 +20,9 @@ namespace Folio.Controllers
             return View();
         }
 
-        public IActionResult News(int? HttpChoice)
+        public IActionResult News(int? id)
         {
-            return View(Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(HttpChoice))); 
+            return View(Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(id))); 
         }
 
         public IActionResult About()

@@ -20,7 +20,7 @@ namespace Folio.Logic
             {
                 historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 return null;
             }
@@ -34,22 +34,11 @@ namespace Folio.Logic
         //    TimeSpan half = new TimeSpan(0);
         //    while(loopCount < 20)
         //    {
-        //        if (loopCount == 0)
-        //        {
-        //            try
-        //            {
-        //                historicalPrice = hps.Get(ticker, (endDate - TimeSpan.FromDays(1)), endDate, Period.Daily);
-        //            }
-        //            catch(Exception ex)
-        //            {
-        //                return historicalPrice;
-        //            }
-        //        }
         //        try
         //        {
         //            historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
         //        }
-        //        catch(Exception ex)
+        //        catch(Exception)
         //        {
         //        }
         //        if (historicalPrice == null)
@@ -66,6 +55,7 @@ namespace Folio.Logic
         //    }
         //    return historicalPrice;
         //}
+
 
         public static decimal GetCurrentStockPrice(string ticker)
         {

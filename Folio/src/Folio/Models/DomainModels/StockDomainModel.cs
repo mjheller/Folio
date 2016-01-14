@@ -1,9 +1,9 @@
 ﻿using Folio.Logic;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using YSQ.core.Historical;
 using System.Linq;
 

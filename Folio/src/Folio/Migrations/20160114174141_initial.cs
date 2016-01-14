@@ -46,10 +46,10 @@ namespace folio.Migrations
                     Symbol = table.Column<string>(nullable: false),
                     DailyReturns1Year = table.Column<string>(nullable: true),
                     Exchange = table.Column<string>(nullable: true),
-                    ExpectedReturn = table.Column<decimal>(nullable: false),
+                    ExpectedReturn = table.Column<decimal>(nullable: true),
                     LastUpdate = table.Column<DateTime>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Variance = table.Column<decimal>(nullable: false)
+                    Variance = table.Column<decimal>(nullable: true)
                 },
                 constraints: table =>
                 {

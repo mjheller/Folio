@@ -117,13 +117,13 @@ namespace folio.Migrations
 
                     b.Property<string>("Exchange");
 
-                    b.Property<decimal>("ExpectedReturn");
+                    b.Property<decimal?>("ExpectedReturn");
 
                     b.Property<DateTime>("LastUpdate");
 
                     b.Property<string>("Name");
 
-                    b.Property<decimal>("Variance");
+                    b.Property<decimal?>("Variance");
 
                     b.HasKey("Symbol");
                 });

@@ -73,10 +73,10 @@ namespace Folio.SeedData
                     Symbol = s.Ticker,
                     Name = s.Name,
                     LastUpdate = s.LastUpdated,
-                    Variance = s.Variance,
-                    ExpectedReturn = s.ExpectedReturn,
+                    Variance = null, //s.Variance,
+                    ExpectedReturn = null, // s.ExpectedReturn,
                     DailyReturns1Year = s.DailyReturns1YearAsJSON,
-                    Exchange = s.Exchange,
+                    Exchange = s.Exchange
                 });
             }
             return dataStocks;

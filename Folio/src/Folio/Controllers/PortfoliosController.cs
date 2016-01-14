@@ -1,7 +1,6 @@
 using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
-using Newtonsoft.Json;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
@@ -75,7 +74,7 @@ namespace Folio.Controllers
 
         // GET: Portfolios/AddStock/5
         [HttpGet]
-        public async Task<IActionResult> AddStock(int? id)
+        public IActionResult AddStock(int? id)
         {
             if (id == null)
             {
@@ -86,17 +85,19 @@ namespace Folio.Controllers
             Portfolio workingPortfolio = userPortfolios.Find(p => p.ID == id);
             userPortfolios.Remove(userPortfolios.Find(p => p.Name == workingPortfolio.Name));
 
-            if (HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks") == null)
+            if (HttpContext.Session.GetObjectFromJson<List<string>>("Stocks") == null)
             {
                 // Need Chris' Method to Get StockViewModel objects for all stocks.
                 // Set the list of all StockViewModel objects on the session.
+                List<string> testStocks = new List<string>() { "GOOG", "MSFT", "YHOO", "TWTR" };
+                HttpContext.Session.SetObjectAsJson("Stocks", testStocks);
             }
 
             AddStockToPortfolioViewModel model = new AddStockToPortfolioViewModel
             {
                 UserPortfolios = userPortfolios,
                 WorkingPortfolio = workingPortfolio,
-                AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<StockViewModel>>("Stocks")
+                AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<string>>("Stocks")
             };
 
             return View(model);
@@ -128,8 +129,8 @@ namespace Folio.Controllers
 
         public JsonResult Autocomplete(string term)
         {
-            // List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("StockTickers");
-            List<string> items = new List<string>();
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Stocks");
+            // List<string> items = new List<string>();
             var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
             return Json(filteredItems);
         }

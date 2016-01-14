@@ -6,49 +6,75 @@
 
 <script type="text/javascript" language="javascript">
     $(document).ready(function () {
-        $('#ticker').autocomplete({
+        $("#ticker").autocomplete({
             source: '@Url.Action("Autocomplete")'
+        });
+        $("#get-stock-data").click(function () {
+            $("#stock-information-header").html("Current Stock Data: " + $("#ticker").val());
+
         });
     })
 </script>
 
-<h2>Add a Stock to Portfolio: @Model.WorkingPortfolio.Name</h2>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Add a Stock to Portfolio: @Model.WorkingPortfolio.Name</h2>
 
-@if (Model.UserPortfolios.Count() > 0)
-{
-    <p>Change Portfolio To:</p>
-<ul>
-    @foreach(Portfolio portfolio in Model.UserPortfolios)
-    {
-        <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
-    }
-</ul>
-}
-
-<hr />
-<p>Search for a stock ticker below to add it.</p>
-<form asp-action="AddStock" id="search-stock">
-    <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
-    <div>
-        @Html.Label("Ticker Search:")
-        @Html.TextBox("ticker", "", new { name = "ticker", @class = "stock-input", @style = "margin-bottom: 15px" } )
-        @Html.Label("Shares Held:")
-        @Html.TextBox("amount", "", new { name = "amount", @class = "stock-input" } )
-        <input type="submit" class="portfolio-button" value="Add Stock">
+        @if (Model.UserPortfolios.Count() > 0)
+        {
+            <p>Change Portfolio To:</p>
+            <ul>
+                @foreach (Portfolio portfolio in Model.UserPortfolios)
+                {
+                    <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
+                }
+            </ul>
+        }
+        <hr />
     </div>
-</form>
+</div>
 
-
-@if (Model.WorkingPortfolio.PortfolioAssets.Count() > 0)
-{
-    <hr />
-    <div class="owned-stocks">
-        <label>Assets Held Within @Model.WorkingPortfolio.Name:</label>
-        <ul>
-            @foreach (PortfolioAsset asset in Model.WorkingPortfolio.PortfolioAssets)
-            {
-                <li><p>@asset.AssetSymbol : @asset.NumberOfAssetOwned Shares</p></li>
-            }
-        </ul>
+<div class="row">
+    <div class="col-md-4">
+        <h4>Search for a Stock:</h4>
+        <form asp-action="AddStock" id="search-stock">
+            <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+            <div>
+                @Html.Label("Ticker Search:")
+                @Html.TextBox("ticker", "", new { name = "ticker", @class = "stock-input", @style = "margin-bottom: 15px" })
+                @Html.Label("Shares Held:")
+                @Html.TextBox("amount", "", new { name = "amount", @class = "stock-input" })
+                <button id="get-stock-data" type="button" class="portfolio-button">Get Stock Data</button>
+                <input type="submit" class="portfolio-button" value="Add Stock">
+            </div>
+        </form>
     </div>
-}
+
+    <div class="col-md-8">
+        <h4 id="stock-information-header">Current Stock Data</h4>
+        <dl class="dl-horizontal">
+            <dt>Current Price: </dt>
+            <dd>Choose a Stock</dd>
+            <dt>Percent Change:</dt>
+            <dd>Choose a Stock</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (Model.WorkingPortfolio.PortfolioAssets.Count() > 0)
+        {
+            <hr />
+            <div class="owned-stocks">
+                <label>Assets Held Within @Model.WorkingPortfolio.Name:</label>
+                <ul>
+                    @foreach (PortfolioAsset asset in Model.WorkingPortfolio.PortfolioAssets)
+                    {
+                        <li><p>@asset.AssetSymbol : @asset.NumberOfAssetOwned Shares</p></li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>

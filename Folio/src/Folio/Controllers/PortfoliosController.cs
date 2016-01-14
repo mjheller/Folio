@@ -2,6 +2,7 @@ using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
 using Microsoft.AspNet.Authorization;
+using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
@@ -74,7 +75,7 @@ namespace Folio.Controllers
 
         // GET: Portfolios/AddStock/5
         [HttpGet]
-        public IActionResult AddStock(int? id)
+        public async Task<IActionResult> AddStock(int? id)
         {
             if (id == null)
             {
@@ -85,19 +86,18 @@ namespace Folio.Controllers
             Portfolio workingPortfolio = userPortfolios.Find(p => p.ID == id);
             userPortfolios.Remove(userPortfolios.Find(p => p.Name == workingPortfolio.Name));
 
-            if (HttpContext.Session.GetObjectFromJson<List<string>>("Stocks") == null)
+            if (HttpContext.Session.GetObjectFromJson<List<string>>("Tickers") == null)
             {
-                // Need Chris' Method to Get StockViewModel objects for all stocks.
-                // Set the list of all StockViewModel objects on the session.
-                List<string> testStocks = new List<string>() { "GOOG", "MSFT", "YHOO", "TWTR" };
-                HttpContext.Session.SetObjectAsJson("Stocks", testStocks);
+                List<Stock> stock = await _context.Stock.ToListAsync();
+                List<string> tickers = stock.Select(s => s.Symbol).ToList();
+                HttpContext.Session.SetObjectAsJson("Tickers", tickers);
             }
 
             AddStockToPortfolioViewModel model = new AddStockToPortfolioViewModel
             {
                 UserPortfolios = userPortfolios,
                 WorkingPortfolio = workingPortfolio,
-                AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<string>>("Stocks")
+                AvailableAssetTickers = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers")
             };
 
             return View(model);
@@ -106,19 +106,19 @@ namespace Folio.Controllers
         // POST: Portfolios/AddStock/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddStock(int? id, string ticker, string amount)
+        public async Task<IActionResult> AddStock(int? id, string tickerinput, string amount)
         {
             Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
 
             if (portfolio.PortfolioAssets == null)
             {
-                PortfolioAsset asset = new PortfolioAsset { AssetSymbol = ticker, NumberOfAssetOwned = Int32.Parse(amount) };
+                PortfolioAsset asset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
                 _context.PortfolioAsset.Add(asset);
                 portfolio.PortfolioAssets = new List<PortfolioAsset>() { asset };
                 _context.Update(portfolio);
             } else
             {
-                PortfolioAsset asset = portfolio.PortfolioAssets.ToList().Find(p => p.AssetSymbol == ticker);
+                PortfolioAsset asset = portfolio.PortfolioAssets.ToList().Find(p => p.AssetSymbol == tickerinput);
                 asset.NumberOfAssetOwned += Int32.Parse(amount);
                 _context.Update(asset);
             }
@@ -129,8 +129,7 @@ namespace Folio.Controllers
 
         public JsonResult Autocomplete(string term)
         {
-            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Stocks");
-            // List<string> items = new List<string>();
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers");
             var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
             return Json(filteredItems);
         }

@@ -7,7 +7,7 @@
         <environment names="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
             <link rel="stylesheet" href="~/css/site.css" />
-            <link rel="stylesheet" href="~/css/ticker.css" />
+            <link rel="stylesheet" href="~/css/Table.css" />
             <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
             <script src="~/js/site.js"></script>
             <script src="Chart.js"></script>
@@ -45,30 +45,6 @@
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>
-                <table class="table-fill">
-                    <thead>
-                        <tr>
-                            <th class="text-left">Ticker</th>
-                            <th class="text-left">Name</th>
-                            <th class="text-left">Price</th>
-                            <th class="text-left">Change Percent</th>
-                            <th class="text-left">Change $</th>
-                            <th class="text-left">Volume</th>
-
-                        </tr>
-                    </thead>
-                    <tbody class="table-hover">
-                        <tr>
-                            <td id="tickerGOOG" class="text-left">Ticker</td>
-                            <td id="nameGOOG" class="text-left">Name/td>
-                            <td id="priceGOOG" class="text-left">Price</td>
-                            <td id="changeGOOG" class="text-left">Change</td>
-                            <td id="changedGOOG" class="text-left">Changed</td>
-                            <td id="volumeGOOG" class="text-left">Volume</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="breezy">designed by Jbree$y </p>
             </div>
         </div>
         <div class="container body-content">
@@ -143,4 +119,3 @@
     getData("GOOG");
     window.setInterval(function () { getData("GOOG"), getData("YHOO"), getData("AAPL"), getData("AMZN"), getData("TWTR"), getData("FB"), getData("NFLX"), getData("MSFT")}, 5000);
 </script>
-

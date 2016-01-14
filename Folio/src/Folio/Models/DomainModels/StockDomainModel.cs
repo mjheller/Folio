@@ -35,33 +35,22 @@ namespace Folio.Models
             set { DailyReturns1Year = JsonConvert.DeserializeObject<IEnumerable<HistoricalPrice>>(value); }
         }
 
-        //public StockDomainModel(string ticker, int sharesOwned)
-        //{
-        //    Ticker = ticker;
-        //    SharesOwned = sharesOwned;
-        //    CurrentPrice = UpdateCurrentPrice();
-        //    UpdateStockInformation();
-        //}
-
-        public StockDomainModel(string ticker, string name, string exchange)
+        public StockDomainModel(Stock stock, int sharesOwned)
         {
-            Ticker = ticker;
-            Name = name;
-            Exchange = exchange;
-            //CurrentPrice = UpdateCurrentPrice();
-            //UpdateDailyReturns1Year();
-            //LastUpdated = DateTime.UtcNow;
+            Ticker = stock.Symbol;
+            Name = stock.Name;
+            Exchange = stock.Exchange;
+            SharesOwned = sharesOwned;
+            UpdateStockInformation();
         }
 
         private void UpdateStockInformation()
         {
-            if ((DateTime.UtcNow - LastUpdated) > TimeSpan.FromDays(7))
-            {
-                ExpectedReturn = CalculateExpectedReturn();
-                Variance = CalculateVariance();
-                UpdateDailyReturns1Year();
-                LastUpdated = DateTime.UtcNow;
-            }
+            CurrentPrice = UpdateCurrentPrice();
+            ExpectedReturn = CalculateExpectedReturn();
+            Variance = CalculateVariance();
+            UpdateDailyReturns1Year();
+            LastUpdated = DateTime.UtcNow;
         }
 
         private void UpdateDailyReturns1Year()

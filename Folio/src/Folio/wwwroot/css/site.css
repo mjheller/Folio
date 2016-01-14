@@ -1,8 +1,20 @@
-﻿body {
+﻿html{
+  position:relative; 
+  min-height: 100%;
+}
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url("../images/GreySignature.png");
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    margin-bottom:100px;
 }
-
+div {
+    
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -15,6 +27,17 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:100px;
+    background-color:darkgrey;
+    text-align: center;
+    color: black;
 }
 
 select {
@@ -90,6 +113,20 @@ select {
 	position:relative;
 	top:1px;
 }
+.navbar {
+    background-color:darkgrey;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+}
+.nav.navbar-nav.nav li a {
+    color: black;
+}
+
+.navbar-button:hover {
+    color: black;
+}
+
 
 /* Carousel */
 .carousel-caption {

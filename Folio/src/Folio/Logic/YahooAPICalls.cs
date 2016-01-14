@@ -20,7 +20,7 @@ namespace Folio.Logic
             {
                 historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 return null;
             }
@@ -78,7 +78,7 @@ namespace Folio.Logic
                 {
                     beta = Convert.ToDecimal(td[5].InnerHtml);
                 }
-                catch(Exception)
+                catch(Exception ex)
                 {
                     beta = 1;
                 }

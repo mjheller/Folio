@@ -4,14 +4,13 @@
 }
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
     background-image: url("../images/GreySignature.png");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-weight: bold;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
+    margin-top: 100px;
 }
 
 footer{
@@ -19,13 +18,15 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    height:100px;
+    height:70px;
     background-color:darkgrey;
     text-align: center;
     color: black;
+    font-weight: bold;
 }
 
 .body-content {
+    padding-top: 50px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -110,23 +111,35 @@ select {
 }
 .navbar {
     background-color:darkgrey;
+    font-weight: bold;
 }
 .nav.navbar-nav.nav li a {
     color: black;
+    font-weight: bold;
 }
 .nav.navbar-nav.nav li a:hover {
     color: grey;
     background-color:darkgrey;
+    font-weight: bold;
 }
 .navbar-header.nav a{
     color: black;
+    font-weight: bold;
 }
 .navbar-brand{
     color: black;
+    font-weight: bold;
 }
 .navbar-brand:hover{
     color: grey;
     background-color:darkgrey;
+    font-weight: bold;
+}
+.breezy{
+    color: white;
+    font-size: 8px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .carousel-caption {
@@ -163,4 +176,5 @@ select {
  */
 .navbar-toggle {
     color: black;
+    font-weight: bold;
 }

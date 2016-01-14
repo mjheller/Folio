@@ -62,7 +62,7 @@ namespace Folio.SeedData
                 {
                 stocks.Add(new StockDomainModel(seedStocks[i].Symbol, seedStocks[i].Name, seedStocks[i].Exchange));
                 }
-                catch(Exception ex)
+                catch(Exception)
                 { }
             });
 

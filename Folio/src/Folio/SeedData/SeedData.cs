@@ -47,7 +47,7 @@ namespace Folio.SeedData
                seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock]));
             }
             List<Stock> dataStocks = SeedDataHelperFunctions.SeedStockData(seedStocks);
-            context.AddRange(dataStocks);
+            context.Stock.AddRange(dataStocks);
             context.SaveChanges();
         }
 

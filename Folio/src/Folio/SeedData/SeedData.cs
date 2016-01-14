@@ -1,16 +1,18 @@
-﻿using Folio.Models;
+﻿using AForge;
+using Folio.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Folio.SeedData
 {
     public class SeedData
     {
-        public static void Initialize(IServiceProvider serviceProvider)
+        public async static void Initialize(IServiceProvider serviceProvider)
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
             if (context.Database == null)
@@ -42,31 +44,33 @@ namespace Folio.SeedData
                 { "SP500Quote", "S&P 500" }
             };
             List<SeedStock> seedStocks = new List<SeedStock>();
+            HashSet<string> tickers = new HashSet<string>();
             foreach (string stock in stockFiles.Keys)
             {
-               seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock]));
+               seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock], tickers));
             }
             List<Stock> dataStocks = SeedDataHelperFunctions.SeedStockData(seedStocks);
             context.Stock.AddRange(dataStocks);
             context.SaveChanges();
         }
 
-        private static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
+        private async static void InitializeRoleAdmin(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {
             IdentityRole role = new IdentityRole { Name = "admin" };
-            roleManager.CreateAsync(role);
+            await roleManager.CreateAsync(role);
             context.SaveChanges();
         }
 
-        private static void InitializeUserAdmin(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        private async static void InitializeUserAdmin(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             ApplicationUser admin = new ApplicationUser
             {
-                UserName = "admin@gmail.com"
-                ,Email = "admin@gmail.com"
+                UserName = "admin@gmail.com",
+                Email = "admin@gmail.com"
             };
-            userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character
-            userManager.AddToRoleAsync(admin, "admin");
+            await userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character
+            Thread.Sleep(5000);
+            await userManager.AddToRoleAsync(admin, "admin");
             context.SaveChanges();
         }
     }

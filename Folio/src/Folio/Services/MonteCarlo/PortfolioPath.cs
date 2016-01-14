@@ -35,6 +35,7 @@ namespace Folio.Services.MonteCarlo
             IEnumerable<double> returns = lognormal.Samples().Take(nSteps);
             this.endingPortfolioValue = returns.Aggregate(initialPortfolioValue, ComputeNextPortfolioValue);
         }
+
         private double ComputeNextPortfolioValue(double currentValue, double randomReturn)
         {
             double value = ComputePortfolioChange(currentValue, randomReturn);
@@ -42,6 +43,7 @@ namespace Folio.Services.MonteCarlo
             portfolioValueList.Add(value);
             return value;
         }
+
         private double ComputePortfolioChange(double currentValue, double randomReturn)//Computes change in value between two points in the path
         {
 

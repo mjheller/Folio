@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Mvc;
+using System.Xml;
 
 namespace Folio.Controllers
 {
@@ -17,6 +18,11 @@ namespace Folio.Controllers
             ViewData["Message"] = "Your news page.";
 
             return View();
+        }
+
+        public IActionResult News(int? id)
+        {
+            return View(Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(id))); 
         }
 
         public IActionResult About()

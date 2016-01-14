@@ -44,12 +44,8 @@ namespace folio.Migrations
                 columns: table => new
                 {
                     Symbol = table.Column<string>(nullable: false),
-                    DailyReturns1Year = table.Column<string>(nullable: true),
                     Exchange = table.Column<string>(nullable: true),
-                    ExpectedReturn = table.Column<decimal>(nullable: false),
-                    LastUpdate = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Variance = table.Column<decimal>(nullable: false)
+                    Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

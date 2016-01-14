@@ -15,47 +15,16 @@ namespace Folio.Logic
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> historicalPrices = null;
-
             try
             {
                 historicalPrices = hps.Get(ticker, startDate, endDate, Period.Daily);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 return null;
             }
             return historicalPrices;
         }
-
-        //private static IEnumerable<HistoricalPrice> BruteForceHistoricalPrices(HistoricalPriceService hps, string ticker, DateTime startDate, DateTime endDate)
-        //{
-        //    IEnumerable<HistoricalPrice> historicalPrice = null;
-        //    int loopCount = 0;
-        //    TimeSpan half = new TimeSpan(0);
-        //    while(loopCount < 20)
-        //    {
-        //        try
-        //        {
-        //            historicalPrice = hps.Get(ticker, startDate, endDate, Period.Daily);
-        //        }
-        //        catch(Exception)
-        //        {
-        //        }
-        //        if (historicalPrice == null)
-        //        {
-        //            half = new TimeSpan((endDate - startDate).Ticks / 2);
-        //            startDate = (startDate + half);
-        //        }
-        //        else
-        //        {
-        //            half = new TimeSpan(half.Ticks + (half.Ticks/2));
-        //            startDate = (startDate + half);
-        //        }
-        //        loopCount++;
-        //    }
-        //    return historicalPrice;
-        //}
-
 
         public static decimal GetCurrentStockPrice(string ticker)
         {

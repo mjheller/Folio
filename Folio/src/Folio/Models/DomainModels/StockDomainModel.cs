@@ -49,8 +49,8 @@ namespace Folio.Models
             Name = name;
             Exchange = exchange;
             CurrentPrice = UpdateCurrentPrice();
-            //UpdateStockInformation();
-
+            UpdateDailyReturns1Year();
+            LastUpdated = DateTime.UtcNow;
         }
 
         private void UpdateStockInformation()
@@ -59,12 +59,17 @@ namespace Folio.Models
             {
                 ExpectedReturn = CalculateExpectedReturn();
                 Variance = CalculateVariance();
-                IEnumerable<HistoricalPrice> priceData = YahooAPICalls
-                    .GetStockHistoricalPrices
-                    (Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year));
-                DailyReturns1Year = priceData;
+                UpdateDailyReturns1Year();
                 LastUpdated = DateTime.UtcNow;
             }
+        }
+
+        private void UpdateDailyReturns1Year()
+        {
+            IEnumerable<HistoricalPrice> priceData = YahooAPICalls
+                    .GetStockHistoricalPrices
+                    (Ticker, new DateTime(DateTime.UtcNow.Year - 1, DateTime.UtcNow.Month, DateTime.UtcNow.Day), new DateTime(DateTime.UtcNow.Year));
+            DailyReturns1Year = priceData;
         }
 
         private decimal UpdateCurrentPrice()
@@ -117,15 +122,12 @@ namespace Folio.Models
         public double[] DailyReturns1YearAsArray()
         {
             decimal[] prices = DailyReturns1Year.Select(p => p.Price).ToArray();
-            decimal[] dailyRet = new decimal[prices.Length];
-            double[] dailyReturnsDoubles = new double[dailyRet.Length];
-            dailyRet[0] = prices[1];
-            for (int i = 1; i < prices.Length; i++)
-            {
+            double[] dailyReturnsDoubles = new double[prices.Length];
+            dailyReturnsDoubles[0] = Convert.ToDouble(prices[1]);
+            Parallel.For(1, prices.Length, i => {
                 decimal dailyReturn = (prices[i] - prices[i - 1]) / prices[i - 1];
-                dailyRet[i] = dailyReturn;
-            }
-            Parallel.For(0, dailyRet.Length, i => { dailyReturnsDoubles[i] = (double)dailyRet[i]; });
+                dailyReturnsDoubles[i] = Convert.ToDouble(dailyReturn);
+            });
             return dailyReturnsDoubles;
         }
     }

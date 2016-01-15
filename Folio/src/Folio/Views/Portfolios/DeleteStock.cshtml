@@ -1,4 +1,4 @@
-﻿@model Folio.Models.Portfolio
+﻿@model Folio.ViewModels.Portfolios.DeleteStockFromPortfolioViewModel
 
 @{
     ViewData["Title"] = "Delete Stock from Portfolio";
@@ -6,8 +6,15 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2>Delete Stock from Portfolio: @Model.Name</h2>
+        <h2>Delete Stock from Portfolio: @Model.WorkingPortfolio.Name</h2>
         <p>Enter the amount of stock you'd like to delete in the input column and then click "Delete Stock" to remove that amount from your portfolio.</p>
+        <p>Change Portfolio To:</p>
+        <ul>
+            @foreach (Portfolio portfolio in Model.UserPortfolios)
+            {
+                <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
+            }
+        </ul>
         <hr />
     </div>
 </div>
@@ -21,7 +28,7 @@
             <th>Amount to Delete</th>
             <th>Confirm</th>
         </tr>
-        @foreach (PortfolioAsset asset in @Model.PortfolioAssets)
+        @foreach (PortfolioAsset asset in @Model.WorkingPortfolio.PortfolioAssets)
         {
             <tr>
                 <td>@asset.AssetSymbol</td>

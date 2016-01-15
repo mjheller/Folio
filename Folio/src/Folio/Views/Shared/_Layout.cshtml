@@ -10,7 +10,6 @@
             <link rel="stylesheet" href="~/css/Table.css" />
             <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
             <script src="~/js/site.js"></script>
-            <script src="Chart.js"></script>
         </environment>
         <environment names="Staging,Production">
             <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
@@ -107,43 +106,3 @@
         @RenderSection("scripts", required: false)
     </body>
 </html>
-<script>
-    var yolo = "whatever";
-    function getData(sym) {
-        var url = "https://query.yahooapis.com/v1/public/yql";
-        var symbol = sym;
-        var data = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + symbol + "')");
-
-        $.getJSON(url, 'q=' + data + "&format=json&diagnostics=true&env=http://datatables.org/alltables.env")
-            .done(function (data) {
-                yolo = data;
-                if ("$" + yolo.query.results.quote.LastTradePriceOnly !== $("#price" + sym).text() || yolo.query.results.quote.LastTradePriceOnly == null) {
-                    $("#price" + sym).fadeOut(function () {
-                        $(this).text("$" + yolo.query.results.quote.LastTradePriceOnly)
-                    }).fadeIn();
-                    $("#change" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.PercentChange)
-                    }).fadeIn();
-                    $("#name" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.Name)
-                    }).fadeIn();
-                    $("#ticker" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.symbol)
-                    }).fadeIn();
-                    $("#changed" + sym).fadeOut(function () {
-                        $(this).text("$" + yolo.query.results.quote.Change)
-                    }).fadeIn();
-                    $("#volume" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.Volume)
-                    }).fadeIn();
-
-                }
-            })
-            .fail(function (jqxhr, textStatus, error) {
-                var err = textStatus + ", " + error;
-                $("#price" + sym).text('Request failed: ' + err);
-            });
-    }
-    getData("GOOG");
-    window.setInterval(function () { getData("GOOG"), getData("YHOO"), getData("AAPL"), getData("AMZN"), getData("TWTR"), getData("FB"), getData("NFLX"), getData("MSFT")}, 5000);
-</script>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Folio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,5 +19,6 @@ namespace Folio.ViewModels.MonteCarlo
         [Display(Name = "Retirement Income Draw")]
         public double AnnualRetirementIncomeDraw { get; set; }
         public IEnumerable<decimal> MonteCarloResults { get; set; }
+        public int StartingAge { get; set; }
     }
 }

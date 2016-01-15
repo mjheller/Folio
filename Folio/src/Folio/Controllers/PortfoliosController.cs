@@ -41,22 +41,27 @@ namespace Folio.Controllers
         [HttpGet]
         public async Task<ActionResult> Details(int? id)
         {
+            PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
             if (id == null)
             {
                 return HttpNotFound();
             }
-            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
-            if (portfolio == null)
+            if (portfolioViewModel == null)
             {
-                return HttpNotFound();
+                Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
+                if (portfolio == null)
+                {
+                    return HttpNotFound();
+                }
+                Builder builder = new Builder(_context);
+                PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+                portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+                HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
             }
-            Builder builder = new Builder(_context);
-            PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
-            PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
-
             return View(portfolioViewModel);
         }
 
+        // GET: Portfolios/Stocks/5
         [HttpGet]
         public ActionResult Stocks(int? id)
         {
@@ -80,7 +85,6 @@ namespace Folio.Controllers
             {
                 return RedirectToAction("Stocks", id);
             }
-
         }
 
         // GET: Portfolios/Create
@@ -142,22 +146,28 @@ namespace Folio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddStock(int? id, string tickerinput, string amount)
         {
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(p => p.ID == id);
+            List<string> heldTickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
+            PortfolioAsset newAsset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
 
-            if (portfolio.PortfolioAssets == null)
+            if (portfolio.PortfolioAssets.Count == 0)
             {
-                PortfolioAsset asset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
-                _context.PortfolioAsset.Add(asset);
-                portfolio.PortfolioAssets = new List<PortfolioAsset>() { asset };
+                _context.PortfolioAsset.Add(newAsset);
+                portfolio.PortfolioAssets = new List<PortfolioAsset>() { newAsset };
+            } else if (!heldTickers.Contains(tickerinput))
+            {
+                portfolio.PortfolioAssets.Add(newAsset);
                 _context.Update(portfolio);
-            } else
+            }
+            else
             {
-                PortfolioAsset asset = portfolio.PortfolioAssets.ToList().Find(p => p.AssetSymbol == tickerinput);
+                PortfolioAsset asset = portfolio.PortfolioAssets.Single(p => p.AssetSymbol == tickerinput);
                 asset.NumberOfAssetOwned += Int32.Parse(amount);
                 _context.Update(asset);
             }
 
             await _context.SaveChangesAsync();
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return RedirectToAction("AddStock", new { id = id } );
         }
 
@@ -167,7 +177,10 @@ namespace Folio.Controllers
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
             List<Portfolio> portfolios = _context.Portfolio.Include(a => a.PortfolioAssets).Where(p => p.User.Id == user.Id).ToList();
-            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Find(p => p.ID == id), UserPortfolios = portfolios };
+            Portfolio workingPortfolio = portfolios.Find(p => p.ID == id);
+            portfolios.Remove(workingPortfolio);
+
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = workingPortfolio, UserPortfolios = portfolios };
             return View(model);
         }
 
@@ -177,18 +190,32 @@ namespace Folio.Controllers
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
             List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(p => p.PortfolioAssets).ToList();
-            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
+            Portfolio workingPortfolio = portfolios.Single(p => p.ID == id);
+            portfolios.Remove(workingPortfolio);
+
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = workingPortfolio, UserPortfolios = portfolios };
 
             PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
+
             if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
             {
-                return View(model);
+                asset.NumberOfAssetOwned = 0;
             } else
             {
                 asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+            }
+
+            if (asset.NumberOfAssetOwned == 0)
+            {
+                _context.PortfolioAsset.Remove(asset);
+                await _context.SaveChangesAsync();
+            } else
+            {
                 _context.Update(asset);
                 await _context.SaveChangesAsync();
             }
+            
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return View(model);
         }
 
@@ -219,6 +246,8 @@ namespace Folio.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return View(portfolio);
         }
 
@@ -245,9 +274,17 @@ namespace Folio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(m => m.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
+            
+            foreach(PortfolioAsset asset in portfolio.PortfolioAssets)
+            {
+                PortfolioAsset assetToRemove = _context.PortfolioAsset.Single(p => p.ID == asset.ID);
+                _context.PortfolioAsset.Remove(assetToRemove);
+            }
+
             _context.Portfolio.Remove(portfolio);
             await _context.SaveChangesAsync();
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return RedirectToAction("Index");
         }
 

@@ -29,11 +29,17 @@
             </tr>
         </thead>
         <tbody class="table-hover">
-            <tr>
-                <td id="tickerGOOG"class="text-left">Symbol</td>
-                <td id="nameGOOG" class="text-left">Name</td>
-                <td id="priceGOOG"class="text-left">Price</td>
-                <td id="changeGOOG"class="text-left">Change</td>
+            <tr class="row1">
+                <td id="ticker"class="text-left">Symbol</td>
+                <td id="name" class="text-left">Name</td>
+                <td id="price"class="text-left">Price</td>
+                <td id="change"class="text-left">Change</td>
+            </tr>
+            <tr class="row2">
+                <td id="ticker1" class="text-left">Symbol</td>
+                <td id="name1" class="text-left">Name</td>
+                <td id="price1" class="text-left">Price</td>
+                <td id="change1" class="text-left">Change</td>
             </tr>
         </tbody>
     </table>
@@ -45,19 +51,30 @@
 </body>
 </html>
 <script>
+    var sym = "^IXIC, ^NYA";
     var data = {
         labels: [],
         datasets: [
             {
-                label: "GOOG",
-                fillColor: "rgba(185, 189, 191, 0.9);",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(0, 0, 0, 0.9);",
+                label: "IXIC",
+                fillColor: "rgba(215, 0, 255, 0.5)",
+                strokeColor: "rgba(215, 0, 255, 0.9)",
+                pointColor: "rgba(215, 0, 255, 0.9)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
                 data: []
-            }
+            },
+            {
+                label: "^NYA",
+                fillColor: "rgba(122, 175, 197, 0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(122, 175, 197, 0.9)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: []
+            },
         ]
     };
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -76,35 +93,47 @@
             .done(function (data) {
                 yolo = data;
                 console.log(yolo);
-                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price" + sym).text() || yolo.query.results.quote.LastTradePriceOnly == null) {
-                    $("#price" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.LastTradePriceOnly)
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price").text() || yolo.query.results.quote[0].LastTradePriceOnly == null) {
+                    $("#price").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[0].LastTradePriceOnly)
                     }).fadeIn();
-                    $("#change" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.PercentChange)
+                    $("#change").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[0].PercentChange)
                     }).fadeIn();
-                    $("#name" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.Name)
+                    $("#name").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[0].Name)
                     }).fadeIn();
-                    $("#ticker" + sym).fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.symbol)
+                    $("#ticker").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[0].symbol)
                     }).fadeIn();
-                    date = new Date();
-                    var time = (date.getHours().toString() + ":" + date.getMinutes().toString() + ":" + date.getSeconds().toString());
-                    myNewChart.addData([yolo.query.results.quote.LastTradePriceOnly], time);
+                }
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price1").text() || yolo.query.results.quote[1].LastTradePriceOnly == null) {
+                    $("#price1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].LastTradePriceOnly)
+                    }).fadeIn();
+                    $("#change1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].PercentChange)
+                    }).fadeIn();
+                    $("#name1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].Name)
+                    }).fadeIn();
+                    $("#ticker1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].symbol)
+                    }).fadeIn();
+                    myNewChart.addData([yolo.query.results.quote[0].LastTradePriceOnly, yolo.query.results.quote[1].LastTradePriceOnly], yolo.query.results.quote[1].LastTradeTime);
                     myNewChart.update();
                 }
             })
             .fail(function (jqxhr, textStatus, error) {
                 var err = textStatus + ", " + error;
-                $("#price" + sym).text('Request failed: ' + err);
+                $("#price").text('Request failed: ' + err);
             });
     }
     $(document).ready(function () {
-        getData("GOOG");
+        getData(sym);
     });
     if (hours < 16 && hours > 9) {
-        window.setInterval(function () { getData("GOOG"), console.log(yolo)}, 10000);
+        window.setInterval(function () { getData(sym), console.log(yolo)}, 10000);
     }
 
     </script>

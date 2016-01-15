@@ -26,13 +26,16 @@
     <div class="col-md-12">
         <h2>Delete Stock from Portfolio: @Model.WorkingPortfolio.Name</h2>
         <p>Enter the amount of stock you'd like to delete in the input column and then click "Delete Stock" to remove that amount from your portfolio.</p>
-        <p>Change Portfolio To:</p>
-        <ul>
-            @foreach (Portfolio portfolio in Model.UserPortfolios)
-            {
-                <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
-            }
-        </ul>
+        @if (Model.UserPortfolios.Count() > 0)
+        {
+            <p>Change Portfolio To:</p>
+            <ul>
+                @foreach (Portfolio portfolio in Model.UserPortfolios)
+                {
+                    <li><a asp-action="DeleteStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
+                }
+            </ul>
+        }
         <hr />
     </div>
 </div>
@@ -54,3 +57,7 @@
         </tr>
     }
 </table>
+<div>
+    <hr />
+    <a asp-action="Index">Back to Portfolio</a>
+</div>

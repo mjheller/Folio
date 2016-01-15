@@ -1,13 +1,9 @@
-﻿using System;
+﻿using Folio.Models;
+using Folio.ViewModels;
+using Microsoft.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Folio.Models;
-using Folio.ViewModels;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.Data.Entity;
-using Microsoft.AspNet.Authorization;
 
 namespace Folio.Builders
 {
@@ -74,12 +70,13 @@ namespace Folio.Builders
 
         public PortfolioViewModel GetPortfolioViewModel(PortfolioDomainModel portfolioDomainModel)
         {
-            string expectedReturn = ((portfolioDomainModel.ExpectedReturn)*100M).ToString().Substring(0, 3);
+            //string expectedReturn = ((portfolioDomainModel.ExpectedReturn)*100M).ToString().Substring(0, 2);
             PortfolioViewModel portfolioViewModel = new PortfolioViewModel {
                 ID = portfolioDomainModel.ID,
                 Name = portfolioDomainModel.Name,
                 DateCreated = portfolioDomainModel.DateCreated,
-                ExpectedReturn = string.Format("{0}%", expectedReturn),
+               // ExpectedReturnString = string.Format("{0}%", expectedReturn),
+                ExpectedReturnDouble = (double)portfolioDomainModel.ExpectedReturn,
                 Variance = portfolioDomainModel.Variance,
                 DollarValue = portfolioDomainModel.DollarValue
             };

@@ -13,14 +13,10 @@ namespace Folio.Builders
     {
         public Stocks createQuotes (string m_symbol)
         {
-            Stocks model = new Stocks();
-            string stringForSearchData = "&f=sl1d1t1c1hgvbap2";
-
-            if (m_symbol == "")
-                // Set the default stock symbol to YHOO.
-                m_symbol = @"YHOO";
-
-            model.companies = m_symbol.Replace(",", " ").Split(' ');
+            const string stringForSearchData = "&f=sl1d1t1c1hgvbap2";
+            Stocks stocks = new Stocks();
+            
+            stocks.companies = m_symbol.Replace(",", " ").Split(' ');
             // Update the textbox value.
             //txtSymbol.Value = m_symbol;
 
@@ -30,8 +26,6 @@ namespace Folio.Builders
                 {
                     // Return the stock quote data in XML format.
                     string symbol = m_symbol.Trim();
-                    if (model == null)
-                        return null;
                     // Use Yahoo finance service to download stock data from Yahoo
                     string yahooURL = @"http://download.finance.yahoo.com/d/quotes.csv?s=" + symbol + stringForSearchData;
                     string[] symbols = symbol.Replace(",", " ").Split(' ');
@@ -103,7 +97,7 @@ namespace Folio.Builders
                             quote.Bid = contents[9];
 
                         }
-                        model.stocks.Add(quote);
+                        stocks.stocks.Add(quote);
                     }
                     strm.Close();
                 }
@@ -112,7 +106,7 @@ namespace Folio.Builders
                     return null;
                 }
             }
-            return model;
+            return stocks;
         }
     }
 }

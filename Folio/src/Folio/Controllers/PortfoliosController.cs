@@ -14,7 +14,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Folio.Models.Data_Models;
-using Folio.Builders;
 using System.Net;
 using System.IO;
 using System.Text;
@@ -66,8 +65,8 @@ namespace Folio.Controllers
         {
             Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(p => p.ID == id);
             List<string> tickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
-            string m_symbol = string.Join(",", tickers.ToArray());
-            Stocks model = new Stocks();
+            string m_symbol = string.Join(" ", tickers.ToArray());
+            Stocks model;
             StockQuotesBuilder dataModel = new StockQuotesBuilder();
 
             if (m_symbol == "")
@@ -76,10 +75,8 @@ namespace Folio.Controllers
 
             model = dataModel.createQuotes(m_symbol);
 
-            if (model != null)
-                return View(model);
-            else
-                return View();
+            return View(model);
+
         }
 
         // GET: Portfolios/Create

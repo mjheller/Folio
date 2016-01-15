@@ -9,11 +9,13 @@ namespace Folio.ViewModels.MonteCarlo
     public class MonteCarloViewModel
     {
         public PortfolioViewModel portfolioViewModel { get; set; }
+        [Display(Name = "Annual Contribution")]
         public double AnnualContribution { get; set; }
-
-       [Display(Name = "Preferred Retirement Age")]
+        [Display(Name = "Retirement Age")]
         public int PreferredRetirementAge { get; set; }
+        [Display(Name = "Retirement Span")]
         public int EstimatedRetirementSpan { get; set; }
+        [Display(Name = "Retirement Income Draw")]
         public double AnnualRetirementIncomeDraw { get; set; }
     }
 }

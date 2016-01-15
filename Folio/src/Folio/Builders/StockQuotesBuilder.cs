@@ -30,10 +30,14 @@ namespace Folio.Builders
                     string yahooURL = @"http://download.finance.yahoo.com/d/quotes.csv?s=" + symbol + stringForSearchData;
                     string[] symbols = symbol.Replace(",", " ").Split(' ');
 
-                    // Initialize a new WebRequest.
+                        // Initialize a new WebRequest.
                     HttpWebRequest webreq = (HttpWebRequest)WebRequest.Create(yahooURL);
                     // Get the response from the Internet resource.
                     HttpWebResponse webresp = (HttpWebResponse)webreq.GetResponse();
+                    while (webresp == null)
+                    {
+                        webresp = (HttpWebResponse)webreq.GetResponse();
+                    }
                     // Read the body of the response from the server.
                     StreamReader strm = new StreamReader(webresp.GetResponseStream(), Encoding.ASCII);
 

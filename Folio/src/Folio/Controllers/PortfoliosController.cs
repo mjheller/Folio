@@ -1,6 +1,9 @@
 using folio.Services;
+using Folio.Builders;
 using Folio.Models;
+using Folio.Models.Data_Models;
 using Folio.ViewModels;
+using Folio.ViewModels.Portfolios;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
@@ -29,24 +32,55 @@ namespace Folio.Controllers
         // GET: Portfolios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Portfolio.ToListAsync());
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            IEnumerable<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(s => s.PortfolioAssets);
+            return View(portfolios);
         }
 
         // GET: Portfolios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpGet]
+        public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return HttpNotFound();
             }
-
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(m => m.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
             if (portfolio == null)
             {
                 return HttpNotFound();
             }
+            Builder builder = new Builder(_context);
+            PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+            PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
 
-            return View(portfolio);
+            return View(portfolioViewModel);
+        }
+
+        [HttpGet]
+        public ActionResult Stocks(int? id)
+        {
+            Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(p => p.ID == id);
+            List<string> tickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
+            string m_symbol = string.Join(" ", tickers.ToArray());
+            Stocks model;
+            StockQuotesBuilder dataModel = new StockQuotesBuilder();
+
+            if (m_symbol == "")
+                // Set the default stock symbol to YHOO.
+                m_symbol = @"YHOO";
+
+            model = dataModel.createQuotes(m_symbol);
+
+            if (model != null)
+            {
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Stocks", id);
+            }
+
         }
 
         // GET: Portfolios/Create
@@ -127,11 +161,35 @@ namespace Folio.Controllers
             return RedirectToAction("AddStock", new { id = id } );
         }
 
-        public JsonResult Autocomplete(string term)
+        // Portfolios/DeleteStock/5
+        [HttpGet]
+        public async Task<IActionResult> DeleteStock(int? id)
         {
-            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers");
-            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
-            return Json(filteredItems);
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            List<Portfolio> portfolios = _context.Portfolio.Include(a => a.PortfolioAssets).Where(p => p.User.Id == user.Id).ToList();
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Find(p => p.ID == id), UserPortfolios = portfolios };
+            return View(model);
+        }
+
+        // Portfolios/DeleteStock/5
+        [HttpPost]
+        public async Task<IActionResult> DeleteStock(int? id, string stockTicker, string amountRemove)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(p => p.PortfolioAssets).ToList();
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
+
+            PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
+            if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
+            {
+                return View(model);
+            } else
+            {
+                asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+                _context.Update(asset);
+                await _context.SaveChangesAsync();
+            }
+            return View(model);
         }
 
         // GET: Portfolios/Edit/5
@@ -191,6 +249,13 @@ namespace Folio.Controllers
             _context.Portfolio.Remove(portfolio);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        public JsonResult Autocomplete(string term)
+        {
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers");
+            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
+            return Json(filteredItems);
         }
     }
 }

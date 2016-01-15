@@ -1,0 +1,56 @@
+﻿@model Folio.ViewModels.Portfolios.DeleteStockFromPortfolioViewModel
+
+@{
+    ViewData["Title"] = "Delete Stock from Portfolio";
+}
+
+<script>
+    function postData(stockTicker, amountRemove) {
+        var data = {
+            stockTicker: stockTicker,
+            amountRemove: $("#amount-delete-" + stockTicker).val()
+        };
+
+        $.ajax({
+            url: "@Url.Action("DeleteStock", new { id = Model.WorkingPortfolio.ID })",
+            type: "POST",
+            data: data,
+            success: function () {
+                window.location = "@Url.Action("DeleteStock", new { id = Model.WorkingPortfolio.ID })";
+            }
+        });
+    }
+</script>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Delete Stock from Portfolio: @Model.WorkingPortfolio.Name</h2>
+        <p>Enter the amount of stock you'd like to delete in the input column and then click "Delete Stock" to remove that amount from your portfolio.</p>
+        <p>Change Portfolio To:</p>
+        <ul>
+            @foreach (Portfolio portfolio in Model.UserPortfolios)
+            {
+                <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
+            }
+        </ul>
+        <hr />
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>Ticker</th>
+        <th>Amount Owned</th>
+        <th>Amount to Delete</th>
+        <th>Confirm</th>
+    </tr>
+    @foreach (PortfolioAsset asset in @Model.WorkingPortfolio.PortfolioAssets)
+    {
+        <tr>
+            <td>@asset.AssetSymbol</td>
+            <td>@asset.NumberOfAssetOwned</td>
+            <td><input type="text" id="amount-delete-@asset.AssetSymbol" /></td>
+            <td><input type="button" value="Delete Stock" onClick="postData('@asset.AssetSymbol');"/></td>
+        </tr>
+    }
+</table>

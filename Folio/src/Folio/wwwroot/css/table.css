@@ -1,14 +1,13 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
-
+﻿
 div.table-title {
   display: block;
-  max-width: 600px;
+  max-width: 100%;
   padding:5px;
   width: 100%;
 }
 
 .table-title h3 {
-   color: #fafafa;
+   color: black;
    font-size: 30px;
    font-weight: 400;
    font-style:normal;
@@ -24,7 +23,7 @@ div.table-title {
   border-radius:3px;
   border-collapse: collapse;
   height: 150px;
-  max-width: 600px;
+  max-width: 100%;
   padding:5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +32,7 @@ div.table-title {
  
 th {
   color:#D5DDE5;
-  background:#1b1e24;
+  background:#A9A9A9;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
   font-size:23px;
@@ -55,7 +54,7 @@ th:last-child {
   
 tr {
   border-top: 1px solid #C1C3D1;
-  border-bottom-: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
   color:#666B85;
   font-size:16px;
   font-weight:normal;

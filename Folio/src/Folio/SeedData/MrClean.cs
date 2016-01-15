@@ -17,19 +17,31 @@ namespace Folio.SeedData
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
             List<Stock> stocks = context.Stock.Select(s => s).ToList();
-            Parallel.For(0, stocks.Count(), async i =>
+            //Parallel.For(0, stocks.Count(), async i =>
+            //{
+            //    try
+            //    {
+            //        YahooAPICalls.GetCurrentStockPrice(stocks[i].Symbol);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        context.Remove(stocks[i]);
+            //        var x = context.SaveChangesAsync();
+            //        await x;
+            //    }
+            //});
+            foreach (Stock stock in stocks)
             {
                 try
                 {
-                    YahooAPICalls.GetCurrentStockPrice(stocks[i].Symbol);
+                    YahooAPICalls.GetCurrentStockPrice(stock.Symbol);
                 }
                 catch (Exception ex)
                 {
-                    context.Remove(stocks[i]);
-                    var x = context.SaveChangesAsync();
-                    await x;
+                    context.Remove(stock);
+                    context.SaveChangesAsync();
                 }
-            });
+            }
         }
 
     }

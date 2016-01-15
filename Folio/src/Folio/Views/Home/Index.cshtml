@@ -7,46 +7,104 @@
 @{
     ViewData["Title"] = "[Folio]";
 }
-<div class="row">
-    <div class="col-md-4">
-        <h2>Login!</h2>
-        <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal" role="form">
-            <h4>Use a local account to log in.</h4>
-            <hr />
-            <div asp-validation-summary="ValidationSummary.All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="col-md-2 control-label"></label>
-                <div class="col-md-12">
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="col-md-2 control-label"></label>
-                <div class="col-md-12">
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <div class="checkbox">
-                        <input asp-for="RememberMe" />
-                        <label asp-for="RememberMe"></label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <button type="submit" class="btn btn-default">Log in</button>
-                </div>
-            </div>
-            <p>
-                <a asp-controller="Account" asp-action="Register">Register as a new user?</a>
-            </p>
-            <p>
-                <a asp-controller="Account" asp-action="ForgotPassword">Forgot your password?</a>
-            </p>
-        </form>
+<html lang="en">
+<head>
+    <script src="~/lib/Chart.js/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="index-title"> 
+        Folio Marketing
     </div>
-</div>
+    <div class="table-title">
+        <h3>Live Stocks</h3>
+    </div>
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-left">Symbol</th>
+                <th class="text-left">Name</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Change</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            <tr>
+                <td id="tickerGOOG"class="text-left">Symbol</td>
+                <td id="nameGOOG" class="text-left">Name</td>
+                <td id="priceGOOG"class="text-left">Price</td>
+                <td id="changeGOOG"class="text-left">Change</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <div>
+            <canvas id="myChart" width="1000" height="600"></canvas>
+        </div>
+    </p>
+</body>
+</html>
+<script>
+    var data = {
+        labels: [],
+        datasets: [
+            {
+                label: "GOOG",
+                fillColor: "rgba(185, 189, 191, 0.9);",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(0, 0, 0, 0.9);",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: []
+            }
+        ]
+    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    ctx.textAlign = "center";
+    var myNewChart = new Chart(ctx).Line(data);
+    new Chart(ctx).Line(data);
+    var yolo = "whatever";
+    var date = new Date();
+    var hours = date.getHours();
+    function getData(sym) {
+        var url = "https://query.yahooapis.com/v1/public/yql";
+        var symbol = sym;
+        var data = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + symbol + "')");
+
+        $.getJSON(url, 'q=' + data + "&format=json&diagnostics=true&env=http://datatables.org/alltables.env")
+            .done(function (data) {
+                yolo = data;
+                console.log(yolo);
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price" + sym).text() || yolo.query.results.quote.LastTradePriceOnly == null) {
+                    $("#price" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.LastTradePriceOnly)
+                    }).fadeIn();
+                    $("#change" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.PercentChange)
+                    }).fadeIn();
+                    $("#name" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.Name)
+                    }).fadeIn();
+                    $("#ticker" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.symbol)
+                    }).fadeIn();
+                    date = new Date();
+                    var time = (date.getHours().toString() + ":" + date.getMinutes().toString() + ":" + date.getSeconds().toString());
+                    myNewChart.addData([yolo.query.results.quote.LastTradePriceOnly], time);
+                    myNewChart.update();
+                }
+            })
+            .fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                $("#price" + sym).text('Request failed: ' + err);
+            });
+    }
+    $(document).ready(function () {
+        getData("GOOG");
+    });
+    if (hours < 16 && hours > 9) {
+        window.setInterval(function () { getData("GOOG"), console.log(yolo)}, 10000);
+    }
+
+    </script>

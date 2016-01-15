@@ -3,39 +3,51 @@
 }
 
 <!DOCTYPE html>
+@model Folio.Models.Email
 <html>
 <head>
-    <title>Request for Assistance</title>
+    <title>Email @Model.ContactName</title>
 </head>
 <body>
-    <h2>Email @ViewData["ContactName"]</h2>
-    <form method="post" action="ProcessRequest">
-        <div>
-            Your name:
-            <input type="text" id="customerName" name="customerName" />
-            @{ViewData["customerName"] = ViewBag.customerName;}
-            @Html.ValidationMessage("customerName")
-        </div>
-        <div>
-            Your email address:
-            <input type="text" id="customerEmail" name="customerEmail" />
-            @{ViewData["customerEmail"] = ViewBag.customerEmail;}
-            @Html.ValidationMessage("customerEmail")
-        </div>
-        <div>
-            Subject: <br />
-            <textarea name="emailSubject" id="emailSubject" cols="45" rows="1"></textarea>
-            @{ViewData["emailSubject"] = ViewBag.emailSubject;}
-            @Html.ValidationMessage("emailSubject")
-        </div>
-        <div>
-            Body: <br />
-            <textarea name="emailBody" id="emailBody" cols="45" rows="6"></textarea>
-            @{ViewData["emailBody"] = ViewBag.emailBody;}
-            @Html.ValidationMessage("emailBody")
-        </div>
-        <div>
-            <input type="submit" value="Submit" onclick="@Folio.Services.Emails.ProcessEmail(ViewData["contactEmail"].ToString(), ViewBag.customerEmail, ViewBag.emailSubject, ViewBag.emailBody);"/>
+    <form asp-action="ContactEmail">
+        <div class="form-horizontal">
+            <h4>Email @Model.ContactName</h4>
+            <hr />
+            <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+            @*<input type="hidden" asp-for="ID" />*@
+            <div class="form-group">
+                <label asp-for="CustomerName" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="CustomerName" class="form-control" />
+                    <span asp-validation-for="CustomerName" class="text-danger" /><br /><br />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerEmail" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="CustomerEmail" class="form-control" />
+                    <span asp-validation-for="CustomerEmail" class="text-danger" /><br /><br />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailSubject" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="EmailSubject" class="form-control" />
+                    <span asp-validation-for="EmailSubject" class="text-danger" /><br /><br />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailBody" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="EmailBody" class="form-control" />
+                    <span asp-validation-for="EmailBody" class="text-danger" /><br /><br />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
         </div>
     </form>
 </body>

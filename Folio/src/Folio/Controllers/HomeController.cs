@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using Folio.Models;
+using Microsoft.AspNet.Mvc;
 using System.Xml;
 
 namespace Folio.Controllers
@@ -34,22 +35,27 @@ namespace Folio.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult ContactEmail(int? id)
         {
-            ViewData["contactEmail"] = Services.Emails.GetContactEmailAddress(id);
-            ViewData["contactName"] = Services.Emails.GetContactName(id);
-            return View();
+            Email email = new Email();
+            email.ContactEmail = Services.Emails.GetContactEmailAddress(id);
+            email.ContactName = Services.Emails.GetContactName(id);
+            return View(email);
         }
 
-        public IActionResult ProcessRequest()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ContactEmail(Email email)
         {
-            ViewData["errorMessage"] = Folio.Services.Emails.errorMessage;
-            return View();
+            Services.Emails.ProcessEmail(email.ContactEmail, email.CustomerEmail, email.EmailSubject, email.EmailBody);
+            email.ErrorMessage = Services.Emails.errorMessage;
+            return RedirectToAction("ProcessRequest", email);
         }
-
-        public IActionResult Test()
+        [HttpGet]
+        public IActionResult ProcessRequest(Email email)
         {
-            return View("ContactEmail");
+            return View(email);
         }
 
         public IActionResult Error()

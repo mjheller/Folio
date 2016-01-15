@@ -7,17 +7,15 @@ namespace Folio.Services.MonteCarlo
 {
     public static class MonteCarlo
     {
-        public static PortfolioPath[] RunSimulation(int yearsUntilRetirement, int nPaths, double expectedReturn, double variance, double initialPortfolioValue, double annualContributions, double incomeDraw, int yearsPlannedRetirement)
+        public static PortfolioPath[] RunSimulation(int yearsUntilRetirement, 
+            int nPaths, double expectedReturn, double variance, double initialPortfolioValue, 
+            double annualContributions, double incomeDraw, int yearsPlannedRetirement)
         {
             PortfolioPath[] paths = new PortfolioPath[nPaths];
             Func<int, PortfolioPath> creator = x => new PortfolioPath(yearsUntilRetirement, expectedReturn, variance, initialPortfolioValue, annualContributions, incomeDraw, yearsPlannedRetirement);
             IEnumerable<int> indices = Enumerable.Range(0, nPaths - 1);
             paths = indices.AsParallel().Select(creator).ToArray();
-            IEnumerable<double> endingValues = paths.Select(x => x.endingPortfolioValue);
-            Console.WriteLine("Min portfolio from simulation: " + endingValues.Min().ToString());
-            Console.WriteLine("Avg portfolio from simulation: " + endingValues.Average().ToString());
-            Console.WriteLine("Max portfolio from simulation: " + endingValues.Max().ToString());
-
+            
             return paths;
         }
         

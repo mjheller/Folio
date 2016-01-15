@@ -1,31 +1,29 @@
 ﻿@{
-//var contactEmail = ViewData["contactEmail"];
-//var contactName = ViewData["contactName"];
-//var customerName = ViewData["customerName"];
-//var customerEmail = ViewData["customerEmail"];
-//var emailSubject = ViewData["emailSubject"];
-//var emailBody = ViewData["emailBody"];
-var errorMessage = ViewData["errorMessage"]; 
+    ViewData["Title"] = "ProcessRequest";
 }
 
 <!DOCTYPE html>
+@model Folio.Models.Email
+
 <html>
 <head>
     <title>Contact Email</title>
 </head>
 <body>
-    <p>Thank you.</p>
-    @if (errorMessage.ToString() == "")
+    <p>Thank you @Model.CustomerName</p>
+    @if (@Model.ErrorMessage == "")
     {
-        <p>
-            Your email message has been sent;
-        </p>
+        <p>Your email message has been sent to @Model.ContactName;</p> <br/><br/><br/>
+        <p>Subject: @Model.EmailSubject</p> <br/><br/>
+        <p>Body: @Model.EmailBody</p>
+
+
     }
     else {
-        <p><b>The email was <em>not</em> sent.</b></p>
-        <p>
-            Please check that your name and email address is filled out correctly. Thank you for your patience.
-        </p>
+        <p><b>The email was <em>not</em> sent to @Model.ContactName</b></p><br />
+        <p>Please check that your name (@Model.ContactName) and email address (@Model.ContactEmail)</p><br/>
+        <p> filled out correctly.Thank you for your patience.</p>
     }
 </body>
 </html>
+

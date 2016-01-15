@@ -39,6 +39,7 @@ namespace Folio.Controllers
             {
                 return HttpNotFound();
             }
+
             PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
             //if (portfolioViewModel == null)
             //{

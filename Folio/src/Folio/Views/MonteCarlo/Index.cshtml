@@ -4,7 +4,9 @@
     ViewData["Title"] = "Index";
 }
 
-<script>
+@if (Model.MonteCarloResults != null)
+{
+    <script>
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
 
@@ -25,7 +27,8 @@
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
         chart.draw(data, options);
     }
-</script>
+    </script>
+}
 
 <h2>Monte Carlo Simulation</h2>
 <hr />

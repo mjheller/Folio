@@ -68,7 +68,7 @@
                     @Html.DisplayFor(modelItem => item.SharesOwned)
                 </td>
                 <td>
-                    <a asp-action="Stock" asp-route-id="@item.Ticker">Select</a>
+                    <a asp-action="Stocks" asp-route-id="@Model.ID">Select</a>
                 </td>
             </tr>
         }

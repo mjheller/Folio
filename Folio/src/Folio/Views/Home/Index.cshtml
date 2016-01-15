@@ -15,39 +15,68 @@
 </head>
 
 <body>
-    <div class="table-title">
-        <h3>Data Table</h3>
-    </div>
     <table class="table-fill">
         <thead>
             <tr>
-                <th class="text-left">Month</th>
-                <th class="text-left">Sales</th>
+                <th class="text-left">Symbol</th>
+                <th class="text-left">Name</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Change</th>
             </tr>
         </thead>
         <tbody class="table-hover">
             <tr>
-                <td class="text-left">January</td>
-                <td class="text-left">$ 50,000.00</td>
-            </tr>
-            <tr>
-                <td class="text-left">February</td>
-                <td class="text-left">$ 10,000.00</td>
-            </tr>
-            <tr>
-                <td class="text-left">March</td>
-                <td class="text-left">$ 85,000.00</td>
-            </tr>
-            <tr>
-                <td class="text-left">April</td>
-                <td class="text-left">$ 56,000.00</td>
-            </tr>
-            <tr>
-                <td class="text-left">May</td>
-                <td class="text-left">$ 98,000.00</td>
+                <td id="tickerGOOG"class="text-left">Symbol</td>
+                <td id="nameGOOG" class="text-left">Name</td>
+                <td id="priceGOOG"class="text-left">Price</td>
+                <td id="changeGOOG"class="text-left">Change</td>
             </tr>
         </tbody>
     </table>
 
 
 </body>
+</html>
+<script>
+    var yolo = "whatever";
+    function getData(sym) {
+        var url = "https://query.yahooapis.com/v1/public/yql";
+        var symbol = sym;
+        var data = encodeURIComponent("select * from yahoo.finance.quotes where symbol in ('" + symbol + "')");
+
+        $.getJSON(url, 'q=' + data + "&format=json&diagnostics=true&env=http://datatables.org/alltables.env")
+            .done(function (data) {
+                yolo = data;
+                console.log(yolo);
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price" + sym).text() || yolo.query.results.quote.LastTradePriceOnly == null) {
+                    $("#price" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.LastTradePriceOnly)
+                    }).fadeIn();
+                    $("#change" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.PercentChange)
+                    }).fadeIn();
+                    $("#name" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.Name)
+                    }).fadeIn();
+                    $("#ticker" + sym).fadeOut(function () {
+                        $(this).text(yolo.query.results.quote.symbol)
+                    }).fadeIn();
+
+                }
+            })
+            .fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                $("#price" + sym).text('Request failed: ' + err);
+            });
+    }
+    $(document).ready(function () {
+        getData("GOOG");
+    });
+    var date = new Date();
+    var hours = date.getHours();
+    console.log(hours);
+    if (hours < 16 && hours > 9)
+    {
+        window.setInterval(function () { getData("GOOG")}, 5000);
+    }
+    </script>

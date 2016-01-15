@@ -13,6 +13,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Folio.Models.Data_Models;
+using Folio.Builders;
+using System.Net;
+using System.IO;
+using System.Text;
 
 namespace Folio.Controllers
 {
@@ -37,7 +42,8 @@ namespace Folio.Controllers
         }
 
         // GET: Portfolios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpGet]
+        public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -51,8 +57,29 @@ namespace Folio.Controllers
             Builder builder = new Builder(_context);
             PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
             PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
-            
+
             return View(portfolioViewModel);
+        }
+
+        [HttpGet]
+        public ActionResult Stocks(int? id)
+        {
+            Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(p => p.ID == id);
+            List<string> tickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
+            string m_symbol = string.Join(",", tickers.ToArray());
+            Stocks model = new Stocks();
+            StockQuotesBuilder dataModel = new StockQuotesBuilder();
+
+            if (m_symbol == "")
+                // Set the default stock symbol to YHOO.
+                m_symbol = @"YHOO";
+
+            model = dataModel.createQuotes(m_symbol);
+
+            if (model != null)
+                return View(model);
+            else
+                return View();
         }
 
         // GET: Portfolios/Create

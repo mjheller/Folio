@@ -64,7 +64,7 @@ namespace Folio.Models
             return YahooAPICalls.GetCurrentStockPrice(Ticker);
         }
 
-        private void addShares(int amount)
+        protected void addShares(int amount)
         {
             SharesOwned += amount;
         }

@@ -11,8 +11,9 @@ namespace Folio.Controllers
     public class MonteCarloController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
+
             return View();
         }
     }

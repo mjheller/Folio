@@ -101,11 +101,17 @@ namespace Folio.Models
             return sumSquared / numYears;
         }
 
-        private decimal CalculateExpectedReturn()
+        protected decimal CalculateExpectedReturn()
+        {
+            decimal beta = YahooAPICalls.GetStockBeta(Ticker);
+            decimal expectedReturn = MathExpectedReturn(beta);
+            return expectedReturn;
+        }
+
+        protected decimal MathExpectedReturn(decimal beta)
         {
             const decimal _sp500avgReturn = 6.34m;
             const decimal _riskFreeReturn = 2.70m;
-            decimal beta = YahooAPICalls.GetStockBeta(Ticker);
             decimal marketRiskPremium = _sp500avgReturn -_riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             return (_riskFreeReturn + riskPremium)/100;

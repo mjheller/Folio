@@ -15,7 +15,7 @@ namespace Folio.Tests
             decimal actualReturn = testBetween.TestExpectedReturn(testDec);
             Assert.Equal(actualReturn, expectedDec);
         }
-        [Fact]
+       // [Fact]
         void RunExpectedRetrunTest()
         {
             List<decimal> testList = new List<decimal> { 10, 5, 2, 1.003m, 1, .05m, 0, -.04m, -0.9m, -1, -1.55m, -2, -5, -10 };
@@ -30,7 +30,7 @@ namespace Folio.Tests
             int resultShares = testBetween.SharesOwned;
             Assert.Equal(resultShares, expectedNumber);
         }
-        [Fact]
+       // [Fact]
         void RunAddStockTester()
         {
             List<int> testList = new List<int> { 0, 1, 5, 10, 1000000, 42202032 };
@@ -41,7 +41,17 @@ namespace Folio.Tests
                 expectedResult = startShares + testList[i];
                 AddStockTester(testList[i], expectedResult, tbs);
             }
-
          }
+        void TestTester(int x, int y)
+        { 
+            Assert.Equal(x, y);
+        }
+        [Fact]
+        void RunTestTester()
+        {
+            List<int> testList = new List<int> { 0, 1, 5, 10, 1000000, 42202032 };
+            foreach (int i in testList)
+                TestTester(testList[i], testList[i]);
+        }
     }
 }

@@ -9,12 +9,16 @@
 }
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Table Style</title>
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <script src="~/lib/Chart.js/Chart.min.js"></script>
 </head>
 
 <body>
+    <div class="index-title"> 
+        Folio Marketing
+    </div>
+    <div class="table-title">
+        <h3>Live Stocks</h3>
+    </div>
     <table class="table-fill">
         <thead>
             <tr>
@@ -33,11 +37,38 @@
             </tr>
         </tbody>
     </table>
-
-
+    <p>
+        <div>
+            <canvas id="myChart" width="1000" height="600"></canvas>
+        </div>
+    </p>
 </body>
 </html>
 <script>
+    var data = {
+        labels: ["January"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,0.8)",
+                highlightFill: "rgba(220,220,220,0.75)",
+                highlightStroke: "rgba(220,220,220,1)",
+                data: [600]
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,0.8)",
+                highlightFill: "rgba(151,187,205,0.75)",
+                highlightStroke: "rgba(151,187,205,1)",
+                data: [700]
+            }
+        ]
+    };
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(data);
+    new Chart(ctx).Bar(data);
     var yolo = "whatever";
     function getData(sym) {
         var url = "https://query.yahooapis.com/v1/public/yql";
@@ -61,7 +92,8 @@
                     $("#ticker" + sym).fadeOut(function () {
                         $(this).text(yolo.query.results.quote.symbol)
                     }).fadeIn();
-
+                    myNewChart.datasets[0].bars[0].value = yolo.query.results.quote.LastTradePriceOnly;
+                    myNewChart.update();
                 }
             })
             .fail(function (jqxhr, textStatus, error) {
@@ -71,12 +103,14 @@
     }
     $(document).ready(function () {
         getData("GOOG");
+        getData("GOOG");
     });
     var date = new Date();
     var hours = date.getHours();
     console.log(hours);
-    if (hours < 16 && hours > 9)
-    {
-        window.setInterval(function () { getData("GOOG")}, 5000);
+    console.log(yolo);
+    if (hours < 16 && hours > 9) {
+        window.setInterval(function () { getData("GOOG"), console.log(yolo)}, 5000);
     }
+
     </script>

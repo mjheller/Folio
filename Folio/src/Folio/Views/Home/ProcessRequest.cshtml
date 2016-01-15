@@ -1,0 +1,31 @@
+﻿@{
+//var contactEmail = ViewData["contactEmail"];
+//var contactName = ViewData["contactName"];
+//var customerName = ViewData["customerName"];
+//var customerEmail = ViewData["customerEmail"];
+//var emailSubject = ViewData["emailSubject"];
+//var emailBody = ViewData["emailBody"];
+var errorMessage = ViewData["errorMessage"]; 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Email</title>
+</head>
+<body>
+    <p>Thank you.</p>
+    @if (errorMessage.ToString() == "")
+    {
+        <p>
+            Your email message has been sent;
+        </p>
+    }
+    else {
+        <p><b>The email was <em>not</em> sent.</b></p>
+        <p>
+            Please check that your name and email address is filled out correctly. Thank you for your patience.
+        </p>
+    }
+</body>
+</html>

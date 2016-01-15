@@ -178,3 +178,18 @@ select {
     color: black;
     font-weight: bold;
 }
+.navbar-toggle:hover{
+    color: black;
+    background-color:grey;
+    font-weight: bold;
+}
+.dropdown-submenu:hover > a:after {
+    color: black;
+    background-color:darkgrey;
+    font-weight: bold;
+}
+.nav.navbar-nav{
+    color: black;
+    background-color:darkgrey;
+    font-weight: bold;
+}

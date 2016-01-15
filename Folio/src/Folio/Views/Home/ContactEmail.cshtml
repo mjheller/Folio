@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "ContactEmail";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request for Assistance</title>
+</head>
+<body>
+    <h2>Email @ViewData["ContactName"]</h2>
+    <form method="post" action="ProcessRequest">
+        <div>
+            Your name:
+            <input type="text" id="customerName" name="customerName" />
+            @{ViewData["customerName"] = ViewBag.customerName;}
+            @Html.ValidationMessage("customerName")
+        </div>
+        <div>
+            Your email address:
+            <input type="text" id="customerEmail" name="customerEmail" />
+            @{ViewData["customerEmail"] = ViewBag.customerEmail;}
+            @Html.ValidationMessage("customerEmail")
+        </div>
+        <div>
+            Subject: <br />
+            <textarea name="emailSubject" id="emailSubject" cols="45" rows="1"></textarea>
+            @{ViewData["emailSubject"] = ViewBag.emailSubject;}
+            @Html.ValidationMessage("emailSubject")
+        </div>
+        <div>
+            Body: <br />
+            <textarea name="emailBody" id="emailBody" cols="45" rows="6"></textarea>
+            @{ViewData["emailBody"] = ViewBag.emailBody;}
+            @Html.ValidationMessage("emailBody")
+        </div>
+        <div>
+            <input type="submit" value="Submit" onclick="@Folio.Services.Emails.ProcessEmail(ViewData["contactEmail"].ToString(), ViewBag.customerEmail, ViewBag.emailSubject, ViewBag.emailBody);"/>
+        </div>
+    </form>
+</body>
+</html>

@@ -38,9 +38,6 @@
                         News<b class="caret"></b>
                     </button>
                     <ul class="nav navbar-nav">
-                        @*<li><a asp-controller="Home" asp-action="News">News</a></li>*@
-                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-                        <li><a asp-controller="Home" asp-action="About">About</a></li>
                         <li class="collapse-hidden">
                             <ul class="nav navbar-nav collapse-hidden">
                                 <li class="dropdown">
@@ -56,6 +53,8 @@
                                 </li>
                             </ul>
                         </li>
+                        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        @*<li><a asp-controller="Home" asp-action="About">About</a></li>*@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li><a asp-controller="Portfolios" asp-action="Index">Portfolios</a></li>

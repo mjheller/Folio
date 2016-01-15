@@ -34,6 +34,24 @@ namespace Folio.Controllers
             return View();
         }
 
+        public IActionResult ContactEmail(int? id)
+        {
+            ViewData["contactEmail"] = Services.Emails.GetContactEmailAddress(id);
+            ViewData["contactName"] = Services.Emails.GetContactName(id);
+            return View();
+        }
+
+        public IActionResult ProcessRequest()
+        {
+            ViewData["errorMessage"] = Folio.Services.Emails.errorMessage;
+            return View();
+        }
+
+        public IActionResult Test()
+        {
+            return View("ContactEmail");
+        }
+
         public IActionResult Error()
         {
             return View();

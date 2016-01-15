@@ -29,11 +29,17 @@
             </tr>
         </thead>
         <tbody class="table-hover">
-            <tr>
+            <tr class="row1">
                 <td id="ticker"class="text-left">Symbol</td>
                 <td id="name" class="text-left">Name</td>
                 <td id="price"class="text-left">Price</td>
                 <td id="change"class="text-left">Change</td>
+            </tr>
+            <tr class="row2">
+                <td id="ticker1" class="text-left">Symbol</td>
+                <td id="name1" class="text-left">Name</td>
+                <td id="price1" class="text-left">Price</td>
+                <td id="change1" class="text-left">Change</td>
             </tr>
         </tbody>
     </table>
@@ -45,20 +51,30 @@
 </body>
 </html>
 <script>
-    var sym = "GOOG";
+    var sym = "^IXIC, ^NYA";
     var data = {
         labels: [],
         datasets: [
             {
-                label: sym,
-                fillColor: "rgba(185, 189, 191, 0.9);",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(0, 0, 0, 0.9);",
+                label: "IXIC",
+                fillColor: "rgba(215, 0, 255, 0.5)",
+                strokeColor: "rgba(215, 0, 255, 0.9)",
+                pointColor: "rgba(215, 0, 255, 0.9)",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
                 data: []
-            }
+            },
+            {
+                label: "^NYA",
+                fillColor: "rgba(122, 175, 197, 0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(122, 175, 197, 0.9)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: []
+            },
         ]
     };
     var ctx = document.getElementById("myChart").getContext("2d");
@@ -77,20 +93,34 @@
             .done(function (data) {
                 yolo = data;
                 console.log(yolo);
-                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price").text() || yolo.query.results.quote.LastTradePriceOnly == null) {
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price").text() || yolo.query.results.quote[0].LastTradePriceOnly == null) {
                     $("#price").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.LastTradePriceOnly)
+                        $(this).text(yolo.query.results.quote[0].LastTradePriceOnly)
                     }).fadeIn();
                     $("#change").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.PercentChange)
+                        $(this).text(yolo.query.results.quote[0].PercentChange)
                     }).fadeIn();
                     $("#name").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.Name)
+                        $(this).text(yolo.query.results.quote[0].Name)
                     }).fadeIn();
                     $("#ticker").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote.symbol)
+                        $(this).text(yolo.query.results.quote[0].symbol)
                     }).fadeIn();
-                    myNewChart.addData([yolo.query.results.quote.LastTradePriceOnly], yolo.query.results.quote.LastTradeTime);
+                }
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price1").text() || yolo.query.results.quote[1].LastTradePriceOnly == null) {
+                    $("#price1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].LastTradePriceOnly)
+                    }).fadeIn();
+                    $("#change1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].PercentChange)
+                    }).fadeIn();
+                    $("#name1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].Name)
+                    }).fadeIn();
+                    $("#ticker1").fadeOut(function () {
+                        $(this).text(yolo.query.results.quote[1].symbol)
+                    }).fadeIn();
+                    myNewChart.addData([yolo.query.results.quote[0].LastTradePriceOnly, yolo.query.results.quote[1].LastTradePriceOnly], yolo.query.results.quote[1].LastTradeTime);
                     myNewChart.update();
                 }
             })

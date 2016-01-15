@@ -51,6 +51,7 @@ namespace Folio.Controllers
             Builder builder = new Builder(_context);
             PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
             PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+            
             return View(portfolioViewModel);
         }
 

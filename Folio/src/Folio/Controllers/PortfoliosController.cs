@@ -1,4 +1,5 @@
 using folio.Services;
+using Folio.Builders;
 using Folio.Models;
 using Folio.ViewModels;
 using Folio.ViewModels.Portfolios;
@@ -42,14 +43,15 @@ namespace Folio.Controllers
             {
                 return HttpNotFound();
             }
-
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(m => m.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
             if (portfolio == null)
             {
                 return HttpNotFound();
             }
-
-            return View(portfolio);
+            Builder builder = new Builder(_context);
+            PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+            PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+            return View(portfolioViewModel);
         }
 
         // GET: Portfolios/Create

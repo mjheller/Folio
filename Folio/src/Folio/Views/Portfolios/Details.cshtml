@@ -16,7 +16,7 @@
             @Html.DisplayNameFor(model => model.DateCreated)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ExpectedReturn)
+            @Html.DisplayNameFor(model => model.ExpectedReturnString)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Variance)
@@ -30,7 +30,7 @@
             @Html.DisplayFor(model => model.DateCreated)
         </td>
         <td>
-            @Html.DisplayFor(model => model.ExpectedReturn)
+            @Html.DisplayFor(model => model.ExpectedReturnDouble)
         </td>
         <td>
             @Html.DisplayFor(model => model.Variance)
@@ -43,6 +43,7 @@
 
 <div>
     <a asp-action="Stocks" asp-route-id="@Model.ID"><b>Current Stock Information</b></a>
+    <a asp-controller="MonteCarlo" asp-action="Index" asp-route-id="@Model.ID"><b>Run Monte Carlo Simulation</b></a>
 </div>
 
 @if (Model.Stocks != null)

@@ -16,8 +16,7 @@ namespace Folio.Services.MonteCarlo
             int steps = yearsUntilRetirement + fullMonte.EstimatedRetirementSpan;
             const int nPaths = 250000;
             PortfolioViewModel p = fullMonte.PortfolioViewModel;
-            
-            
+
             PortfolioPath[] paths = MonteCarlo.RunSimulation(yearsUntilRetirement, nPaths, p.ExpectedReturnDouble, (double)p.Variance, (double)p.DollarValue, fullMonte.AnnualContribution, fullMonte.AnnualRetirementIncomeDraw, fullMonte.EstimatedRetirementSpan);
 
             List<decimal> result = PathAnalysis.GetAveragePath(paths, steps);

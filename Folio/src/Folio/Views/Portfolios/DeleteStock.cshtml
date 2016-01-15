@@ -5,11 +5,12 @@
 }
 
 <script>
-    function postData() {
+    function postData(stockTicker, amountRemove) {
         var data = {
-            stockTicker: $("#amount-delete").attr("data-stock-ticker"),
-            amountRemove: $("#amount-delete").val()
+            stockTicker: stockTicker,
+            amountRemove: $("#amount-delete-" + stockTicker).val()
         };
+
         $.ajax({
             url: "@Url.Action("DeleteStock", new { id = Model.WorkingPortfolio.ID })",
             type: "POST",
@@ -48,9 +49,8 @@
         <tr>
             <td>@asset.AssetSymbol</td>
             <td>@asset.NumberOfAssetOwned</td>
-            <td><input type="text" id="amount-delete" data-stock-ticker="@asset.AssetSymbol" /></td>
-            <td><input type="button" value="Delete Stock" onClick="postData();"/></td>
+            <td><input type="text" id="amount-delete-@asset.AssetSymbol" /></td>
+            <td><input type="button" value="Delete Stock" onClick="postData('@asset.AssetSymbol');"/></td>
         </tr>
     }
 </table>
-

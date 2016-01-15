@@ -88,18 +88,8 @@
                 <td style="font-family: Arial, Helvetica, sans-serif;
                            font-size: 14px; color: #000; text-decoration: none;">
 
-                    <h2>Get Stock Info</h2>
-                    @using (@Html.BeginForm("Stock", "Stock", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                    {
-                        <fieldset>
-                            <input id="stock" name="stock" type="text" />
-                            <input id="updateTemplateSubmit" type="submit" value="Get Quotes">
-                            <br /><br />
-                        </fieldset>
-                    }
-                    <span style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #666;">
-                        e.g. "YHOO or YHOO GOOG"
-                    </span>
+                    <h2>Stock Info</h2>
+
                     <div id="divChart">
                         <!-- Main DIV: this DIV contains text and DIVs that displays stock quotes and chart. -->
                         @model Folio.Models.Data_Models.Stocks
@@ -181,6 +171,8 @@
                                             <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(7,@i, "@Model.companies[i].ToLower()");'><span id='divMax_@i.ToString()'>Max</span></a><br><br /><br />
                             }
                         }
+                        @if (Model == null)
+                        { <h2>Stock data not avialable. Try again later of try refreshing page.</h2>}
                     </div>
                 </td>
             </tr>

@@ -40,18 +40,18 @@ namespace Folio.Controllers
                 return HttpNotFound();
             }
             PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
-            //if (portfolioViewModel == null)
-            //{
-            //    Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
-            //    if (portfolio == null)
-            //    {
-            //        return HttpNotFound();
-            //    }
-            //    Builder builder = new Builder(_context);
-            //    PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
-            //    portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
-            //    HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
-            //}
+            if (portfolioViewModel == null)
+            {
+                Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
+                if (portfolio == null)
+                {
+                    return HttpNotFound();
+                }
+                Builder builder = new Builder(_context);
+                PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+                portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+                HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
+            }
             MonteCarloViewModel blankMonte = new MonteCarloViewModel();
            // blankMonte.PortfolioViewModel = portfolioViewModel;
 

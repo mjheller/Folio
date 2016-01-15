@@ -1,0 +1,80 @@
+@model Folio.ViewModels.PortfolioViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Portfolio Details</h2>
+
+<div>
+    <h4>@Model.Name Portfolio</h4>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpectedReturn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Variance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DollarValue)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.DateCreated)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.ExpectedReturn)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Variance)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.DollarValue)
+        </td>
+    </tr>
+</table>
+
+@if (Model.Stocks != null)
+{ 
+    <table class= "table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stocks.FirstOrDefault().Ticker)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stocks.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stocks.FirstOrDefault().SharesOwned)
+            </th>
+        </tr>
+        @foreach (var item in Model.Stocks)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ticker)
+                </td>
+                <td>
+                    @Html.DisplayNameFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SharesOwned)
+                </td>
+                <td>
+                    <a asp-action="Stocks" asp-route-id="@Model.ID">Select</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </p>

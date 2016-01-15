@@ -120,11 +120,9 @@ namespace Folio
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
             // Comment out below line to stop seeddata from running if you're getting database errors.
-            //SeedData.SeedData.Initialize(app.ApplicationServices);
-            //mattsclass.mattsfunction(app.ApplicationServices);
-            //context.stock.Select(s => s);
 
-           // SeedData.MrClean.Clean(app.ApplicationServices);
+            //SeedData.SeedData.Initialize(app.ApplicationServices);
+            //SeedData.MrClean.Clean(app.ApplicationServices);
         }
 
         // Entry point for the application.

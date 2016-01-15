@@ -31,7 +31,7 @@ namespace Folio.SeedData
             }
             if (!(context.Stock.Any()))
             {
-              //  SeedStocks(context);
+                SeedStocks(context);
             }
         }
 

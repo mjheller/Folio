@@ -41,22 +41,23 @@ namespace Folio.Controllers
         [HttpGet]
         public async Task<ActionResult> Details(int? id)
         {
+            PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
             if (id == null)
             {
                 return HttpNotFound();
             }
-
-            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
-
-            if (portfolio == null)
+            if (portfolioViewModel == null)
             {
-                return HttpNotFound();
+                Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
+                if (portfolio == null)
+                {
+                    return HttpNotFound();
+                }
+                Builder builder = new Builder(_context);
+                PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+                portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+                HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
             }
-
-            Builder builder = new Builder(_context);
-            PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
-            PortfolioViewModel portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
-
             return View(portfolioViewModel);
         }
 

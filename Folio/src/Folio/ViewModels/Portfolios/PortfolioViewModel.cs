@@ -14,10 +14,8 @@ namespace Folio.ViewModels
         [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
 
-        [DataType(DataType.Currency)]
-        public decimal ExpectedReturn { get; set; }
+        public string ExpectedReturn { get; set; }
 
-        [DataType(DataType.Currency)]
         public decimal Variance { get; set; }
 
         [DataType(DataType.Currency)]

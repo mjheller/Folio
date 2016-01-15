@@ -15,11 +15,7 @@ namespace Folio.Services.MonteCarlo
             Func<int, PortfolioPath> creator = x => new PortfolioPath(yearsUntilRetirement, expectedReturn, variance, initialPortfolioValue, annualContributions, incomeDraw, yearsPlannedRetirement);
             IEnumerable<int> indices = Enumerable.Range(0, nPaths - 1);
             paths = indices.AsParallel().Select(creator).ToArray();
-            IEnumerable<double> endingValues = paths.Select(x => x.endingPortfolioValue);
-            Console.WriteLine("Min portfolio from simulation: " + endingValues.Min().ToString());
-            Console.WriteLine("Avg portfolio from simulation: " + endingValues.Average().ToString());
-            Console.WriteLine("Max portfolio from simulation: " + endingValues.Max().ToString());
-
+            
             return paths;
         }
         

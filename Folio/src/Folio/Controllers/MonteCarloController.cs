@@ -8,7 +8,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace Folio.Controllers
 {
-    public class PortfolioSimulation : Controller
+    public class MonteCarloController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()

@@ -14,7 +14,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Folio.Models.Data_Models;
-using Folio.Builders;
 using System.Net;
 using System.IO;
 using System.Text;
@@ -66,8 +65,8 @@ namespace Folio.Controllers
         {
             Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(p => p.ID == id);
             List<string> tickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
-            string m_symbol = string.Join(",", tickers.ToArray());
-            Stocks model = new Stocks();
+            string m_symbol = string.Join(" ", tickers.ToArray());
+            Stocks model;
             StockQuotesBuilder dataModel = new StockQuotesBuilder();
 
             if (m_symbol == "")
@@ -77,9 +76,14 @@ namespace Folio.Controllers
             model = dataModel.createQuotes(m_symbol);
 
             if (model != null)
+            {
                 return View(model);
+            }
             else
-                return View();
+            {
+                return RedirectToAction("Stocks", id);
+            }
+
         }
 
         // GET: Portfolios/Create
@@ -169,9 +173,19 @@ namespace Folio.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> DeleteStock(int? id, string ticker)
+        [HttpPost]
+        public async Task<IActionResult> DeleteStock(int? id, string stockTicker, string amountRemove)
         {
-            throw new NotImplementedException();
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(p => p.PortfolioAssets).ToList();
+
+            PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
+            asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+            _context.Update(asset);
+            await _context.SaveChangesAsync();
+
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
+            return View(model);
         }
 
         // GET: Portfolios/Edit/5

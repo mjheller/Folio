@@ -1,13 +1,9 @@
-﻿using System;
+﻿using Folio.Models;
+using Folio.ViewModels;
+using Microsoft.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Folio.Models;
-using Folio.ViewModels;
-using Microsoft.AspNet.Mvc;
-using Microsoft.AspNet.Mvc.Rendering;
-using Microsoft.Data.Entity;
-using Microsoft.AspNet.Authorization;
 
 namespace Folio.Builders
 {

@@ -1,0 +1,23 @@
+﻿@model Portfolio
+
+@{
+    ViewData["Title"] = "Delete Stock from Portfolio";
+}
+
+<h2>Delete Stock</h2>
+
+<table class="table">
+    <tr>
+        <th>Ticker</th>
+        <th>Amount Owned</th>
+        <th></th>
+    </tr>
+    <tr>
+        @foreach(PortfolioAsset asset in @Model.PortfolioAssets)
+        {
+            <td>@asset.AssetSymbol</td>
+            <td>@asset.NumberOfAssetOwned</td>
+            <td><a>Delete</a></td>
+        }
+    </tr>
+</table>

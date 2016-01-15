@@ -15,6 +15,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Folio.ViewModels.MonteCarlo;
+using Folio.Services.MonteCarlo;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,7 +25,6 @@ namespace Folio.Controllers
     public class MonteCarloController : Controller
     {
         private ApplicationDbContext _context;
-        private UserManager<ApplicationUser> _userManager; 
 
         public MonteCarloController(ApplicationDbContext context)
         {
@@ -40,25 +40,57 @@ namespace Folio.Controllers
                 return HttpNotFound();
             }
             PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
-            if (portfolioViewModel == null)
-            {
-                Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
-                if (portfolio == null)
-                {
-                    return HttpNotFound();
-                }
-                Builder builder = new Builder(_context);
-                PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
-                portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
-                HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
-            }
-            return View();
+            //if (portfolioViewModel == null)
+            //{
+            //    Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
+            //    if (portfolio == null)
+            //    {
+            //        return HttpNotFound();
+            //    }
+            //    Builder builder = new Builder(_context);
+            //    PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
+            //    portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
+            //    HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
+            //}
+            MonteCarloViewModel blankMonte = new MonteCarloViewModel();
+           // blankMonte.PortfolioViewModel = portfolioViewModel;
+
+            return View(blankMonte);
         }
 
         [HttpPost]
-        public IActionResult Index(MonteCarloViewModel model)
+        public IActionResult Index(MonteCarloViewModel fullMonte)
         {
-            throw new NotImplementedException();
+            fullMonte.PortfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
+
+            bool inputCheck = true;
+            if (string.IsNullOrWhiteSpace(fullMonte.AnnualContribution.ToString()))
+            {
+                inputCheck = false;
+            }
+            if (string.IsNullOrWhiteSpace(fullMonte.PreferredRetirementAge.ToString()))
+            {
+                inputCheck = false;
+            }
+            if (string.IsNullOrWhiteSpace(fullMonte.EstimatedRetirementSpan.ToString()))
+            {
+                inputCheck = false;
+            }
+            if (string.IsNullOrWhiteSpace(fullMonte.AnnualRetirementIncomeDraw.ToString()))
+            {
+                inputCheck = false;
+            }
+
+            if (inputCheck == false)
+            {
+                return View(fullMonte.PortfolioViewModel.ID); 
+            }
+            
+            ApplicationUser currentUser = _context.Users.Single(u => u.Id == HttpContext.User.GetUserId());
+            List<decimal> monteCarloResults = MonteCarloProcessor.CalculateMonteCarlo(fullMonte, currentUser);
+            fullMonte.MonteCarloResults = monteCarloResults;
+
+            return View(fullMonte);
         }
     }
 }

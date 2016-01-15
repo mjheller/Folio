@@ -89,6 +89,7 @@ namespace Folio.Controllers
             ApplicationUser currentUser = _context.Users.Single(u => u.Id == HttpContext.User.GetUserId());
             List<decimal> monteCarloResults = MonteCarloProcessor.CalculateMonteCarlo(fullMonte, currentUser);
             fullMonte.MonteCarloResults = monteCarloResults;
+            fullMonte.StartingAge = (DateTime.Now.Year - currentUser.DateOfBirth.Year);
 
             return View(fullMonte);
         }

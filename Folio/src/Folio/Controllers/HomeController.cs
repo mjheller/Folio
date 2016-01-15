@@ -13,16 +13,11 @@ namespace Folio.Controllers
             return View();
         }
 
-        public IActionResult News()
-        {
-            ViewData["Message"] = "Your news page.";
-
-            return View();
-        }
-
         public IActionResult News(int? id)
         {
-            return View(Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(id))); 
+            ViewData["XMLNodeList"] = Services.RSSFeed.GetXMLNodeList(Services.RSSFeed.GetRSSHttp(id));
+            ViewData["RSSTitle"] = Services.RSSFeed.GetTitleName(id);
+            return View();
         }
 
         public IActionResult About()

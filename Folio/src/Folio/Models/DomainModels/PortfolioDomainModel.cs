@@ -9,14 +9,20 @@ namespace Folio.Models
 {
     public class PortfolioDomainModel
     {
-        public List<StockDomainModel> Stocks;
-        public decimal expectedReturn { get; private set; }
-        public decimal variance { get; private set; }
-        private decimal dollarValue;
+        public int ID { get; private set; }
+        public DateTime DateCreated { get; private set; }
+        public List<StockDomainModel> Stocks { get; private set; }
+        public decimal ExpectedReturn { get; private set; }
+        public decimal Variance { get; private set; }
+        public  decimal DollarValue { get; private set; }
+        public string Name { get; private set; }
 
-        public PortfolioDomainModel(List<StockDomainModel> stocks)
+        public PortfolioDomainModel(List<StockDomainModel> stocks, Portfolio portfolio)
         {
             Stocks = stocks;
+            ID = portfolio.ID;
+            Name = portfolio.Name;
+            DateCreated = portfolio.DateCreated;
             UpdatePortfolioDollarValue();
             SetWeights();
             CalculateExpectedReturn();
@@ -30,22 +36,14 @@ namespace Folio.Models
             {
                 count += s.Worth;
             }
-            dollarValue = count;
+            DollarValue = count;
         }
-
-        //private void UpdateCurrentPrices()
-        //{
-        //    foreach (StockDomainModel s in Stocks)
-        //    {
-        //        s.CurrentPrice = YahooAPICalls.GetCurrentStockPrice(s.Ticker);
-        //    }
-        //}
 
         private void SetWeights()
         {
             foreach (StockDomainModel s in Stocks)
             {
-                s.Weight = s.Worth / dollarValue;
+                s.Weight = s.Worth / DollarValue;
             }
         }
 
@@ -74,7 +72,7 @@ namespace Folio.Models
                 }
                 localVariance += nthWeightedVariance;
             }
-            variance = localVariance;
+            Variance = localVariance;
         }
 
         private void CalculateExpectedReturn()
@@ -85,7 +83,7 @@ namespace Folio.Models
                 decimal weightedReturn = s.Weight * s.ExpectedReturn;
                 sum += weightedReturn;
             }
-            this.expectedReturn = sum;
+            this.ExpectedReturn = sum;
         }
     }
 }

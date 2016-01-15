@@ -30,10 +30,10 @@
         </thead>
         <tbody class="table-hover">
             <tr>
-                <td id="tickerGOOG"class="text-left">Symbol</td>
-                <td id="nameGOOG" class="text-left">Name</td>
-                <td id="priceGOOG"class="text-left">Price</td>
-                <td id="changeGOOG"class="text-left">Change</td>
+                <td id="ticker"class="text-left">Symbol</td>
+                <td id="name" class="text-left">Name</td>
+                <td id="price"class="text-left">Price</td>
+                <td id="change"class="text-left">Change</td>
             </tr>
         </tbody>
     </table>
@@ -45,11 +45,12 @@
 </body>
 </html>
 <script>
+    var sym = "GOOG";
     var data = {
         labels: [],
         datasets: [
             {
-                label: "GOOG",
+                label: sym,
                 fillColor: "rgba(185, 189, 191, 0.9);",
                 strokeColor: "rgba(220,220,220,1)",
                 pointColor: "rgba(0, 0, 0, 0.9);",
@@ -76,35 +77,33 @@
             .done(function (data) {
                 yolo = data;
                 console.log(yolo);
-                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price" + sym).text() || yolo.query.results.quote.LastTradePriceOnly == null) {
-                    $("#price" + sym).fadeOut(function () {
+                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price").text() || yolo.query.results.quote.LastTradePriceOnly == null) {
+                    $("#price").fadeOut(function () {
                         $(this).text(yolo.query.results.quote.LastTradePriceOnly)
                     }).fadeIn();
-                    $("#change" + sym).fadeOut(function () {
+                    $("#change").fadeOut(function () {
                         $(this).text(yolo.query.results.quote.PercentChange)
                     }).fadeIn();
-                    $("#name" + sym).fadeOut(function () {
+                    $("#name").fadeOut(function () {
                         $(this).text(yolo.query.results.quote.Name)
                     }).fadeIn();
-                    $("#ticker" + sym).fadeOut(function () {
+                    $("#ticker").fadeOut(function () {
                         $(this).text(yolo.query.results.quote.symbol)
                     }).fadeIn();
-                    date = new Date();
-                    var time = (date.getHours().toString() + ":" + date.getMinutes().toString() + ":" + date.getSeconds().toString());
-                    myNewChart.addData([yolo.query.results.quote.LastTradePriceOnly], time);
+                    myNewChart.addData([yolo.query.results.quote.LastTradePriceOnly], yolo.query.results.quote.LastTradeTime);
                     myNewChart.update();
                 }
             })
             .fail(function (jqxhr, textStatus, error) {
                 var err = textStatus + ", " + error;
-                $("#price" + sym).text('Request failed: ' + err);
+                $("#price").text('Request failed: ' + err);
             });
     }
     $(document).ready(function () {
-        getData("GOOG");
+        getData(sym);
     });
     if (hours < 16 && hours > 9) {
-        window.setInterval(function () { getData("GOOG"), console.log(yolo)}, 10000);
+        window.setInterval(function () { getData(sym), console.log(yolo)}, 10000);
     }
 
     </script>

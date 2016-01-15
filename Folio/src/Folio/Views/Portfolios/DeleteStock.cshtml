@@ -30,7 +30,7 @@
         <ul>
             @foreach (Portfolio portfolio in Model.UserPortfolios)
             {
-                <li><a asp-action="AddStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
+                <li><a asp-action="DeleteStock" asp-route-id="@portfolio.ID">@portfolio.Name</a></li>
             }
         </ul>
         <hr />

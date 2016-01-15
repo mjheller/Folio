@@ -141,7 +141,7 @@ namespace Folio.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> DeleteStock(int? id, string ticker)
+        public async Task<IActionResult> DeleteStock(int? id, )
         {
             throw new NotImplementedException();
         }

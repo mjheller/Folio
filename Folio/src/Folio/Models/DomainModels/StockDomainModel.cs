@@ -13,7 +13,7 @@ namespace Folio.Models
     {
         public string Name { get; private set; }
         public string Exchange { get; private set; }
-        public DateTime LastUpdated { get; private set; }
+        //public DateTime LastUpdated { get; private set; }
         public IEnumerable<HistoricalPrice> DailyReturns1Year { get; private set; }
         public string Ticker { get; private set; }
         [DataType("Currency")]
@@ -48,7 +48,7 @@ namespace Folio.Models
             ExpectedReturn = CalculateExpectedReturn();
             Variance = CalculateVariance();
             UpdateDailyReturns1Year();
-            LastUpdated = DateTime.UtcNow;
+           // LastUpdated = DateTime.UtcNow;
         }
 
         private void UpdateDailyReturns1Year()
@@ -101,11 +101,17 @@ namespace Folio.Models
             return sumSquared / numYears;
         }
 
-        private decimal CalculateExpectedReturn()
+        protected decimal CalculateExpectedReturn()
+        {
+            decimal beta = YahooAPICalls.GetStockBeta(Ticker);
+            decimal expectedReturn = MathExpectedReturn(beta);
+            return expectedReturn;
+        }
+
+        protected decimal MathExpectedReturn(decimal beta)
         {
             const decimal _sp500avgReturn = 6.34m;
             const decimal _riskFreeReturn = 2.70m;
-            decimal beta = YahooAPICalls.GetStockBeta(Ticker);
             decimal marketRiskPremium = _sp500avgReturn -_riskFreeReturn;
             decimal riskPremium = beta * marketRiskPremium;
             return (_riskFreeReturn + riskPremium)/100;

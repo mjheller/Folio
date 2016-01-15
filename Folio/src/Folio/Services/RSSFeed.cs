@@ -8,35 +8,35 @@ namespace Folio.Services
 {
     public static class RSSFeed
     {
-        public static string GetRSSHttp(int? value)
+        public static string GetRSSHttp(int? id)
         {
-            if (value == 1)
+            if (id == 1)
             {
                 return "http://articlefeeds.nasdaq.com/nasdaq/categories?category=Stocks";
             }
-            else if (value == 2)
+            else if (id == 2)
             {
                 return "http://finance.yahoo.com/rss/headline?s=yhoo";
             }
-            else if (value == 3)
+            else if (id == 3)
             {
                 return "http://rss.cnn.com/rss/money_markets.rss";
             }
-            else if (value == 4)
+            else if (id == 4)
             {
                 return "http://feeds.marketwatch.com/marketwatch/StockstoWatch/";
             }
-            else if(value == 5)
+            else if (id == 5)
             {
                 return "http://feeds.reuters.com/reuters/hotStocksNews";
             }
-            else if(value == 6)
+            else if (id == 6)
             {
                 return "http://rss.briefing.com/Investor/RSS/StockMarketUpdate.xml";
             }
             else
             {
-                return "null";
+                return "http://articlefeeds.nasdaq.com/nasdaq/categories?category=Stocks";
             }
         }
 
@@ -46,6 +46,38 @@ namespace Folio.Services
             XmlDocument XML = new XmlDocument();
             XML.Load(RSS);
             return XML.SelectNodes("//item");
+        }
+
+        public static string GetTitleName(int? id)
+        {
+            if (id == 1)
+            {
+                return "NASDAQ - Stocks";
+            }
+            else if (id == 2)
+            {
+                return "Yahoo Finance - Top Stories";
+            }
+            else if (id == 3)
+            {
+                return "CNN - Money Markets";
+            }
+            else if (id == 4)
+            {
+                return "Marketwatch - Stocks to Watch";
+            }
+            else if (id == 5)
+            {
+                return "Reuters - Hot Stock News";
+            }
+            else if (id == 6)
+            {
+                return "Briefing - Stock Market Update";
+            }
+            else
+            {
+                return "NASDAQ - Stocks";
+            }
         }
     }
 }

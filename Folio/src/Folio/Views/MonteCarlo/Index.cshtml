@@ -9,22 +9,20 @@
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Age', 'Net Worth'],
-          ['26', 1000],
-          ['27', 1170],
-          ['28', 1300],
-          ['29', 1600]
-        ]);
-
+        var load = [['Age', 'Net Worth']];
+        var age = @Model.StartingAge;
+        @foreach(decimal item in Model.MonteCarloResults)
+        {
+            @:load.push([age, @item]);
+            @:age += 1;
+        }
+        var data = google.visualization.arrayToDataTable(load);
         var options = {
             title: 'Portfolio Simulation',
             curveType: 'function',
             legend: { position: 'bottom' }
         };
-
         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
         chart.draw(data, options);
     }
 </script>

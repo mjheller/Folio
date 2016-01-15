@@ -14,10 +14,14 @@ namespace Folio.ViewModels
         [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
 
-        public string ExpectedReturn { get; set; }
+        [Display(Name = "Expected Return")]
+        public string ExpectedReturnString { get; set; }
+
+        public double ExpectedReturnDouble { get; set; }
 
         public decimal Variance { get; set; }
 
+        [Display(Name = "Dollar Value")]
         [DataType(DataType.Currency)]
         public decimal DollarValue { get; set; }
 

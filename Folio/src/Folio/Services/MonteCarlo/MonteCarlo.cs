@@ -18,6 +18,5 @@ namespace Folio.Services.MonteCarlo
             
             return paths;
         }
-        
     }
 }

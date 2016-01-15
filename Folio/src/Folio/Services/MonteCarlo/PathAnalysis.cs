@@ -7,13 +7,13 @@ namespace Folio.Services.MonteCarlo
 {
     public class PathAnalysis
     {
-        public static List<double> GetAveragePath(PortfolioPath[] paths, int steps)
+        public static List<decimal> GetAveragePath(PortfolioPath[] paths, int steps)
         {
-            List<double> avgPathSequence = new List<double>();
+            List<decimal> avgPathSequence = new List<decimal>();
             for (int i = 0; i < steps - 1; i++)
             {
-                double[] avgValuesArray = paths.Select(x => x.portfolioValueList[i]).ToArray();
-                double avgValue = avgValuesArray.Average();
+                decimal[] avgValuesArray = paths.Select(x => (decimal)x.portfolioValueList[i]).ToArray();
+                decimal avgValue = avgValuesArray.Average();
                 avgPathSequence.Add(avgValue);
             }
             return avgPathSequence;

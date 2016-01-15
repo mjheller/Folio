@@ -146,17 +146,22 @@ namespace Folio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddStock(int? id, string tickerinput, string amount)
         {
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(p => p.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(p => p.ID == id);
+            List<string> heldTickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
+            PortfolioAsset newAsset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
 
-            if (portfolio.PortfolioAssets == null)
+            if (portfolio.PortfolioAssets.Count == 0)
             {
-                PortfolioAsset asset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
-                _context.PortfolioAsset.Add(asset);
-                portfolio.PortfolioAssets = new List<PortfolioAsset>() { asset };
+                _context.PortfolioAsset.Add(newAsset);
+                portfolio.PortfolioAssets = new List<PortfolioAsset>() { newAsset };
+            } else if (!heldTickers.Contains(tickerinput))
+            {
+                portfolio.PortfolioAssets.Add(newAsset);
                 _context.Update(portfolio);
-            } else
+            }
+            else
             {
-                PortfolioAsset asset = portfolio.PortfolioAssets.ToList().Find(p => p.AssetSymbol == tickerinput);
+                PortfolioAsset asset = portfolio.PortfolioAssets.Single(p => p.AssetSymbol == tickerinput);
                 asset.NumberOfAssetOwned += Int32.Parse(amount);
                 _context.Update(asset);
             }
@@ -172,7 +177,10 @@ namespace Folio.Controllers
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
             List<Portfolio> portfolios = _context.Portfolio.Include(a => a.PortfolioAssets).Where(p => p.User.Id == user.Id).ToList();
-            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Find(p => p.ID == id), UserPortfolios = portfolios };
+            Portfolio workingPortfolio = portfolios.Find(p => p.ID == id);
+            portfolios.Remove(workingPortfolio);
+
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = workingPortfolio, UserPortfolios = portfolios };
             return View(model);
         }
 
@@ -182,7 +190,10 @@ namespace Folio.Controllers
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
             List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(p => p.PortfolioAssets).ToList();
-            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
+            Portfolio workingPortfolio = portfolios.Single(p => p.ID == id);
+            portfolios.Remove(workingPortfolio);
+
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = workingPortfolio, UserPortfolios = portfolios };
 
             PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
 
@@ -263,7 +274,14 @@ namespace Folio.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            Portfolio portfolio = await _context.Portfolio.SingleAsync(m => m.ID == id);
+            Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
+            
+            foreach(PortfolioAsset asset in portfolio.PortfolioAssets)
+            {
+                PortfolioAsset assetToRemove = _context.PortfolioAsset.Single(p => p.ID == asset.ID);
+                _context.PortfolioAsset.Remove(assetToRemove);
+            }
+
             _context.Portfolio.Remove(portfolio);
             await _context.SaveChangesAsync();
             HttpContext.Session.Remove("selected_port_viewmodel");

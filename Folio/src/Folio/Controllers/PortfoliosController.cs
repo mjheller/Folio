@@ -30,7 +30,7 @@ namespace Folio.Controllers
         public async Task<IActionResult> Index()
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
-            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(s => s.PortfolioAssets).ToList();
+            IEnumerable<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(s => s.PortfolioAssets);
             return View(portfolios);
         }
 

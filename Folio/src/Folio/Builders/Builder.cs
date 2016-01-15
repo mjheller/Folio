@@ -74,11 +74,12 @@ namespace Folio.Builders
 
         public PortfolioViewModel GetPortfolioViewModel(PortfolioDomainModel portfolioDomainModel)
         {
+            string expectedReturn = ((portfolioDomainModel.ExpectedReturn)*100M).ToString().Substring(0, 3);
             PortfolioViewModel portfolioViewModel = new PortfolioViewModel {
                 ID = portfolioDomainModel.ID,
                 Name = portfolioDomainModel.Name,
                 DateCreated = portfolioDomainModel.DateCreated,
-                ExpectedReturn = portfolioDomainModel.ExpectedReturn,
+                ExpectedReturn = string.Format("{0}%", expectedReturn),
                 Variance = portfolioDomainModel.Variance,
                 DollarValue = portfolioDomainModel.DollarValue
             };

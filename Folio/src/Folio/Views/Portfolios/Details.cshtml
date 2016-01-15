@@ -41,6 +41,10 @@
     </tr>
 </table>
 
+<div>
+    <a asp-action="Stocks" asp-route-id="@Model.ID"><b>Current Stock Information</b></a>
+</div>
+
 @if (Model.Stocks != null)
 { 
     <table class= "table">
@@ -55,6 +59,7 @@
                 @Html.DisplayNameFor(model => model.Stocks.FirstOrDefault().SharesOwned)
             </th>
         </tr>
+
         @foreach (var item in Model.Stocks)
         {
             <tr>
@@ -62,13 +67,10 @@
                     @Html.DisplayFor(modelItem => item.Ticker)
                 </td>
                 <td>
-                    @Html.DisplayNameFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.SharesOwned)
-                </td>
-                <td>
-                    <a asp-action="Stock" asp-route-id="@item.Ticker">Select</a>
                 </td>
             </tr>
         }

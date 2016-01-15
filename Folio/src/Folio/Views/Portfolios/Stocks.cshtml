@@ -1,0 +1,189 @@
+@{
+    ViewData["Title"] = "Portfolio Details";
+}
+
+    <script type="text/javascript" language="JavaScript">
+    function SendRequest()
+    {
+        var txtSymbol = document.getElementById("txtSymbol");
+        window.location = "default.aspx?s=" + txtSymbol.value;
+        return false;
+    }
+
+    function CheckEnter(e)
+    {
+        if ((e.keyCode && e.keyCode == 13) || (e.which && e.which == 13))
+            return SendRequest();
+        return true;
+    }
+
+    function changeChart(type, num, symbol)
+    {
+        // All the DIVs are inside the main DIV
+        // and defined in the code-behind class.
+        var div1d=document.getElementById("div1d_"+num);
+        var div5d = document.getElementById("div5d_" + num);
+        var div3m = document.getElementById("div3m_" + num);
+        var div6m = document.getElementById("div6m_" + num);
+        var div1y = document.getElementById("div1y_" + num);
+        var div2y = document.getElementById("div2y_" + num);
+        var div5y = document.getElementById("div5y_" + num);
+        var divMax = document.getElementById("divMax_" + num);
+        var divChart = document.getElementById("imgChart_" + num);
+        // Set innerHTML property.
+        div1d.innerHTML = "1d";
+        div5d.innerHTML = "5d";
+        div3m.innerHTML = "3m";
+        div6m.innerHTML = "6m";
+        div1y.innerHTML = "1y";
+        div2y.innerHTML = "2y";
+        div5y.innerHTML = "5y";
+        divMax.innerHTML = "Max";
+        // Use a random number to defeat cache.
+        var rand_no = Math.random();
+        rand_no = rand_no * 100000000;
+        //  Display the stock chart.
+        switch(type)
+        {
+        case 1: // 5 days
+            div5d.innerHTML="<b>5d</b>";
+            divChart.src = "http://ichart.finance.yahoo.com/w?s=" + symbol + "&" + rand_no;
+            break;
+        case 2: // 3 months
+            div3m.innerHTML="<b>3m</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/3m/" + symbol + "?" + rand_no;
+            break;
+        case 3: // 6 months
+            div6m.innerHTML = "<b>6m</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/6m/" + symbol + "?" + rand_no;
+            break;
+        case 4: // 1 year
+            div1y.innerHTML = "<b>1y</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/1y/" + symbol + "?" + rand_no;
+            break;
+        case 5: // 2 years
+            div2y.innerHTML = "<b>2y</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/2y/" + symbol + "?" + rand_no;
+            break;
+        case 6: // 5 years
+            div5y.innerHTML = "<b>5y</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/5y/" + symbol + "?" + rand_no;
+            break;
+        case 7: // Max
+            divMax.innerHTML = "<b>msx</b>";
+            divChart.src = "http://chart.finance.yahoo.com/c/my/" + symbol + "?" + rand_no;
+            break;
+        case 0: // 1 day
+        default:
+            div1d.innerHTML = "<b>1d</b>";
+            divChart.src = "http://ichart.finance.yahoo.com/b?s=" + symbol + "&" + rand_no;
+            break;
+        }
+    }
+    </script>
+    <div>
+        <table border="0"
+               cellspacing="0" cellpadding="0">
+            <tr valign="top">
+                <td style="font-family: Arial, Helvetica, sans-serif;
+                           font-size: 14px; color: #000; text-decoration: none;">
+
+                    <h2>Get Stock Info</h2>
+                    @using (@Html.BeginForm("Stock", "Stock", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <fieldset>
+                            <input id="stock" name="stock" type="text" />
+                            <input id="updateTemplateSubmit" type="submit" value="Get Quotes">
+                            <br /><br />
+                        </fieldset>
+                    }
+                    <span style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #666;">
+                        e.g. "YHOO or YHOO GOOG"
+                    </span>
+                    <div id="divChart">
+                        <!-- Main DIV: this DIV contains text and DIVs that displays stock quotes and chart. -->
+                        @model Folio.Models.Data_Models.Stocks
+                        @if (Model != null)
+                        {
+                            <TABLE width="770" STYLE="border:1px solid black">
+                                <TR STYLE="font-size:14px; font-family:Arial, Helvetica, sans-serif; font-weight:bold">
+                                    <TD>Symbol</TD>
+                                    <TD>Date</TD>
+                                    <TD>Time</TD>
+                                    <TD>Trade</TD>
+                                    <TD>% Chg</TD>
+                                    <TD>Bid</TD>
+                                    <TD>Ask</TD>
+                                    <TD>Volume</TD>
+                                    <TD>High</TD>
+                                    <TD>Low</TD>
+                                </TR>
+                                @foreach (var quote in Model)
+                                {
+                                    <TR STYLE="font-family:Arial, Helvetica, sans-serif; font-size:14px; padding:0px 2px">
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Symbol)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Date)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Time)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Last)
+                                        </TD>
+                                        <TD>
+                                            @if (quote.Change.StartsWith("+"))
+                                            { <span style='color:green'>@quote.Change</span> }
+                                            @if (quote.Change.StartsWith("-"))
+                                            { <span style='color:red'>@quote.Change</span> }
+                                            else { @Html.DisplayFor(modelItem => quote.Change)}
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Bid)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Ask)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Volume)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.High)
+                                        </TD>
+                                        <TD>
+                                            @Html.DisplayFor(modelItem => quote.Low)
+                                        </TD>
+                                    </TR>
+                                }
+                            </TABLE>
+                            <br />
+                            for (var i = 0; i < Model.companies.Length; i++)
+                            {
+                                var r = new Random();
+                                var randomNumber = r.Next();
+                                <img id='imgChart_@i' src='http://ichart.finance.yahoo.com/b?s=@Model.companies[i].Trim().ToUpper()&@randomNumber' border=0><br />
+                                            @* 1 day *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(0,@i, "@Model.companies[i].ToLower()");'><span id='div1d_@i'><b>1d</b></span></a>
+                                            @* 5 days *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(1,@i, "@Model.companies[i].ToLower()");'><span id='div5d_@i'>5d</span></a>
+                                            @* 3 months *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(2,@i, "@Model.companies[i].ToLower()");'><span id='div3m_@i'>3m</span></a>
+                                            @* 6 months *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(3,@i, "@Model.companies[i].ToLower()");'><span id='div6m_@i'>6m</span></a>
+                                            @* 1 year *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(4,@i, "@Model.companies[i].ToLower()");'><span id='div1y_@i'>1y</span></a>
+                                            @* 2 years *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(5,@i, "@Model.companies[i].ToLower()");'><span id='div2y_@i'>2y</span></a>
+                                            @* 5 years *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(6,@i, "@Model.companies[i].ToLower()");'><span id='div5y_@i'>5y</span></a>
+                                            @* Max *@
+                                            <a style='font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: Blue;' href='javascript:changeChart(7,@i, "@Model.companies[i].ToLower()");'><span id='divMax_@i.ToString()'>Max</span></a><br><br /><br />
+                            }
+                        }
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+

@@ -162,6 +162,7 @@ namespace Folio.Controllers
             }
 
             await _context.SaveChangesAsync();
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return RedirectToAction("AddStock", new { id = id } );
         }
 
@@ -187,13 +188,23 @@ namespace Folio.Controllers
 
             if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
             {
-                return View(model);
+                asset.NumberOfAssetOwned = 0;
             } else
             {
                 asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+            }
+
+            if (asset.NumberOfAssetOwned == 0)
+            {
+                _context.PortfolioAsset.Remove(asset);
+                await _context.SaveChangesAsync();
+            } else
+            {
                 _context.Update(asset);
                 await _context.SaveChangesAsync();
             }
+            
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return View(model);
         }
 
@@ -224,6 +235,8 @@ namespace Folio.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
+
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return View(portfolio);
         }
 
@@ -253,6 +266,7 @@ namespace Folio.Controllers
             Portfolio portfolio = await _context.Portfolio.SingleAsync(m => m.ID == id);
             _context.Portfolio.Remove(portfolio);
             await _context.SaveChangesAsync();
+            HttpContext.Session.Remove("selected_port_viewmodel");
             return RedirectToAction("Index");
         }
 

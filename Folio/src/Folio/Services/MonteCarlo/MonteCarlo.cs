@@ -7,7 +7,9 @@ namespace Folio.Services.MonteCarlo
 {
     public static class MonteCarlo
     {
-        public static PortfolioPath[] RunSimulation(int yearsUntilRetirement, int nPaths, double expectedReturn, double variance, double initialPortfolioValue, double annualContributions, double incomeDraw, int yearsPlannedRetirement)
+        public static PortfolioPath[] RunSimulation(int yearsUntilRetirement, 
+            int nPaths, double expectedReturn, double variance, double initialPortfolioValue, 
+            double annualContributions, double incomeDraw, int yearsPlannedRetirement)
         {
             PortfolioPath[] paths = new PortfolioPath[nPaths];
             Func<int, PortfolioPath> creator = x => new PortfolioPath(yearsUntilRetirement, expectedReturn, variance, initialPortfolioValue, annualContributions, incomeDraw, yearsPlannedRetirement);

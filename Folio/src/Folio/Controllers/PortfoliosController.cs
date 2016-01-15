@@ -58,10 +58,10 @@ namespace Folio.Controllers
                 portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
                 HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
             }
-
             return View(portfolioViewModel);
         }
 
+        // GET: Portfolios/Stocks/5
         [HttpGet]
         public ActionResult Stocks(int? id)
         {
@@ -85,7 +85,6 @@ namespace Folio.Controllers
             {
                 return RedirectToAction("Stocks", id);
             }
-
         }
 
         // GET: Portfolios/Create
@@ -185,6 +184,7 @@ namespace Folio.Controllers
             var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
 
             PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
+
             if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
             {
                 return View(model);

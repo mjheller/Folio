@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Folio.ViewModels.MonteCarlo;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,9 +31,8 @@ namespace Folio.Controllers
             _context = context;
         }
 
-
-
         // GET: /<controller>/
+        [HttpGet]
         public IActionResult Index(int? id)
         {
             if (id == null)
@@ -42,7 +42,7 @@ namespace Folio.Controllers
             PortfolioViewModel portfolioViewModel = HttpContext.Session.GetObjectFromJson<PortfolioViewModel>("selected_port_viewmodel");
             if (portfolioViewModel == null)
             {
-                Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
+                Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
                 if (portfolio == null)
                 {
                     return HttpNotFound();
@@ -53,6 +53,12 @@ namespace Folio.Controllers
                 HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
             }
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(MonteCarloViewModel model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

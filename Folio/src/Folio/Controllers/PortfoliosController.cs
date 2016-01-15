@@ -1,6 +1,7 @@
 using folio.Services;
 using Folio.Models;
 using Folio.ViewModels;
+using Folio.ViewModels.Portfolios;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
@@ -130,10 +131,12 @@ namespace Folio.Controllers
         }
 
         [HttpGet]
-        public IActionResult DeleteStock(int? id)
+        public async Task<IActionResult> DeleteStock(int? id)
         {
-            Portfolio portfolio = _context.Portfolio.Include(a => a.PortfolioAssets).ToList().Find(p => p.ID == id);
-            return View(portfolio);
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            List<Portfolio> portfolios = _context.Portfolio.Include(a => a.PortfolioAssets).Where(p => p.User.Id == user.Id).ToList();
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Find(p => p.ID == id), UserPortfolios = portfolios };
+            return View(model);
         }
 
         public async Task<IActionResult> DeleteStock(int? id, string ticker)

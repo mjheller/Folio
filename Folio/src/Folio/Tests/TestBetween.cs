@@ -5,15 +5,24 @@ using System.Threading.Tasks;
 
 namespace Folio.Tests
 {
-    public class TestBetween : Models.StockDomainModel
+    public class TestBetweenStocks : Models.StockDomainModel
     {
-        public TestBetween(Models.Stock stock, int sharesOwned) : base(stock, sharesOwned) { }
+        public TestBetweenStocks(Models.Stock stock, int sharesOwned) : base(stock, sharesOwned) { }
 
         public decimal TestExpectedReturn(decimal beta)
         {
             decimal expectedRetrun = MathExpectedReturn(beta);
             return expectedRetrun;
         }
+        public void testStockAdd(int sharesToAdd)
+        {
+            addShares(sharesToAdd);
+        }
 
+    }
+    public class TestBetweenPortfolio : Models.PortfolioDomainModel
+    {
+        public TestBetweenPortfolio(List<Models.StockDomainModel> stocks, Models.Portfolio portfolio)
+            : base(stocks, portfolio) { }
     }
 }

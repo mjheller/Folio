@@ -1,0 +1,32 @@
+﻿@model Folio.ViewModels.MonteCarlo.MonteCarloViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Monte Carlo Simulation</h2>
+
+<form asp-controller="MonteCarlo" asp-action="GatherRequiredInformation" method="post" class="form-horizontal" role="form">
+<div class="form-group">
+    <label asp-for="PreferredRetirementAge" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <input asp-for="PreferredRetirementAge" class="form-control" />
+        <span asp-validation-for="PreferredRetirementAge" class="text-danger"></span>
+    </div>
+    <label asp-for="AnnualContribution" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <input asp-for="AnnualContribution" class="form-control" />
+        <span asp-validation-for="AnnualContribution" class="text-danger"></span>
+    </div>
+    <label asp-for="EstimatedRetirementSpan" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <input asp-for="EstimatedRetirementSpan" class="form-control" />
+        <span asp-validation-for="EstimatedRetirementSpan" class="text-danger"></span>
+    </div>
+    <label asp-for="AnnualRetirementIncomeDraw" class="col-md-2 control-label"></label>
+    <div class="col-md-10">
+        <input asp-for="AnnualRetirementIncomeDraw" class="form-control" />
+        <span asp-validation-for="AnnualRetirementIncomeDraw" class="text-danger"></span>
+    </div>
+</div>
+</form>

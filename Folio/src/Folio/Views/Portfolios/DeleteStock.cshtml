@@ -1,23 +1,35 @@
-﻿@model Portfolio
+﻿@model Folio.Models.Portfolio
 
 @{
     ViewData["Title"] = "Delete Stock from Portfolio";
 }
 
-<h2>Delete Stock</h2>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Delete Stock from Portfolio: @Model.Name</h2>
+        <p>Enter the amount of stock you'd like to delete in the input column and then click "Delete Stock" to remove that amount from your portfolio.</p>
+        <hr />
+    </div>
+</div>
 
-<table class="table">
-    <tr>
-        <th>Ticker</th>
-        <th>Amount Owned</th>
-        <th></th>
-    </tr>
-    <tr>
-        @foreach(PortfolioAsset asset in @Model.PortfolioAssets)
+<form asp-action="DeleteStock">
+    <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+    <table class="table">
+        <tr>
+            <th>Ticker</th>
+            <th>Amount Owned</th>
+            <th>Amount to Delete</th>
+            <th>Confirm</th>
+        </tr>
+        @foreach (PortfolioAsset asset in @Model.PortfolioAssets)
         {
-            <td>@asset.AssetSymbol</td>
-            <td>@asset.NumberOfAssetOwned</td>
-            <td><a>Delete</a></td>
+            <tr>
+                <td>@asset.AssetSymbol</td>
+                <td>@asset.NumberOfAssetOwned</td>
+                <td>@Html.TextBox("amount-delete", "", new { name = "amountdelete" })</td>
+                <td><input type="submit" value="Delete Stock" /></td>
+            </tr>
         }
-    </tr>
-</table>
+    </table>
+</form>
+

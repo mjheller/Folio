@@ -130,9 +130,9 @@ namespace Folio.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> DeleteStock(int? id)
+        public IActionResult DeleteStock(int? id)
         {
-            List<Portfolio> portfolios = await _context.Portfolio.ToListAsync();
+            Portfolio portfolio = _context.Portfolio.Include(a => a.PortfolioAssets).ToList().Find(p => p.ID == id);
             return View(portfolio);
         }
 

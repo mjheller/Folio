@@ -11,10 +11,10 @@ using Microsoft.AspNet.Authorization;
 
 namespace Folio.Builders
 {
-    public class StockBuilder
+    public class Builder
     {
         private ApplicationDbContext _context;
-        public StockBuilder(ApplicationDbContext context)
+        public Builder(ApplicationDbContext context)
         {
             _context = context;
         }

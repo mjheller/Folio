@@ -75,7 +75,14 @@ namespace Folio.Controllers
 
             model = dataModel.createQuotes(m_symbol);
 
-            return View(model);
+            if (model != null)
+            {
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Stocks", id);
+            }
 
         }
 

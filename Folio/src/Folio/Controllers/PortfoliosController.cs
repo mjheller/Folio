@@ -1,6 +1,7 @@
 using folio.Services;
 using Folio.Builders;
 using Folio.Models;
+using Folio.Models.Data_Models;
 using Folio.ViewModels;
 using Folio.ViewModels.Portfolios;
 using Microsoft.AspNet.Authorization;
@@ -13,10 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Folio.Models.Data_Models;
-using System.Net;
-using System.IO;
-using System.Text;
 
 namespace Folio.Controllers
 {
@@ -164,6 +161,7 @@ namespace Folio.Controllers
             return RedirectToAction("AddStock", new { id = id } );
         }
 
+        // Portfolios/DeleteStock/5
         [HttpGet]
         public async Task<IActionResult> DeleteStock(int? id)
         {
@@ -173,18 +171,24 @@ namespace Folio.Controllers
             return View(model);
         }
 
+        // Portfolios/DeleteStock/5
         [HttpPost]
         public async Task<IActionResult> DeleteStock(int? id, string stockTicker, string amountRemove)
         {
             ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
             List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(p => p.PortfolioAssets).ToList();
+            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
 
             PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
-            asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
-            _context.Update(asset);
-            await _context.SaveChangesAsync();
-
-            var model = new DeleteStockFromPortfolioViewModel { WorkingPortfolio = portfolios.Single(p => p.ID == id), UserPortfolios = portfolios };
+            if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
+            {
+                return View(model);
+            } else
+            {
+                asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+                _context.Update(asset);
+                await _context.SaveChangesAsync();
+            }
             return View(model);
         }
 

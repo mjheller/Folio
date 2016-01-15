@@ -29,7 +29,9 @@ namespace Folio.Controllers
         // GET: Portfolios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Portfolio.ToListAsync());
+            ApplicationUser user = await _userManager.FindByIdAsync(HttpContext.User.GetUserId());
+            List<Portfolio> portfolios = _context.Portfolio.Where(p => p.User.Id == user.Id).Include(s => s.PortfolioAssets).ToList();
+            return View(portfolios);
         }
 
         // GET: Portfolios/Details/5
@@ -127,11 +129,16 @@ namespace Folio.Controllers
             return RedirectToAction("AddStock", new { id = id } );
         }
 
-        public JsonResult Autocomplete(string term)
+        [HttpGet]
+        public IActionResult DeleteStock(int? id)
         {
-            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers");
-            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
-            return Json(filteredItems);
+            Portfolio portfolio = _context.Portfolio.Include(a => a.PortfolioAssets).ToList().Find(p => p.ID == id);
+            return View(portfolio);
+        }
+
+        public async Task<IActionResult> DeleteStock(int? id, string ticker)
+        {
+            throw new NotImplementedException();
         }
 
         // GET: Portfolios/Edit/5
@@ -191,6 +198,13 @@ namespace Folio.Controllers
             _context.Portfolio.Remove(portfolio);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
+        }
+
+        public JsonResult Autocomplete(string term)
+        {
+            List<string> items = HttpContext.Session.GetObjectFromJson<List<string>>("Tickers");
+            var filteredItems = items.Where(item => item.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0);
+            return Json(filteredItems);
         }
     }
 }

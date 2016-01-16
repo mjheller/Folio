@@ -33,6 +33,18 @@ button{
     padding-left: 15px;
     padding-right: 15px;
 }
+.darkgray{
+    color:darkgray;
+}
+.blue{
+    color:blue;
+}
+.red{
+    color:red;
+}
+.lightgray{
+    color:lightgray;
+}
 
 input,
 select,

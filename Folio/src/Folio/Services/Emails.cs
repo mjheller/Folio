@@ -77,18 +77,22 @@ namespace Folio.Services
             }
             if (id == 2)
             {
+                // add alex's email address
                 return "Alex Morask";
             }
             if (id == 3)
             {
+                // add chad's email address
                 return "Chad Hilke";
             }
             if (id == 4)
             {
+                // add chris's email address
                 return "Chris Hoelter";
             }
             if (id == 5)
             {
+                // add josh's email address
                 return "Josh Oliver";
             }
             if (id == 6)
@@ -97,6 +101,7 @@ namespace Folio.Services
             }
             else
             {
+                // add robert's email address
                 return "Robert Moon";
             }
         }

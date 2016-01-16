@@ -46,8 +46,10 @@ namespace Folio.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ContactEmail(Email email)
+        public IActionResult ContactEmail(Email email, int? id)
         {
+            email.ContactEmail = Services.Emails.GetContactEmailAddress(id);
+            email.ContactName = Services.Emails.GetContactName(id);
             Services.Emails.ProcessEmail(email.ContactEmail, email.CustomerEmail, email.EmailSubject, email.EmailBody);
             email.ErrorMessage = Services.Emails.errorMessage;
             return RedirectToAction("ProcessRequest", email);

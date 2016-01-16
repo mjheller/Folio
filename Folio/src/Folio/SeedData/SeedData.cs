@@ -67,7 +67,8 @@ namespace Folio.SeedData
             ApplicationUser admin = new ApplicationUser
             {
                 UserName = "admin@gmail.com",
-                Email = "admin@gmail.com"
+                Email = "admin@gmail.com",
+                DateOfBirth = new DateTime(1990, 1, 1)
             };
             Thread.Sleep(2000);
             await userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character

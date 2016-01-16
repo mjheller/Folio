@@ -10,7 +10,6 @@
     <title>Contact Email</title>
 </head>
 <body>
-    <p>Thank you @Model.CustomerName</p>
     @if (@Model.ErrorMessage == "")
     {
         <p>Your email message has been sent to @Model.ContactName;</p> <br/><br/><br/>
@@ -20,9 +19,9 @@
 
     }
     else {
-        <p><b>The email was <em>not</em> sent to @Model.ContactName</b></p><br />
-        <p>Please check that your name (@Model.ContactName) and email address (@Model.ContactEmail)</p><br/>
-        <p> filled out correctly.Thank you for your patience.</p>
+        <p><b>Message delivery failed to @Model.ContactName.</b></p><br/>
+        <p>Please check that your name (@Model.CustomerName) and email address (@Model.CustomerEmail) are filled out correctly.</p><br/>
+        <p>Thank you for your patience.</p>
     }
 </body>
 </html>

@@ -31,6 +31,7 @@ namespace Folio.SeedData
             }
             if (!(context.Stock.Any()))
             {
+                Thread.Sleep(5000);
                 SeedStocks(context);
             }
         }
@@ -68,8 +69,9 @@ namespace Folio.SeedData
                 UserName = "admin@gmail.com",
                 Email = "admin@gmail.com"
             };
+            Thread.Sleep(2000);
             await userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             await userManager.AddToRoleAsync(admin, "admin");
             context.SaveChanges();
         }

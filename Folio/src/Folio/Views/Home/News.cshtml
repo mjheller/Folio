@@ -8,11 +8,11 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h3>@ViewData["RSSTitle"]</h3>
+        <h1 class="darkgray">@ViewData["RSSTitle"]</h1>
         <ul>
             @foreach (XmlNode node in (XmlNodeList)ViewData["XMLNodeList"])
             {
-                <li>
+                <li class="red">
                     <div class="date">@node["pubDate"].InnerText</div>
                     <a href="@node["link"].InnerText">@node["title"].InnerText</a>
                     <p></p>

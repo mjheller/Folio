@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Folio.Models.Data_Models
+//used for the quote builder
+namespace Folio.Models
 {
     public class Stocks : IEnumerable<Quote>
     {

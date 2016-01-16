@@ -1,5 +1,4 @@
-﻿using AForge;
-using Folio.Models;
+﻿using Folio.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +11,7 @@ namespace Folio.SeedData
 {
     public class SeedData
     {
-        public async static void Initialize(IServiceProvider serviceProvider)
+        public static void Initialize(IServiceProvider serviceProvider)
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
             if (context.Database == null)
@@ -68,7 +67,8 @@ namespace Folio.SeedData
             {
                 UserName = "admin@gmail.com",
                 Email = "admin@gmail.com",
-                DateOfBirth = new DateTime(1990, 1, 1)
+                DateOfBirth = new DateTime(1990, 1, 1),
+                EmailConfirmed = true
             };
             Thread.Sleep(2000);
             await userManager.CreateAsync(admin, "Beast@2"); //password must match constraints of 6 char min, case-change, min 1 number and non-letter character

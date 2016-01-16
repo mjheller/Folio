@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Folio.Models.Data_Models
+namespace Folio.Models
 {
     public class Quote
     {

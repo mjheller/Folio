@@ -1,19 +1,15 @@
 ﻿using folio.Services;
 using Folio.Builders;
 using Folio.Models;
-using Folio.Models.Data_Models;
 using Folio.ViewModels;
-using Folio.ViewModels.Portfolios;
 using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Http;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using Folio.ViewModels.MonteCarlo;
 using Folio.Services.MonteCarlo;
 

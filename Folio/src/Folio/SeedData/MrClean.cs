@@ -8,40 +8,39 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Folio.SeedData
 {
     public class MrClean
     {
-        public static void Clean(IServiceProvider serviceProvider)
+        public async static void Clean(IServiceProvider serviceProvider)
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
+
             List<Stock> stocks = context.Stock.Select(s => s).ToList();
-            //Parallel.For(0, stocks.Count(), async i =>
-            //{
-            //    try
-            //    {
-            //        YahooAPICalls.GetCurrentStockPrice(stocks[i].Symbol);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        context.Remove(stocks[i]);
-            //        var x = context.SaveChangesAsync();
-            //        await x;
-            //    }
-            //});
+            List<Task> tasks = new List<Task>();
+            int count = 0;
             foreach (Stock stock in stocks)
             {
-                try
+                Task task = Task.Factory.StartNew(() => CheckIfTickerExists(stock, context), TaskCreationOptions.LongRunning);
+                tasks.Add(task);
+                count++;
+            }
+            Task.WaitAll(tasks.ToArray());
+            context.SaveChanges();
+        }
+
+        private static void CheckIfTickerExists(Stock stock, ApplicationDbContext context)
+        {
+            try
                 {
                     YahooAPICalls.GetCurrentStockPrice(stock.Symbol);
                 }
                 catch (Exception ex)
                 {
                     context.Remove(stock);
-                    context.SaveChangesAsync();
                 }
-            }
         }
 
     }

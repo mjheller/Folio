@@ -1,7 +1,6 @@
 using folio.Services;
 using Folio.Builders;
 using Folio.Models;
-using Folio.Models.Data_Models;
 using Folio.ViewModels;
 using Folio.ViewModels.Portfolios;
 using Microsoft.AspNet.Authorization;

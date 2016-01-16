@@ -47,7 +47,7 @@ namespace Folio.SeedData
             HashSet<string> tickers = new HashSet<string>();
             foreach (string stock in stockFiles.Keys)
             {
-               seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\chris\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock], tickers));
+               seedStocks.AddRange(SeedDataHelperFunctions.ParseStockCSV($"c:\\users\\phantom\\github\\folio\\folio\\src\\folio\\stockdata\\{stock}.csv", stockFiles[stock], tickers));
             }
             List<Stock> dataStocks = SeedDataHelperFunctions.SeedStockData(seedStocks);
             context.Stock.AddRange(dataStocks);

@@ -58,7 +58,6 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li><a asp-controller="Portfolios" asp-action="Index">Portfolios</a></li>
-                            <li><a asp-controller="MonteCarlo" asp-action="Index">MonteCarlo</a></li>
                         }
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")

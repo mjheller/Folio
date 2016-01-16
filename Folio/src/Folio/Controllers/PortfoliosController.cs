@@ -45,7 +45,7 @@ namespace Folio.Controllers
             {
                 return HttpNotFound();
             }
-            if (portfolioViewModel == null)
+            if ((portfolioViewModel == null) || (portfolioViewModel.ID != id))
             {
                 Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(m => m.ID == id);
                 if (portfolio == null)
@@ -56,6 +56,10 @@ namespace Folio.Controllers
                 PortfolioDomainModel portfolioDomainModel = builder.GetPortfolioDomainModel(portfolio);
                 portfolioViewModel = builder.GetPortfolioViewModel(portfolioDomainModel);
                 HttpContext.Session.SetObjectAsJson("selected_port_viewmodel", portfolioViewModel);
+            }
+            if (portfolioViewModel.Stocks.Count() < 1)
+            {
+                return RedirectToAction("AddStock", new { id = id });
             }
             return View(portfolioViewModel);
         }
@@ -82,7 +86,7 @@ namespace Folio.Controllers
             }
             else
             {
-                return RedirectToAction("Stocks", id);
+                return RedirectToAction("Stocks", new { id = id });
             }
         }
 
@@ -161,7 +165,7 @@ namespace Folio.Controllers
             else
             {
                 PortfolioAsset asset = portfolio.PortfolioAssets.Single(p => p.AssetSymbol == tickerinput);
-                asset.NumberOfAssetOwned += Int32.Parse(amount);
+                asset.NumberOfAssetOwned += int.Parse(amount);
                 _context.Update(asset);
             }
 
@@ -196,19 +200,20 @@ namespace Folio.Controllers
 
             PortfolioAsset asset = _context.PortfolioAsset.Single(p => p.PortfolioID == id && p.AssetSymbol == stockTicker);
 
-            if (asset.NumberOfAssetOwned < Int32.Parse(amountRemove))
+            if (asset.NumberOfAssetOwned < int.Parse(amountRemove))
             {
                 asset.NumberOfAssetOwned = 0;
             } else
             {
-                asset.NumberOfAssetOwned -= Int32.Parse(amountRemove);
+                asset.NumberOfAssetOwned -= int.Parse(amountRemove);
             }
 
             if (asset.NumberOfAssetOwned == 0)
             {
                 _context.PortfolioAsset.Remove(asset);
                 await _context.SaveChangesAsync();
-            } else
+            }
+            else
             {
                 _context.Update(asset);
                 await _context.SaveChangesAsync();

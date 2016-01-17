@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Folio.ViewModels.MonteCarlo
 {
     public class MonteCarloViewModel
@@ -18,7 +19,12 @@ namespace Folio.ViewModels.MonteCarlo
         public int EstimatedRetirementSpan { get; set; }
         [Display(Name = "Retirement Income Draw")]
         public double AnnualRetirementIncomeDraw { get; set; }
-        public IEnumerable<decimal> MonteCarloResults { get; set; }
+        public List<decimal> MonteCarloAvgResults { get; set; }
+        public List<decimal> MonteCarloMaxResults { get; set; }
+        public List<decimal> MonteCarloMinResults { get; set; }
+        public List<string> ageSpan { get; set; }
+
+
         public int StartingAge { get; set; }
     }
 }

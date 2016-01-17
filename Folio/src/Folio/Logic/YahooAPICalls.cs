@@ -31,6 +31,20 @@ namespace Folio.Logic
             IEnumerable<HistoricalPrice> price = hps.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
             decimal currentPrice = price.ElementAt(0).Price;
             return currentPrice;
+            // this will fix if errors getting prices on weekend if for any reason
+            
+            //try
+            //{
+            //    price = hps.Get(ticker, DateTime.Today.AddDays(-1), DateTime.UtcNow, Period.Daily);
+            //    currentPrice = price.ElementAt(0).Price;
+            //    return currentPrice;
+            //} catch (ArgumentOutOfRangeException)
+            //{
+            //    price = hps.Get(ticker, DateTime.Today.AddDays(-2), DateTime.UtcNow, Period.Daily);
+            //    currentPrice = price.ElementAt(0).Price;
+            //    return currentPrice;
+            //}
+
         }
 
         public static decimal GetStockBeta(string ticker)

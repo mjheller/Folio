@@ -18,11 +18,10 @@ namespace Folio.Services
             {
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.EnableSsl = true;
-                client.Timeout = 100;
+                client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = true;
-                client.Credentials = CredentialCache.DefaultNetworkCredentials;
-                //client.Credentials = new NetworkCredential("*****", "****");
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(Secret.ProjectEmail, Secret.ProjectPassword);
                 MailMessage msg = new MailMessage();
                 msg.To.Add(To);
                 msg.From = new MailAddress(From);

@@ -1,5 +1,4 @@
 ﻿using folio.Services;
-using Folio.Builders;
 using Folio.Models;
 using Folio.ViewModels;
 using Microsoft.AspNet.Authorization;
@@ -12,6 +11,7 @@ using System.Linq;
 using System.Security.Claims;
 using Folio.ViewModels.MonteCarlo;
 using Folio.Services.MonteCarlo;
+using Folio.Builders;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 

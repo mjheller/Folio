@@ -18,20 +18,22 @@ namespace Folio.Services.MonteCarlo
             }
             return avgPathSequence;
         }
-        public static List<double> GetMaximumPath(PortfolioPath[] paths, int steps)
+        public static List<decimal> GetMaximumPath(PortfolioPath[] paths, int steps)
         {
-            IEnumerable<double> endingValues = paths.Select(x => x.endingPortfolioValue).ToArray();
-            double maxEndingValue = endingValues.Max();
-            var maxPathQuery = paths.Where(path => path.endingPortfolioValue == maxEndingValue).ToArray();
-            List<double> maxPathSequence = maxPathQuery[0].portfolioValueList;
+            IEnumerable<decimal> endingValues = paths.Select(x => (decimal)x.endingPortfolioValue).ToArray();
+            decimal maxEndingValue = endingValues.Max();
+            var maxPathQuery = paths.Where(path => (decimal)path.endingPortfolioValue == maxEndingValue).ToArray();
+            List<decimal> maxPathSequence = maxPathQuery[0].portfolioValueList;
+
             return maxPathSequence;
         }
-        public static List<double> GetMinimumPath(PortfolioPath[] paths, int steps)
+        public static List<decimal> GetMinimumPath(PortfolioPath[] paths, int steps)
         {
-            IEnumerable<double> endingValues = paths.Select(x => x.endingPortfolioValue).ToArray();
-            double minEndingValue = endingValues.Min();
-            var maxPathQuery = paths.Where(path => path.endingPortfolioValue == minEndingValue).ToArray();
-            List<double> minPathSequence = maxPathQuery[0].portfolioValueList;
+            IEnumerable<decimal> endingValues = paths.Select(x => (decimal)x.endingPortfolioValue).ToArray();
+            decimal minEndingValue = endingValues.Min();
+            var minPathQuery = paths.Where(path => (decimal)path.endingPortfolioValue == minEndingValue).ToArray();
+            List<decimal> minPathSequence = minPathQuery[0].portfolioValueList;
+
             return minPathSequence;
         }
     }

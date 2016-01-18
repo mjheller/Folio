@@ -82,11 +82,24 @@ namespace Folio.Controllers
             {
                 return View(fullMonte.PortfolioViewModel.ID); 
             }
-            
+
             ApplicationUser currentUser = _context.Users.Single(u => u.Id == HttpContext.User.GetUserId());
-            List<decimal> monteCarloResults = MonteCarloProcessor.CalculateMonteCarlo(fullMonte, currentUser);
-            fullMonte.MonteCarloResults = monteCarloResults;
             fullMonte.StartingAge = (DateTime.Now.Year - currentUser.DateOfBirth.Year);
+            int steps = (fullMonte.PreferredRetirementAge - fullMonte.StartingAge) + fullMonte.EstimatedRetirementSpan;
+            PortfolioPath[] monteCarloPathResults = MonteCarloProcessor.CalculateMonteCarlo(fullMonte, currentUser);
+            List<decimal> monteCarloAvgResults = PathAnalysis.GetAveragePath(monteCarloPathResults, steps);
+            List<decimal> monteCarloMaxResults = PathAnalysis.GetMaximumPath(monteCarloPathResults, steps);
+            List<decimal> monteCarloMinResults = PathAnalysis.GetMinimumPath(monteCarloPathResults, steps);
+            List<string> ageList = new List<string>();
+            for (int i = fullMonte.StartingAge; i < fullMonte.PreferredRetirementAge + fullMonte.EstimatedRetirementSpan; i++)
+            {
+                ageList.Add(i.ToString());
+            }
+
+            fullMonte.MonteCarloAvgResults = monteCarloAvgResults;
+            fullMonte.MonteCarloMaxResults = monteCarloMaxResults;
+            fullMonte.MonteCarloMinResults = monteCarloMinResults;
+            fullMonte.ageSpan = ageList;
 
             return View(fullMonte);
         }

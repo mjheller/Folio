@@ -4,34 +4,8 @@
     ViewData["Title"] = "Index";
 }
 
-@if (Model.MonteCarloResults != null)
-{
-    <script>
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-        var load = [['Age', 'Net Worth']];
-        var age = @Model.StartingAge;
-        @foreach(decimal item in Model.MonteCarloResults)
-        {
-            @:load.push([age, @item]);
-            @:age += 1;
-        }
-        var data = google.visualization.arrayToDataTable(load);
-        var options = {
-            title: 'Portfolio Simulation',
-            curveType: 'function',
-            legend: { position: 'bottom' }
-        };
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-        chart.draw(data, options);
-    }
-    </script>
-}
-
 <h2>Monte Carlo Simulation</h2>
-<hr>
+<hr />
 <div class="row">
     <div class="col-md-12">
         <form asp-controller="MonteCarlo" asp-action="Index" method="post" class="form-horizontal" role="form">
@@ -72,6 +46,113 @@
         </form>
     </div>
 </div>
-<hr>
+<div class="row">
+    <div class="col-md-12">
+        <canvas id="myChart" width="600" height="400"></canvas>
 
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+        @if (Model.MonteCarloAvgResults != null)
+        {
+
+            <script>
+    var chartLabels = []
+    var MinPath = []
+    var AvgPath = []
+    var MaxPath = []
+    @foreach(var label in Model.ageSpan)
+    {
+    <text>
+    chartLabels.push('@label');
+    </text>
+    }
+    @foreach (decimal value in Model.MonteCarloMinResults)
+    {
+        if (value < 0)
+        {
+           @:MaxPath.push(0);
+        } else
+        {
+    <text>
+
+    MinPath.push(@value);
+    </text>
+        }
+    }
+    @foreach (decimal value in Model.MonteCarloAvgResults)
+    {
+        if (value < 0)
+        {
+           @:AvgPath.push(0);
+        } else
+        {
+    <text>
+        AvgPath.push(@value);
+    </text>
+        }
+    }
+
+    @foreach(decimal value in Model.MonteCarloMaxResults)
+    {
+        if(value < 0)
+        {
+           @:MaxPath.push(0);
+                } else
+        {
+
+       <text>
+    MaxPath.push(@value);
+    </text>
+        }
+
+    }
+
+    var lineChartData =
+    {
+        labels: chartLabels,
+        datasets:
+         [
+            {
+                label: "Minimum Path",
+                fillColor: "rgba(220,220,220,0.2)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: MinPath
+            },
+            {
+                label: "Average Path",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: AvgPath
+            },
+            {
+                label: "Maximum Path",
+                fillColor: "rgba(151,187,205,0.2)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: MaxPath
+            }
+         ]
+    }
+    window.onload = function () {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true
+        });
+    }
+            </script>
+        }
+    </div>
+</div>
+
+<hr />
+
+

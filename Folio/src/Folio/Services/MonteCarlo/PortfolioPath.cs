@@ -17,9 +17,9 @@ namespace Folio.Services.MonteCarlo
         public double endingPortfolioValue;
         public double folioReturn;
         public double folioStDev;
-        public List<double> portfolioValueList;
+        public List<decimal> portfolioValueList;
         int stepCount = 0;
-        
+
         public PortfolioPath(int yearsUntilRetirement, double expectedReturn, double variance, double initialPortfolioValue, double annualContribution, double incomeDraw, int yearsPlannedRetirement)
         {
             this.folioReturn = expectedReturn;
@@ -29,8 +29,8 @@ namespace Folio.Services.MonteCarlo
             this.initialPortfolioValue = initialPortfolioValue;
             this.retirement = yearsUntilRetirement;
             this.nSteps = retirement + yearsPlannedRetirement;
-            this.portfolioValueList = new List<double>();
-            this.portfolioValueList.Add(initialPortfolioValue);
+            this.portfolioValueList = new List<decimal>();
+            this.portfolioValueList.Add((decimal)initialPortfolioValue);
             LogNormal lognormal = LogNormal.WithMuSigma(folioReturn, folioStDev);
             IEnumerable<double> returns = lognormal.Samples().Take(nSteps);
             this.endingPortfolioValue = returns.Aggregate(initialPortfolioValue, ComputeNextPortfolioValue);
@@ -40,7 +40,7 @@ namespace Folio.Services.MonteCarlo
         {
             double value = ComputePortfolioChange(currentValue, randomReturn);
             stepCount++;
-            portfolioValueList.Add(value);
+            portfolioValueList.Add((decimal)value);
             return value;
         }
 
@@ -49,8 +49,7 @@ namespace Folio.Services.MonteCarlo
             if (stepCount < retirement)
             {
                 return currentValue * randomReturn + annualContribution;
-            } 
-            else
+            } else
             {
                 return currentValue * randomReturn - incomeDraw;
             }

@@ -40,7 +40,7 @@ namespace Folio.Controllers
             if (portfolioViewModel == null)
             {
                 Portfolio portfolio = _context.Portfolio.Include(p => p.PortfolioAssets).Single(m => m.ID == id);
-                if (portfolio == null)
+                if ((portfolio == null) || (portfolioViewModel.ID != id))
                 {
                     return HttpNotFound();
                 }
@@ -51,7 +51,6 @@ namespace Folio.Controllers
             }
             MonteCarloViewModel blankMonte = new MonteCarloViewModel();
            // blankMonte.PortfolioViewModel = portfolioViewModel;
-
             return View(blankMonte);
         }
 

@@ -42,8 +42,9 @@
 </table>
 
 <div>
-    <a asp-action="Stocks" asp-route-id="@Model.ID"><b>Current Stock Information</b></a>
-    <a asp-controller="MonteCarlo" asp-action="Index" asp-route-id="@Model.ID"><b>Run Monte Carlo Simulation</b></a>
+    <button class="portfolio-button"><a asp-action="Stocks" asp-route-id="@Model.ID"><b>Current Stock Information</b></a></button>
+    <button class="portfolio-button"><a asp-controller="MonteCarlo" asp-action="Index" asp-route-id="@Model.ID"><b>Run Monte Carlo Simulation</b></a></button>
+    <hr/>
 </div>
 
 @if (Model.Stocks != null)

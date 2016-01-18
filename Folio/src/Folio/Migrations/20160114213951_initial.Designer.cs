@@ -8,7 +8,7 @@ using Folio.Models;
 namespace folio.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160116203058_initial")]
+    [Migration("20160114213951_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

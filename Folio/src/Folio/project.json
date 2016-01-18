@@ -1,5 +1,5 @@
 {
-  "userSecretsId": "Folio-db-1",
+  "userSecretsId": "carbon_folio",
   "version": "1.0.0-*",
   "compilationOptions": {
     "emitEntryPoint": true

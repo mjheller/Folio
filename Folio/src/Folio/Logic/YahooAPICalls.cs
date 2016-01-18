@@ -39,7 +39,7 @@ namespace Folio.Logic
             }
             catch (ArgumentOutOfRangeException)
             {
-                price = hps.Get(ticker, DateTime.Today.AddDays(-2), DateTime.UtcNow, Period.Daily);
+                price = hps.Get(ticker, DateTime.Today.AddDays(-3), DateTime.UtcNow, Period.Daily);
                 currentPrice = price.ElementAt(0).Price;
                 return currentPrice;
             }

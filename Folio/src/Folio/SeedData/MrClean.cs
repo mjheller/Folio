@@ -14,7 +14,7 @@ namespace Folio.SeedData
 {
     public class MrClean
     {
-        public async static void Clean(IServiceProvider serviceProvider)
+        public static void Clean(IServiceProvider serviceProvider)
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
 
@@ -23,7 +23,7 @@ namespace Folio.SeedData
             int count = 0;
             foreach (Stock stock in stocks)
             {
-                Task task = Task.Factory.StartNew(() => CheckIfTickerExists(stock, context), TaskCreationOptions.LongRunning);
+                Task task = Task.Run(() => CheckIfTickerExists(stock, context));
                 tasks.Add(task);
                 count++;
             }

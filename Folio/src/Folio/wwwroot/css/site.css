@@ -218,3 +218,7 @@ select {
     font-weight: 300;
     background-color: #A9A9A9;
 }
+.table{
+    background-color:darkgrey;
+    color:gray;
+}

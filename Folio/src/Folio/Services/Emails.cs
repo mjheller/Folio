@@ -18,11 +18,10 @@ namespace Folio.Services
             {
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
                 client.EnableSsl = true;
-                client.Timeout = 100;
+                client.Timeout = 10000;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
-                client.UseDefaultCredentials = true;
-                client.Credentials = CredentialCache.DefaultNetworkCredentials;
-                //client.Credentials = new NetworkCredential("*****", "****");
+                client.UseDefaultCredentials = false;
+                client.Credentials = new NetworkCredential(Secret.ProjectEmail, Secret.ProjectPassword);
                 MailMessage msg = new MailMessage();
                 msg.To.Add(To);
                 msg.From = new MailAddress(From);
@@ -73,36 +72,36 @@ namespace Folio.Services
         {
             if (id == 1)
             {
-                return "Vada_Overlord@hotmail.com";
+                return Secret.AaronEmail;
             }
             if (id == 2)
             {
                 // add alex's email address
-                return "Alex Morask";
+                return Secret.AlexEmail;
             }
             if (id == 3)
             {
                 // add chad's email address
-                return "Chad Hilke";
+                return Secret.ChadEmail;
             }
             if (id == 4)
             {
                 // add chris's email address
-                return "Chris Hoelter";
+                return Secret.ChrisEmail;
             }
             if (id == 5)
             {
                 // add josh's email address
-                return "Josh Oliver";
+                return Secret.JoshEmail;
             }
             if (id == 6)
             {
-                return "MJHeller89@gmail.com";
+                return Secret.MattEmail;
             }
             else
             {
                 // add robert's email address
-                return "Robert Moon";
+                return Secret.RobertEmail;
             }
         }
     }

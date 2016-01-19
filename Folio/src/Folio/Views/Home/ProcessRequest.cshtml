@@ -10,7 +10,7 @@
     <title>Contact Email</title>
 </head>
 <body>
-    @if (@Model.ErrorMessage == "")
+    @if (@Model.ErrorMessage == "" || Model.ErrorMessage == null)
     {
         <p>Your email message has been sent to @Model.ContactName;</p> <br/><br/><br/>
         <p>Subject: @Model.EmailSubject</p> <br/><br/>

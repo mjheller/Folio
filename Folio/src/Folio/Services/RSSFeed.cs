@@ -32,7 +32,7 @@ namespace Folio.Services
             }
             else if (id == 6)
             {
-                return "http://rss.briefing.com/Investor/RSS/StockMarketUpdate.xml";
+                return "http://economictimes.indiatimes.com/rssfeeds/2146842.cms";
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Folio.Services
             }
             else if (id == 6)
             {
-                return "Briefing - Stock Market Update";
+                return "Economic Times - Stock Market Update";
             }
             else
             {

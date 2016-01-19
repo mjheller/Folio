@@ -29,7 +29,7 @@ namespace Folio.Logic
         {
             HistoricalPriceService hps = new HistoricalPriceService();
             IEnumerable<HistoricalPrice> price;
-            decimal currentPrice; 
+            decimal currentPrice;
             // this will fix if errors getting prices on weekend if for any reason
             try
             {
@@ -43,7 +43,6 @@ namespace Folio.Logic
                 currentPrice = price.ElementAt(0).Price;
                 return currentPrice;
             }
-
         }
 
         public static decimal GetStockBeta(string ticker)

@@ -42,7 +42,6 @@ namespace Folio.Logic
             {
                 return GetCurrentStockPrice(hps, ticker, DateTime.Now.AddDays(-1), DateTime.Now);
             }
-
         }
 
         private static decimal GetCurrentStockPrice(HistoricalPriceService hps, string ticker, DateTime start, DateTime end)

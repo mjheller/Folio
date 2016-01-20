@@ -7,6 +7,7 @@
 @{
     ViewData["Title"] = "[Folio]";
 }
+
 <html lang="en">
 <head>
     <script src="~/lib/Chart.js/Chart.min.js"></script>
@@ -35,12 +36,6 @@
                 <td id="price"class="text-left">Price</td>
                 <td id="change"class="text-left">Change</td>
             </tr>
-            <tr class="row2">
-                <td id="ticker1" class="text-left">Symbol</td>
-                <td id="name1" class="text-left">Name</td>
-                <td id="price1" class="text-left">Price</td>
-                <td id="change1" class="text-left">Change</td>
-            </tr>
         </tbody>
     </table>
     <p>
@@ -51,12 +46,12 @@
 </body>
 </html>
 <script>
-    var sym = "PFE, INTC";
+    var sym = "GOOG";
     var data = {
         labels: [],
         datasets: [
             {
-                label: "PFE",
+                label: "GOOG",
                 fillColor: "rgba(215, 0, 255, 0.5)",
                 strokeColor: "rgba(215, 0, 255, 0.9)",
                 pointColor: "rgba(215, 0, 255, 0.9)",
@@ -64,24 +59,13 @@
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
                 data: []
-            },
-            {
-                label: "INTC",
-                fillColor: "rgba(122, 175, 197, 0.5)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(122, 175, 197, 0.9)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: []
-            },
+            }
         ]
     };
     var ctx = document.getElementById("myChart").getContext("2d");
-    ctx.textAlign = "center";
     var myNewChart = new Chart(ctx).Line(data);
     new Chart(ctx).Line(data);
-    var yolo = "whatever";
+    var result = "whatever";
     var date = new Date();
     var hours = date.getHours();
     function getData(sym) {
@@ -91,36 +75,22 @@
 
         $.getJSON(url, 'q=' + data + "&format=json&diagnostics=true&env=http://datatables.org/alltables.env")
             .done(function (data) {
-                yolo = data;
-                console.log(yolo);
-                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price").text() || yolo.query.results.quote[0].LastTradePriceOnly == null) {
+                result = data;
+                console.log(result);
+                if (result.query.results.quote.LastTradePriceOnly !== $("#price").text() || result.query.results.quote.LastTradePriceOnly == null) {
                     $("#price").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[0].LastTradePriceOnly)
+                        $(this).text(result.query.results.quote.LastTradePriceOnly)
                     }).fadeIn();
                     $("#change").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[0].PercentChange)
+                        $(this).text(result.query.results.quote.PercentChange)
                     }).fadeIn();
                     $("#name").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[0].Name)
+                        $(this).text(result.query.results.quote.Name)
                     }).fadeIn();
                     $("#ticker").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[0].symbol)
+                        $(this).text(result.query.results.quote.symbol)
                     }).fadeIn();
-                }
-                if (yolo.query.results.quote.LastTradePriceOnly !== $("#price1").text() || yolo.query.results.quote[1].LastTradePriceOnly == null) {
-                    $("#price1").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[1].LastTradePriceOnly)
-                    }).fadeIn();
-                    $("#change1").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[1].PercentChange)
-                    }).fadeIn();
-                    $("#name1").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[1].Name)
-                    }).fadeIn();
-                    $("#ticker1").fadeOut(function () {
-                        $(this).text(yolo.query.results.quote[1].symbol)
-                    }).fadeIn();
-                    myNewChart.addData([yolo.query.results.quote[0].LastTradePriceOnly, yolo.query.results.quote[1].LastTradePriceOnly], yolo.query.results.quote[1].LastTradeTime);
+                    myNewChart.addData([result.query.results.quote.LastTradePriceOnly], result.query.results.quote.LastTradeTime);
                     myNewChart.update();
                 }
             })
@@ -133,7 +103,7 @@
         getData(sym);
     });
     if (hours < 16 && hours > 9) {
-        window.setInterval(function () { getData(sym), console.log(yolo)}, 10000);
+        window.setInterval(function () { getData(sym)}, 10000);
     }
 
     </script>

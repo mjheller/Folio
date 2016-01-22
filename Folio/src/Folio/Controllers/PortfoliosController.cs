@@ -151,7 +151,7 @@ namespace Folio.Controllers
         {
             Portfolio portfolio = await _context.Portfolio.Include(p => p.PortfolioAssets).SingleAsync(p => p.ID == id);
             List<string> heldTickers = portfolio.PortfolioAssets.Select(p => p.AssetSymbol).ToList();
-            PortfolioAsset newAsset = new PortfolioAsset { AssetSymbol = tickerinput, NumberOfAssetOwned = Int32.Parse(amount) };
+            PortfolioAsset newAsset = new PortfolioAsset { AssetSymbol = tickerinput.ToUpper(), NumberOfAssetOwned = Int32.Parse(amount) };
 
             if (portfolio.PortfolioAssets.Count == 0)
             {
